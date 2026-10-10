@@ -1,0 +1,9 @@
+node_modules/
+__pycache__/
+*.py[cod]
+.sites-runtime/
+.DS_Store
+*.tmp
+production/qa-captures/
+production/critic-final-captures/
+production/critic-current-captures/
