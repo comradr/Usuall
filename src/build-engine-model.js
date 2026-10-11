@@ -115,7 +115,7 @@ function actor(id,position,pose,time,progress=0,geometry,facing='left',travelled
   const looping=['idle','walk','carryWalk','busy','phone','sit'].includes(pose);
   const moving=['walk','carryWalk','chalkStep'].includes(pose);
   let animationFrame=moving?Math.floor(travelled*(frames?.length||4)/(pose==='chalkStep'?16:32))%Math.max(1,frames?.length||4):looping?Math.floor(time*(pose==='phone'?3:2))%Math.max(1,frames?.length||4):Math.min((frames?.length||6)-1,Math.floor(clamp(progress)*(frames?.length||6)));
-  if(!moving&&!looping&&poseSpec?.durationsMs?.length===frames?.length) {
+  if(!moving&&!looping&&Array.isArray(poseSpec?.durationsMs)&&poseSpec.durationsMs.length===frames?.length) {
     // Round below the sampling resolution so decimal phase boundaries select the next frame consistently.
     let remaining=Math.round(clamp(progress)*poseSpec.durationsMs.reduce((sum,duration)=>sum+duration,0)*1e6)/1e6;
     for(let i=0;i<frames.length;i++) {animationFrame=i;if(remaining<poseSpec.durationsMs[i]||i===frames.length-1)break;remaining-=poseSpec.durationsMs[i];}
@@ -158,7 +158,7 @@ export function chalkAt(seconds) {
       footX=226+17*(step.draw?step.glyph:mix(step.previousGlyph,step.glyph,amount));}
     if(distance<step.length)break;distance-=step.length;
   }
-  if(seconds<35||seconds>=46.5)contact=null;
+  if(seconds<35||seconds>=46.5){contact=null;penDown=false;}
   return {equation:'7 + 5 = 12',text:'7 + 5 = 12',segments,progress:p,complete:p>=1,contact:contact?{x:contact[0],y:contact[1]}:null,
     penDown,movingBetweenGlyphs,stationaryPenUp:!!contact&&!penDown&&!movingBetweenGlyphs,footX};
 }

@@ -8,7 +8,7 @@ function entries(dir){return fs.readdirSync(path.join(root,dir),{withFileTypes:t
 const dirs=['dist','src','scripts','tests','production/art-source','production/critic-interactive-captures','production/critic-interactive-baseline'];
 const extra=['README.md','package.json','.openai/hosting.json','production/npc-review-sheet.png','production/critic-interactive-probe.mjs'];
 const docs=entries('production').filter(p=>p.split('/').length===2&&/\.(json|md|txt|csv)$/.test(p));
-const files=[...dirs.flatMap(entries),...extra,...docs].filter(p=>!/(?:-rejected|__pycache__|\.pyc$|\.tmp$)/.test(p)).sort();
+const files=[...dirs.filter(d=>fs.existsSync(path.join(root,d))).flatMap(entries),...extra.filter(p=>fs.existsSync(path.join(root,p))),...docs].filter(p=>!/(?:-rejected|__pycache__|\.pyc$|\.tmp$)/.test(p)).sort();
 const unique=[...new Set(files)];
 function meta(p,b){return {path:p,bytes:b.length,encoding:/\.(png|gif|jpe?g|webp)$/i.test(p)?'base64':'utf-8',sha256:hash('sha256',b),git_sha:hash('sha1',Buffer.concat([Buffer.from(`blob ${b.length}\0`),b]))};}
 if(process.argv[2]==='--file'||process.argv[2]==='--chunk'){
