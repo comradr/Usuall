@@ -20,7 +20,7 @@
     "arithmetic": "7 + 5 = 12",
     "breakStartsAtSeconds": 124,
     "assertions": [
-      "Chalk appears only after chalk contacts the board.",
+      "Board marks appear only after the held chalk contacts the board.",
       "The completed arithmetic persists throughout the next scene.",
       "Nastya never holds a phone during an active lesson.",
       "The walk to a pupil follows the aisle around desks."

@@ -1,0 +1,856 @@
+{
+  "version": "nastya-motion-v4-reconstructed-export",
+  "status": "mechanically exported; independent art and runtime critique pending",
+  "actor": "nastya",
+  "image": "assets/actors/nastya-motion-v4.png",
+  "frameWidth": 96,
+  "frameHeight": 112,
+  "columns": 8,
+  "rows": 2,
+  "frameCount": 11,
+  "pivot": [
+    48,
+    100
+  ],
+  "frames": [
+    {
+      "index": 0,
+      "name": "walkContactNearV4",
+      "source": "nastyaMotionV4",
+      "rawSourceIndex": 0,
+      "sourceCell": [
+        0,
+        0,
+        384,
+        350
+      ],
+      "sourceOpaqueBoundsInCell": [
+        123,
+        12,
+        312,
+        344
+      ],
+      "sourceFloorPivot": [
+        218,
+        344
+      ],
+      "sourceFloorMeaning": "measured ground projection; individual pivot, common row scale",
+      "bodyHeightSourcePx": 332,
+      "bodyHeightNativePx": 80,
+      "scale": 0.24096385542168675,
+      "nativeOrigin": [
+        25,
+        20
+      ],
+      "pivot": [
+        48,
+        100
+      ],
+      "bounds": [
+        25,
+        20,
+        71,
+        100
+      ],
+      "hand": [
+        30,
+        66
+      ],
+      "handOffset": [
+        -18,
+        -34
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle"
+    },
+    {
+      "index": 1,
+      "name": "walkPassingNearV4",
+      "source": "nastyaMotionV4",
+      "rawSourceIndex": 1,
+      "sourceCell": [
+        384,
+        0,
+        384,
+        350
+      ],
+      "sourceOpaqueBoundsInCell": [
+        116,
+        12,
+        283,
+        343
+      ],
+      "sourceFloorPivot": [
+        588,
+        344
+      ],
+      "sourceFloorMeaning": "measured ground projection; individual pivot, common row scale",
+      "bodyHeightSourcePx": 332,
+      "bodyHeightNativePx": 80,
+      "scale": 0.24096385542168675,
+      "nativeOrigin": [
+        27,
+        20
+      ],
+      "pivot": [
+        48,
+        100
+      ],
+      "bounds": [
+        27,
+        20,
+        67,
+        100
+      ],
+      "hand": [
+        31,
+        66
+      ],
+      "handOffset": [
+        -17,
+        -34
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle"
+    },
+    {
+      "index": 2,
+      "name": "walkContactFarV4",
+      "source": "nastyaMotionV4",
+      "rawSourceIndex": 2,
+      "sourceCell": [
+        768,
+        0,
+        384,
+        350
+      ],
+      "sourceOpaqueBoundsInCell": [
+        89,
+        12,
+        277,
+        344
+      ],
+      "sourceFloorPivot": [
+        946,
+        344
+      ],
+      "sourceFloorMeaning": "measured ground projection; individual pivot, common row scale",
+      "bodyHeightSourcePx": 332,
+      "bodyHeightNativePx": 80,
+      "scale": 0.24096385542168675,
+      "nativeOrigin": [
+        27,
+        20
+      ],
+      "pivot": [
+        48,
+        100
+      ],
+      "bounds": [
+        27,
+        20,
+        72,
+        100
+      ],
+      "hand": [
+        39,
+        57
+      ],
+      "handOffset": [
+        -9,
+        -43
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle"
+    },
+    {
+      "index": 3,
+      "name": "walkPassingFarV4",
+      "source": "nastyaMotionV4",
+      "rawSourceIndex": 3,
+      "sourceCell": [
+        1152,
+        0,
+        384,
+        350
+      ],
+      "sourceOpaqueBoundsInCell": [
+        78,
+        10,
+        263,
+        343
+      ],
+      "sourceFloorPivot": [
+        1348,
+        344
+      ],
+      "sourceFloorMeaning": "measured ground projection; individual pivot, common row scale",
+      "bodyHeightSourcePx": 332,
+      "bodyHeightNativePx": 80,
+      "scale": 0.24096385542168675,
+      "nativeOrigin": [
+        20,
+        20
+      ],
+      "pivot": [
+        48,
+        100
+      ],
+      "bounds": [
+        20,
+        20,
+        65,
+        100
+      ],
+      "hand": [
+        24,
+        60
+      ],
+      "handOffset": [
+        -24,
+        -40
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle"
+    },
+    {
+      "index": 4,
+      "name": "chalkRestEmptyV4",
+      "source": "nastyaMotionV4",
+      "rawSourceIndex": 4,
+      "sourceCell": [
+        0,
+        350,
+        384,
+        320
+      ],
+      "sourceOpaqueBoundsInCell": [
+        145,
+        9,
+        298,
+        313
+      ],
+      "sourceFloorPivot": [
+        219,
+        664
+      ],
+      "sourceFloorMeaning": "measured ground projection; individual pivot, common row scale",
+      "bodyHeightSourcePx": 304,
+      "bodyHeightNativePx": 80,
+      "scale": 0.2631578947368421,
+      "nativeOrigin": [
+        29,
+        20
+      ],
+      "pivot": [
+        48,
+        100
+      ],
+      "bounds": [
+        29,
+        20,
+        69,
+        100
+      ],
+      "hand": [
+        35,
+        71
+      ],
+      "handOffset": [
+        -13,
+        -29
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle"
+    },
+    {
+      "index": 5,
+      "name": "chalkReachLowEmptyV4",
+      "source": "nastyaMotionV4",
+      "rawSourceIndex": 5,
+      "sourceCell": [
+        384,
+        350,
+        384,
+        320
+      ],
+      "sourceOpaqueBoundsInCell": [
+        85,
+        10,
+        284,
+        313
+      ],
+      "sourceFloorPivot": [
+        597,
+        664
+      ],
+      "sourceFloorMeaning": "measured ground projection; individual pivot, common row scale",
+      "bodyHeightSourcePx": 304,
+      "bodyHeightNativePx": 80,
+      "scale": 0.2631578947368421,
+      "nativeOrigin": [
+        14,
+        20
+      ],
+      "pivot": [
+        48,
+        100
+      ],
+      "bounds": [
+        14,
+        20,
+        66,
+        100
+      ],
+      "hand": [
+        20,
+        66
+      ],
+      "handOffset": [
+        -28,
+        -34
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle"
+    },
+    {
+      "index": 6,
+      "name": "chalkChestHeldV4",
+      "source": "nastyaMotionV4",
+      "rawSourceIndex": 7,
+      "sourceCell": [
+        1152,
+        350,
+        384,
+        320
+      ],
+      "sourceOpaqueBoundsInCell": [
+        81,
+        9,
+        270,
+        315
+      ],
+      "sourceFloorPivot": [
+        1336,
+        664
+      ],
+      "sourceFloorMeaning": "measured ground projection; individual pivot, common row scale",
+      "bodyHeightSourcePx": 304,
+      "bodyHeightNativePx": 80,
+      "scale": 0.2631578947368421,
+      "nativeOrigin": [
+        21,
+        20
+      ],
+      "pivot": [
+        48,
+        100
+      ],
+      "bounds": [
+        21,
+        20,
+        71,
+        101
+      ],
+      "hand": [
+        25,
+        41
+      ],
+      "handOffset": [
+        -23,
+        -59
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle",
+      "chalkTip": [
+        22,
+        37
+      ],
+      "chalkTipOffset": [
+        -26,
+        -63
+      ],
+      "bakedItem": "chalk"
+    },
+    {
+      "index": 7,
+      "name": "chalkFaceHeldV4",
+      "source": "nastyaMotionV4",
+      "rawSourceIndex": 8,
+      "sourceCell": [
+        0,
+        670,
+        384,
+        354
+      ],
+      "sourceOpaqueBoundsInCell": [
+        124,
+        8,
+        308,
+        333
+      ],
+      "sourceFloorPivot": [
+        225,
+        1003
+      ],
+      "sourceFloorMeaning": "measured ground projection; individual pivot, common row scale",
+      "bodyHeightSourcePx": 324,
+      "bodyHeightNativePx": 80,
+      "scale": 0.24691358024691357,
+      "nativeOrigin": [
+        23,
+        20
+      ],
+      "pivot": [
+        48,
+        100
+      ],
+      "bounds": [
+        23,
+        20,
+        68,
+        100
+      ],
+      "hand": [
+        27,
+        34
+      ],
+      "handOffset": [
+        -21,
+        -66
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle",
+      "chalkTip": [
+        24,
+        31
+      ],
+      "chalkTipOffset": [
+        -24,
+        -69
+      ],
+      "bakedItem": "chalk"
+    },
+    {
+      "index": 8,
+      "name": "chalkHighHeldV4",
+      "source": "nastyaMotionV4",
+      "rawSourceIndex": 9,
+      "sourceCell": [
+        384,
+        670,
+        384,
+        354
+      ],
+      "sourceOpaqueBoundsInCell": [
+        119,
+        5,
+        303,
+        333
+      ],
+      "sourceFloorPivot": [
+        611,
+        1003
+      ],
+      "sourceFloorMeaning": "measured ground projection; individual pivot, common row scale",
+      "bodyHeightSourcePx": 324,
+      "bodyHeightNativePx": 80,
+      "scale": 0.24691358024691357,
+      "nativeOrigin": [
+        21,
+        19
+      ],
+      "pivot": [
+        48,
+        100
+      ],
+      "bounds": [
+        21,
+        19,
+        66,
+        100
+      ],
+      "hand": [
+        28,
+        23
+      ],
+      "handOffset": [
+        -20,
+        -77
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle",
+      "chalkTip": [
+        24,
+        20
+      ],
+      "chalkTipOffset": [
+        -24,
+        -80
+      ],
+      "bakedItem": "chalk"
+    },
+    {
+      "index": 9,
+      "name": "chalkContactLowHeldV4",
+      "source": "nastyaMotionV4",
+      "rawSourceIndex": 10,
+      "sourceCell": [
+        768,
+        670,
+        384,
+        354
+      ],
+      "sourceOpaqueBoundsInCell": [
+        87,
+        10,
+        287,
+        333
+      ],
+      "sourceFloorPivot": [
+        980,
+        1003
+      ],
+      "sourceFloorMeaning": "measured ground projection; individual pivot, common row scale",
+      "bodyHeightSourcePx": 324,
+      "bodyHeightNativePx": 80,
+      "scale": 0.24691358024691357,
+      "nativeOrigin": [
+        17,
+        20
+      ],
+      "pivot": [
+        48,
+        100
+      ],
+      "bounds": [
+        17,
+        20,
+        66,
+        100
+      ],
+      "hand": [
+        22,
+        63
+      ],
+      "handOffset": [
+        -26,
+        -37
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle",
+      "chalkTip": [
+        20,
+        64
+      ],
+      "chalkTipOffset": [
+        -28,
+        -36
+      ],
+      "bakedItem": "chalk"
+    },
+    {
+      "index": 10,
+      "name": "chalkContactLowEmptyV4",
+      "source": "nastyaMotionV4",
+      "rawSourceIndex": 11,
+      "sourceCell": [
+        1152,
+        670,
+        384,
+        354
+      ],
+      "sourceOpaqueBoundsInCell": [
+        79,
+        10,
+        280,
+        333
+      ],
+      "sourceFloorPivot": [
+        1355,
+        1003
+      ],
+      "sourceFloorMeaning": "measured ground projection; individual pivot, common row scale",
+      "bodyHeightSourcePx": 324,
+      "bodyHeightNativePx": 80,
+      "scale": 0.24691358024691357,
+      "nativeOrigin": [
+        17,
+        20
+      ],
+      "pivot": [
+        48,
+        100
+      ],
+      "bounds": [
+        17,
+        20,
+        67,
+        100
+      ],
+      "hand": [
+        24,
+        63
+      ],
+      "handOffset": [
+        -24,
+        -37
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle"
+    }
+  ],
+  "sockets": {
+    "0": {
+      "hand": [
+        30,
+        66
+      ],
+      "handOffset": [
+        -18,
+        -34
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle"
+    },
+    "1": {
+      "hand": [
+        31,
+        66
+      ],
+      "handOffset": [
+        -17,
+        -34
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle"
+    },
+    "2": {
+      "hand": [
+        39,
+        57
+      ],
+      "handOffset": [
+        -9,
+        -43
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle"
+    },
+    "3": {
+      "hand": [
+        24,
+        60
+      ],
+      "handOffset": [
+        -24,
+        -40
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle"
+    },
+    "4": {
+      "hand": [
+        35,
+        71
+      ],
+      "handOffset": [
+        -13,
+        -29
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle"
+    },
+    "5": {
+      "hand": [
+        20,
+        66
+      ],
+      "handOffset": [
+        -28,
+        -34
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle"
+    },
+    "6": {
+      "hand": [
+        25,
+        41
+      ],
+      "handOffset": [
+        -23,
+        -59
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle",
+      "chalkTip": [
+        22,
+        37
+      ],
+      "chalkTipOffset": [
+        -26,
+        -63
+      ],
+      "bakedItem": "chalk"
+    },
+    "7": {
+      "hand": [
+        27,
+        34
+      ],
+      "handOffset": [
+        -21,
+        -66
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle",
+      "chalkTip": [
+        24,
+        31
+      ],
+      "chalkTipOffset": [
+        -24,
+        -69
+      ],
+      "bakedItem": "chalk"
+    },
+    "8": {
+      "hand": [
+        28,
+        23
+      ],
+      "handOffset": [
+        -20,
+        -77
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle",
+      "chalkTip": [
+        24,
+        20
+      ],
+      "chalkTipOffset": [
+        -24,
+        -80
+      ],
+      "bakedItem": "chalk"
+    },
+    "9": {
+      "hand": [
+        22,
+        63
+      ],
+      "handOffset": [
+        -26,
+        -37
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle",
+      "chalkTip": [
+        20,
+        64
+      ],
+      "chalkTipOffset": [
+        -28,
+        -36
+      ],
+      "bakedItem": "chalk"
+    },
+    "10": {
+      "hand": [
+        24,
+        63
+      ],
+      "handOffset": [
+        -24,
+        -37
+      ],
+      "socketKind": "authored-hand-grip",
+      "heightGroup": "middle"
+    }
+  },
+  "poses": {
+    "walk": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "chalkRaise": [
+      4,
+      9,
+      6,
+      7,
+      8
+    ],
+    "chalkLower": [
+      6,
+      9,
+      4
+    ],
+    "chalkRest": [
+      4
+    ]
+  },
+  "acceptedRawIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "rejected": [
+    {
+      "rawSourceIndex": 6,
+      "reason": "wrong active arm; no visible chalk",
+      "evidence": "production/art-review/nastya-motion-v4/rejected-raw-6-unfiltered.png"
+    }
+  ],
+  "ownership": "Only local6–9 contain a baked chalk; draw a separate prop for other held-chalk frames.",
+  "motionLimitations": [
+    "Legacy raised-chalk walk24–27 untouched, known opposite-support gait defect remains P1.",
+    "Contact0/2 show similar trouser silhouettes; opposite supporting leg remains visually ambiguous.",
+    "Native source export and opaque socket proximity do not establish art or in-game motion acceptance."
+  ],
+  "provenance": {
+    "method": "deterministic re-export from preserved built-in image source; no generation",
+    "source": "production/art-source/nastya-motion-source-v4.png",
+    "sourceSha256": "743740ec3745860cea6cd3328ab95817824365e0796eec2626728f33723638a1",
+    "sourceDimensions": [
+      1536,
+      1024
+    ],
+    "alphaThreshold": 160,
+    "scaling": "nearest-neighbor; one80px body scale per measured source row",
+    "recovery": "Original v4 export was removed by workspace maintenance; lost export byte identity cannot be verified."
+  },
+  "mechanicalQA": {
+    "issues": [],
+    "alphaValues": [
+      0,
+      255
+    ],
+    "uniqueFrames": 11,
+    "raw6Excluded": true,
+    "atlasSize": [
+      768,
+      224
+    ],
+    "sourcePreserved": true
+  },
+  "hashes": {
+    "production/art-source/nastya-motion-source-v4.png": "743740ec3745860cea6cd3328ab95817824365e0796eec2626728f33723638a1",
+    "dist/assets/actors/nastya-motion-v4.png": "9d115c86a538467ba1d9c99a14de216707f1f169ca66e899e04a540ae4db94f4",
+    "production/art-review/nastya-motion-v4/all-12-source-unfiltered.png": "743740ec3745860cea6cd3328ab95817824365e0796eec2626728f33723638a1",
+    "production/art-review/nastya-motion-v4/rejected-raw-6-unfiltered.png": "cbd5f3d4f0fa8eafdb20e850b16d134edc95254939a400e2b08799f2b29deb50",
+    "production/art-review/nastya-motion-v4/valid-11-native-x3-sockets.png": "dc7de2fe8ae38524e2510fe0162c6c52545737d3814936024618edca9fa5908f",
+    "production/art-review/nastya-motion-v4/valid-11-native-x3.png": "9e02581509352cfd587beffe44df4b84fc339053199e3404782e2b6e55c8dd0d"
+  }
+}

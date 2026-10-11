@@ -1,4 +1,4 @@
-import {WIDTH,HEIGHT,TOTAL_DURATION,SAVE_KEY,SCENES,CUES,MESSAGES,INTERACTIONS,NASTYA_PHONE_ACTIONS,stateAt,nextBeatEnd,makeSave,loadSave,saveToStorage,clearSave} from './model.js';
+import {WIDTH,HEIGHT,TOTAL_DURATION,SAVE_KEY,SCENES,CUES,MESSAGES,INTERACTIONS,NASTYA_PHONE_ACTIONS,NASTYA_MOTION_ACTIONS,stateAt,nextBeatEnd,makeSave,loadSave,saveToStorage,clearSave} from './model.js';
 
 /** Images are original scene layers and alpha atlases, never a screenshot of a finished scene. */
 export async function loadAssets(manifestURL = new URL('./assets/manifest.json', import.meta.url), imageLoader) {
@@ -38,7 +38,7 @@ export function buildGeometry(manifest) {
     lowerShelf:va.poses.shelfLift||[...va.poses.carry,...(va.poses.shelfPut||va.poses.raisedContact||va.poses.put)],
     phoneReach:[...va.poses.idle,...va.poses.carry,...(va.poses.shelfLift?[11]:va.poses.carry)],
     phoneReturn:va.poses.phoneReturn||[...va.poses.phone,...va.poses.carry,...va.poses.idle]};
-  na.poses={...na.poses,...NASTYA_PHONE_ACTIONS, chalkStep:na.poses.chalkStep||na.poses.chalkPenUp||na.poses.chalkMiddle};
+  na.poses={...na.poses,...NASTYA_PHONE_ACTIONS,...NASTYA_MOTION_ACTIONS, chalkStep:na.poses.chalkStep||na.poses.chalkPenUp||na.poses.chalkMiddle};
   function offset(id,pose,last=false) {const m=geometry.actors[id],frames=m.poses[pose],idx=last?frames.at(-1):frames[0];const s=m.frames[idx]?.hand||m.sockets[String(idx)]?.hand;if(!s)throw new Error('Не описана точка захвата спрайта.');return [s[0]-m.pivot[0],s[1]-m.pivot[1]];}
   function feet(target,id,pose,last=false){const s=offset(id,pose,last);return [target[0]-s[0],target[1]-s[1]];}
   geometry.anchors={source:vs.source,stage:vs.pack,trolley:vs.trolley,shelf:vs.shelf,
@@ -173,6 +173,12 @@ function drawChair(ctx,chair,assets) {
   const left=chair.seat.x-16*width/25,top=chair.y-height;
   imageRect(ctx,im,[0,0,im.width,im.height],left,top,width,height);
 }
+function drawHeldChalk(ctx,world,assets) {
+  if(!world.chalk?.visible)return;
+  const frame=assets.manifest.actors.nastya.frames[world.actor.frame];
+  if(frame?.bakedItem==='chalk'||frame?.bakedItems?.includes('chalk')||assets.manifest.actors.nastya.sockets?.[String(world.actor.frame)]?.bakedItem==='chalk')return;
+  drawSmallProp(ctx,assets,'chalk',world.chalk.x,world.chalk.y);
+}
 export function cameraAt(seconds,side,reducedMotion=false) {
   if(side!=='store'||reducedMotion||seconds<102||seconds>=111)return {zoom:1,x:170,y:260};
   const u=seconds-102,smooth=v=>v*v*(3-2*v),blend=u<1?smooth(u):u>8?smooth(9-u):1;
@@ -228,7 +234,7 @@ export function renderFrame(ctx,state,side,assets,options={}) {
     if(world.actor.pose==='help')layers.push({depth:deskDepth+.2,draw:()=>drawDeskContact(ctx,world,assets)});
     layers.push({depth:world.chair.y-.1,draw:()=>drawChair(ctx,world.chair,assets)});
     for(const p of world.pupils)if(p.visible)layers.push({depth:p.y,draw:()=>drawNpc(ctx,p,assets)});
-    layers.push({depth:world.actor.y,draw:()=>{drawActor(ctx,world.actor,assets);drawPhone(ctx,world.phone,assets,world.actor);}});
+    layers.push({depth:world.actor.y,draw:()=>{drawActor(ctx,world.actor,assets);drawHeldChalk(ctx,world,assets);drawPhone(ctx,world.phone,assets,world.actor);}});
   }
   for(const occ of assets.manifest.occluders?.[side]||[])layers.push({depth:occ.depth,draw:()=>drawOccluder(ctx,{...occ,side},assets)});
   layers.sort((a,b)=>a.depth-b.depth).forEach(layer=>layer.draw());ctx.restore();
@@ -289,12 +295,15 @@ export async function createGame(options) {
   function currentState() {
     const state=stateAt(elapsed,{geometry}),pending=awaitingAction();
     if(pending){
-      const person=state[pending.side].actor,spec=geometry.actors[person.id],frame=spec.poses.idle[0];
+      const person=state[pending.side].actor,spec=geometry.actors[person.id],frame=pending.id==='writeBoard'?NASTYA_MOTION_ACTIONS.chalkRest.frames[0]:spec.poses.idle[0];
       const hand=spec.frames[frame]?.hand||spec.sockets[String(frame)]?.hand,pivot=spec.pivot;
-      person.pose='idle';person.frame=frame;person.animationFrame=0;person.progress=0;
+      person.pose=pending.id==='writeBoard'?'chalkRest':'idle';person.frame=frame;person.animationFrame=0;person.progress=0;
       person.socket=[(hand[0]-pivot[0])*(person.facing==='right'?-1:1),hand[1]-pivot[1]];
       person.hand={x:person.x+person.socket[0],y:person.y+person.socket[1]};
-      if(pending.id==='writeBoard')state.school.board=stateAt(pending.at-1e-6,{geometry}).school.board;
+      if(pending.id==='writeBoard') {
+        state.school.board=stateAt(pending.at-1e-6,{geometry}).school.board;
+        state.school.chalk={...state.school.chalk,x:person.hand.x,y:person.hand.y};
+      }
       if(pending.id==='replyToNastya')state.store.phone={...state.store.phone,owner:'pocket',visible:false,unread:true};
     }
     return state;
@@ -325,7 +334,7 @@ export async function createGame(options) {
       const afterState=currentState();
       const critical=afterState.sceneId!==beforeState.sceneId||afterState.school.board.complete!==beforeState.school.board.complete||afterState.store.bread.owner!==beforeState.store.bread.owner||
         afterState.store.bread.packaged!==beforeState.store.bread.packaged||afterState.store.phone.owner!==beforeState.store.phone.owner||
-        afterState.school.phone.owner!==beforeState.school.phone.owner||
+        afterState.school.phone.owner!==beforeState.school.phone.owner||afterState.school.chalk?.owner!==beforeState.school.chalk?.owner||
         afterState.store.purchase?.owner!==beforeState.store.purchase?.owner||
         afterState.store.purchase?.scanning!==beforeState.store.purchase?.scanning||
         afterState.store.customer.visible!==beforeState.store.customer.visible||

@@ -59,8 +59,18 @@ export const NASTYA_PHONE_ACTIONS = Object.freeze({
   standUp:{frames:[21,22,23],durationsMs:[180,300,220]},
   standNeutral:{frames:[23]},
 });
+export const NASTYA_MOTION_ACTIONS = Object.freeze({
+  walk:{frames:[28,29,30,31]},
+  chalkRaise:{frames:[32,37,34,35,36],durationsMs:[140,200,210,220,130]},
+  chalkLower:{frames:[14,34,37,32],durationsMs:[200,500,600,500]},
+  chalkRest:{frames:[32]},
+});
+export const CHALK_TIMING = Object.freeze({raiseStart:35,writeStart:35.9,writeEnd:46.2,lowerEnd:48,
+  pocketContact:130.65,phoneTake:130.85});
 const nastyaSupplementSockets={16:[1,-24],17:[15,-30],18:[2,-30],19:[2,-38],20:[3,-39],21:[15,-31],
-  22:[-3,-29],23:[-11,-31],24:[-16,-73],25:[-15,-73],26:[-15,-74],27:[-14,-73]};
+  22:[-3,-29],23:[-11,-31],24:[-16,-73],25:[-15,-73],26:[-15,-74],27:[-14,-73],
+  28:[-18,-34],29:[-17,-34],30:[-9,-43],31:[-24,-40],32:[-13,-29],33:[-28,-34],
+  34:[-23,-59],35:[-21,-66],36:[-20,-77],37:[-26,-37],38:[-24,-37]};
 export const DEFAULT_GEOMETRY = Object.freeze({
   anchors:{
     source:[210,157], stage:[219,158], trolley:[178,285], shelf:[104,182],
@@ -110,7 +120,7 @@ function socketFor(id,pose,geometry,frame=0,progress=0) {
   return geometry?.sockets?.[id]?.[pose]||DEFAULT_GEOMETRY.sockets[id][pose]||DEFAULT_GEOMETRY.sockets[id].idle;
 }
 function actor(id,position,pose,time,progress=0,geometry,facing='left',travelled=0) {
-  const poseSpec=geometry?.actors?.[id]?.poses?.[pose]||(id==='nastya'?(NASTYA_PHONE_ACTIONS[pose]||(pose==='chalkStep'?[24,25,26,27]:null)):null);
+  const poseSpec=geometry?.actors?.[id]?.poses?.[pose]||(id==='nastya'?(NASTYA_MOTION_ACTIONS[pose]||NASTYA_PHONE_ACTIONS[pose]||(pose==='chalkStep'?[24,25,26,27]:null)):null);
   const frames=Array.isArray(poseSpec)?poseSpec:poseSpec?.frames;
   const looping=['idle','walk','carryWalk','busy','phone','sit'].includes(pose);
   const moving=['walk','carryWalk','chalkStep'].includes(pose);
@@ -149,7 +159,7 @@ function chalkPoint(point,glyph) {
   return [x,y];
 }
 export function chalkAt(seconds) {
-  const p=clamp((seconds-35)/11.5);let distance=p*totalChalkLength;const segments=[];let contact=null,penDown=false,footX=226,movingBetweenGlyphs=false;
+  const p=clamp((seconds-CHALK_TIMING.writeStart)/(CHALK_TIMING.writeEnd-CHALK_TIMING.writeStart));let distance=p*totalChalkLength;const segments=[];let contact=null,penDown=false,footX=226,movingBetweenGlyphs=false;
   for(const step of chalkSteps) {
     const amount=clamp(distance/step.length);
     if(amount>0) {const end=chalkPoint(lerpPoint(step.a,step.b,amount),step.glyph);
@@ -158,7 +168,7 @@ export function chalkAt(seconds) {
       footX=226+17*(step.draw?step.glyph:mix(step.previousGlyph,step.glyph,amount));}
     if(distance<step.length)break;distance-=step.length;
   }
-  if(seconds<35||seconds>=46.5){contact=null;penDown=false;}
+  if(seconds<CHALK_TIMING.writeStart||seconds>=CHALK_TIMING.writeEnd){contact=null;penDown=false;}
   return {equation:'7 + 5 = 12',text:'7 + 5 = 12',segments,progress:p,complete:p>=1,contact:contact?{x:contact[0],y:contact[1]}:null,
     penDown,movingBetweenGlyphs,stationaryPenUp:!!contact&&!penDown&&!movingBetweenGlyphs,footX};
 }
@@ -274,11 +284,15 @@ function schoolAt(t,geometry) {
   const chalkBase=a.chalkFootBase??226,chalkEnd=[chalkBase+85,197];
   if(t>=10&&t<30) {pos=move(t,10,30,[a.teacherInitial,[289,272],[338,254],a.boardFeet]);pose='walk';}
   else if(t>=30&&t<35) {pos=move(t,30,35,[a.boardFeet,[chalkBase,197]]);pose='walk';}
-  else if(t>=35&&t<46.5) {
+  else if(t>=CHALK_TIMING.raiseStart&&t<CHALK_TIMING.writeStart) {
+    pos=[chalkBase,197];pose='chalkRaise';p=(t-CHALK_TIMING.raiseStart)/(CHALK_TIMING.writeStart-CHALK_TIMING.raiseStart);
+  }
+  else if(t>=CHALK_TIMING.writeStart&&t<CHALK_TIMING.writeEnd) {
     const chalk=chalkAt(t),c=chalk.contact||{x:194,y:115};
     // Stationary lifts keep the authored high/middle/low arm. Only travel between glyphs steps.
-    pos=[chalk.footX+chalkBase-226,197];pose=chalk.movingBetweenGlyphs?'chalkStep':(c.y===115?'chalkHigh':c.y===122?'chalkMiddle':'chalkLow');p=(t-35)/11.5;travelled=pos[0]-chalkBase;
-  } else if(t>=46.5&&t<61) {pos=chalkEnd;pose='idle';}
+    pos=[chalk.footX+chalkBase-226,197];pose=chalk.movingBetweenGlyphs?'chalkStep':(c.y===115?'chalkHigh':c.y===122?'chalkMiddle':'chalkLow');p=(t-CHALK_TIMING.writeStart)/(CHALK_TIMING.writeEnd-CHALK_TIMING.writeStart);travelled=pos[0]-chalkBase;
+  } else if(t>=CHALK_TIMING.writeEnd&&t<CHALK_TIMING.lowerEnd) {pos=chalkEnd;pose='chalkLower';p=(t-CHALK_TIMING.writeEnd)/(CHALK_TIMING.lowerEnd-CHALK_TIMING.writeEnd);}
+  else if(t>=CHALK_TIMING.lowerEnd&&t<61) {pos=chalkEnd;pose='chalkRest';}
   else if(t>=61&&t<69) {pos=move(t,61,69,[chalkEnd,[330,285],[164,295],a.helpFeet]);pose='walk';}
   else if(t>=69&&t<79) {pos=a.helpFeet;pose='help';p=(t-69)/10;}
   else if(t>=79&&t<102) {pos=a.helpFeet;pose='idle';}
@@ -306,9 +320,11 @@ function schoolAt(t,geometry) {
     person.contact=board.contact;person.chalkHeight=clamp(Math.round((128-board.contact.y)/7.5),0,2);
   }
   // The last pupil leaves at 130.65. Ownership changes at an actual pocket-contact pose.
-  const phoneActive=t>=130.65&&t<178.66;
+  const phoneActive=t>=CHALK_TIMING.phoneTake&&t<178.66;
+  const chalkHeld=t<CHALK_TIMING.pocketContact;
   const pupils=pupilsAt(t);
   return {actor:person,board,pupils,lessonActive:t<124,
+    chalk:{id:'chalk-01',owner:chalkHeld?'hand':'pocket',visible:chalkHeld,x:person.hand.x,y:person.hand.y},
     phone:{owner:phoneActive?'hand':'pocket',visible:phoneActive,x:person.hand.x,y:person.hand.y},
     chair:{visible:true,x:a.teacherPhoneFeet[0],y:a.teacherPhoneFeet[1],seat:{x:a.teacherPhoneFeet[0]+19,y:a.teacherPhoneFeet[1]-24}},
     notebook:{x:a.notebook[0],y:a.notebook[1],progress:clamp((t-71)/7),helping:t>=71&&t<79},

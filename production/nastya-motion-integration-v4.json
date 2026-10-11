@@ -1,0 +1,121 @@
+{
+  "baselineManifest": "production/art-contract-interactive-v3.json",
+  "legacyAtlas": {
+    "path": "assets/actors/nastya-work-v3.png",
+    "sha256": "e38f515c76fe7084ceeb5033248bbc02cc1c4ccfc1bb0a62e2c152391b017439",
+    "preservedCells": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ]
+  },
+  "motionAtlas": {
+    "path": "assets/actors/nastya-motion-v4.png",
+    "sha256": "9d115c86a538467ba1d9c99a14de216707f1f169ca66e899e04a540ae4db94f4",
+    "appendedCells": [
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ]
+  },
+  "output": {
+    "path": "assets/actors/nastya-work-v4.png",
+    "sha256": "3b1c56edf3abdf3941ccb055641a8fb549a397811c7150b828ec6eb86e882b6c"
+  },
+  "preservedNpcs": [
+    "pupilBoy",
+    "pupilGirl",
+    "shopper"
+  ],
+  "sourceImage": "production/art-source/nastya-motion-source-v4.png",
+  "runtimeSequences": {
+    "walk": {
+      "frames": [
+        28,
+        29,
+        30,
+        31
+      ]
+    },
+    "chalkRaise": {
+      "frames": [
+        32,
+        37,
+        34,
+        35,
+        36
+      ],
+      "durationsMs": [
+        140,
+        200,
+        210,
+        220,
+        130
+      ]
+    },
+    "chalkLower": {
+      "frames": [
+        14,
+        34,
+        37,
+        32
+      ],
+      "durationsMs": [
+        200,
+        500,
+        600,
+        500
+      ]
+    },
+    "chalkRest": {
+      "frames": [
+        32
+      ]
+    },
+    "chalkStep": [
+      24,
+      25,
+      26,
+      27
+    ]
+  },
+  "unusedAuthoredCells": [
+    33,
+    38
+  ],
+  "rejectedSourcePose": 6,
+  "knownOpenDefect": "Legacy raised-chalk gait24–27 still has ambiguous opposing support legs."
+}

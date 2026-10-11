@@ -1,0 +1,3929 @@
+{
+  "version": "art-contract-v3-nastya-phone-and-pen-up",
+  "status": "prototype-exported; independent live motion review and user art approval pending",
+  "logicalSize": [
+    480,
+    360
+  ],
+  "pixelSampling": "nearest-neighbor",
+  "backgrounds": {
+    "store": {
+      "image": "assets/store-bg-v1.png",
+      "width": 480,
+      "height": 360
+    },
+    "school": {
+      "image": "assets/school-bg-v1.png",
+      "width": 480,
+      "height": 360
+    }
+  },
+  "actors": {
+    "vova": {
+      "image": "assets/actors/vova-work-v2.png",
+      "frameWidth": 96,
+      "frameHeight": 112,
+      "columns": 8,
+      "rows": 3,
+      "frameCount": 24,
+      "pivot": [
+        48,
+        100
+      ],
+      "poses": {
+        "idle": [
+          0
+        ],
+        "walk": [
+          16,
+          17,
+          18,
+          19
+        ],
+        "reach": [
+          6
+        ],
+        "contact": [
+          6
+        ],
+        "carry": [
+          5
+        ],
+        "pack": [
+          6
+        ],
+        "put": [
+          6
+        ],
+        "phone": [
+          7
+        ],
+        "walkA": [
+          1
+        ],
+        "walkB": [
+          2
+        ],
+        "raisedReach": [
+          3
+        ],
+        "raisedContact": [
+          4
+        ],
+        "packA": [
+          8
+        ],
+        "liftA": [
+          9
+        ],
+        "carryB": [
+          10
+        ],
+        "shelfLift": [
+          5,
+          11,
+          3,
+          4
+        ],
+        "cartBendA": [
+          12
+        ],
+        "cartContact": [
+          13
+        ],
+        "cartLiftA": [
+          14
+        ],
+        "cartLiftB": [
+          15
+        ],
+        "walkContactNear": [
+          16
+        ],
+        "walkPassingNear": [
+          17
+        ],
+        "walkContactFar": [
+          18
+        ],
+        "walkPassingFar": [
+          19
+        ],
+        "carryWalk0": [
+          20
+        ],
+        "carryWalk1": [
+          21
+        ],
+        "carryWalk2": [
+          22
+        ],
+        "carryWalk3": [
+          23
+        ],
+        "carryWalk": [
+          20,
+          21,
+          22,
+          23
+        ],
+        "cartReach": [
+          12,
+          13
+        ],
+        "cartGrab": [
+          13
+        ],
+        "cartLift": [
+          13,
+          14,
+          15,
+          10,
+          5
+        ],
+        "packingHands": [
+          6,
+          8,
+          9
+        ],
+        "phoneReach": [
+          11,
+          7
+        ],
+        "phoneReturn": [
+          7,
+          11,
+          5,
+          0
+        ]
+      },
+      "sockets": {
+        "0": {
+          "hand": [
+            39,
+            72
+          ],
+          "handOffset": [
+            -9,
+            -28
+          ]
+        },
+        "1": {
+          "hand": [
+            30,
+            65
+          ],
+          "handOffset": [
+            -18,
+            -35
+          ]
+        },
+        "2": {
+          "hand": [
+            35,
+            67
+          ],
+          "handOffset": [
+            -13,
+            -33
+          ]
+        },
+        "3": {
+          "hand": [
+            21,
+            25
+          ],
+          "handOffset": [
+            -27,
+            -75
+          ]
+        },
+        "4": {
+          "hand": [
+            23,
+            23
+          ],
+          "handOffset": [
+            -25,
+            -77
+          ]
+        },
+        "5": {
+          "hand": [
+            38,
+            56
+          ],
+          "handOffset": [
+            -10,
+            -44
+          ]
+        },
+        "6": {
+          "hand": [
+            28,
+            54
+          ],
+          "handOffset": [
+            -20,
+            -46
+          ]
+        },
+        "7": {
+          "hand": [
+            39,
+            50
+          ],
+          "handOffset": [
+            -9,
+            -50
+          ],
+          "bakedItem": "phone"
+        },
+        "8": {
+          "hand": [
+            29,
+            69
+          ],
+          "handOffset": [
+            -19,
+            -31
+          ]
+        },
+        "9": {
+          "hand": [
+            36,
+            68
+          ],
+          "handOffset": [
+            -12,
+            -32
+          ]
+        },
+        "10": {
+          "hand": [
+            37,
+            64
+          ],
+          "handOffset": [
+            -11,
+            -36
+          ]
+        },
+        "11": {
+          "hand": [
+            34,
+            52
+          ],
+          "handOffset": [
+            -14,
+            -48
+          ]
+        },
+        "12": {
+          "hand": [
+            29,
+            76
+          ],
+          "handOffset": [
+            -19,
+            -24
+          ]
+        },
+        "13": {
+          "hand": [
+            27,
+            91
+          ],
+          "handOffset": [
+            -21,
+            -9
+          ]
+        },
+        "14": {
+          "hand": [
+            34,
+            78
+          ],
+          "handOffset": [
+            -14,
+            -22
+          ]
+        },
+        "15": {
+          "hand": [
+            36,
+            67
+          ],
+          "handOffset": [
+            -12,
+            -33
+          ]
+        },
+        "16": {
+          "hand": [
+            32,
+            65
+          ],
+          "handOffset": [
+            -16,
+            -35
+          ]
+        },
+        "17": {
+          "hand": [
+            35,
+            64
+          ],
+          "handOffset": [
+            -13,
+            -36
+          ]
+        },
+        "18": {
+          "hand": [
+            31,
+            64
+          ],
+          "handOffset": [
+            -17,
+            -36
+          ]
+        },
+        "19": {
+          "hand": [
+            31,
+            65
+          ],
+          "handOffset": [
+            -17,
+            -35
+          ]
+        },
+        "20": {
+          "hand": [
+            36,
+            58
+          ],
+          "handOffset": [
+            -12,
+            -42
+          ]
+        },
+        "21": {
+          "hand": [
+            36,
+            59
+          ],
+          "handOffset": [
+            -12,
+            -41
+          ]
+        },
+        "22": {
+          "hand": [
+            37,
+            59
+          ],
+          "handOffset": [
+            -11,
+            -41
+          ]
+        },
+        "23": {
+          "hand": [
+            34,
+            58
+          ],
+          "handOffset": [
+            -14,
+            -42
+          ]
+        }
+      },
+      "frames": [
+        {
+          "index": 0,
+          "name": "idle",
+          "source": "vova",
+          "sourceCell": [
+            0,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            201,
+            500
+          ],
+          "sourceHand": [
+            149,
+            330
+          ],
+          "scale": 0.166667,
+          "bounds": [
+            36,
+            20,
+            63,
+            101
+          ],
+          "hand": [
+            39,
+            72
+          ],
+          "handOffset": [
+            -9,
+            -28
+          ]
+        },
+        {
+          "index": 1,
+          "name": "walkA",
+          "source": "vova",
+          "sourceCell": [
+            384,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            565,
+            499
+          ],
+          "sourceHand": [
+            460,
+            297
+          ],
+          "scale": 0.175055,
+          "bounds": [
+            27,
+            19,
+            68,
+            100
+          ],
+          "hand": [
+            30,
+            65
+          ],
+          "handOffset": [
+            -18,
+            -35
+          ]
+        },
+        {
+          "index": 2,
+          "name": "walkB",
+          "source": "vova",
+          "sourceCell": [
+            768,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            955,
+            499
+          ],
+          "sourceHand": [
+            878,
+            309
+          ],
+          "scale": 0.173913,
+          "bounds": [
+            27,
+            19,
+            68,
+            98
+          ],
+          "hand": [
+            35,
+            67
+          ],
+          "handOffset": [
+            -13,
+            -33
+          ]
+        },
+        {
+          "index": 3,
+          "name": "raisedReach",
+          "source": "vova",
+          "sourceCell": [
+            1152,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            1358,
+            500
+          ],
+          "sourceHand": [
+            1206,
+            77
+          ],
+          "scale": 0.176991,
+          "bounds": [
+            19,
+            20,
+            66,
+            101
+          ],
+          "hand": [
+            21,
+            25
+          ],
+          "handOffset": [
+            -27,
+            -75
+          ]
+        },
+        {
+          "index": 4,
+          "name": "raisedContact",
+          "source": "vova",
+          "sourceCell": [
+            0,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            236,
+            994
+          ],
+          "sourceHand": [
+            95,
+            555
+          ],
+          "scale": 0.175439,
+          "bounds": [
+            19,
+            19,
+            66,
+            100
+          ],
+          "hand": [
+            23,
+            23
+          ],
+          "handOffset": [
+            -25,
+            -77
+          ]
+        },
+        {
+          "index": 5,
+          "name": "carry",
+          "source": "vova",
+          "sourceCell": [
+            384,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            590,
+            994
+          ],
+          "sourceHand": [
+            532,
+            746
+          ],
+          "scale": 0.1766,
+          "bounds": [
+            32,
+            18,
+            65,
+            99
+          ],
+          "hand": [
+            38,
+            56
+          ],
+          "handOffset": [
+            -10,
+            -44
+          ]
+        },
+        {
+          "index": 6,
+          "name": "pack",
+          "source": "vova",
+          "sourceCell": [
+            768,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            980,
+            991
+          ],
+          "sourceHand": [
+            874,
+            744
+          ],
+          "scale": 0.184332,
+          "bounds": [
+            24,
+            17,
+            66,
+            100
+          ],
+          "hand": [
+            28,
+            54
+          ],
+          "handOffset": [
+            -20,
+            -46
+          ]
+        },
+        {
+          "index": 7,
+          "name": "phone",
+          "source": "vova",
+          "sourceCell": [
+            1152,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            1354,
+            992
+          ],
+          "sourceHand": [
+            1306,
+            710
+          ],
+          "scale": 0.177778,
+          "bounds": [
+            32,
+            18,
+            61,
+            100
+          ],
+          "hand": [
+            39,
+            50
+          ],
+          "handOffset": [
+            -9,
+            -50
+          ]
+        },
+        {
+          "index": 8,
+          "name": "packA",
+          "source": "vovaActing",
+          "sourceCell": [
+            0,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            234,
+            509
+          ],
+          "sourceHand": [
+            119,
+            323
+          ],
+          "scale": 0.166667,
+          "bounds": [
+            24,
+            23,
+            66,
+            100
+          ],
+          "hand": [
+            29,
+            69
+          ],
+          "handOffset": [
+            -19,
+            -31
+          ]
+        },
+        {
+          "index": 9,
+          "name": "liftA",
+          "source": "vovaActing",
+          "sourceCell": [
+            384,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            605,
+            509
+          ],
+          "sourceHand": [
+            531,
+            318
+          ],
+          "scale": 0.166667,
+          "bounds": [
+            27,
+            24,
+            66,
+            100
+          ],
+          "hand": [
+            36,
+            68
+          ],
+          "handOffset": [
+            -12,
+            -32
+          ]
+        },
+        {
+          "index": 10,
+          "name": "carryB",
+          "source": "vovaActing",
+          "sourceCell": [
+            768,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            961,
+            510
+          ],
+          "sourceHand": [
+            894,
+            296
+          ],
+          "scale": 0.166667,
+          "bounds": [
+            31,
+            20,
+            64,
+            101
+          ],
+          "hand": [
+            37,
+            64
+          ],
+          "handOffset": [
+            -11,
+            -36
+          ]
+        },
+        {
+          "index": 11,
+          "name": "shelfLift",
+          "source": "vovaActing",
+          "sourceCell": [
+            1152,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            1327,
+            509
+          ],
+          "sourceHand": [
+            1244,
+            224
+          ],
+          "scale": 0.166667,
+          "bounds": [
+            30,
+            20,
+            64,
+            100
+          ],
+          "hand": [
+            34,
+            52
+          ],
+          "handOffset": [
+            -14,
+            -48
+          ]
+        },
+        {
+          "index": 12,
+          "name": "cartBendA",
+          "source": "vovaActing",
+          "sourceCell": [
+            0,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            238,
+            980
+          ],
+          "sourceHand": [
+            125,
+            839
+          ],
+          "scale": 0.166667,
+          "bounds": [
+            24,
+            32,
+            66,
+            101
+          ],
+          "hand": [
+            29,
+            76
+          ],
+          "handOffset": [
+            -19,
+            -24
+          ]
+        },
+        {
+          "index": 13,
+          "name": "cartContact",
+          "source": "vovaActing",
+          "sourceCell": [
+            384,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            625,
+            978
+          ],
+          "sourceHand": [
+            499,
+            926
+          ],
+          "scale": 0.166667,
+          "bounds": [
+            22,
+            45,
+            68,
+            100
+          ],
+          "hand": [
+            27,
+            91
+          ],
+          "handOffset": [
+            -21,
+            -9
+          ]
+        },
+        {
+          "index": 14,
+          "name": "cartLiftA",
+          "source": "vovaActing",
+          "sourceCell": [
+            768,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            973,
+            980
+          ],
+          "sourceHand": [
+            890,
+            848
+          ],
+          "scale": 0.166667,
+          "bounds": [
+            29,
+            33,
+            69,
+            101
+          ],
+          "hand": [
+            34,
+            78
+          ],
+          "handOffset": [
+            -14,
+            -22
+          ]
+        },
+        {
+          "index": 15,
+          "name": "cartLiftB",
+          "source": "vovaActing",
+          "sourceCell": [
+            1152,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            1350,
+            980
+          ],
+          "sourceHand": [
+            1275,
+            784
+          ],
+          "scale": 0.166667,
+          "bounds": [
+            30,
+            24,
+            63,
+            101
+          ],
+          "hand": [
+            36,
+            67
+          ],
+          "handOffset": [
+            -12,
+            -33
+          ]
+        },
+        {
+          "index": 16,
+          "name": "walkContactNear",
+          "source": "walkCorrected",
+          "sourceCell": [
+            0,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            213,
+            496
+          ],
+          "sourceHand": [
+            120,
+            291
+          ],
+          "scale": 0.169851,
+          "bounds": [
+            27,
+            20,
+            71,
+            100
+          ],
+          "hand": [
+            32,
+            65
+          ],
+          "handOffset": [
+            -16,
+            -35
+          ]
+        },
+        {
+          "index": 17,
+          "name": "walkPassingNear",
+          "source": "walkCorrected",
+          "sourceCell": [
+            384,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            568,
+            496
+          ],
+          "sourceHand": [
+            492,
+            284
+          ],
+          "scale": 0.170213,
+          "bounds": [
+            30,
+            20,
+            68,
+            100
+          ],
+          "hand": [
+            35,
+            64
+          ],
+          "handOffset": [
+            -13,
+            -36
+          ]
+        },
+        {
+          "index": 18,
+          "name": "walkContactFar",
+          "source": "walkCorrected",
+          "sourceCell": [
+            768,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            948,
+            495
+          ],
+          "sourceHand": [
+            848,
+            286
+          ],
+          "scale": 0.170213,
+          "bounds": [
+            24,
+            20,
+            71,
+            100
+          ],
+          "hand": [
+            31,
+            64
+          ],
+          "handOffset": [
+            -17,
+            -36
+          ]
+        },
+        {
+          "index": 19,
+          "name": "walkPassingFar",
+          "source": "walkCorrected",
+          "sourceCell": [
+            1152,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            1341,
+            492
+          ],
+          "sourceHand": [
+            1240,
+            288
+          ],
+          "scale": 0.171306,
+          "bounds": [
+            26,
+            20,
+            68,
+            100
+          ],
+          "hand": [
+            31,
+            65
+          ],
+          "handOffset": [
+            -17,
+            -35
+          ]
+        },
+        {
+          "index": 20,
+          "name": "carryWalk0",
+          "source": "chalkCarry",
+          "sourceCell": [
+            0,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            217,
+            990
+          ],
+          "sourceHand": [
+            144,
+            745
+          ],
+          "scale": 0.169492,
+          "bounds": [
+            25,
+            19,
+            70,
+            101
+          ],
+          "hand": [
+            36,
+            58
+          ],
+          "handOffset": [
+            -12,
+            -42
+          ]
+        },
+        {
+          "index": 21,
+          "name": "carryWalk1",
+          "source": "chalkCarry",
+          "sourceCell": [
+            384,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            590,
+            990
+          ],
+          "sourceHand": [
+            520,
+            745
+          ],
+          "scale": 0.168421,
+          "bounds": [
+            31,
+            19,
+            64,
+            100
+          ],
+          "hand": [
+            36,
+            59
+          ],
+          "handOffset": [
+            -12,
+            -41
+          ]
+        },
+        {
+          "index": 22,
+          "name": "carryWalk2",
+          "source": "chalkCarry",
+          "sourceCell": [
+            768,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            952,
+            990
+          ],
+          "sourceHand": [
+            889,
+            749
+          ],
+          "scale": 0.169492,
+          "bounds": [
+            24,
+            19,
+            71,
+            101
+          ],
+          "hand": [
+            37,
+            59
+          ],
+          "handOffset": [
+            -11,
+            -41
+          ]
+        },
+        {
+          "index": 23,
+          "name": "carryWalk3",
+          "source": "chalkCarry",
+          "sourceCell": [
+            1152,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            1365,
+            990
+          ],
+          "sourceHand": [
+            1279,
+            743
+          ],
+          "scale": 0.168421,
+          "bounds": [
+            28,
+            19,
+            60,
+            100
+          ],
+          "hand": [
+            34,
+            58
+          ],
+          "handOffset": [
+            -14,
+            -42
+          ]
+        }
+      ],
+      "facing": "left or three-quarter left",
+      "status": "exported-alpha-clean; pose craft pending full runtime critic"
+    },
+    "nastya": {
+      "image": "assets/actors/nastya-work-v3.png",
+      "frameWidth": 96,
+      "frameHeight": 112,
+      "columns": 8,
+      "rows": 4,
+      "frameCount": 28,
+      "pivot": [
+        48,
+        100
+      ],
+      "poses": {
+        "idle": [
+          0
+        ],
+        "walk": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "reach": [
+          3
+        ],
+        "chalk": [
+          12,
+          13,
+          14
+        ],
+        "point": [
+          5
+        ],
+        "help": [
+          6
+        ],
+        "deskLean": [
+          6
+        ],
+        "phone": [
+          7
+        ],
+        "walkA": [
+          1
+        ],
+        "walkB": [
+          2
+        ],
+        "boardReach": [
+          3
+        ],
+        "walkContactNear": [
+          8
+        ],
+        "walkPassingNear": [
+          9
+        ],
+        "walkContactFar": [
+          10
+        ],
+        "walkPassingFar": [
+          11
+        ],
+        "chalkHigh": [
+          12
+        ],
+        "chalkMiddle": [
+          13
+        ],
+        "chalkLow": [
+          14
+        ],
+        "chalkLowest": [
+          15
+        ],
+        "chalkLevels": [
+          12,
+          13,
+          14,
+          15
+        ],
+        "phoneReach": [
+          6,
+          7
+        ],
+        "phoneReturn": [
+          7,
+          6,
+          0
+        ],
+        "sitDown": [
+          23,
+          22,
+          16
+        ],
+        "pocketTake": [
+          17,
+          18,
+          19
+        ],
+        "phoneHold": [
+          19
+        ],
+        "phoneType": [
+          19,
+          20,
+          19
+        ],
+        "pocketPut": [
+          19,
+          18,
+          21
+        ],
+        "standUp": [
+          21,
+          22,
+          23
+        ],
+        "sitSettle": [
+          16
+        ],
+        "pocketContact": [
+          17
+        ],
+        "phoneLow": [
+          18
+        ],
+        "pocketReturn": [
+          21
+        ],
+        "halfRise": [
+          22
+        ],
+        "standNeutral": [
+          23
+        ],
+        "chalkStep": [
+          24,
+          25,
+          26,
+          27
+        ],
+        "chalkPenUp": [
+          24,
+          25,
+          26,
+          27
+        ],
+        "chalkPenUpStep": [
+          24,
+          25,
+          26,
+          27
+        ],
+        "chalkStep0": [
+          24
+        ],
+        "chalkStep1": [
+          25
+        ],
+        "chalkStep2": [
+          26
+        ],
+        "chalkStep3": [
+          27
+        ]
+      },
+      "sockets": {
+        "0": {
+          "hand": [
+            37,
+            69
+          ],
+          "handOffset": [
+            -11,
+            -31
+          ]
+        },
+        "1": {
+          "hand": [
+            30,
+            63
+          ],
+          "handOffset": [
+            -18,
+            -37
+          ]
+        },
+        "2": {
+          "hand": [
+            29,
+            65
+          ],
+          "handOffset": [
+            -19,
+            -35
+          ]
+        },
+        "3": {
+          "hand": [
+            21,
+            24
+          ],
+          "handOffset": [
+            -27,
+            -76
+          ],
+          "bakedItem": "chalk"
+        },
+        "4": {
+          "hand": [
+            19,
+            22
+          ],
+          "handOffset": [
+            -29,
+            -78
+          ],
+          "bakedItem": "chalk"
+        },
+        "5": {
+          "hand": [
+            16,
+            23
+          ],
+          "handOffset": [
+            -32,
+            -77
+          ]
+        },
+        "6": {
+          "hand": [
+            10,
+            56
+          ],
+          "handOffset": [
+            -38,
+            -44
+          ]
+        },
+        "7": {
+          "hand": [
+            46,
+            58
+          ],
+          "handOffset": [
+            -2,
+            -42
+          ]
+        },
+        "8": {
+          "hand": [
+            30,
+            64
+          ],
+          "handOffset": [
+            -18,
+            -36
+          ]
+        },
+        "9": {
+          "hand": [
+            38,
+            59
+          ],
+          "handOffset": [
+            -10,
+            -41
+          ]
+        },
+        "10": {
+          "hand": [
+            28,
+            64
+          ],
+          "handOffset": [
+            -20,
+            -36
+          ]
+        },
+        "11": {
+          "hand": [
+            35,
+            59
+          ],
+          "handOffset": [
+            -13,
+            -41
+          ]
+        },
+        "12": {
+          "hand": [
+            26,
+            18
+          ],
+          "handOffset": [
+            -22,
+            -82
+          ],
+          "bakedItem": "chalk",
+          "socketKind": "chalk-tip"
+        },
+        "13": {
+          "hand": [
+            26,
+            25
+          ],
+          "handOffset": [
+            -22,
+            -75
+          ],
+          "bakedItem": "chalk",
+          "socketKind": "chalk-tip"
+        },
+        "14": {
+          "hand": [
+            23,
+            34
+          ],
+          "handOffset": [
+            -25,
+            -66
+          ],
+          "bakedItem": "chalk",
+          "socketKind": "chalk-tip"
+        },
+        "15": {
+          "hand": [
+            23,
+            39
+          ],
+          "handOffset": [
+            -25,
+            -61
+          ],
+          "bakedItem": "chalk",
+          "socketKind": "chalk-tip"
+        },
+        "16": {
+          "hand": [
+            49,
+            76
+          ],
+          "handOffset": [
+            1,
+            -24
+          ],
+          "bakedItem": null
+        },
+        "17": {
+          "hand": [
+            63,
+            70
+          ],
+          "handOffset": [
+            15,
+            -30
+          ],
+          "bakedItem": null
+        },
+        "18": {
+          "hand": [
+            50,
+            70
+          ],
+          "handOffset": [
+            2,
+            -30
+          ],
+          "bakedItem": null
+        },
+        "19": {
+          "hand": [
+            50,
+            62
+          ],
+          "handOffset": [
+            2,
+            -38
+          ],
+          "bakedItem": null
+        },
+        "20": {
+          "hand": [
+            51,
+            61
+          ],
+          "handOffset": [
+            3,
+            -39
+          ],
+          "bakedItem": null
+        },
+        "21": {
+          "hand": [
+            63,
+            69
+          ],
+          "handOffset": [
+            15,
+            -31
+          ],
+          "bakedItem": null
+        },
+        "22": {
+          "hand": [
+            45,
+            71
+          ],
+          "handOffset": [
+            -3,
+            -29
+          ],
+          "bakedItem": null
+        },
+        "23": {
+          "hand": [
+            37,
+            69
+          ],
+          "handOffset": [
+            -11,
+            -31
+          ],
+          "bakedItem": null
+        },
+        "24": {
+          "hand": [
+            32,
+            27
+          ],
+          "handOffset": [
+            -16,
+            -73
+          ],
+          "socketKind": "raised-hand-grip",
+          "chalkTip": [
+            28,
+            25
+          ],
+          "chalkTipOffset": [
+            -20,
+            -75
+          ],
+          "bakedItem": "chalk",
+          "heightGroup": "middle"
+        },
+        "25": {
+          "hand": [
+            33,
+            27
+          ],
+          "handOffset": [
+            -15,
+            -73
+          ],
+          "socketKind": "raised-hand-grip",
+          "chalkTip": [
+            29,
+            25
+          ],
+          "chalkTipOffset": [
+            -19,
+            -75
+          ],
+          "bakedItem": "chalk",
+          "heightGroup": "middle"
+        },
+        "26": {
+          "hand": [
+            33,
+            26
+          ],
+          "handOffset": [
+            -15,
+            -74
+          ],
+          "socketKind": "raised-hand-grip",
+          "chalkTip": [
+            30,
+            24
+          ],
+          "chalkTipOffset": [
+            -18,
+            -76
+          ],
+          "bakedItem": "chalk",
+          "heightGroup": "middle"
+        },
+        "27": {
+          "hand": [
+            34,
+            27
+          ],
+          "handOffset": [
+            -14,
+            -73
+          ],
+          "socketKind": "raised-hand-grip",
+          "chalkTip": [
+            30,
+            25
+          ],
+          "chalkTipOffset": [
+            -18,
+            -75
+          ],
+          "bakedItem": "chalk",
+          "heightGroup": "middle"
+        }
+      },
+      "frames": [
+        {
+          "index": 0,
+          "name": "idle",
+          "source": "nastya",
+          "sourceCell": [
+            0,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            188,
+            499
+          ],
+          "sourceHand": [
+            123,
+            308
+          ],
+          "scale": 0.164271,
+          "bounds": [
+            35,
+            20,
+            66,
+            100
+          ],
+          "hand": [
+            37,
+            69
+          ],
+          "handOffset": [
+            -11,
+            -31
+          ]
+        },
+        {
+          "index": 1,
+          "name": "walkA",
+          "source": "nastya",
+          "sourceCell": [
+            384,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            556,
+            500
+          ],
+          "sourceHand": [
+            446,
+            275
+          ],
+          "scale": 0.163934,
+          "bounds": [
+            28,
+            20,
+            68,
+            99
+          ],
+          "hand": [
+            30,
+            63
+          ],
+          "handOffset": [
+            -18,
+            -37
+          ]
+        },
+        {
+          "index": 2,
+          "name": "walkB",
+          "source": "nastya",
+          "sourceCell": [
+            768,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            946,
+            500
+          ],
+          "sourceHand": [
+            828,
+            288
+          ],
+          "scale": 0.164609,
+          "bounds": [
+            27,
+            20,
+            67,
+            100
+          ],
+          "hand": [
+            29,
+            65
+          ],
+          "handOffset": [
+            -19,
+            -35
+          ]
+        },
+        {
+          "index": 3,
+          "name": "boardReach",
+          "source": "nastya",
+          "sourceCell": [
+            1152,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            1356,
+            500
+          ],
+          "sourceHand": [
+            1194,
+            39
+          ],
+          "scale": 0.165631,
+          "bounds": [
+            18,
+            19,
+            64,
+            100
+          ],
+          "hand": [
+            21,
+            24
+          ],
+          "handOffset": [
+            -27,
+            -76
+          ]
+        },
+        {
+          "index": 4,
+          "name": "chalk",
+          "source": "nastya",
+          "sourceCell": [
+            0,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            241,
+            1006
+          ],
+          "sourceHand": [
+            66,
+            535
+          ],
+          "scale": 0.16632,
+          "bounds": [
+            17,
+            19,
+            63,
+            100
+          ],
+          "hand": [
+            19,
+            22
+          ],
+          "handOffset": [
+            -29,
+            -78
+          ]
+        },
+        {
+          "index": 5,
+          "name": "point",
+          "source": "nastya",
+          "sourceCell": [
+            384,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            626,
+            1008
+          ],
+          "sourceHand": [
+            435,
+            541
+          ],
+          "scale": 0.165631,
+          "bounds": [
+            15,
+            19,
+            65,
+            99
+          ],
+          "hand": [
+            16,
+            23
+          ],
+          "handOffset": [
+            -32,
+            -77
+          ]
+        },
+        {
+          "index": 6,
+          "name": "deskLean",
+          "source": "nastya",
+          "sourceCell": [
+            768,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            999,
+            1006
+          ],
+          "sourceHand": [
+            777,
+            752
+          ],
+          "scale": 0.171674,
+          "bounds": [
+            8,
+            20,
+            63,
+            100
+          ],
+          "hand": [
+            10,
+            56
+          ],
+          "handOffset": [
+            -38,
+            -44
+          ]
+        },
+        {
+          "index": 7,
+          "name": "phone",
+          "source": "nastya",
+          "sourceCell": [
+            1152,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            1295,
+            1005
+          ],
+          "sourceHand": [
+            1283,
+            752
+          ],
+          "scale": 0.164271,
+          "bounds": [
+            35,
+            28,
+            76,
+            100
+          ],
+          "hand": [
+            46,
+            58
+          ],
+          "handOffset": [
+            -2,
+            -42
+          ]
+        },
+        {
+          "index": 8,
+          "name": "walkContactNear",
+          "source": "walkCorrected",
+          "sourceCell": [
+            0,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            207,
+            979
+          ],
+          "sourceHand": [
+            106,
+            775
+          ],
+          "scale": 0.174292,
+          "bounds": [
+            23,
+            19,
+            74,
+            102
+          ],
+          "hand": [
+            30,
+            64
+          ],
+          "handOffset": [
+            -18,
+            -36
+          ]
+        },
+        {
+          "index": 9,
+          "name": "walkPassingNear",
+          "source": "walkCorrected",
+          "sourceCell": [
+            384,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            558,
+            989
+          ],
+          "sourceHand": [
+            500,
+            747
+          ],
+          "scale": 0.170576,
+          "bounds": [
+            34,
+            19,
+            78,
+            101
+          ],
+          "hand": [
+            38,
+            59
+          ],
+          "handOffset": [
+            -10,
+            -41
+          ]
+        },
+        {
+          "index": 10,
+          "name": "walkContactFar",
+          "source": "walkCorrected",
+          "sourceCell": [
+            768,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            958,
+            982
+          ],
+          "sourceHand": [
+            841,
+            775
+          ],
+          "scale": 0.17316,
+          "bounds": [
+            22,
+            19,
+            74,
+            102
+          ],
+          "hand": [
+            28,
+            64
+          ],
+          "handOffset": [
+            -20,
+            -36
+          ]
+        },
+        {
+          "index": 11,
+          "name": "walkPassingFar",
+          "source": "walkCorrected",
+          "sourceCell": [
+            1152,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            1334,
+            989
+          ],
+          "sourceHand": [
+            1257,
+            747
+          ],
+          "scale": 0.170576,
+          "bounds": [
+            30,
+            19,
+            74,
+            101
+          ],
+          "hand": [
+            35,
+            59
+          ],
+          "handOffset": [
+            -13,
+            -41
+          ]
+        },
+        {
+          "index": 12,
+          "name": "chalkHigh",
+          "source": "chalkCarry",
+          "sourceCell": [
+            0,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            246,
+            499
+          ],
+          "sourceHand": [
+            118,
+            20
+          ],
+          "scale": 0.172043,
+          "bounds": [
+            26,
+            17,
+            69,
+            100
+          ],
+          "hand": [
+            26,
+            18
+          ],
+          "handOffset": [
+            -22,
+            -82
+          ]
+        },
+        {
+          "index": 13,
+          "name": "chalkMiddle",
+          "source": "chalkCarry",
+          "sourceCell": [
+            384,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            616,
+            499
+          ],
+          "sourceHand": [
+            491,
+            73
+          ],
+          "scale": 0.175055,
+          "bounds": [
+            26,
+            20,
+            69,
+            100
+          ],
+          "hand": [
+            26,
+            25
+          ],
+          "handOffset": [
+            -22,
+            -75
+          ]
+        },
+        {
+          "index": 14,
+          "name": "chalkLow",
+          "source": "chalkCarry",
+          "sourceCell": [
+            768,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            997,
+            499
+          ],
+          "sourceHand": [
+            858,
+            128
+          ],
+          "scale": 0.178174,
+          "bounds": [
+            23,
+            20,
+            67,
+            100
+          ],
+          "hand": [
+            23,
+            34
+          ],
+          "handOffset": [
+            -25,
+            -66
+          ]
+        },
+        {
+          "index": 15,
+          "name": "chalkLowest",
+          "source": "chalkCarry",
+          "sourceCell": [
+            1152,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            1365,
+            499
+          ],
+          "sourceHand": [
+            1228,
+            164
+          ],
+          "scale": 0.182232,
+          "bounds": [
+            23,
+            19,
+            67,
+            100
+          ],
+          "hand": [
+            23,
+            39
+          ],
+          "handOffset": [
+            -25,
+            -61
+          ]
+        },
+        {
+          "index": 16,
+          "name": "sitSettle",
+          "sourceCell": [
+            0,
+            0,
+            384,
+            492
+          ],
+          "sourceFeet": [
+            174,
+            480
+          ],
+          "sourceHand": [
+            178,
+            334
+          ],
+          "scale": 0.16736401673640167,
+          "bounds": [
+            36,
+            31,
+            70,
+            100
+          ],
+          "hand": [
+            49,
+            76
+          ],
+          "handOffset": [
+            1,
+            -24
+          ],
+          "sourceHandPoint": "near palm/contact pixel, not a free floating prop point",
+          "source": "nastyaPhoneAction"
+        },
+        {
+          "index": 17,
+          "name": "pocketContact",
+          "sourceCell": [
+            384,
+            0,
+            384,
+            492
+          ],
+          "sourceFeet": [
+            505,
+            480
+          ],
+          "sourceHand": [
+            592,
+            303
+          ],
+          "scale": 0.16736401673640167,
+          "bounds": [
+            36,
+            32,
+            77,
+            100
+          ],
+          "hand": [
+            63,
+            70
+          ],
+          "handOffset": [
+            15,
+            -30
+          ],
+          "sourceHandPoint": "near palm/contact pixel, not a free floating prop point",
+          "source": "nastyaPhoneAction"
+        },
+        {
+          "index": 18,
+          "name": "phoneLow",
+          "sourceCell": [
+            768,
+            0,
+            384,
+            492
+          ],
+          "sourceFeet": [
+            886,
+            480
+          ],
+          "sourceHand": [
+            895,
+            301
+          ],
+          "scale": 0.16736401673640167,
+          "bounds": [
+            36,
+            33,
+            77,
+            101
+          ],
+          "hand": [
+            50,
+            70
+          ],
+          "handOffset": [
+            2,
+            -30
+          ],
+          "sourceHandPoint": "near palm/contact pixel, not a free floating prop point",
+          "source": "nastyaPhoneAction"
+        },
+        {
+          "index": 19,
+          "name": "phoneHold",
+          "sourceCell": [
+            1152,
+            0,
+            384,
+            492
+          ],
+          "sourceFeet": [
+            1270,
+            480
+          ],
+          "sourceHand": [
+            1282,
+            253
+          ],
+          "scale": 0.16736401673640167,
+          "bounds": [
+            36,
+            32,
+            75,
+            101
+          ],
+          "hand": [
+            50,
+            62
+          ],
+          "handOffset": [
+            2,
+            -38
+          ],
+          "sourceHandPoint": "near palm/contact pixel, not a free floating prop point",
+          "source": "nastyaPhoneAction"
+        },
+        {
+          "index": 20,
+          "name": "phoneType",
+          "sourceCell": [
+            0,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            163,
+            967
+          ],
+          "sourceHand": [
+            179,
+            734
+          ],
+          "scale": 0.16736401673640167,
+          "bounds": [
+            37,
+            32,
+            77,
+            100
+          ],
+          "hand": [
+            51,
+            61
+          ],
+          "handOffset": [
+            3,
+            -39
+          ],
+          "sourceHandPoint": "near palm/contact pixel, not a free floating prop point",
+          "source": "nastyaPhoneAction"
+        },
+        {
+          "index": 21,
+          "name": "pocketReturn",
+          "sourceCell": [
+            384,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            532,
+            970
+          ],
+          "sourceHand": [
+            622,
+            782
+          ],
+          "scale": 0.16736401673640167,
+          "bounds": [
+            36,
+            31,
+            77,
+            99
+          ],
+          "hand": [
+            63,
+            69
+          ],
+          "handOffset": [
+            15,
+            -31
+          ],
+          "sourceHandPoint": "near palm/contact pixel, not a free floating prop point",
+          "source": "nastyaPhoneAction"
+        },
+        {
+          "index": 22,
+          "name": "halfRise",
+          "sourceCell": [
+            768,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            964,
+            970
+          ],
+          "sourceHand": [
+            949,
+            795
+          ],
+          "scale": 0.16736401673640167,
+          "bounds": [
+            29,
+            28,
+            64,
+            100
+          ],
+          "hand": [
+            45,
+            71
+          ],
+          "handOffset": [
+            -3,
+            -29
+          ],
+          "sourceHandPoint": "near palm/contact pixel, not a free floating prop point",
+          "source": "nastyaPhoneAction"
+        },
+        {
+          "index": 23,
+          "name": "standNeutral",
+          "sourceCell": [
+            1152,
+            492,
+            384,
+            532
+          ],
+          "sourceFeet": [
+            1334,
+            975
+          ],
+          "sourceHand": [
+            1266,
+            792
+          ],
+          "scale": 0.16736401673640167,
+          "bounds": [
+            34,
+            20,
+            65,
+            99
+          ],
+          "hand": [
+            37,
+            69
+          ],
+          "handOffset": [
+            -11,
+            -31
+          ],
+          "sourceHandPoint": "near palm/contact pixel, not a free floating prop point",
+          "source": "nastyaPhoneAction"
+        },
+        {
+          "index": 24,
+          "name": "chalkStep0",
+          "source": "nastyaChalkStep",
+          "sourceCell": [
+            0,
+            0,
+            543,
+            724
+          ],
+          "sourceFeet": [
+            330,
+            687
+          ],
+          "sourceFeetMeaning": "ground projection of pelvis; lower visible sole baseline",
+          "sourceSupportingSole": [
+            267,
+            687
+          ],
+          "sourceHand": [
+            198,
+            87
+          ],
+          "sourceChalkTip": [
+            168,
+            70
+          ],
+          "scale": 0.12195121951219512,
+          "bounds": [
+            27,
+            20,
+            67,
+            100
+          ],
+          "hand": [
+            32,
+            27
+          ],
+          "handOffset": [
+            -16,
+            -73
+          ],
+          "chalkTip": [
+            28,
+            25
+          ],
+          "chalkTipOffset": [
+            -20,
+            -75
+          ],
+          "motionPurpose": "raised chalk hand continuity during inter-glyph pen-up movement",
+          "gaitStatus": "opposite leading leg ambiguous; not accepted as a verified opposite gait"
+        },
+        {
+          "index": 25,
+          "name": "chalkStep1",
+          "source": "nastyaChalkStep",
+          "sourceCell": [
+            543,
+            0,
+            543,
+            724
+          ],
+          "sourceFeet": [
+            821,
+            685
+          ],
+          "sourceFeetMeaning": "ground projection of pelvis; lower visible sole baseline",
+          "sourceSupportingSole": [
+            800,
+            685
+          ],
+          "sourceHand": [
+            699,
+            87
+          ],
+          "sourceChalkTip": [
+            669,
+            70
+          ],
+          "scale": 0.12195121951219512,
+          "bounds": [
+            28,
+            20,
+            68,
+            100
+          ],
+          "hand": [
+            33,
+            27
+          ],
+          "handOffset": [
+            -15,
+            -73
+          ],
+          "chalkTip": [
+            29,
+            25
+          ],
+          "chalkTipOffset": [
+            -19,
+            -75
+          ],
+          "motionPurpose": "raised chalk hand continuity during inter-glyph pen-up movement",
+          "gaitStatus": "opposite leading leg ambiguous; not accepted as a verified opposite gait"
+        },
+        {
+          "index": 26,
+          "name": "chalkStep2",
+          "source": "nastyaChalkStep",
+          "sourceCell": [
+            1086,
+            0,
+            543,
+            724
+          ],
+          "sourceFeet": [
+            1318,
+            688
+          ],
+          "sourceFeetMeaning": "ground projection of pelvis; lower visible sole baseline",
+          "sourceSupportingSole": [
+            1255,
+            688
+          ],
+          "sourceHand": [
+            1199,
+            78
+          ],
+          "sourceChalkTip": [
+            1167,
+            61
+          ],
+          "scale": 0.12195121951219512,
+          "bounds": [
+            29,
+            20,
+            69,
+            101
+          ],
+          "hand": [
+            33,
+            26
+          ],
+          "handOffset": [
+            -15,
+            -74
+          ],
+          "chalkTip": [
+            30,
+            24
+          ],
+          "chalkTipOffset": [
+            -18,
+            -76
+          ],
+          "motionPurpose": "raised chalk hand continuity during inter-glyph pen-up movement",
+          "gaitStatus": "opposite leading leg ambiguous; not accepted as a verified opposite gait"
+        },
+        {
+          "index": 27,
+          "name": "chalkStep3",
+          "source": "nastyaChalkStep",
+          "sourceCell": [
+            1629,
+            0,
+            543,
+            724
+          ],
+          "sourceFeet": [
+            1813,
+            695
+          ],
+          "sourceFeetMeaning": "ground projection of pelvis; lower visible sole baseline",
+          "sourceSupportingSole": [
+            1759,
+            695
+          ],
+          "sourceHand": [
+            1699,
+            98
+          ],
+          "sourceChalkTip": [
+            1668,
+            81
+          ],
+          "scale": 0.12195121951219512,
+          "bounds": [
+            28,
+            20,
+            69,
+            100
+          ],
+          "hand": [
+            34,
+            27
+          ],
+          "handOffset": [
+            -14,
+            -73
+          ],
+          "chalkTip": [
+            30,
+            25
+          ],
+          "chalkTipOffset": [
+            -18,
+            -75
+          ],
+          "motionPurpose": "raised chalk hand continuity during inter-glyph pen-up movement",
+          "gaitStatus": "opposite leading leg ambiguous; not accepted as a verified opposite gait"
+        }
+      ],
+      "facing": "left or three-quarter left",
+      "status": "prototype-exported-v3; action craft, gait, and live motion acceptance pending",
+      "actionContracts": {
+        "pocketPhone": "production/nastya-phone-action-v1.json",
+        "chalkPenUpStep": "production/nastya-chalk-step-action-v1.json"
+      },
+      "motionLimitations": [
+        "Ordinary walking frames 8–11 and aliases remain unchanged; previous opposite-leg repair was not verified.",
+        "Chalk step frames 24–27 preserve raised arm continuity, with ambiguous opposite-leading leg.",
+        "Phone action chair hip contact and separate phone ownership require live-engine review."
+      ]
+    }
+  },
+  "props": {
+    "bread": {
+      "image": "assets/props/bread-v1.png",
+      "width": 22,
+      "height": 13,
+      "pivot": [
+        11,
+        6
+      ],
+      "status": "separated-native-export"
+    },
+    "bagEmpty": {
+      "image": "assets/props/bagEmpty-v1.png",
+      "width": 24,
+      "height": 24,
+      "pivot": [
+        12,
+        12
+      ],
+      "status": "separated-native-export"
+    },
+    "breadPacked": {
+      "image": "assets/props/breadPacked-v1.png",
+      "width": 24,
+      "height": 27,
+      "pivot": [
+        12,
+        13
+      ],
+      "status": "separated-native-export"
+    },
+    "trolley": {
+      "image": "assets/props/trolley-v1.png",
+      "width": 56,
+      "height": 47,
+      "pivot": [
+        28,
+        23
+      ],
+      "status": "separated-native-export"
+    },
+    "phone": {
+      "image": "assets/props/phone-v1.png",
+      "width": 8,
+      "height": 12,
+      "pivot": [
+        4,
+        6
+      ],
+      "status": "separated-native-export"
+    },
+    "notebook": {
+      "image": "assets/props/notebook-v1.png",
+      "width": 20,
+      "height": 13,
+      "pivot": [
+        10,
+        6
+      ],
+      "status": "separated-native-export"
+    },
+    "chalk": {
+      "image": "assets/props/chalk-v1.png",
+      "width": 4,
+      "height": 3,
+      "pivot": [
+        2,
+        1
+      ],
+      "status": "separated-native-export"
+    },
+    "chair": {
+      "image": "assets/props/chair-v1.png",
+      "width": 25,
+      "height": 35,
+      "pivot": [
+        12,
+        17
+      ],
+      "status": "separated-native-export"
+    }
+  },
+  "occluders": {
+    "store": [
+      {
+        "name": "packingBench",
+        "image": "assets/occlusion/store-packingBench-v1.png",
+        "bounds": [
+          193,
+          164,
+          292,
+          199
+        ],
+        "depth": 199,
+        "layer": "foreground furniture face; draw only for actor behind contact plane",
+        "source": "same native background rectangular occlusion export"
+      },
+      {
+        "name": "breadShelf",
+        "image": "assets/occlusion/store-breadShelf-v1.png",
+        "bounds": [
+          22,
+          185,
+          119,
+          254
+        ],
+        "depth": 254,
+        "layer": "foreground furniture face; draw only for actor behind contact plane",
+        "source": "same native background rectangular occlusion export"
+      },
+      {
+        "name": "cashCounter",
+        "image": "assets/occlusion/store-cashCounter-v1.png",
+        "bounds": [
+          315,
+          187,
+          480,
+          282
+        ],
+        "depth": 282,
+        "layer": "foreground furniture face; draw only for actor behind contact plane",
+        "source": "same native background rectangular occlusion export"
+      }
+    ],
+    "school": [
+      {
+        "name": "teacherDesk",
+        "image": "assets/occlusion/school-teacherDesk-v1.png",
+        "bounds": [
+          51,
+          176,
+          210,
+          231
+        ],
+        "depth": 231,
+        "layer": "foreground furniture face; draw only for actor behind contact plane",
+        "source": "same native background rectangular occlusion export"
+      },
+      {
+        "name": "studentUpperLeft",
+        "image": "assets/occlusion/school-studentUpperLeft-v1.png",
+        "bounds": [
+          13,
+          226,
+          144,
+          277
+        ],
+        "depth": 277,
+        "layer": "foreground furniture face; draw only for actor behind contact plane",
+        "source": "same native background rectangular occlusion export"
+      },
+      {
+        "name": "studentLowerLeft",
+        "image": "assets/occlusion/school-studentLowerLeft-v1.png",
+        "bounds": [
+          0,
+          280,
+          128,
+          346
+        ],
+        "depth": 346,
+        "layer": "foreground furniture face; draw only for actor behind contact plane",
+        "source": "same native background rectangular occlusion export"
+      },
+      {
+        "name": "studentUpperRight",
+        "image": "assets/occlusion/school-studentUpperRight-v1.png",
+        "bounds": [
+          361,
+          217,
+          480,
+          252
+        ],
+        "depth": 252,
+        "layer": "foreground furniture face; draw only for actor behind contact plane",
+        "source": "same native background rectangular occlusion export"
+      },
+      {
+        "name": "studentLowerRight",
+        "image": "assets/occlusion/school-studentLowerRight-v1.png",
+        "bounds": [
+          370,
+          271,
+          480,
+          338
+        ],
+        "depth": 338,
+        "layer": "foreground furniture face; draw only for actor behind contact plane",
+        "source": "same native background rectangular occlusion export"
+      }
+    ]
+  },
+  "anchors": {
+    "store": {
+      "initial": [
+        245,
+        275
+      ],
+      "work": [
+        242,
+        220
+      ],
+      "source": [
+        210,
+        157
+      ],
+      "pack": [
+        219,
+        158
+      ],
+      "trolley": [
+        178,
+        285
+      ],
+      "cartFeet": [
+        209,
+        304
+      ],
+      "shelfFeet": [
+        144,
+        264
+      ],
+      "shelf": [
+        104,
+        182
+      ]
+    },
+    "school": {
+      "initial": [
+        275,
+        225
+      ],
+      "boardFeet": [
+        338,
+        197
+      ],
+      "boardSurface": [
+        164,
+        60,
+        192,
+        77
+      ],
+      "equationBounds": [
+        194,
+        113,
+        88,
+        17
+      ],
+      "teacherDesk": [
+        51,
+        163,
+        159,
+        68
+      ],
+      "teacherNotebook": [
+        177,
+        172
+      ],
+      "studentNotebook": [
+        114,
+        225
+      ],
+      "studentHelpFeet": [
+        147,
+        288
+      ],
+      "breakFeet": [
+        235,
+        242
+      ]
+    }
+  },
+  "obstacles": {
+    "store": [
+      [
+        0,
+        52,
+        123,
+        205
+      ],
+      [
+        193,
+        165,
+        99,
+        34
+      ],
+      [
+        315,
+        158,
+        165,
+        124
+      ]
+    ],
+    "school": [
+      [
+        51,
+        176,
+        159,
+        55
+      ],
+      [
+        13,
+        226,
+        131,
+        51
+      ],
+      [
+        0,
+        280,
+        128,
+        66
+      ],
+      [
+        361,
+        217,
+        119,
+        35
+      ],
+      [
+        370,
+        271,
+        110,
+        67
+      ]
+    ]
+  },
+  "notes": [
+    "Backgrounds contain architecture and fixed furniture only, no main actors/UI/interactive bread/phone/notebooks.",
+    "Exact socket offsets below are measured from exported pixels; producers must solve feet=contact-handOffset rather than use arbitrary former coordinates.",
+    "Two raised Vova reach poses are retained for review only; bread manipulation uses forward-lean poses."
+  ],
+  "npcs": {
+    "pupilBoy": {
+      "image": "assets/npcs/pupilBoy-v1.png",
+      "frameWidth": 96,
+      "frameHeight": 112,
+      "columns": 8,
+      "pivot": [
+        48,
+        100
+      ],
+      "poses": {
+        "idle": [
+          0
+        ],
+        "walk": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "seated": [
+          5
+        ],
+        "writing": [
+          6
+        ],
+        "raised": [
+          7
+        ]
+      },
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            40,
+            78
+          ],
+          "opaqueBounds": [
+            38,
+            46,
+            59,
+            100
+          ]
+        },
+        {
+          "index": 1,
+          "rect": [
+            96,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            35,
+            77
+          ],
+          "opaqueBounds": [
+            34,
+            47,
+            64,
+            100
+          ]
+        },
+        {
+          "index": 2,
+          "rect": [
+            192,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            36,
+            76
+          ],
+          "opaqueBounds": [
+            35,
+            46,
+            61,
+            100
+          ]
+        },
+        {
+          "index": 3,
+          "rect": [
+            288,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            37,
+            75
+          ],
+          "opaqueBounds": [
+            34,
+            46,
+            64,
+            100
+          ]
+        },
+        {
+          "index": 4,
+          "rect": [
+            384,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            41,
+            77
+          ],
+          "opaqueBounds": [
+            37,
+            47,
+            64,
+            100
+          ]
+        },
+        {
+          "index": 5,
+          "rect": [
+            480,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            30,
+            77
+          ],
+          "opaqueBounds": [
+            38,
+            51,
+            64,
+            100
+          ]
+        },
+        {
+          "index": 6,
+          "rect": [
+            576,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            39,
+            82
+          ],
+          "opaqueBounds": [
+            38,
+            52,
+            65,
+            100
+          ]
+        },
+        {
+          "index": 7,
+          "rect": [
+            672,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            47,
+            80
+          ],
+          "opaqueBounds": [
+            38,
+            45,
+            65,
+            100
+          ]
+        }
+      ],
+      "sockets": {
+        "0": {
+          "hand": [
+            40,
+            78
+          ]
+        },
+        "1": {
+          "hand": [
+            35,
+            77
+          ]
+        },
+        "2": {
+          "hand": [
+            36,
+            76
+          ]
+        },
+        "3": {
+          "hand": [
+            37,
+            75
+          ]
+        },
+        "4": {
+          "hand": [
+            41,
+            77
+          ]
+        },
+        "5": {
+          "hand": [
+            30,
+            77
+          ]
+        },
+        "6": {
+          "hand": [
+            39,
+            82
+          ]
+        },
+        "7": {
+          "hand": [
+            47,
+            80
+          ]
+        }
+      },
+      "sourceSha256": "06c61e2b9296c9d53e58459dcdb24ec00823e6d3842ef7a8872e58a8c8eab3d8",
+      "normalization": "Uniform row scale, nearest neighbor, feet baseline, alpha cleanup only; poses authored in source"
+    },
+    "pupilGirl": {
+      "image": "assets/npcs/pupilGirl-v1.png",
+      "frameWidth": 96,
+      "frameHeight": 112,
+      "columns": 8,
+      "pivot": [
+        48,
+        100
+      ],
+      "poses": {
+        "idle": [
+          0
+        ],
+        "walk": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "seated": [
+          5
+        ],
+        "writing": [
+          6
+        ],
+        "raised": [
+          7
+        ]
+      },
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            39,
+            82
+          ],
+          "opaqueBounds": [
+            38,
+            46,
+            61,
+            100
+          ]
+        },
+        {
+          "index": 1,
+          "rect": [
+            96,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            37,
+            79
+          ],
+          "opaqueBounds": [
+            35,
+            46,
+            65,
+            100
+          ]
+        },
+        {
+          "index": 2,
+          "rect": [
+            192,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            37,
+            78
+          ],
+          "opaqueBounds": [
+            34,
+            46,
+            60,
+            100
+          ]
+        },
+        {
+          "index": 3,
+          "rect": [
+            288,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            38,
+            78
+          ],
+          "opaqueBounds": [
+            34,
+            46,
+            65,
+            100
+          ]
+        },
+        {
+          "index": 4,
+          "rect": [
+            384,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            46,
+            78
+          ],
+          "opaqueBounds": [
+            42,
+            46,
+            68,
+            100
+          ]
+        },
+        {
+          "index": 5,
+          "rect": [
+            480,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            33,
+            82
+          ],
+          "opaqueBounds": [
+            39,
+            51,
+            67,
+            100
+          ]
+        },
+        {
+          "index": 6,
+          "rect": [
+            576,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            40,
+            82
+          ],
+          "opaqueBounds": [
+            39,
+            51,
+            67,
+            100
+          ]
+        },
+        {
+          "index": 7,
+          "rect": [
+            672,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            49,
+            83
+          ],
+          "opaqueBounds": [
+            40,
+            44,
+            68,
+            100
+          ]
+        }
+      ],
+      "sockets": {
+        "0": {
+          "hand": [
+            39,
+            82
+          ]
+        },
+        "1": {
+          "hand": [
+            37,
+            79
+          ]
+        },
+        "2": {
+          "hand": [
+            37,
+            78
+          ]
+        },
+        "3": {
+          "hand": [
+            38,
+            78
+          ]
+        },
+        "4": {
+          "hand": [
+            46,
+            78
+          ]
+        },
+        "5": {
+          "hand": [
+            33,
+            82
+          ]
+        },
+        "6": {
+          "hand": [
+            40,
+            82
+          ]
+        },
+        "7": {
+          "hand": [
+            49,
+            83
+          ]
+        }
+      },
+      "sourceSha256": "06c61e2b9296c9d53e58459dcdb24ec00823e6d3842ef7a8872e58a8c8eab3d8",
+      "normalization": "Uniform row scale, nearest neighbor, feet baseline, alpha cleanup only; poses authored in source"
+    },
+    "shopper": {
+      "image": "assets/npcs/shopper-v1.png",
+      "frameWidth": 96,
+      "frameHeight": 112,
+      "columns": 8,
+      "pivot": [
+        48,
+        100
+      ],
+      "poses": {
+        "idle": [
+          0
+        ],
+        "walk": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "reach": [
+          5
+        ],
+        "pickup": [
+          5,
+          6
+        ],
+        "carry": [
+          6
+        ],
+        "carryWalk": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            35,
+            71
+          ],
+          "opaqueBounds": [
+            33,
+            20,
+            65,
+            100
+          ]
+        },
+        {
+          "index": 1,
+          "rect": [
+            96,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            29,
+            68
+          ],
+          "opaqueBounds": [
+            26,
+            21,
+            72,
+            100
+          ]
+        },
+        {
+          "index": 2,
+          "rect": [
+            192,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            33,
+            68
+          ],
+          "opaqueBounds": [
+            29,
+            20,
+            66,
+            100
+          ]
+        },
+        {
+          "index": 3,
+          "rect": [
+            288,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            37,
+            70
+          ],
+          "opaqueBounds": [
+            27,
+            20,
+            70,
+            100
+          ]
+        },
+        {
+          "index": 4,
+          "rect": [
+            384,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            41,
+            71
+          ],
+          "opaqueBounds": [
+            32,
+            20,
+            70,
+            100
+          ]
+        },
+        {
+          "index": 5,
+          "rect": [
+            480,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            19,
+            72
+          ],
+          "opaqueBounds": [
+            13,
+            23,
+            69,
+            100
+          ]
+        },
+        {
+          "index": 6,
+          "rect": [
+            576,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            21,
+            69
+          ],
+          "opaqueBounds": [
+            17,
+            22,
+            67,
+            100
+          ]
+        },
+        {
+          "index": 7,
+          "rect": [
+            672,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            41,
+            65
+          ],
+          "opaqueBounds": [
+            32,
+            20,
+            67,
+            100
+          ]
+        }
+      ],
+      "sockets": {
+        "0": {
+          "hand": [
+            35,
+            71
+          ]
+        },
+        "1": {
+          "hand": [
+            29,
+            68
+          ]
+        },
+        "2": {
+          "hand": [
+            33,
+            68
+          ]
+        },
+        "3": {
+          "hand": [
+            37,
+            70
+          ]
+        },
+        "4": {
+          "hand": [
+            41,
+            71
+          ]
+        },
+        "5": {
+          "hand": [
+            19,
+            72
+          ]
+        },
+        "6": {
+          "hand": [
+            21,
+            69
+          ]
+        },
+        "7": {
+          "hand": [
+            41,
+            65
+          ]
+        }
+      },
+      "sourceSha256": "06c61e2b9296c9d53e58459dcdb24ec00823e6d3842ef7a8872e58a8c8eab3d8",
+      "normalization": "Uniform row scale, nearest neighbor, feet baseline, alpha cleanup only; poses authored in source"
+    }
+  }
+}

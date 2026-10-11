@@ -7,6 +7,66 @@
       "sha256": "8eeb24e5a554b66600566cf9bab0a9eb81cdb7c2ff8d5f920a7ca29e87272ba8"
     },
     {
+      "path": "dist/assets/actors/nastya-motion-v4.png",
+      "bytes": 69899,
+      "sha256": "9d115c86a538467ba1d9c99a14de216707f1f169ca66e899e04a540ae4db94f4"
+    },
+    {
+      "path": "dist/assets/actors/nastya-motion-v4__00__walkContactNear.png",
+      "bytes": 6551,
+      "sha256": "be70f981c123575a72105eaa8587cb8ff277399386463ec6b96df74e4737b2ab"
+    },
+    {
+      "path": "dist/assets/actors/nastya-motion-v4__01__walkPassingNear.png",
+      "bytes": 5990,
+      "sha256": "bc7102d5494f5f480a3b0e5193f2fa4e0d6940be6c810fa602f66d1bf4bb8d3c"
+    },
+    {
+      "path": "dist/assets/actors/nastya-motion-v4__02__walkContactFar.png",
+      "bytes": 6323,
+      "sha256": "9b06b23d6129109df274f76987b9ac06b343d37812f27120a3d1caa95f056d17"
+    },
+    {
+      "path": "dist/assets/actors/nastya-motion-v4__03__walkPassingFar.png",
+      "bytes": 6388,
+      "sha256": "30769c92926fba1e7aa71f349b0682c5ee9aede18fe2070656a52d601cb618e0"
+    },
+    {
+      "path": "dist/assets/actors/nastya-motion-v4__04__chalkRestEmpty.png",
+      "bytes": 6691,
+      "sha256": "2699cf3181984484cb2e53a17e38e2076373a60825cda2dc0d41fa81f34b3ae6"
+    },
+    {
+      "path": "dist/assets/actors/nastya-motion-v4__05__chalkReachLowEmpty.png",
+      "bytes": 6831,
+      "sha256": "1b7aca73b3bce64c43da8225a605ca0cd8fb2fa61995582630e33750c8b4026e"
+    },
+    {
+      "path": "dist/assets/actors/nastya-motion-v4__06__chalkChestHeld.png",
+      "bytes": 7076,
+      "sha256": "f70122deb597936254cc541805ab3d31fe52da670885413363507c06f545279d"
+    },
+    {
+      "path": "dist/assets/actors/nastya-motion-v4__07__chalkFaceHeld.png",
+      "bytes": 6599,
+      "sha256": "79c91d98d4b850982550a1e040ab4f1ca98079f139f31bd13cb787eb05383832"
+    },
+    {
+      "path": "dist/assets/actors/nastya-motion-v4__08__chalkHighHeld.png",
+      "bytes": 6677,
+      "sha256": "7c04695b5f1fa633a2ed41798a9fff3ba0b66a1e6512b4803f41a748b1cc49fb"
+    },
+    {
+      "path": "dist/assets/actors/nastya-motion-v4__09__chalkContactLowHeld.png",
+      "bytes": 6552,
+      "sha256": "9c9e723b81f58977a2b5b04d12f508f8d9f6a01e66e6f9cc7e5a6e6a7db3818e"
+    },
+    {
+      "path": "dist/assets/actors/nastya-motion-v4__10__chalkContactLowEmpty.png",
+      "bytes": 6677,
+      "sha256": "39a1e849cde0f92b4e70e0d098c880c8716f649ecb39a8541cae6b489040ae6b"
+    },
+    {
       "path": "dist/assets/actors/nastya-phone-action-v1.png",
       "bytes": 37769,
       "sha256": "27a4375957a367ef2b11e3940636276ed928ceb90aa1d295e1ad194381d81068"
@@ -25,6 +85,11 @@
       "path": "dist/assets/actors/nastya-work-v3.png",
       "bytes": 153871,
       "sha256": "e38f515c76fe7084ceeb5033248bbc02cc1c4ccfc1bb0a62e2c152391b017439"
+    },
+    {
+      "path": "dist/assets/actors/nastya-work-v4.png",
+      "bytes": 222018,
+      "sha256": "3b1c56edf3abdf3941ccb055641a8fb549a397811c7150b828ec6eb86e882b6c"
     },
     {
       "path": "dist/assets/actors/nastya__boardReach__f000.png",
@@ -298,13 +363,13 @@
     },
     {
       "path": "dist/assets/fragment-poster.png",
-      "bytes": 605713,
-      "sha256": "7d92743e953dbae454da2bd27264665d1d7ba7d9df4bd1300d38a5577f586ebe"
+      "bytes": 605478,
+      "sha256": "01645b845ce21e028219897ba69d8189c064bbedd3ced5df0669658add187af4"
     },
     {
       "path": "dist/assets/fragment-preview.gif",
-      "bytes": 2327133,
-      "sha256": "c62cb34de8bfa5794304929bf4ba39c786d7d66ed81df7421092cafe854f9c7d"
+      "bytes": 1388330,
+      "sha256": "9267496e566a7cf7c4df223e2771ff32c95a3a6c855017158cfcb81ea9c03462"
     },
     {
       "path": "dist/assets/game-icon.svg",
@@ -313,8 +378,8 @@
     },
     {
       "path": "dist/assets/manifest.json",
-      "bytes": 71855,
-      "sha256": "8aaa48e4ea591402ad2cc58c6c51b0fad0021df06a4726a0283ad2633422cc34"
+      "bytes": 91131,
+      "sha256": "03422bd75e768e676eda8a9ec4e6eb9230ad468ba4c9139604474d3ae3de7276"
     },
     {
       "path": "dist/assets/npcs/pupilBoy-v1.png",
@@ -423,13 +488,13 @@
     },
     {
       "path": "dist/engine.js",
-      "bytes": 29469,
-      "sha256": "8768c388db4d99a87da28ff494f6791bee34d0096bf8ab4fe08411bcbc5d484e"
+      "bytes": 31350,
+      "sha256": "c36023e4f1a831b799ff16fb9d4e11ab5a8065a9a5c5806e1761350679919b10"
     },
     {
       "path": "dist/index.html",
-      "bytes": 4605,
-      "sha256": "12d6da7eb39b3c20bd6c844eecd10eded4317a07a66500d6fc986ce1d7a00f3c"
+      "bytes": 4763,
+      "sha256": "48ca691d7f2fc4d6f6f1e8044358420d2f95c1b8485e4e89d7b370e504b81e01"
     },
     {
       "path": "dist/manifest.webmanifest",
@@ -438,18 +503,18 @@
     },
     {
       "path": "dist/model.js",
-      "bytes": 25475,
-      "sha256": "2b7e1d2bc4e5620f4dac0a757833214fc53ba66b20865fc59e50afbc1074b97e"
+      "bytes": 26865,
+      "sha256": "2cb146463c5b2fae396189a6761b2dcba536f0cfa8778485a8ce9843120bc9be"
     },
     {
       "path": "dist/style.css",
-      "bytes": 6324,
-      "sha256": "4155142282d8a1433ba4c123d88a5f17dec6a90eabecd604ebe4c52a80b0fc22"
+      "bytes": 6859,
+      "sha256": "87b5a4f5781505b1be594786bf81662892249f85209438bdc8ff3b13d370e52c"
     },
     {
       "path": "dist/ui.js",
-      "bytes": 6597,
-      "sha256": "56219ccc66f1eca83959e3be11b47f76840242aa09be28b2a199d39b02fd0ca0"
+      "bytes": 7835,
+      "sha256": "61465b340665b4f226888c72fc50d07144b41a8f73ce91b7b2e41671b2436320"
     },
     {
       "path": "src/story.json",
@@ -457,5 +522,5 @@
       "sha256": "73dadda3765c8db31216e1842df7a6a1e88f26dea498a2c8270a249c57a90753"
     }
   ],
-  "build_id": "slice-cc408edc66cc9eb44d25"
+  "build_id": "slice-a9530733b1afd03972f1"
 }

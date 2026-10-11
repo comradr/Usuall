@@ -667,10 +667,10 @@ if (!modelOnly && engine && runtimeAssets && geometry) {
   });
   await test('CLOCK-SAVE-01', 'Every irreversible message/cue/scene/prop boundary commits before a fresh game resumes', async () => {
     const cases = [
-      { id: 'bread-grab', at: 25 }, { id: 'bread-packed', at: 28 }, { id: 'bread-staged', at: 32 }, { id: 'arithmetic-complete', at: 46.5 },
+      { id: 'bread-grab', at: 25 }, { id: 'bread-packed', at: 28 }, { id: 'bread-staged', at: 32 }, { id: 'arithmetic-complete', at: 46.2 },
       { id: 'stage-pickup', at: 82 }, { id: 'trolley-release', at: 91 }, { id: 'scene-S03', at: 102 },
       { id: 'trolley-pickup', at: 105 }, { id: 'shelf-release', at: 120 }, { id: 'break-bell', at: 124 },
-      { id: 'teacher-phone-out', at: 130.65 }, { id: 'first-message', at: 136 }, { id: 'vova-phone-out', at: 147 },
+      { id: 'teacher-phone-out', at: 130.85 }, { id: 'first-message', at: 136 }, { id: 'vova-phone-out', at: 147 },
       { id: 'hello-message', at: 152 }, { id: 'bread-message', at: 159 }, { id: 'vova-phone-return', at: 164 },
       { id: 'bread-reply-1', at: 170 }, { id: 'bread-reply-2', at: 176 }, { id: 'teacher-phone-return', at: 178.66 }
     ];

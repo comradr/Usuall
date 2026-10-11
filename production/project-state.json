@@ -1,22 +1,20 @@
 {
   "project": "Обычный день",
-  "version": "0.2.0-interactive-slice",
+  "version": "0.3.0-recovered-motion",
   "scope": [
     "S02",
     "S03"
   ],
-  "milestone": "Fullscreen landscape split, six physical player actions, customer event and NPC sprites",
-  "implementation_status": "playable_revision_with_open_art_quality_blockers",
-  "build_id": "slice-cc408edc66cc9eb44d25",
+  "milestone": "Authored Nastya motion, chalk/phone ownership and preserved interactive split",
+  "implementation_status": "private_prototype_with_open_art_blockers",
+  "build_id": "slice-ef2c1787b63a0bfb4cdc",
   "independent_review": {
-    "status": "BLOCKED",
-    "reviewer": "/root/review_actual_02",
+    "status": "PENDING_FRESH_REVIEW",
+    "reviewer": "/root/recover_qa_critic",
     "independent": true,
-    "evidence": "production/critic-interactive-evidence.json",
-    "gate": "production/quality-gate-interactive.json",
-    "gate_validation": "production/quality-gate-interactive-validation.json",
+    "evidence": "production/recovery-qa-critic/",
     "open_p1": [
-      "Nastya opposite support leg and chalk entry/return"
+      "Legacy raised-chalk gait24–27"
     ]
   },
   "source": "/workspace/scratch/c320be6a75fa/concept/Obychnyy_den_CONCEPT_COMPLETE_v3",
@@ -35,10 +33,11 @@
   ],
   "canonical_duration_seconds": 189,
   "owners": {
-    "Producer, UI, Engine, Art export and technical QA": "/root",
-    "Independent Critic": "/root/review_actual_02"
+    "Producer / Engine / UI / Integration": "/root",
+    "Art Export": "/root/recover_motion_export",
+    "Independent QA/Critic": "/root/recover_qa_critic"
   },
-  "creative_approval": "proposed_sprite_art_not_yet_approved",
+  "creative_approval": "not_yet_approved",
   "browser_qa": "NOT_CHECKED",
   "browser_qa_reason": "Managed preview requires unavailable control-browser skill; browser installation and alternate controls prohibited by Sites instructions",
   "future_scenes": [
@@ -55,23 +54,15 @@
   "public_deployment": "site_audience_unchanged_private",
   "private_site_id": "appgprj_6ac96180a080819193b082c26699d249",
   "native_qa": {
-    "status": "PASS",
-    "checks_passed": 46,
-    "checks_failed": 0,
-    "evidence": [
-      "production/qa-regression.json",
-      "production/qa-interactive.json",
-      "production/qa-ui-logic.json"
-    ],
-    "reviewer": "/root",
-    "independent": false,
-    "limits": "33 Node/native Canvas,8 interactive/storage,5 UI events in Node VM; no real browser"
+    "status": "PENDING_FRESH_RUN",
+    "previous_70_pass_report": "lost_with_pruned_working_copy; not evidence for current reconstruction",
+    "evidence": "production/recovery-qa-critic/"
   },
-  "art_contract": "production/art-contract-v3.json",
+  "art_contract": "production/art-contract-v4.json",
   "known_quality_blockers": [
-    "Nastya opposite-step gait and chalk entry/return need new authored poses",
-    "NPC walking support leg remains subject to independent animation review",
-    "Actual mobile DOM/touch/fullscreen, audible audio and device FPS not checked"
+    "Legacy raised-chalk gait24–27",
+    "New contact-step support layering remains ambiguous",
+    "Actual browser/device verification NOT_CHECKED"
   ],
   "quality_escalation": {
     "status": "DRAFT_ONLY_NO_SUCCESS_HANDOFF",
