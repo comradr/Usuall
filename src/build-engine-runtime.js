@@ -326,6 +326,11 @@ export async function createGame(options) {
       const critical=afterState.sceneId!==beforeState.sceneId||afterState.school.board.complete!==beforeState.school.board.complete||afterState.store.bread.owner!==beforeState.store.bread.owner||
         afterState.store.bread.packaged!==beforeState.store.bread.packaged||afterState.store.phone.owner!==beforeState.store.phone.owner||
         afterState.school.phone.owner!==beforeState.school.phone.owner||
+        afterState.store.purchase?.owner!==beforeState.store.purchase?.owner||
+        afterState.store.purchase?.scanning!==beforeState.store.purchase?.scanning||
+        afterState.store.customer.visible!==beforeState.store.customer.visible||
+        afterState.store.customer.served!==beforeState.store.customer.served||
+        (!!awaitingAction()&&elapsed>before)||
         [...CUES,...MESSAGES].some(cue=>cue.at>before&&cue.at<=after);
       // Commit observable events before drawing, publishing dialogue or playing their cue.
       if(critical)persist(true);
@@ -344,9 +349,23 @@ export async function createGame(options) {
   const pointers=[];
   function pointer(side,canvas,event) {
     if(phase!=='playing')return;
-    if(interactive){const pending=awaitingAction();if(pending?.side===side)game.performAction(pending.id,side);return;}
+    if(event.button!==undefined&&event.button!==0)return;
     const rect=canvas.getBoundingClientRect(),screenX=(event.clientX-rect.left)*WIDTH/rect.width,screenY=(event.clientY-rect.top)*HEIGHT/rect.height;
+    if(!Number.isFinite(screenX)||!Number.isFinite(screenY)||screenX<0||screenY<0||screenX>WIDTH||screenY>HEIGHT)return;
     const camera=cameraAt(elapsed,side,reducedMotion),x=camera.x+(screenX-camera.x)/camera.zoom,y=camera.y+(screenY-camera.y)/camera.zoom;
+    if(interactive){
+      const pending=awaitingAction();if(pending?.side!==side)return;
+      const state=currentState(),a=state.geometry,inside=([left,top,width,height])=>x>=left&&x<=left+width&&y>=top&&y<=top+height;
+      const targets={
+        packBread:[[193,125,99,95]],writeBoard:[[164,60,196,87]],
+        serveCustomer:[[state.store.customer.x-30,state.store.customer.y-90,60,94]],
+        moveBreadToCart:[[a.stage[0]-22,a.stage[1]-16,44,32],[151,264,59,65]],
+        stockShelf:[[52,60,91,203],[151,264,59,65]],
+        replyToNastya:[[state.store.actor.x-25,state.store.actor.y-92,50,96]],
+      };
+      if(targets[pending.id]?.some(inside))game.performAction(pending.id,side);
+      return;
+    }
     const t=elapsed;
     const hit=side==='store'&&((t>=10&&t<23&&x>193&&x<292&&y>125&&y<220)||(t>=102&&t<115&&x<140&&y>60&&y<260))||
       side==='school'&&t>=35&&t<48&&x>164&&x<356&&y>60&&y<147;
