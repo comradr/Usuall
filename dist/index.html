@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f4f0e6" />
+    <meta name="description" content="Первый игровой фрагмент «Обычного дня»: Вова в магазине, Настя в классе. Утренние сцены двух пространств." />
+    <title>Обычный день</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./ui.js"></script>
+  </head>
+  <body data-phase="loading">
+    <svg class="icon-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M5 7h14M5 12h14M5 17h14" /></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7Z" /></symbol>
+      <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14" /></symbol>
+      <symbol id="i-sound" viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4ZM15 9a5 5 0 0 1 0 6M18 6a9 9 0 0 1 0 12" /></symbol>
+      <symbol id="i-muted" viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4ZM16 9l6 6M22 9l-6 6" /></symbol>
+      <symbol id="i-next" viewBox="0 0 24 24"><path d="m5 6 10 6L5 18ZM19 6v12" /></symbol>
+      <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 7h15m-4-4 4 4-4 4M20 17H5m4-4-4 4 4 4" /></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" /></symbol>
+      <symbol id="i-repeat" viewBox="0 0 24 24"><path d="M18 7a8 8 0 1 0 2 7M18 3v4h-4" /></symbol>
+    </svg>
+
+    <main class="game-shell" id="game-shell">
+      <header class="game-header">
+        <div class="title-group">
+          <p class="eyebrow"><span class="pixel-mark" aria-hidden="true"></span> ПЕРВЫЙ ФРАГМЕНТ</p>
+          <h1>Обычный день</h1>
+          <p class="chapter-line">Утро <span aria-hidden="true">·</span> Магазин и класс</p>
+        </div>
+        <button class="icon-button menu-trigger" id="open-menu" type="button" aria-label="Открыть меню и настройки" title="Меню и настройки" disabled>
+          <svg class="icon" aria-hidden="true"><use href="#i-menu" /></svg>
+        </button>
+      </header>
+
+      <noscript>
+        <style>.world-section,.start-shelf,.menu-trigger{display:none!important}</style>
+        <section class="no-js-preview" aria-label="Просмотр первого фрагмента без управления">
+          <picture class="fallback-picture">
+            <source media="(prefers-reduced-motion: reduce)" srcset="./assets/fragment-poster.png" />
+            <img src="./assets/fragment-preview.gif" alt="Первый фрагмент «Обычного дня»: Вова в магазине, Настя в классе" />
+          </picture>
+          <p class="fallback-animation-note">Просмотр анимации. Управление требует JavaScript.</p>
+          <p class="fallback-poster-note">Статичный кадр. Управление требует JavaScript.</p>
+        </section>
+      </noscript>
+
+      <section class="world-section" aria-label="Вова в магазине и Настя в классе">
+        <div class="world-stage" id="world-stage" data-focus="store">
+          <section class="world-pane store-pane" data-camera="store" aria-label="Вова в магазине">
+            <div class="world-caption"><span class="character-name">Вова</span><span class="place-name">Магазин</span></div>
+            <canvas id="store-canvas" width="480" height="360" role="img" aria-label="Пиксельная сцена: Вова работает в магазине">Игровая сцена Вовы в магазине.</canvas>
+          </section>
+          <section class="world-pane school-pane" data-camera="school" aria-label="Настя в классе">
+            <div class="world-caption"><span class="character-name">Настя</span><span class="place-name">Класс</span></div>
+            <canvas id="school-canvas" width="480" height="360" role="img" aria-label="Пиксельная сцена: Настя ведёт урок">Игровая сцена Насти в классе.</canvas>
+          </section>
+          <button class="pip-switch" id="swap-camera" type="button" aria-label="Показать Настю крупно" title="Показать Настю крупно" disabled><span class="pip-label">Настя <svg class="icon" aria-hidden="true"><use href="#i-swap" /></svg></span></button>
+          <div class="stage-status" id="stage-status" role="status"><span class="loading-dot" aria-hidden="true"></span> Подготавливаем сцены…</div>
+        </div>
+        <div class="scene-strip">
+          <p id="scene-title">Хлеб и доска</p>
+          <span class="playback-state" id="playback-state">Первый фрагмент</span>
+        </div>
+        <div class="progress-track" id="scene-progress" role="progressbar" aria-label="Ход фрагмента" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress-fill"></div></div>
+      </section>
+
+      <section class="start-shelf" id="start-shelf" aria-label="Начать игру">
+        <p>Наблюдайте за двумя пространствами. Действия идут сами.</p>
+        <div class="start-actions">
+          <button class="button button-primary" id="start-fragment" type="button" disabled><svg class="icon" aria-hidden="true"><use href="#i-play" /></svg>Начать фрагмент</button>
+          <button class="button button-secondary" id="continue-fragment" type="button" hidden disabled>Продолжить</button>
+        </div>
+      </section>
+
+      <div class="transport" id="transport" aria-label="Управление фрагментом" hidden>
+        <div class="transport-main">
+          <button class="button transport-play" id="toggle-play" type="button" aria-label="Поставить на паузу" title="Пауза · пробел" disabled><svg class="icon" aria-hidden="true"><use id="play-icon" href="#i-pause" /></svg><span id="play-label">Пауза</span></button>
+          <button class="icon-button" id="toggle-mute" type="button" aria-pressed="false" aria-label="Выключить звук" title="Выключить звук" disabled><svg class="icon" aria-hidden="true"><use id="sound-icon" href="#i-sound" /></svg></button>
+          <label class="tempo-label" for="tempo"><span>Темп</span><select id="tempo" disabled aria-label="Темп проигрывания"><option value="1">1×</option><option value="2">2×</option></select></label>
+        </div>
+        <button class="icon-button next-action" id="next-action" type="button" aria-label="Быстрее к следующему действию" title="Быстрее к следующему действию" hidden disabled><svg class="icon" aria-hidden="true"><use href="#i-next" /></svg></button>
+      </div>
+
+      <p class="storage-note" id="storage-note" role="status" aria-live="polite" hidden>Прогресс пока не сохраняется. Можно продолжить игру.</p>
+      <p class="audio-note" id="audio-note" role="status" aria-live="polite" hidden>Звук сейчас недоступен. Можно продолжить без звука.</p>
+      <p class="watch-hint" id="watch-hint" hidden></p>
+
+      <section class="chat-panel" id="chat-panel" aria-labelledby="chat-title" hidden>
+        <div class="chat-heading"><h2 id="chat-title">Переписка</h2><span id="chat-counter" aria-hidden="true"></span></div>
+        <ol class="message-list" id="message-list" role="log" aria-live="polite" aria-relevant="additions" aria-label="Сообщения Вовы и Насти" tabindex="0"></ol>
+      </section>
+
+      <section class="completion-shelf" id="completion-shelf" aria-label="Фрагмент завершён" hidden>
+        <div><p class="completion-title" tabindex="-1" id="completion-title">Первый фрагмент завершён</p><p class="completion-description">Утренние сцены магазина и класса</p></div>
+        <button class="button button-primary" id="repeat-fragment" type="button"><svg class="icon" aria-hidden="true"><use href="#i-repeat" /></svg>Повторить</button>
+      </section>
+
+      <p class="error-note" id="error-note" role="alert" hidden></p>
+      <footer class="game-footer"><span>Обычный день</span><span>Первый фрагмент</span></footer>
+      <div class="sr-only" id="announcements" role="status" aria-live="polite"></div>
+    </main>
+
+    <dialog class="pause-menu" id="pause-menu" aria-labelledby="menu-title">
+      <div class="menu-header"><h2 id="menu-title">Пауза</h2><button class="icon-button" id="close-menu" type="button" aria-label="Закрыть меню"><svg class="icon" aria-hidden="true"><use href="#i-close" /></svg></button></div>
+      <div class="menu-actions">
+        <button class="button button-primary" id="resume-fragment" type="button">Вернуться к фрагменту</button>
+        <button class="button button-secondary" id="restart-fragment" type="button">С начала</button>
+      </div>
+      <div class="setting-row"><label for="reduced-motion"><span class="setting-title">Меньше движения</span><span class="setting-description">Спокойные переходы и без мерцания</span></label><input id="reduced-motion" type="checkbox" role="switch" /></div>
+      <p class="keyboard-hint">Пробел: пауза. Tab: выбор кнопки. Escape: закрыть меню.</p>
+      <button class="sources-toggle" id="show-sources" type="button" aria-expanded="false" aria-controls="sources-content">Источники <span aria-hidden="true">+</span></button>
+      <div class="sources-content" id="sources-content" hidden>
+        <p>Основа: «Обычный день», полный сюжет и концепция v3.0.</p>
+        <p>S02 «Хлеб и доска», S03 «Хлеб выставляю». Сообщения взяты из проверенного реестра реплик.</p>
+        <p>Этот игровой фрагмент охватывает только S02–S03.</p>
+      </div>
+    </dialog>
+  </body>
+</html>

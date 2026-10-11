@@ -1,0 +1,33 @@
+{
+  "evidenceType": "actual exported engine renderFrame, native Canvas; not browser capture",
+  "storyDurationSeconds": 189,
+  "additionalBoundaries": [130,130.18,130.43,130.65,130.85,131.05,131.31,135.7,135.92,136.08,136.3,169.7,169.92,170.08,170.3,175.7,175.92,176.08,176.3,178,178.22,178.44,178.66,178.84,179.14,179.36,183],
+  "transitionNeighborhoodSeconds": 0.016666666666666666,
+  "scanFrequencyHz": 60,
+  "outputFramesPerSecond": 10,
+  "originalRateClips": [
+    {"id": "nastya-walk", "from": 12, "to": 18, "rate": 1},
+    {"id": "chalk-writing", "from": 34.5, "to": 47, "rate": 1},
+    {"id": "nastya-phone-pickup", "from": 127, "to": 136, "rate": 1},
+    {"id": "nastya-phone-return", "from": 176, "to": 184, "rate": 1}
+  ],
+  "montage": [
+    {"id": "approach", "from": 10, "to": 23, "rate": 5},
+    {"id": "grab-pack", "from": 23, "to": 35, "rate": 3},
+    {"id": "chalk-contact", "from": 35, "to": 48, "rate": 4},
+    {"id": "pupil-raised-hand", "from": 48, "to": 61, "rate": 5},
+    {"id": "desk-help-route", "from": 61, "to": 79, "rate": 5},
+    {"id": "stage-to-cart", "from": 79, "to": 94, "rate": 4},
+    {"id": "cart-to-shelf", "from": 102, "to": 115, "rate": 4},
+    {"id": "shelf-release", "from": 115, "to": 124, "rate": 4},
+    {"id": "break-phone", "from": 124, "to": 136, "rate": 4},
+    {"id": "first-message", "from": 136, "to": 147, "rate": 4},
+    {"id": "vova-reply", "from": 147, "to": 164, "rate": 5},
+    {"id": "nastya-replies", "from": 164, "to": 181, "rate": 5},
+    {"id": "phone-returns", "from": 181, "to": 189, "rate": 5}
+  ],
+  "rawFrames": "Every unique authored pose/frame encountered by the actual state timeline and every contact/ownership/phone/chalk/pupil phase boundary ±1/60 sec.",
+  "minimumWorldDisplayWidth": 320,
+  "mobileLimit": "World-only nearest-neighbor scaling to 320 px; HTML/PIP/touch/layout not checked.",
+  "gifLimit": "A chronological accelerated montage omits quiet intervals and contains no sound. Its displayed duration is not the unabridged story duration."
+}

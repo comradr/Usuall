@@ -1,0 +1,8 @@
+{
+  "name": "obychnyy-den",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Обычный день — S02–S03 playable art prototype",
+  "scripts": {"check": "node --check dist/model.js && node --check dist/engine.js && node --check dist/ui.js", "test": "node tests/regression.mjs"}
+}

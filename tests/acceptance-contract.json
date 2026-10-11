@@ -1,0 +1,53 @@
+{
+  "title": "Обычный день · independent QA acceptance for S02–S03",
+  "source": "Obychnyy_den_CONCEPT_COMPLETE_v3, scenes S02/S03, animation/state contracts",
+  "scope": ["S02", "S03"],
+  "durationSeconds": 189,
+  "sceneBoundarySeconds": 102,
+  "trackedBread": {
+    "countInitially": 6,
+    "sourceCountAfterGrab": 5,
+    "ownerSequence": ["crate", "hand", "stage", "hand", "trolley", "hand", "shelf"],
+    "assertions": [
+      "The tracked loaf has one owner at every sampled frame.",
+      "Raw loaf leaves the crate before becoming visible in hands.",
+      "Packed loaf persists from S02 into S03.",
+      "Trolley releases the loaf before the shelf receives it.",
+      "Vova never holds the phone while carrying the loaf."
+    ]
+  },
+  "lesson": {
+    "arithmetic": "7 + 5 = 12",
+    "breakStartsAtSeconds": 124,
+    "assertions": [
+      "Chalk appears only after chalk contacts the board.",
+      "The completed arithmetic persists throughout the next scene.",
+      "Nastya never holds a phone during an active lesson.",
+      "The walk to a pupil follows the aisle around desks."
+    ]
+  },
+  "dialogue": [
+    {"id": "message4459710", "speaker": "Настя", "text": "вова такой занятой"},
+    {"id": "message4459712", "speaker": "Вова", "text": "Привет"},
+    {"id": "message4459713", "speaker": "Вова", "text": "Хлеб выставляю"},
+    {"id": "message4459715", "speaker": "Настя", "text": "оо хлеб это хорошо"},
+    {"id": "message4459716", "speaker": "Настя", "text": "как раз у меня закончился"}
+  ],
+  "persistence": [
+    "Intermediate ownership and chalk/chat state survive roundtrip through validated save data.",
+    "Malformed JSON, mismatched version, negative/non-finite/overrun time and unsupported preferences are rejected or normalized safely.",
+    "Storage quota and unavailable-storage errors never terminate the simulation."
+  ],
+  "controls": [
+    "Pause consumes no story time.",
+    "Playback speed changes wall-clock rate without changing event order.",
+    "A long tab suspension cannot jump through a physical action.",
+    "Fast-forward advances continuously and observes every ownership boundary.",
+    "Reduced motion does not remove ownership or dialogue events."
+  ],
+  "evidenceLimitations": [
+    "Native Canvas captures exercise the game's exported renderFrame, not a browser.",
+    "DOM layout, real mobile touch, actual browser audio, focus/PIP and browser performance are NOT_CHECKED.",
+    "Deterministic regression results do not certify art quality or complete-game readiness."
+  ]
+}
