@@ -5,8 +5,8 @@ import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const hash=(alg,b)=>createHash(alg).update(b).digest('hex');
 function entries(dir){return fs.readdirSync(path.join(root,dir),{withFileTypes:true}).flatMap(e=>e.isDirectory()?entries(`${dir}/${e.name}`):e.isFile()?[`${dir}/${e.name}`]:[]);}
-const dirs=['dist','src','scripts','tests','production/art-source'];
-const extra=['README.md','package.json','.openai/hosting.json'];
+const dirs=['dist','src','scripts','tests','production/art-source','production/critic-interactive-captures','production/critic-interactive-baseline'];
+const extra=['README.md','package.json','.openai/hosting.json','production/npc-review-sheet.png','production/critic-interactive-probe.mjs'];
 const docs=entries('production').filter(p=>p.split('/').length===2&&/\.(json|md|txt|csv)$/.test(p));
 const files=[...dirs.flatMap(entries),...extra,...docs].filter(p=>!/(?:-rejected|__pycache__|\.pyc$|\.tmp$)/.test(p)).sort();
 const unique=[...new Set(files)];

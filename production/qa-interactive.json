@@ -1,0 +1,106 @@
+{
+  "createdAt": "2026-10-11T07:56:38.301Z",
+  "environment": "Node/native Canvas, injected clock/storage; no browser",
+  "independent": false,
+  "tests": [
+    {
+      "id": "INPUT-WAIT-REJECT",
+      "status": "PASS",
+      "evidence": {
+        "waitSeconds": 10,
+        "firstStep": 0.09999999999999964
+      }
+    },
+    {
+      "id": "CUSTOMER-SERVICE",
+      "status": "PASS",
+      "evidence": {
+        "owners": [
+          "counter",
+          "vova",
+          "customer"
+        ],
+        "exitAt": 79,
+        "breadCount": 6
+      }
+    },
+    {
+      "id": "WAITING-RELOAD",
+      "status": "PASS",
+      "evidence": {
+        "gate": 35
+      }
+    },
+    {
+      "id": "MID-ACTION-RELOAD",
+      "status": "PASS",
+      "evidence": {
+        "elapsed": 85.09999999999965,
+        "owner": "hand"
+      }
+    },
+    {
+      "id": "PHONE-INPUT",
+      "status": "PASS",
+      "evidence": {
+        "gate": 145,
+        "pickupAfterInput": true,
+        "phoneAt": 147
+      }
+    },
+    {
+      "id": "FULL-PLAYTHROUGH",
+      "status": "PASS",
+      "evidence": {
+        "ticks": 1895,
+        "clicks": [
+          "packBread",
+          "writeBoard",
+          "serveCustomer",
+          "moveBreadToCart",
+          "stockShelf",
+          "replyToNastya"
+        ],
+        "messages": 5,
+        "owners": [
+          "crate",
+          "hand",
+          "stage",
+          "hand",
+          "trolley",
+          "hand",
+          "shelf"
+        ]
+      }
+    },
+    {
+      "id": "BLOCKED-STORAGE-PAUSE-MOTION",
+      "status": "PASS",
+      "evidence": {
+        "usable": true,
+        "noticeOnce": true
+      }
+    },
+    {
+      "id": "LEGACY-MIGRATION-CORRUPT-LEDGER",
+      "status": "PASS",
+      "evidence": {
+        "old": 109.2,
+        "checkpoint": 102
+      }
+    }
+  ],
+  "sourceSha256": {
+    "dist/engine.js": "8768c388db4d99a87da28ff494f6791bee34d0096bf8ab4fe08411bcbc5d484e",
+    "dist/model.js": "2b7e1d2bc4e5620f4dac0a757833214fc53ba66b20865fc59e50afbc1074b97e",
+    "dist/ui.js": "56219ccc66f1eca83959e3be11b47f76840242aa09be28b2a199d39b02fd0ca0",
+    "dist/style.css": "4155142282d8a1433ba4c123d88a5f17dec6a90eabecd604ebe4c52a80b0fc22",
+    "dist/index.html": "12d6da7eb39b3c20bd6c844eecd10eded4317a07a66500d6fc986ce1d7a00f3c",
+    "dist/assets/manifest.json": "8aaa48e4ea591402ad2cc58c6c51b0fad0021df06a4726a0283ad2633422cc34"
+  },
+  "counts": {
+    "pass": 8,
+    "fail": 0
+  },
+  "status": "PASS"
+}

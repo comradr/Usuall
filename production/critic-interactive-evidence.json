@@ -1,0 +1,1708 @@
+{
+  "reviewer": "/root/review_actual_02",
+  "independent": true,
+  "build_id": "slice-cc408edc66cc9eb44d25",
+  "build_artifact": {
+    "path": "production/build-manifest.json",
+    "sha256": "34df5ff10485a9f4e3cdeadc7c259ed1c4697ffff07b610951c5fe3aabd13c15"
+  },
+  "evidence_type": "Actual production exports with native Canvas; not a browser screenshot",
+  "frames": [
+    {
+      "label": "time-20_00000",
+      "time": 20,
+      "file": "production/critic-interactive-captures/time-20_00000.png",
+      "sha256": "876da3f32b76e01346c662b03dbac89b0549238732378d2994799aa6a8b71d2a",
+      "storePose": "walk",
+      "storeFrame": 19,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 503,
+        "y": 333,
+        "frame": 0,
+        "pose": "walk",
+        "walking": true,
+        "facing": "left",
+        "waiting": false,
+        "served": false,
+        "hand": {
+          "x": 484,
+          "y": 301
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-25_00000",
+      "time": 25,
+      "file": "production/critic-interactive-captures/time-25_00000.png",
+      "sha256": "176b68f9b3737b7a6fefa215a521299c5aa572ad440989a7b339430ee9505dfd",
+      "storePose": "liftRaw",
+      "storeFrame": 6,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 448.35714285714283,
+        "y": 333,
+        "frame": 1,
+        "pose": "walk",
+        "walking": true,
+        "facing": "left",
+        "waiting": false,
+        "served": false,
+        "hand": {
+          "x": 433.35714285714283,
+          "y": 301
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-30_00000",
+      "time": 30,
+      "file": "production/critic-interactive-captures/time-30_00000.png",
+      "sha256": "79463ae966d622020b7584a2fc73bd6e5294ba3d93aea5f5253d1136136310bc",
+      "storePose": "pack",
+      "storeFrame": 6,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 393.7142857142857,
+        "y": 333,
+        "frame": 2,
+        "pose": "walk",
+        "walking": true,
+        "facing": "left",
+        "waiting": false,
+        "served": false,
+        "hand": {
+          "x": 382.7142857142857,
+          "y": 303
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-34_00000",
+      "time": 34,
+      "file": "production/critic-interactive-captures/time-34_00000.png",
+      "sha256": "b13012b1f4f01424da50fe0587e69346bd47b8100a3ce5abb74cf6e26f14c601",
+      "storePose": "walk",
+      "storeFrame": 17,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": true,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-42_00000",
+      "time": 42,
+      "file": "production/critic-interactive-captures/time-42_00000.png",
+      "sha256": "6435d18471be4849b1848c952ae7f1d03eeeda1690c943e71ebf0781e14295b0",
+      "storePose": "busy",
+      "storeFrame": 6,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": true,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-49_00000",
+      "time": 49,
+      "file": "production/critic-interactive-captures/time-49_00000.png",
+      "sha256": "7a6c4ed762578ba8f0aa45de09941236c92b8227b41d6aeaaf4f43538512ad2b",
+      "storePose": "busy",
+      "storeFrame": 6,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": true,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-55_99000",
+      "time": 55.99,
+      "file": "production/critic-interactive-captures/time-55_99000.png",
+      "sha256": "fe0785ec21b70f22da1f5c7439020d824c06fc2444e86db488527ae6da322a33",
+      "storePose": "busy",
+      "storeFrame": 6,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": true,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-56_00000",
+      "time": 56,
+      "file": "production/critic-interactive-captures/time-56_00000.png",
+      "sha256": "d3960a608188b1dfc44cf26bbfb22781530fa160fc3ce6c4b8c29db12c6e23e5",
+      "storePose": "walk",
+      "storeFrame": 16,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": true,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-61_99000",
+      "time": 61.99,
+      "file": "production/critic-interactive-captures/time-61_99000.png",
+      "sha256": "24f051378255329ad4d4fd3a6d7216897524e52e94e69e2affe0d46e2faa8973",
+      "storePose": "walk",
+      "storeFrame": 19,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": true,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-62_00000",
+      "time": 62,
+      "file": "production/critic-interactive-captures/time-62_00000.png",
+      "sha256": "ee67d309316c5036e75f1c72386d8747c54a59d6b8c44ccc066ff0caadf67f5e",
+      "storePose": "pack",
+      "storeFrame": 6,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": false,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-62_98333",
+      "time": 62.983333333,
+      "file": "production/critic-interactive-captures/time-62_98333.png",
+      "sha256": "bdc90a1419a1a9b735f148cc2a5cbc40ff8db273432c58c0211948966ebd56d0",
+      "storePose": "pack",
+      "storeFrame": 6,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": false,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-63_00000",
+      "time": 63,
+      "file": "production/critic-interactive-captures/time-63_00000.png",
+      "sha256": "ba8cf95addaf46e4ef93bf1d2cded02bcb8bd23440f0d2425affb4d49787fdc3",
+      "storePose": "pack",
+      "storeFrame": 6,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": false,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "vova",
+        "x": 325,
+        "y": 181,
+        "scanning": true,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-64_99000",
+      "time": 64.99,
+      "file": "production/critic-interactive-captures/time-64_99000.png",
+      "sha256": "789bb58da002ba1a54c234598ad825ba84dd4fa07a15795c96322f6c95e18a78",
+      "storePose": "pack",
+      "storeFrame": 6,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": false,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "vova",
+        "x": 325,
+        "y": 181,
+        "scanning": true,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-65_00000",
+      "time": 65,
+      "file": "production/critic-interactive-captures/time-65_00000.png",
+      "sha256": "cc07b59f575aa48dfc17a0420b0028352256026c7a76c28f3cbb8fceb514db20",
+      "storePose": "liftStage",
+      "storeFrame": 6,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": false,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "vova",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-66_00000",
+      "time": 66,
+      "file": "production/critic-interactive-captures/time-66_00000.png",
+      "sha256": "9ed2a3ea8a0abd17d6641fc52a3d4dc00c6db6254bdf955f1f00731ade641d75",
+      "storePose": "carryWalk",
+      "storeFrame": 20,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": false,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "vova",
+        "x": 317,
+        "y": 185,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-68_00000",
+      "time": 68,
+      "file": "production/critic-interactive-captures/time-68_00000.png",
+      "sha256": "d5abe89eb1025dd4c2660d2d815744c641dcce6ec6dc23b92e9d00b876a063a6",
+      "storePose": "carryWalk",
+      "storeFrame": 20,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": false,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "vova",
+        "x": 316.60405478468846,
+        "y": 254.9187318181776,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-69_49000",
+      "time": 69.49,
+      "file": "production/critic-interactive-captures/time-69_49000.png",
+      "sha256": "95ba7aebd06c2301c38f231082c3b6c33da2cbc03fb39b186a3a2135df2dabcf",
+      "storePose": "carryWalk",
+      "storeFrame": 23,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": false,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "vova",
+        "x": 324.95736036523124,
+        "y": 306.6527915454543,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-69_50000",
+      "time": 69.5,
+      "file": "production/critic-interactive-captures/time-69_50000.png",
+      "sha256": "1cab8690ba0e4ce6e0a1c6bd770ad61136cf6c80c8805d0d2f0f3440b35bd0ac",
+      "storePose": "carry",
+      "storeFrame": 5,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "reach",
+        "walking": false,
+        "facing": "left",
+        "waiting": false,
+        "served": false,
+        "hand": {
+          "x": 321,
+          "y": 305
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "vova",
+        "x": 321,
+        "y": 305,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-70_48333",
+      "time": 70.483333333,
+      "file": "production/critic-interactive-captures/time-70_48333.png",
+      "sha256": "ff4bfadef265a0818857b57ec73d1afde684831caa0c97445227930cba87094f",
+      "storePose": "carry",
+      "storeFrame": 5,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "reach",
+        "walking": false,
+        "facing": "left",
+        "waiting": false,
+        "served": false,
+        "hand": {
+          "x": 321,
+          "y": 305
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "vova",
+        "x": 321,
+        "y": 305,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-70_50000",
+      "time": 70.5,
+      "file": "production/critic-interactive-captures/time-70_50000.png",
+      "sha256": "466e40032a858904c0fdd9e615816215b4cd66d28152c49455cde4f751ccd1a6",
+      "storePose": "carry",
+      "storeFrame": 5,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "pickup",
+        "walking": false,
+        "facing": "left",
+        "waiting": false,
+        "served": true,
+        "hand": {
+          "x": 321,
+          "y": 305
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 321,
+        "y": 305,
+        "scanning": false,
+        "collected": true
+      }
+    },
+    {
+      "label": "time-70_65000",
+      "time": 70.65,
+      "file": "production/critic-interactive-captures/time-70_65000.png",
+      "sha256": "0a6e022d659e191cca8c194a5287fa652e8bb20ff785c6e49ccfe37ef0292692",
+      "storePose": "carry",
+      "storeFrame": 5,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "pickup",
+        "walking": false,
+        "facing": "left",
+        "waiting": false,
+        "served": true,
+        "hand": {
+          "x": 321,
+          "y": 305
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 321,
+        "y": 305,
+        "scanning": false,
+        "collected": true
+      }
+    },
+    {
+      "label": "time-70_67000",
+      "time": 70.67,
+      "file": "production/critic-interactive-captures/time-70_67000.png",
+      "sha256": "99f0c313df19bd1a11dd4b44de2112fe4eb1da60438a51f49a619c8db163bc6d",
+      "storePose": "carry",
+      "storeFrame": 5,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 1,
+        "pose": "pickup",
+        "walking": false,
+        "facing": "left",
+        "waiting": false,
+        "served": true,
+        "hand": {
+          "x": 323,
+          "y": 302
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 323,
+        "y": 302,
+        "scanning": false,
+        "collected": true
+      }
+    },
+    {
+      "label": "time-70_82000",
+      "time": 70.82,
+      "file": "production/critic-interactive-captures/time-70_82000.png",
+      "sha256": "9a85242410e3ce9d828be1d8c77e201d2e6baa11577771cb1f9a8b59ccb9fc17",
+      "storePose": "carry",
+      "storeFrame": 5,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 1,
+        "pose": "pickup",
+        "walking": false,
+        "facing": "left",
+        "waiting": false,
+        "served": true,
+        "hand": {
+          "x": 323,
+          "y": 302
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 323,
+        "y": 302,
+        "scanning": false,
+        "collected": true
+      }
+    },
+    {
+      "label": "time-70_84000",
+      "time": 70.84,
+      "file": "production/critic-interactive-captures/time-70_84000.png",
+      "sha256": "9a85242410e3ce9d828be1d8c77e201d2e6baa11577771cb1f9a8b59ccb9fc17",
+      "storePose": "carry",
+      "storeFrame": 5,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 1,
+        "pose": "pickup",
+        "walking": false,
+        "facing": "left",
+        "waiting": false,
+        "served": true,
+        "hand": {
+          "x": 323,
+          "y": 302
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 323,
+        "y": 302,
+        "scanning": false,
+        "collected": true
+      }
+    },
+    {
+      "label": "time-70_98333",
+      "time": 70.983333333,
+      "file": "production/critic-interactive-captures/time-70_98333.png",
+      "sha256": "05359669c6dcd212e84cb1317389450ee56b6e9c8acae6c2f1237a01651fecc6",
+      "storePose": "carry",
+      "storeFrame": 5,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 1,
+        "pose": "pickup",
+        "walking": false,
+        "facing": "left",
+        "waiting": false,
+        "served": true,
+        "hand": {
+          "x": 323,
+          "y": 302
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 323,
+        "y": 302,
+        "scanning": false,
+        "collected": true
+      }
+    },
+    {
+      "label": "time-71_00000",
+      "time": 71,
+      "file": "production/critic-interactive-captures/time-71_00000.png",
+      "sha256": "4335834fe785f63885d4736730ac4ec302636bfb7e986b1b21bb88e86cbefa6f",
+      "storePose": "walk",
+      "storeFrame": 16,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "carryWalk",
+        "walking": true,
+        "facing": "left",
+        "waiting": false,
+        "served": true,
+        "hand": {
+          "x": 331,
+          "y": 301
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 331,
+        "y": 301,
+        "scanning": false,
+        "collected": true
+      }
+    },
+    {
+      "label": "time-71_01667",
+      "time": 71.016666667,
+      "file": "production/critic-interactive-captures/time-71_01667.png",
+      "sha256": "5b7a751b3e7b0f8acb61c5ed0ab4f356dce57bc75dd68fb66048385c38eca991",
+      "storePose": "walk",
+      "storeFrame": 16,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 349.9376662041994,
+        "y": 333.2389462172357,
+        "frame": 0,
+        "pose": "carryWalk",
+        "walking": true,
+        "facing": "left",
+        "waiting": false,
+        "served": true,
+        "hand": {
+          "x": 330.9376662041994,
+          "y": 301.2389462172357
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 330.9376662041994,
+        "y": 301.2389462172357,
+        "scanning": false,
+        "collected": true
+      }
+    },
+    {
+      "label": "time-71_20000",
+      "time": 71.2,
+      "file": "production/critic-interactive-captures/time-71_20000.png",
+      "sha256": "f98a6f06c2fff9b16d767391224d2001506376035a02a7bb2efdca8babf2289f",
+      "storePose": "walk",
+      "storeFrame": 16,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 349.2519944653525,
+        "y": 335.86735454948206,
+        "frame": 1,
+        "pose": "carryWalk",
+        "walking": true,
+        "facing": "left",
+        "waiting": false,
+        "served": true,
+        "hand": {
+          "x": 334.2519944653525,
+          "y": 303.86735454948206
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 334.2519944653525,
+        "y": 303.86735454948206,
+        "scanning": false,
+        "collected": true
+      }
+    },
+    {
+      "label": "time-71_40000",
+      "time": 71.4,
+      "file": "production/critic-interactive-captures/time-71_40000.png",
+      "sha256": "549ffbc342696e49fa647dc4048e4979df6a6054064dbb70bf1bdd1a85fd8b70",
+      "storePose": "walk",
+      "storeFrame": 17,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 348.503988930705,
+        "y": 338.7347090989642,
+        "frame": 2,
+        "pose": "carryWalk",
+        "walking": true,
+        "facing": "left",
+        "waiting": false,
+        "served": true,
+        "hand": {
+          "x": 337.503988930705,
+          "y": 308.7347090989642
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 337.503988930705,
+        "y": 308.7347090989642,
+        "scanning": false,
+        "collected": true
+      }
+    },
+    {
+      "label": "time-72_00000",
+      "time": 72,
+      "file": "production/critic-interactive-captures/time-72_00000.png",
+      "sha256": "b71da99847709841f363017cd155fe486772e67bba60f878006abff38844c3f5",
+      "storePose": "walk",
+      "storeFrame": 16,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 346.2599723267626,
+        "y": 347.3367727474102,
+        "frame": 1,
+        "pose": "carryWalk",
+        "walking": true,
+        "facing": "left",
+        "waiting": false,
+        "served": true,
+        "hand": {
+          "x": 331.2599723267626,
+          "y": 315.3367727474102
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 331.2599723267626,
+        "y": 315.3367727474102,
+        "scanning": false,
+        "collected": true
+      }
+    },
+    {
+      "label": "time-74_00000",
+      "time": 74,
+      "file": "production/critic-interactive-captures/time-74_00000.png",
+      "sha256": "86bca6d62d528c5813a5c2fe685cbcfb3184fe9953ff95cea470288d26e706b2",
+      "storePose": "walk",
+      "storeFrame": 17,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 341.3812534915135,
+        "y": 376.51351431647737,
+        "frame": 3,
+        "pose": "carryWalk",
+        "walking": true,
+        "facing": "left",
+        "waiting": false,
+        "served": true,
+        "hand": {
+          "x": 334.3812534915135,
+          "y": 347.51351431647737
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 334.3812534915135,
+        "y": 347.51351431647737,
+        "scanning": false,
+        "collected": true
+      }
+    },
+    {
+      "label": "time-78_99000",
+      "time": 78.99,
+      "file": "production/critic-interactive-captures/time-78_99000.png",
+      "sha256": "4a661ce7b41e29703b49c932aaa32389dc32a7cfa7e096b6f7d40b12ce7741aa",
+      "storePose": "walk",
+      "storeFrame": 18,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 332.018762506983,
+        "y": 449.8530270286329,
+        "frame": 3,
+        "pose": "carryWalk",
+        "walking": true,
+        "facing": "left",
+        "waiting": false,
+        "served": true,
+        "hand": {
+          "x": 325.018762506983,
+          "y": 420.8530270286329
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 325.018762506983,
+        "y": 420.8530270286329,
+        "scanning": false,
+        "collected": true
+      }
+    },
+    {
+      "label": "time-79_00000",
+      "time": 79,
+      "file": "production/critic-interactive-captures/time-79_00000.png",
+      "sha256": "4ae75786ba52239b27beb255bdd626ea50dc7173f7f3887d6a763ddd2c9d00de",
+      "storePose": "pack",
+      "storeFrame": 6,
+      "customer": {
+        "visible": false
+      },
+      "purchase": null
+    },
+    {
+      "label": "time-34_98333",
+      "time": 34.983333333333334,
+      "file": "production/critic-interactive-captures/time-34_98333.png",
+      "sha256": "17fb06dd38d5f3bc14edc9cfab61d321b70a6b975e8b393e2b6d3d409d1b215a",
+      "storePose": "walk",
+      "storeFrame": 18,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": true,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-35_00000",
+      "time": 35,
+      "file": "production/critic-interactive-captures/time-35_00000.png",
+      "sha256": "72ae802acd2dda3ed0c5d9ac295928d6cc0ac0b2bfdc82dc785738b85e6e0b06",
+      "storePose": "busy",
+      "storeFrame": 0,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": true,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-46_48333",
+      "time": 46.483333333333334,
+      "file": "production/critic-interactive-captures/time-46_48333.png",
+      "sha256": "f770cf0655d45a8e3aa54a7c1d2c2da5031e397b6adeb97466924a81da5fcae2",
+      "storePose": "busy",
+      "storeFrame": 6,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": true,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-46_50000",
+      "time": 46.5,
+      "file": "production/critic-interactive-captures/time-46_50000.png",
+      "sha256": "42aeaa510c10313e77446e1fa3a89682aa8b0616155f76ad79cb57e5010be518",
+      "storePose": "busy",
+      "storeFrame": 6,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": true,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-50_00000",
+      "time": 50,
+      "file": "production/critic-interactive-captures/time-50_00000.png",
+      "sha256": "7d92743e953dbae454da2bd27264665d1d7ba7d9df4bd1300d38a5577f586ebe",
+      "storePose": "busy",
+      "storeFrame": 0,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": true,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "time-71_70000",
+      "time": 71.7,
+      "file": "production/critic-interactive-captures/time-71_70000.png",
+      "sha256": "3937dfb31c93eebebaa402e9ed04707f804219a2c27bb81c722582abe45f7c42",
+      "storePose": "walk",
+      "storeFrame": 19,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 347.3819806287338,
+        "y": 343.0357409231872,
+        "frame": 3,
+        "pose": "carryWalk",
+        "walking": true,
+        "facing": "left",
+        "waiting": false,
+        "served": true,
+        "hand": {
+          "x": 340.3819806287338,
+          "y": 314.0357409231872
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 340.3819806287338,
+        "y": 314.0357409231872,
+        "scanning": false,
+        "collected": true
+      }
+    },
+    {
+      "label": "time-136_00000",
+      "time": 136,
+      "file": "production/critic-interactive-captures/time-136_00000.png",
+      "sha256": "7ea9076107b742b9f01f91ae8806b18da8d2b861b13d9659f164041dcb8dfe23",
+      "storePose": "idle",
+      "storeFrame": 0,
+      "customer": {
+        "visible": false
+      },
+      "purchase": null
+    },
+    {
+      "label": "time-145_00000",
+      "time": 145,
+      "file": "production/critic-interactive-captures/time-145_00000.png",
+      "sha256": "b43ea9bbce898dd91320312000d5cb0e357da0eeb55ed95a4b8a40b96cc7f94c",
+      "storePose": "phoneReach",
+      "storeFrame": 0,
+      "customer": {
+        "visible": false
+      },
+      "purchase": null
+    },
+    {
+      "label": "time-146_00000",
+      "time": 146,
+      "file": "production/critic-interactive-captures/time-146_00000.png",
+      "sha256": "9f2d26c06de41e301fbb1522931341e47c4838f309f1376d2f083c92cc535f18",
+      "storePose": "phoneReach",
+      "storeFrame": 5,
+      "customer": {
+        "visible": false
+      },
+      "purchase": null
+    },
+    {
+      "label": "time-147_00000",
+      "time": 147,
+      "file": "production/critic-interactive-captures/time-147_00000.png",
+      "sha256": "f19d110c8e134ede87e7967de6c125caa0caeb03b7951025b104dcfda36a35e6",
+      "storePose": "phone",
+      "storeFrame": 7,
+      "customer": {
+        "visible": false
+      },
+      "purchase": null
+    },
+    {
+      "label": "gate-packBread-before",
+      "time": 10,
+      "file": "production/critic-interactive-captures/gate-packBread-before.png",
+      "sha256": "d15d8ff4b75a88d6947edcb92baf08d036fd874f0c094ea9eac2b6902734b18f",
+      "storePose": "idle",
+      "storeFrame": 0,
+      "customer": {
+        "visible": false
+      },
+      "purchase": null
+    },
+    {
+      "label": "gate-packBread-accepted",
+      "time": 10,
+      "file": "production/critic-interactive-captures/gate-packBread-accepted.png",
+      "sha256": "443fefa589c9b663b6ad39a52ce064139549ece0570b25437a386481f4b02503",
+      "storePose": "walk",
+      "storeFrame": 16,
+      "customer": {
+        "visible": false
+      },
+      "purchase": null
+    },
+    {
+      "label": "gate-writeBoard-before",
+      "time": 35,
+      "file": "production/critic-interactive-captures/gate-writeBoard-before.png",
+      "sha256": "ae36a2eba8d4ce12399c432d791b0cb062aa98fbcc75b8728b16619b8e95b912",
+      "storePose": "busy",
+      "storeFrame": 0,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": true,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "gate-writeBoard-accepted",
+      "time": 35,
+      "file": "production/critic-interactive-captures/gate-writeBoard-accepted.png",
+      "sha256": "72ae802acd2dda3ed0c5d9ac295928d6cc0ac0b2bfdc82dc785738b85e6e0b06",
+      "storePose": "busy",
+      "storeFrame": 0,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": true,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "gate-serveCustomer-before",
+      "time": 56,
+      "file": "production/critic-interactive-captures/gate-serveCustomer-before.png",
+      "sha256": "58435e3b49f7de88336dc02b7709cab309bd5ad863c9d576cbb2b711c0657568",
+      "storePose": "idle",
+      "storeFrame": 0,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": true,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "gate-serveCustomer-accepted",
+      "time": 56,
+      "file": "production/critic-interactive-captures/gate-serveCustomer-accepted.png",
+      "sha256": "d3960a608188b1dfc44cf26bbfb22781530fa160fc3ce6c4b8c29db12c6e23e5",
+      "storePose": "walk",
+      "storeFrame": 16,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": true,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      }
+    },
+    {
+      "label": "gate-moveBreadToCart-before",
+      "time": 79,
+      "file": "production/critic-interactive-captures/gate-moveBreadToCart-before.png",
+      "sha256": "0f994b853897f819c561680ad1f7256221d1f9c09ca008e458588341c497e64b",
+      "storePose": "idle",
+      "storeFrame": 0,
+      "customer": {
+        "visible": false
+      },
+      "purchase": null
+    },
+    {
+      "label": "gate-moveBreadToCart-accepted",
+      "time": 79,
+      "file": "production/critic-interactive-captures/gate-moveBreadToCart-accepted.png",
+      "sha256": "4ae75786ba52239b27beb255bdd626ea50dc7173f7f3887d6a763ddd2c9d00de",
+      "storePose": "pack",
+      "storeFrame": 6,
+      "customer": {
+        "visible": false
+      },
+      "purchase": null
+    },
+    {
+      "label": "gate-stockShelf-before",
+      "time": 102,
+      "file": "production/critic-interactive-captures/gate-stockShelf-before.png",
+      "sha256": "9213399ff10026cac5fc87958d7baa6cd6a8fc7eba7420f6398e2812d0c93186",
+      "storePose": "idle",
+      "storeFrame": 0,
+      "customer": {
+        "visible": false
+      },
+      "purchase": null
+    },
+    {
+      "label": "gate-stockShelf-accepted",
+      "time": 102,
+      "file": "production/critic-interactive-captures/gate-stockShelf-accepted.png",
+      "sha256": "1576e2e076d44bdbc67b802f44a64ae1099e7675bfbb3d939a1365722641ff6a",
+      "storePose": "cart",
+      "storeFrame": 13,
+      "customer": {
+        "visible": false
+      },
+      "purchase": null
+    },
+    {
+      "label": "gate-replyToNastya-before",
+      "time": 145,
+      "file": "production/critic-interactive-captures/gate-replyToNastya-before.png",
+      "sha256": "b43ea9bbce898dd91320312000d5cb0e357da0eeb55ed95a4b8a40b96cc7f94c",
+      "storePose": "idle",
+      "storeFrame": 0,
+      "customer": {
+        "visible": false
+      },
+      "purchase": null
+    },
+    {
+      "label": "gate-replyToNastya-accepted",
+      "time": 145,
+      "file": "production/critic-interactive-captures/gate-replyToNastya-accepted.png",
+      "sha256": "b43ea9bbce898dd91320312000d5cb0e357da0eeb55ed95a4b8a40b96cc7f94c",
+      "storePose": "phoneReach",
+      "storeFrame": 0,
+      "customer": {
+        "visible": false
+      },
+      "purchase": null
+    }
+  ],
+  "contactJumps": [
+    {
+      "time": 63,
+      "before": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      },
+      "after": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "vova",
+        "x": 325,
+        "y": 181,
+        "scanning": true,
+        "collected": false
+      },
+      "distance": 0
+    },
+    {
+      "time": 65,
+      "before": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "vova",
+        "x": 325,
+        "y": 181,
+        "scanning": true,
+        "collected": false
+      },
+      "after": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "vova",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      },
+      "distance": 0
+    },
+    {
+      "time": 70.5,
+      "before": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "vova",
+        "x": 321,
+        "y": 305,
+        "scanning": false,
+        "collected": false
+      },
+      "after": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 321,
+        "y": 305,
+        "scanning": false,
+        "collected": true
+      },
+      "distance": 0
+    },
+    {
+      "time": 70.66666666666667,
+      "before": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 321,
+        "y": 305,
+        "scanning": false,
+        "collected": true
+      },
+      "after": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 323,
+        "y": 302,
+        "scanning": false,
+        "collected": true
+      },
+      "distance": 3.6055512754639896
+    },
+    {
+      "time": 70.83333333333333,
+      "before": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 323,
+        "y": 302,
+        "scanning": false,
+        "collected": true
+      },
+      "after": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 323,
+        "y": 302,
+        "scanning": false,
+        "collected": true
+      },
+      "distance": 0
+    },
+    {
+      "time": 71,
+      "before": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 323,
+        "y": 302,
+        "scanning": false,
+        "collected": true
+      },
+      "after": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 330.99999625997236,
+        "y": 301.0000143367727,
+        "scanning": false,
+        "collected": true
+      },
+      "distance": 8.062252258905813
+    }
+  ],
+  "checks": [
+    {
+      "id": "CRIT-MODEL-SWEEP",
+      "status": "PASS",
+      "samples": 11341
+    },
+    {
+      "id": "CRIT-SIX-GATE-ACTUAL-API",
+      "status": "PASS",
+      "waitTicksPerGate": 20,
+      "wrongSideRejected": true,
+      "duplicateRejected": true,
+      "actionPersisted": true,
+      "completedAt": 189
+    }
+  ],
+  "limits": [
+    "Browser/fullscreen/orientation/audio/touch/layout/FPS/storage permissions not exercised.",
+    "Independent mechanical check does not certify creative approval."
+  ]
+}

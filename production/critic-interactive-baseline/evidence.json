@@ -1,0 +1,224 @@
+{
+  "reviewer": "/root/review_actual_02",
+  "independent": true,
+  "build_id": "slice-b333ad6c866f5091fc4d",
+  "build_artifact": {
+    "path": "production/critic-interactive-baseline/build-manifest.json",
+    "sha256": "f1d9be9ec54f0be9ca16578984b0ab81389f89415b8b406d360ca682a717957b"
+  },
+  "evidence_type": "Actual production exports with native Canvas; not a browser screenshot",
+  "frames": [
+    {
+      "label": "time-63_00000",
+      "time": 63,
+      "file": "production/critic-interactive-baseline/time-63_00000.png",
+      "sha256": "e206f3e7ee2138599d800b2c519bde281d08be78b8a873bb8227b41fb113c77e",
+      "storePose": "pack",
+      "storeFrame": 6,
+      "customer": {
+        "id": "shopper",
+        "visible": true,
+        "x": 350,
+        "y": 333,
+        "frame": 0,
+        "pose": "idle",
+        "walking": false,
+        "facing": "left",
+        "waiting": false,
+        "served": false,
+        "hand": {
+          "x": 337,
+          "y": 304
+        }
+      },
+      "purchase": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "vova",
+        "x": 325,
+        "y": 181,
+        "scanning": true,
+        "collected": false
+      }
+    },
+    {
+      "label": "gate-replyToNastya-before",
+      "time": 147,
+      "file": "production/critic-interactive-baseline/gate-replyToNastya-before.png",
+      "sha256": "17ce47eda526036353b361c2d36f9430b55f63fd8044504aa7b17746fc8ddfad",
+      "storePose": "idle",
+      "storeFrame": 0,
+      "customer": {
+        "visible": false
+      },
+      "purchase": null
+    },
+    {
+      "label": "gate-replyToNastya-accepted",
+      "time": 147,
+      "file": "production/critic-interactive-baseline/gate-replyToNastya-accepted.png",
+      "sha256": "f19d110c8e134ede87e7967de6c125caa0caeb03b7951025b104dcfda36a35e6",
+      "storePose": "phone",
+      "storeFrame": 7,
+      "customer": {
+        "visible": false
+      },
+      "purchase": null
+    }
+  ],
+  "contactJumps": [
+    {
+      "time": 63,
+      "before": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "counter",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      },
+      "after": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "vova",
+        "x": 325,
+        "y": 181,
+        "scanning": true,
+        "collected": false
+      },
+      "distance": 0
+    },
+    {
+      "time": 65,
+      "before": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "vova",
+        "x": 325,
+        "y": 181,
+        "scanning": true,
+        "collected": false
+      },
+      "after": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "vova",
+        "x": 325,
+        "y": 181,
+        "scanning": false,
+        "collected": false
+      },
+      "distance": 0
+    },
+    {
+      "time": 70.5,
+      "before": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "vova",
+        "x": 321,
+        "y": 305,
+        "scanning": false,
+        "collected": false
+      },
+      "after": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 321,
+        "y": 305,
+        "scanning": false,
+        "collected": true
+      },
+      "distance": 0
+    },
+    {
+      "time": 70.66666666666667,
+      "before": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 321,
+        "y": 305,
+        "scanning": false,
+        "collected": true
+      },
+      "after": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 323,
+        "y": 302,
+        "scanning": false,
+        "collected": true
+      },
+      "distance": 3.6055512754639896
+    },
+    {
+      "time": 70.83333333333333,
+      "before": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 323,
+        "y": 302,
+        "scanning": false,
+        "collected": true
+      },
+      "after": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 343,
+        "y": 298,
+        "scanning": false,
+        "collected": true
+      },
+      "distance": 20.39607805437114
+    },
+    {
+      "time": 71,
+      "before": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 343,
+        "y": 298,
+        "scanning": false,
+        "collected": true
+      },
+      "after": {
+        "id": "purchase-01",
+        "kind": "neutral-packet",
+        "owner": "customer",
+        "x": 357.00001912499994,
+        "y": 304,
+        "scanning": false,
+        "collected": true
+      },
+      "distance": 15.231563790378322
+    }
+  ],
+  "checks": [
+    {
+      "id": "CRIT-MODEL-SWEEP",
+      "status": "PASS",
+      "samples": 11341
+    },
+    {
+      "id": "CRIT-SIX-GATE-ACTUAL-API",
+      "status": "PASS",
+      "waitTicksPerGate": 20,
+      "wrongSideRejected": true,
+      "duplicateRejected": true,
+      "actionPersisted": true,
+      "completedAt": 189
+    }
+  ],
+  "limits": [
+    "Browser/fullscreen/orientation/audio/touch/layout/FPS/storage permissions not exercised.",
+    "Independent mechanical check does not certify creative approval."
+  ],
+  "note": "Selected actual pre-repair native frames retained for comparison; not full historical source snapshot."
+}

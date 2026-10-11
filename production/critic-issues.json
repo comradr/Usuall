@@ -1,0 +1,261 @@
+{
+  "build_id": "slice-df8ec482082a4b396c4f",
+  "build_artifact": {
+    "path": "production/build-manifest.json",
+    "sha256": "cc6d69bdffd886c299d9ffaa4b4db3353f918aa2196c20431879ec8381887a26"
+  },
+  "reviewer": {
+    "kind": "delegated_agent",
+    "independent": true,
+    "context_id": "/root/critic_resume",
+    "inspected_build_id": "slice-df8ec482082a4b396c4f",
+    "production_edits": "None; reviewer wrote only critic-* reports/capture utilities and quality-gate.json"
+  },
+  "issues": [
+    {
+      "id": "CRIT-ASSET-LOADER",
+      "domain": "web",
+      "severity": "P0",
+      "original_severity": "P0",
+      "status": "VERIFIED_FIXED",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "Previously reported assets/assets URL failure. Current production defaultloader resolves20 real images.",
+      "evidence": [
+        "production/qa-regression.json"
+      ],
+      "expected": "All current required image URLs resolve.",
+      "fix": "Correct manifest-relative base path.",
+      "owner": "web-engineer",
+      "retest": "ASSET-02 real defaultloader; browser startup remains untested.",
+      "retest_build_id": "slice-df8ec482082a4b396c4f",
+      "retest_evidence": [
+        "production/qa-regression.json"
+      ],
+      "baseline_basis": "Prior delegated critic/producer report; original failing loader log was not retained. This closure is current-code native loader only."
+    },
+    {
+      "id": "CRIT-PUPIL-HAND",
+      "domain": "animation",
+      "severity": "P1",
+      "original_severity": "P1",
+      "status": "VERIFIED_FIXED",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "Raised hand/forearm visible and connected above pupil head at50.",
+      "evidence": [
+        "production/qa-captures/contact-strip-03.png",
+        "production/qa-regression.json"
+      ],
+      "expected": "Gesture visible after furniture layers.",
+      "fix": "Raise connected forearm/wrist above head.",
+      "owner": "engine+art",
+      "retest": "RENDER-02 plus49.983/50/50.016 natural renders.",
+      "retest_build_id": "slice-df8ec482082a4b396c4f",
+      "retest_evidence": [
+        "production/qa-captures/contact-strip-03.png",
+        "production/qa-regression.json"
+      ]
+    },
+    {
+      "id": "CRIT-SHELF-VISIBILITY",
+      "domain": "environment_vfx",
+      "severity": "P1",
+      "original_severity": "P1",
+      "status": "VERIFIED_FIXED",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "Tracked packed loaf stays visible after release120.",
+      "evidence": [
+        "production/qa-captures/contact-strip-02.png",
+        "production/critic-final-captures/raw/t-120_00000000.png"
+      ],
+      "expected": "Released loaf visible and single shelf owner.",
+      "fix": "Draw shelf loaf after shelf-front occlusion.",
+      "owner": "engine",
+      "retest": "119.983/120/120.016 and one-owner sweep.",
+      "retest_build_id": "slice-df8ec482082a4b396c4f",
+      "retest_evidence": [
+        "production/qa-captures/contact-strip-02.png",
+        "production/critic-final-captures/raw/t-120_00000000.png"
+      ]
+    },
+    {
+      "id": "CRIT-EQUALS",
+      "domain": "narrative",
+      "severity": "P1",
+      "original_severity": "P1",
+      "status": "VERIFIED_FIXED",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "Final7+5=12 shows two separate equals bars.",
+      "evidence": [
+        "production/critic-final-captures/board71-x5.png",
+        "production/qa-regression.json"
+      ],
+      "expected": "Literal correct arithmetic.",
+      "fix": "Separate equals strokes.",
+      "owner": "engine",
+      "retest": "RENDER-03 and natural completedboard71.",
+      "retest_build_id": "slice-df8ec482082a4b396c4f",
+      "retest_evidence": [
+        "production/critic-final-captures/board71-x5.png",
+        "production/qa-regression.json"
+      ]
+    },
+    {
+      "id": "CRIT-EVENT-COMMIT",
+      "domain": "persistence",
+      "severity": "P1",
+      "original_severity": "P1",
+      "status": "VERIFIED_FIXED",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "Every tested critical event commits before observable callback/restore. New ownership timestamps130.65/178.66 are exercised.",
+      "evidence": [
+        "production/qa-regression.json"
+      ],
+      "expected": "Reload never rewinds a visibly committed prop/message event.",
+      "fix": "Commit critical state before draw/callback/cue.",
+      "owner": "engine",
+      "retest": "CLOCK-SAVE-01 actual createGame with injected storage; realbrowser remains untested.",
+      "retest_build_id": "slice-df8ec482082a4b396c4f",
+      "retest_evidence": [
+        "production/qa-regression.json"
+      ]
+    },
+    {
+      "id": "CRIT-ANIM-NASTYA-PHONE",
+      "domain": "animation",
+      "severity": "P1",
+      "original_severity": "P1",
+      "status": "VERIFIED_FIXED",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "Authored stand/bend/sit/pockettake/hold/type/pocketput/rise sequence now visible; chair persists and phone hides only at pocket178.66.",
+      "evidence": [
+        "production/critic-final-captures/phone-sit-take-all-stops-x3.png",
+        "production/critic-final-captures/phone-type-stops-x3.png",
+        "production/critic-final-captures/phone-put-rise-all-stops-x3.png",
+        "production/critic-final-captures/evidence.json"
+      ],
+      "expected": "Physical take/return without chair vanish or instant sitting.",
+      "fix": "Integrate8 real phone poses and persistent worldchair.",
+      "owner": "art+engine",
+      "retest": "All27 exact phase boundaries±1/60;one-phone ownership130.65–178.66.",
+      "retest_build_id": "slice-df8ec482082a4b396c4f",
+      "retest_evidence": [
+        "production/critic-final-captures/phone-sit-take-all-stops-x3.png",
+        "production/critic-final-captures/phone-type-stops-x3.png",
+        "production/critic-final-captures/phone-put-rise-all-stops-x3.png",
+        "production/critic-final-captures/evidence.json"
+      ]
+    },
+    {
+      "id": "CRIT-ANIM-CHALK-PENUP",
+      "domain": "animation",
+      "severity": "P1",
+      "original_severity": "P1",
+      "status": "VERIFIED_FIXED",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "Stationary pen-up41.283/41.633 holds raised authored arm; interglyph steps use24–27 with baked chalk once.",
+      "evidence": [
+        "production/critic-final-captures/chalk-penup-regression-stops-x3.png",
+        "production/qa-captures/all-poses-nastya-03.png",
+        "production/qa-regression.json"
+      ],
+      "expected": "Pen-up does not fall to hip-levelgenericwalk.",
+      "fix": "Raised stationary pose and real chalk-step sprites.",
+      "owner": "art+engine",
+      "retest": "NAR-CHALK-PENUP/current natural stops; closure excludes entry/return and gait.",
+      "retest_build_id": "slice-df8ec482082a4b396c4f",
+      "retest_evidence": [
+        "production/critic-final-captures/chalk-penup-regression-stops-x3.png",
+        "production/qa-captures/all-poses-nastya-03.png",
+        "production/qa-regression.json"
+      ]
+    },
+    {
+      "id": "CRIT-NOTEBOOK-VISIBILITY",
+      "domain": "environment_vfx",
+      "severity": "P1",
+      "original_severity": "P1",
+      "status": "VERIFIED_FIXED",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "At71 notebook interior has106 exact visiblecolorpixels; two pages and connecting hand visible at71/74.",
+      "evidence": [
+        "production/critic-final-captures/notebook-help-current-x3.png",
+        "production/critic-final-captures/evidence.json",
+        "production/qa-captures/contact-strip-04.png"
+      ],
+      "expected": "Notebook and teacher contact visible over desk.",
+      "fix": "Place notebook/forearm above correct furniture face.",
+      "owner": "engine",
+      "retest": "Direct naturalframe71color count plus visual71/74; source pixels unedited.",
+      "retest_build_id": "slice-df8ec482082a4b396c4f",
+      "retest_evidence": [
+        "production/critic-final-captures/notebook-help-current-x3.png",
+        "production/critic-final-captures/evidence.json",
+        "production/qa-captures/contact-strip-04.png"
+      ]
+    },
+    {
+      "id": "CRIT-ANIM-NASTYA-GAIT",
+      "domain": "animation",
+      "severity": "P1",
+      "original_severity": "P1",
+      "status": "OPEN",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "Frames8/10 and9/11 repeat/ambiguously preserve same physical leading/support leg;24/26 and25/27 have same flaw. Current nativewalk10–18 shows repeated halfcycle.",
+      "evidence": [
+        "production/critic-final-captures/walk-runtime-stops-x3.png",
+        "production/qa-captures/all-poses-nastya-01.png",
+        "production/qa-captures/all-poses-nastya-03.png",
+        "production/art-export-v3.json"
+      ],
+      "expected": "A complete walk alternates physical support leg and passing phase.",
+      "fix": "Redraw genuine opposite contact/passing phases at unchanged head/body scale; verify continuous real path.",
+      "owner": "art-director+animation-director",
+      "retest": "All source frames and original-rate current walk; compare physical legs and floor support, not image hashes/framecount.",
+      "repair_attempts": 2,
+      "escalated": true,
+      "escalation": "Two unsuccessful imagegen repairs preserved; no severity downgrade or further generic loop."
+    },
+    {
+      "id": "CRIT-ANIM-CHALK-ENTRY-RETURN",
+      "domain": "animation",
+      "severity": "P1",
+      "original_severity": "P1",
+      "status": "OPEN",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "34.98333333 walk10 hand(199.40,161)→35 chalkHigh12(197,115):46.06px/1frame.46.48333333 chalkLow14(279,131)→46.5 idle0(293,166):37.70px/1frame, chalkvanishes.",
+      "evidence": [
+        "production/critic-final-captures/chalk-entry-stops-x3.png",
+        "production/critic-final-captures/chalk-return-stops-x3.png",
+        "production/qa-captures/raw/t-34_98333333.json",
+        "production/qa-captures/raw/t-35_00000000.json",
+        "production/qa-captures/raw/t-46_48333333.json",
+        "production/qa-captures/raw/t-46_50000000.json"
+      ],
+      "expected": "Visible authored arm raise/lower and actual chalk take/release contact.",
+      "fix": "Create upright intermediate raise/lower plus source/ledge contact and emptyhand release. Point/boardReach is alreadyhigh; deskLean does not solve it. Do not merely move snap earlier.",
+      "owner": "art-director+animation-director+engine",
+      "retest": "Full entry/return action at1x plus every transition±1/60; board contact, fixedfeet and exactlyonechalk.",
+      "baseline_evidence": [
+        "production/critic-current-captures/chalk-start.png"
+      ],
+      "confirmation": "Independent current-build raw evidence; pen-up repair does not close the full chalk action."
+    },
+    {
+      "id": "CRIT-VISUAL-NPC-CRAFT",
+      "domain": "visual",
+      "severity": "P2",
+      "original_severity": "P2",
+      "status": "OPEN",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "Anonymous pupils/customer retain square flat faces and rectilinear limbs that look rough next to shaded actors/furniture.",
+      "evidence": [
+        "production/critic-final-captures/notebook-help-current-x3.png",
+        "production/critic-final-captures/world-only-native320-sheet-1.png"
+      ],
+      "expected": "Anonymous NPCs fit established camera/palette/craft without personal likeness.",
+      "fix": "Redraw neutral pupil/customer silhouettes and small shade clusters; preserve anonymous identities and hand visibility.",
+      "owner": "visual-art-director",
+      "retest": "Native fullworld+320 worldonly and raisedhand/regression. This is polish; does not replace P1 repairs."
+    }
+  ]
+}

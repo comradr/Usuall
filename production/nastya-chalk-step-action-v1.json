@@ -1,0 +1,356 @@
+{
+  "version": "nastya-chalk-step-action-v1",
+  "status": "exported-proposed; in-engine continuity and independent art critique pending",
+  "actor": "nastya",
+  "image": "assets/actors/nastya-chalk-step-action-v1.png",
+  "frameWidth": 96,
+  "frameHeight": 112,
+  "columns": 4,
+  "rows": 1,
+  "frameCount": 4,
+  "pivot": [
+    48,
+    100
+  ],
+  "poses": {
+    "chalkStep": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "chalkPenUp": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "sockets": {
+    "0": {
+      "hand": [
+        32,
+        27
+      ],
+      "handOffset": [
+        -16,
+        -73
+      ],
+      "socketKind": "raised-hand-grip",
+      "chalkTip": [
+        28,
+        25
+      ],
+      "chalkTipOffset": [
+        -20,
+        -75
+      ],
+      "bakedItem": "chalk",
+      "heightGroup": "middle"
+    },
+    "1": {
+      "hand": [
+        33,
+        27
+      ],
+      "handOffset": [
+        -15,
+        -73
+      ],
+      "socketKind": "raised-hand-grip",
+      "chalkTip": [
+        29,
+        25
+      ],
+      "chalkTipOffset": [
+        -19,
+        -75
+      ],
+      "bakedItem": "chalk",
+      "heightGroup": "middle"
+    },
+    "2": {
+      "hand": [
+        33,
+        26
+      ],
+      "handOffset": [
+        -15,
+        -74
+      ],
+      "socketKind": "raised-hand-grip",
+      "chalkTip": [
+        30,
+        24
+      ],
+      "chalkTipOffset": [
+        -18,
+        -76
+      ],
+      "bakedItem": "chalk",
+      "heightGroup": "middle"
+    },
+    "3": {
+      "hand": [
+        34,
+        27
+      ],
+      "handOffset": [
+        -14,
+        -73
+      ],
+      "socketKind": "raised-hand-grip",
+      "chalkTip": [
+        30,
+        25
+      ],
+      "chalkTipOffset": [
+        -18,
+        -75
+      ],
+      "bakedItem": "chalk",
+      "heightGroup": "middle"
+    }
+  },
+  "frames": [
+    {
+      "index": 0,
+      "name": "chalkStep0",
+      "source": "nastyaChalkStep",
+      "sourceCell": [
+        0,
+        0,
+        543,
+        724
+      ],
+      "sourceFeet": [
+        330,
+        687
+      ],
+      "sourceFeetMeaning": "ground projection of pelvis; lower visible sole baseline",
+      "sourceSupportingSole": [
+        267,
+        687
+      ],
+      "sourceHand": [
+        198,
+        87
+      ],
+      "sourceChalkTip": [
+        168,
+        70
+      ],
+      "scale": 0.12195121951219512,
+      "bounds": [
+        27,
+        20,
+        67,
+        100
+      ],
+      "hand": [
+        32,
+        27
+      ],
+      "handOffset": [
+        -16,
+        -73
+      ],
+      "chalkTip": [
+        28,
+        25
+      ],
+      "chalkTipOffset": [
+        -20,
+        -75
+      ],
+      "motionPurpose": "raised chalk hand continuity during inter-glyph pen-up movement",
+      "gaitStatus": "opposite leading leg ambiguous; not accepted as a verified opposite gait"
+    },
+    {
+      "index": 1,
+      "name": "chalkStep1",
+      "source": "nastyaChalkStep",
+      "sourceCell": [
+        543,
+        0,
+        543,
+        724
+      ],
+      "sourceFeet": [
+        821,
+        685
+      ],
+      "sourceFeetMeaning": "ground projection of pelvis; lower visible sole baseline",
+      "sourceSupportingSole": [
+        800,
+        685
+      ],
+      "sourceHand": [
+        699,
+        87
+      ],
+      "sourceChalkTip": [
+        669,
+        70
+      ],
+      "scale": 0.12195121951219512,
+      "bounds": [
+        28,
+        20,
+        68,
+        100
+      ],
+      "hand": [
+        33,
+        27
+      ],
+      "handOffset": [
+        -15,
+        -73
+      ],
+      "chalkTip": [
+        29,
+        25
+      ],
+      "chalkTipOffset": [
+        -19,
+        -75
+      ],
+      "motionPurpose": "raised chalk hand continuity during inter-glyph pen-up movement",
+      "gaitStatus": "opposite leading leg ambiguous; not accepted as a verified opposite gait"
+    },
+    {
+      "index": 2,
+      "name": "chalkStep2",
+      "source": "nastyaChalkStep",
+      "sourceCell": [
+        1086,
+        0,
+        543,
+        724
+      ],
+      "sourceFeet": [
+        1318,
+        688
+      ],
+      "sourceFeetMeaning": "ground projection of pelvis; lower visible sole baseline",
+      "sourceSupportingSole": [
+        1255,
+        688
+      ],
+      "sourceHand": [
+        1199,
+        78
+      ],
+      "sourceChalkTip": [
+        1167,
+        61
+      ],
+      "scale": 0.12195121951219512,
+      "bounds": [
+        29,
+        20,
+        69,
+        101
+      ],
+      "hand": [
+        33,
+        26
+      ],
+      "handOffset": [
+        -15,
+        -74
+      ],
+      "chalkTip": [
+        30,
+        24
+      ],
+      "chalkTipOffset": [
+        -18,
+        -76
+      ],
+      "motionPurpose": "raised chalk hand continuity during inter-glyph pen-up movement",
+      "gaitStatus": "opposite leading leg ambiguous; not accepted as a verified opposite gait"
+    },
+    {
+      "index": 3,
+      "name": "chalkStep3",
+      "source": "nastyaChalkStep",
+      "sourceCell": [
+        1629,
+        0,
+        543,
+        724
+      ],
+      "sourceFeet": [
+        1813,
+        695
+      ],
+      "sourceFeetMeaning": "ground projection of pelvis; lower visible sole baseline",
+      "sourceSupportingSole": [
+        1759,
+        695
+      ],
+      "sourceHand": [
+        1699,
+        98
+      ],
+      "sourceChalkTip": [
+        1668,
+        81
+      ],
+      "scale": 0.12195121951219512,
+      "bounds": [
+        28,
+        20,
+        69,
+        100
+      ],
+      "hand": [
+        34,
+        27
+      ],
+      "handOffset": [
+        -14,
+        -73
+      ],
+      "chalkTip": [
+        30,
+        25
+      ],
+      "chalkTipOffset": [
+        -18,
+        -75
+      ],
+      "motionPurpose": "raised chalk hand continuity during inter-glyph pen-up movement",
+      "gaitStatus": "opposite leading leg ambiguous; not accepted as a verified opposite gait"
+    }
+  ],
+  "ownership": "one short chalk is already baked in every frame; do not draw a second chalk prop",
+  "notes": [
+    "Four raised-arm source poses at one common body/head scale. No per-frame bounding-height normalization.",
+    "Hand sockets identify the grip; chalkTipOffset identifies the visible baked chalk contact tip.",
+    "All four raised hands are near the middle-height chalk pose. This sheet supplies no high or low drawing-height variants.",
+    "Use only for movement between glyphs. A stationary pen-up may keep its previous authored chalk-height pose.",
+    "The leg silhouette has an ambiguous opposite stride. It is not evidence that the ordinary walk was fixed.",
+    "Native export and socket checks are mechanical evidence only; no art or motion acceptance is asserted."
+  ],
+  "provenance": {
+    "method": "pre-existing built-in image_gen source; no new generation or limb synthesis",
+    "source": "production/art-source/nastya-chalk-step-source-v1.png",
+    "sourceSha256": "c93c15b81a0ea2d7a3a53e101c32a6a19c90a1d8478f99031ceeb710ec7d38a8",
+    "generatorFile": "exec-c6bc9bc9-1613-47b3-a342-cb7d353a3333.png",
+    "sourceDimensions": [
+      2172,
+      724
+    ],
+    "export": "alpha threshold 160; common scale 80/656; measured source grip/tip/floor landmarks; nearest-neighbor"
+  },
+  "mechanicalQA": {
+    "issues": [],
+    "alphaValues": [
+      0,
+      255
+    ]
+  }
+}

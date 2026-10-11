@@ -1,0 +1,19 @@
+{
+  "evidence_type": "static_source_only",
+  "duplicate_ids": [],
+  "missing_ui_ids": [],
+  "missing_page_assets": [],
+  "source_sha256": {
+    "dist/index.html": "c5da48ecd309f544a69f3b0c1b7884186dbb063b78c948912f12cacfcae84e48",
+    "dist/ui.js": "5cd895a676ab7bf8f9d10c5f7f85b863e6c549fe222e42f4612abffee967fed9",
+    "dist/style.css": "a6976eeb31763a53dc5ebf3d09413d18f69734213a8112b2e7c2547f33f9e4cc"
+  },
+  "fallback_sha256": {
+    "fragment-preview.gif": "c62cb34de8bfa5794304929bf4ba39c786d7d66ed81df7421092cafe854f9c7d",
+    "fragment-poster.png": "e2c8438d855a72f495632e6a70ecbe35c078548a060e280ed86ceddef7567665"
+  },
+  "limits": [
+    "No browser DOM/layout/touch/audio executed.",
+    "Fallback GIF is a verified accelerated native renderer montage, not an HTML/browser recording."
+  ]
+}

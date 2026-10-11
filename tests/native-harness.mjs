@@ -8,19 +8,22 @@ export const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.u
 const require = createRequire(import.meta.url);
 // Installed native Canvas only. This harness never imports a browser driver,
 // starts a server, navigates a browser or fabricates DOM/layout evidence.
-const canvasPackage = process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES
+let canvasPackage;
+try { canvasPackage = require.resolve('@napi-rs/canvas'); }
+catch { canvasPackage = process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES
   ? path.join(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES, '@napi-rs/canvas')
-  : '/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/@napi-rs/canvas';
+  : '/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/@napi-rs/canvas'; }
 export const nativeCanvas = require(canvasPackage);
 export const { createCanvas, loadImage } = nativeCanvas;
 export const sha256 = buffer => createHash('sha256').update(buffer).digest('hex');
 
 export function manifestImageFiles(manifest) {
   const files = [];
-  for (const group of ['backgrounds', 'actors', 'props']) {
-    for (const info of Object.values(manifest[group] ?? {})) if (info.image) files.push(info.image);
+  function visit(value) {
+    if (typeof value === 'string' && /\.(png|webp|jpe?g)$/i.test(value)) files.push(value);
+    else if (value && typeof value === 'object') for (const child of Object.values(value)) visit(child);
   }
-  for (const items of Object.values(manifest.occluders ?? {})) for (const info of items) if (info.image) files.push(info.image);
+  visit(manifest);
   return [...new Set(files)];
 }
 

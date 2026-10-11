@@ -1,0 +1,11 @@
+BLOCKED: animation: required domain FAIL (expected PASS)
+BLOCKED: ui: required domain NOT_CHECKED (expected PASS)
+BLOCKED: web: required domain NOT_CHECKED (expected PASS)
+BLOCKED: audio: required domain NOT_CHECKED (expected PASS)
+BLOCKED: performance: required domain NOT_CHECKED (expected PASS)
+BLOCKED: persistence: required domain NOT_CHECKED (expected PASS)
+BLOCKED: accessibility: required domain NOT_CHECKED (expected PASS)
+BLOCKED: integration: required domain FAIL (expected PASS)
+BLOCKED: cross-domain review not PASS
+BLOCKED: CRIT-ANIM-NASTYA-GAIT: unverified blocker P1
+BLOCKED: CRIT-ANIM-CHALK-ENTRY-RETURN: unverified blocker P1

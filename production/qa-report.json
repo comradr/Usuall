@@ -1,0 +1,529 @@
+{
+  "title": "Обычный день · S02–S03 · technical native QA",
+  "reviewer": {
+    "kind": "producer_native_checks",
+    "independent": false,
+    "context_id": "/root"
+  },
+  "createdAt": "2026-10-10T10:15:25.632Z",
+  "scope": [
+    "S02",
+    "S03"
+  ],
+  "storyDurationSeconds": 189,
+  "status": "NATIVE_CHECKS_PASS_BROWSER_NOT_CHECKED",
+  "commands": [
+    {
+      "command": "node tests/regression.mjs",
+      "environment": "Node, injected clock/storage, no browser",
+      "exitCode": 0
+    },
+    {
+      "command": "node tests/capture-offscreen.mjs",
+      "environment": "Native Canvas plus Pillow export; no browser",
+      "exitCode": 0,
+      "childCommand": "python tests/build-offscreen-review.py production/qa-captures"
+    },
+    {
+      "command": "node tests/qa-report.mjs",
+      "environment": "Evidence/source SHA-256 crosscheck",
+      "exitCode": 0
+    }
+  ],
+  "regression": {
+    "file": "production/qa-regression.json",
+    "sha256": "a94862a3feadd262460d69a1f3cc5d113db45b93c7d7a94f0e866df21b845bfc",
+    "status": "PASS",
+    "counts": {
+      "pass": 33,
+      "fail": 0
+    },
+    "checks": [
+      {
+        "id": "CANON-01",
+        "purpose": "The playable story contains exactly S02/S03, 15 continuous shots and 189 seconds",
+        "status": "PASS"
+      },
+      {
+        "id": "CANON-02",
+        "purpose": "Five exact original messages retain IDs, speakers, text and order",
+        "status": "PASS"
+      },
+      {
+        "id": "API-01",
+        "purpose": "The real model is importable without browser globals",
+        "status": "PASS"
+      },
+      {
+        "id": "API-02",
+        "purpose": "The real renderer/clock are importable without browser globals",
+        "status": "PASS"
+      },
+      {
+        "id": "ASSET-01",
+        "purpose": "Actual PNGs have native dimensions, alpha, distinct frames and measured opaque hand sockets",
+        "status": "PASS"
+      },
+      {
+        "id": "ASSET-02",
+        "purpose": "Default createGame loader resolves every manifest image to an existing dist file",
+        "status": "PASS"
+      },
+      {
+        "id": "WORLD-01",
+        "purpose": "Every 60 Hz sample conserves the one loaf through all ownership transfers",
+        "status": "PASS"
+      },
+      {
+        "id": "WORLD-02",
+        "purpose": "Scene boundary preserves packed loaf, board and message state",
+        "status": "PASS"
+      },
+      {
+        "id": "NAR-01",
+        "purpose": "No phone before break or while carrying bread; five messages follow physical phone actions",
+        "status": "PASS"
+      },
+      {
+        "id": "NAR-02",
+        "purpose": "Chalk contact precedes visible progress and completed arithmetic persists",
+        "status": "PASS"
+      },
+      {
+        "id": "NAR-03",
+        "purpose": "Teacher phone starts after pupils leave and remains held for each canonical send",
+        "status": "PASS"
+      },
+      {
+        "id": "SAVE-01",
+        "purpose": "Reload roundtrip preserves ownership, chalk and chat at eleven intermediate/end times",
+        "status": "PASS"
+      },
+      {
+        "id": "SAVE-02",
+        "purpose": "Malformed, stale, oversized and non-finite save data fail closed",
+        "status": "PASS"
+      },
+      {
+        "id": "SAVE-03",
+        "purpose": "Blocked storage and quota errors do not throw or overwrite the last valid save",
+        "status": "PASS"
+      },
+      {
+        "id": "SAVE-04",
+        "purpose": "Unsupported preferences are sanitized into supported finite values",
+        "status": "PASS"
+      },
+      {
+        "id": "WORLD-03",
+        "purpose": "Non-finite/out-of-range timeline input remains inside the supported fragment",
+        "status": "PASS"
+      },
+      {
+        "id": "GEO-01",
+        "purpose": "Held loaf and phone attach to the actual bitmap frame hand, not a synthetic target",
+        "status": "PASS"
+      },
+      {
+        "id": "GEO-02",
+        "purpose": "All six ownership boundaries touch the prior/new object anchor within three native pixels",
+        "status": "PASS"
+      },
+      {
+        "id": "GEO-03",
+        "purpose": "Drawing chalk remains at the actual hand while both feet remain on the board floor plane",
+        "status": "PASS"
+      },
+      {
+        "id": "GEO-06",
+        "purpose": "Lifted writing hand stays near the board between strokes instead of falling to the hip",
+        "status": "PASS"
+      },
+      {
+        "id": "GEO-04",
+        "purpose": "Main actor feet route around the real background furniture at every 60 Hz sample",
+        "status": "PASS"
+      },
+      {
+        "id": "GEO-05",
+        "purpose": "Walking pupils avoid furniture except the short approach/exit to their own seated desk",
+        "status": "PASS"
+      },
+      {
+        "id": "RENDER-01",
+        "purpose": "Every rendered store frame draws exactly six loaf images with one moving owner",
+        "status": "PASS"
+      },
+      {
+        "id": "RENDER-02",
+        "purpose": "The raised pupil hand changes visible pixels above the head after furniture occlusion",
+        "status": "PASS"
+      },
+      {
+        "id": "RENDER-03",
+        "purpose": "Completed arithmetic renders the equals sign as two separate visible horizontal lines",
+        "status": "PASS"
+      },
+      {
+        "id": "RENDER-04",
+        "purpose": "Notebook and correction strokes contribute visible pixels after tabletop occlusion",
+        "status": "PASS"
+      },
+      {
+        "id": "CLOCK-01",
+        "purpose": "Pause freezes story time and resume cannot consume the paused wall-clock gap",
+        "status": "PASS"
+      },
+      {
+        "id": "CLOCK-02",
+        "purpose": "Supported playback speeds change wall-clock rate while stalls remain bounded",
+        "status": "PASS"
+      },
+      {
+        "id": "CLOCK-03",
+        "purpose": "Repeated player advance is continuous, visits every owner, and emits cues once",
+        "status": "PASS"
+      },
+      {
+        "id": "CLOCK-04",
+        "purpose": "Resume restores a mid-action save and reduced motion preserves physical and message state",
+        "status": "PASS"
+      },
+      {
+        "id": "CLOCK-05",
+        "purpose": "Quota failures produce one notice and gameplay keeps running",
+        "status": "PASS"
+      },
+      {
+        "id": "CLOCK-SAVE-01",
+        "purpose": "Every irreversible message/cue/scene/prop boundary commits before a fresh game resumes",
+        "status": "PASS"
+      },
+      {
+        "id": "SOURCE-01",
+        "purpose": "Regression evidence still matches every model/renderer/manifest file loaded by this run",
+        "status": "PASS"
+      }
+    ]
+  },
+  "offscreen": {
+    "file": "production/qa-captures/index.json",
+    "sha256": "a52b43d4ee414e0e24c5c5955193aac678b432bd682548fe9012af977461116c",
+    "status": "CAPTURED_NOT_BROWSER",
+    "renderer": "dist/engine.js exported renderFrame",
+    "nativeSizePerWorld": [
+      480,
+      360
+    ],
+    "rawFrameCount": 360,
+    "runtimePoseFrameCount": 85,
+    "forcedAuthoredFrameCount": 52,
+    "contactCases": 23,
+    "mobileWorldCopies": 18,
+    "gif": {
+      "file": "production/qa-captures/fragment-preview.gif",
+      "sha256": "c62cb34de8bfa5794304929bf4ba39c786d7d66ed81df7421092cafe854f9c7d",
+      "bytes": 2327133,
+      "decodedFrames": 397,
+      "distinctDecodedFrames": 397,
+      "displaySeconds": 39.7,
+      "nativeSize": [
+        960,
+        360
+      ],
+      "type": "Accelerated chronological native-render montage; not browser capture; no audio",
+      "encoding": "Shared 255-color palette, unchanged-pixel transparency, disposal 1",
+      "decodedPixelIntegrity": "Every decoded frame equals a palette-quantized captured PNG; complete chronology and durations match"
+    },
+    "poster": {
+      "file": "production/qa-captures/fragment-poster.png",
+      "sourceStoryTime": 41,
+      "sha256": "e2c8438d855a72f495632e6a70ecbe35c078548a060e280ed86ceddef7567665"
+    },
+    "contactSheets": [
+      {
+        "file": "production/qa-captures/contact-strip-01.png",
+        "sha256": "8e9038442987ec62d21076c4eba883b4c79958abb47aa98fc4452e5fdc3c504c",
+        "contactCases": [
+          "bread-transfer-25",
+          "bread-transfer-32",
+          "bread-transfer-82",
+          "bread-transfer-91"
+        ]
+      },
+      {
+        "file": "production/qa-captures/contact-strip-02.png",
+        "sha256": "94c171d4286a6e3eb4e4ff42f3bddcc984f1f76b19ba7cc0ed37f28262d1a2e9",
+        "contactCases": [
+          "bread-transfer-105",
+          "bread-transfer-120",
+          "chalk-35",
+          "chalk-38"
+        ]
+      },
+      {
+        "file": "production/qa-captures/contact-strip-03.png",
+        "sha256": "c4ff0c0df94f8fa0021f05f2ce07ef660cea7e98d37ff7613205a188698a6884",
+        "contactCases": [
+          "chalk-41",
+          "chalk-44",
+          "chalk-46.5",
+          "pupil-hand"
+        ]
+      },
+      {
+        "file": "production/qa-captures/contact-strip-04.png",
+        "sha256": "8eb1559d0adbce680765a0cbc74795b0eee2cb74ad510501ba8f8b9b07c8c3f3",
+        "contactCases": [
+          "desk-help",
+          "lesson-break",
+          "nastya-phone-out",
+          "nastya-first-send"
+        ]
+      },
+      {
+        "file": "production/qa-captures/contact-strip-05.png",
+        "sha256": "385ec323a856df613877349d79d43f0bd0544eb7fe62781f4d81b00238fcd44a",
+        "contactCases": [
+          "vova-phone-out",
+          "vova-reply-hello",
+          "vova-reply-bread",
+          "vova-phone-return"
+        ]
+      },
+      {
+        "file": "production/qa-captures/contact-strip-06.png",
+        "sha256": "09fb248ca4425ead86880ae78aec2d6899184176f1a1d85a068fbf72cf1482f5",
+        "contactCases": [
+          "nastya-reply-1",
+          "nastya-reply-2",
+          "nastya-phone-return"
+        ]
+      }
+    ],
+    "poseSheets": [
+      {
+        "file": "production/qa-captures/all-poses-vova-01.png",
+        "sha256": "37ed6dc7e4681d2ffa1d91add59ffe5e593cd33fc05c54c4fb2e8a675e53b532",
+        "actor": "vova",
+        "poseFrames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "file": "production/qa-captures/all-poses-vova-02.png",
+        "sha256": "7910b9a857a9405d6e16e9056d666e92affdb20193620e2fe605fba2c4a46dc3",
+        "actor": "vova",
+        "poseFrames": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ]
+      },
+      {
+        "file": "production/qa-captures/all-poses-nastya-01.png",
+        "sha256": "fc7c62f09dce4fdd9b5a8dd417bf1cb06eb7a742e34921f3bdd3429d0e8aa362",
+        "actor": "nastya",
+        "poseFrames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "file": "production/qa-captures/all-poses-nastya-02.png",
+        "sha256": "700e8f274387f0378f673f1da58dc1ae7cdf98363822f28471ec1298fb828b72",
+        "actor": "nastya",
+        "poseFrames": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ]
+      },
+      {
+        "file": "production/qa-captures/all-poses-nastya-03.png",
+        "sha256": "55b821655593f75e67c0a72d879add98876dbb86ead0d9d0a44044485feadc47",
+        "actor": "nastya",
+        "poseFrames": [
+          24,
+          25,
+          26,
+          27
+        ]
+      }
+    ],
+    "originalRateClips": [
+      {
+        "id": "nastya-walk",
+        "from": 12,
+        "to": 18,
+        "rate": 1,
+        "type": "Native offscreen renderer, original story rate 1x, 10 fps; no browser/audio",
+        "frameCount": 60,
+        "gif": {
+          "file": "production/qa-captures/offscreen-original-rate-nastya-walk.gif",
+          "sha256": "efa163a3d8779b40e7645b915036a92be58aef18ef4ca3485a3b9ed500fe9562",
+          "bytes": 481962,
+          "decodedFrames": 60,
+          "distinctDecodedFrames": 60,
+          "displaySeconds": 6,
+          "nativeSize": [
+            960,
+            360
+          ],
+          "type": "Native offscreen renderer, original story rate 1x, t=12..18s, 10 fps; not browser; no audio",
+          "encoding": "Shared 255-color palette, unchanged-pixel transparency, disposal 1",
+          "decodedPixelIntegrity": "Every decoded frame equals a palette-quantized captured PNG; complete chronology and durations match"
+        }
+      },
+      {
+        "id": "chalk-writing",
+        "from": 34.5,
+        "to": 47,
+        "rate": 1,
+        "type": "Native offscreen renderer, original story rate 1x, 10 fps; no browser/audio",
+        "frameCount": 125,
+        "gif": {
+          "file": "production/qa-captures/offscreen-original-rate-chalk-writing.gif",
+          "sha256": "eae0ba790d547d41057b5ca4beb5355e8a13fc142cc2d4b91f73cf562ba20ace",
+          "bytes": 495526,
+          "decodedFrames": 125,
+          "distinctDecodedFrames": 120,
+          "displaySeconds": 12.5,
+          "nativeSize": [
+            960,
+            360
+          ],
+          "type": "Native offscreen renderer, original story rate 1x, t=34.5..47s, 10 fps; not browser; no audio",
+          "encoding": "Shared 255-color palette, unchanged-pixel transparency, disposal 1",
+          "decodedPixelIntegrity": "Every decoded frame equals a palette-quantized captured PNG; complete chronology and durations match"
+        }
+      },
+      {
+        "id": "nastya-phone-pickup",
+        "from": 127,
+        "to": 136,
+        "rate": 1,
+        "type": "Native offscreen renderer, original story rate 1x, 10 fps; no browser/audio",
+        "frameCount": 90,
+        "gif": {
+          "file": "production/qa-captures/offscreen-original-rate-nastya-phone-pickup.gif",
+          "sha256": "bf26b5d0197395d14df4a26fd0e37453c9cdb24d81edcedd771eb7c0dacb975a",
+          "bytes": 427862,
+          "decodedFrames": 90,
+          "distinctDecodedFrames": 80,
+          "displaySeconds": 9,
+          "nativeSize": [
+            960,
+            360
+          ],
+          "type": "Native offscreen renderer, original story rate 1x, t=127..136s, 10 fps; not browser; no audio",
+          "encoding": "Shared 255-color palette, unchanged-pixel transparency, disposal 1",
+          "decodedPixelIntegrity": "Every decoded frame equals a palette-quantized captured PNG; complete chronology and durations match"
+        }
+      },
+      {
+        "id": "nastya-phone-return",
+        "from": 176,
+        "to": 184,
+        "rate": 1,
+        "type": "Native offscreen renderer, original story rate 1x, 10 fps; no browser/audio",
+        "frameCount": 80,
+        "gif": {
+          "file": "production/qa-captures/offscreen-original-rate-nastya-phone-return.gif",
+          "sha256": "35f856feaea8b946d5995b13ce4c2810da12fae984527324b70de3be91d1d633",
+          "bytes": 416246,
+          "decodedFrames": 80,
+          "distinctDecodedFrames": 76,
+          "displaySeconds": 8,
+          "nativeSize": [
+            960,
+            360
+          ],
+          "type": "Native offscreen renderer, original story rate 1x, t=176..184s, 10 fps; not browser; no audio",
+          "encoding": "Shared 255-color palette, unchanged-pixel transparency, disposal 1",
+          "decodedPixelIntegrity": "Every decoded frame equals a palette-quantized captured PNG; complete chronology and durations match"
+        }
+      }
+    ],
+    "distinction": "Staged forced authored frames are labeled separately from actual timeline states. GIF is an accelerated chronological montage."
+  },
+  "sourceSha256": {
+    "dist/model.js": "16dcbf5355b62a8029fdc5920bfb8e7948b8938280251c00ec5379cddd12623e",
+    "dist/engine.js": "e60ae1dd4d56764c173a76162f23fda571c670e1c8d6691ee8d78975bdf0f51f",
+    "dist/assets/manifest.json": "c0d33b8b44d19f4f0c77ebf63d6c5b3013e702dd1755e5c1cf903a51a92023b7"
+  },
+  "browser": {
+    "status": "NOT_CHECKED",
+    "reason": "Managed Sites browser skill unavailable; no server/browser/Playwright workaround was used."
+  },
+  "mobileDomTouchPip": {
+    "status": "NOT_CHECKED",
+    "reason": "320 px evidence is native world-only nearest-neighbor scaling, not a device/HTML/PIP/touch test."
+  },
+  "audioListening": {
+    "status": "NOT_CHECKED",
+    "reason": "Cue ordering tested in injected clock. No actual browser/audio listening."
+  },
+  "performance": {
+    "status": "NOT_CHECKED",
+    "reason": "Native export timing does not measure browser FPS or device performance."
+  },
+  "artisticQuality": {
+    "status": "NOT_CERTIFIED_BY_QA",
+    "reason": "Requires separate independent critic and user creative approval."
+  },
+  "completeGame": {
+    "status": "NOT_IMPLEMENTED_IN_THIS_MILESTONE",
+    "scenes": [
+      "S01",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11"
+    ]
+  },
+  "findings": []
+}

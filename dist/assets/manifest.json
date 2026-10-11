@@ -3112,5 +3112,818 @@
     "Backgrounds contain architecture and fixed furniture only, no main actors/UI/interactive bread/phone/notebooks.",
     "Exact socket offsets below are measured from exported pixels; producers must solve feet=contact-handOffset rather than use arbitrary former coordinates.",
     "Two raised Vova reach poses are retained for review only; bread manipulation uses forward-lean poses."
-  ]
+  ],
+  "npcs": {
+    "pupilBoy": {
+      "image": "assets/npcs/pupilBoy-v1.png",
+      "frameWidth": 96,
+      "frameHeight": 112,
+      "columns": 8,
+      "pivot": [
+        48,
+        100
+      ],
+      "poses": {
+        "idle": [
+          0
+        ],
+        "walk": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "seated": [
+          5
+        ],
+        "writing": [
+          6
+        ],
+        "raised": [
+          7
+        ]
+      },
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            40,
+            78
+          ],
+          "opaqueBounds": [
+            38,
+            46,
+            59,
+            100
+          ]
+        },
+        {
+          "index": 1,
+          "rect": [
+            96,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            35,
+            77
+          ],
+          "opaqueBounds": [
+            34,
+            47,
+            64,
+            100
+          ]
+        },
+        {
+          "index": 2,
+          "rect": [
+            192,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            36,
+            76
+          ],
+          "opaqueBounds": [
+            35,
+            46,
+            61,
+            100
+          ]
+        },
+        {
+          "index": 3,
+          "rect": [
+            288,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            37,
+            75
+          ],
+          "opaqueBounds": [
+            34,
+            46,
+            64,
+            100
+          ]
+        },
+        {
+          "index": 4,
+          "rect": [
+            384,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            41,
+            77
+          ],
+          "opaqueBounds": [
+            37,
+            47,
+            64,
+            100
+          ]
+        },
+        {
+          "index": 5,
+          "rect": [
+            480,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            30,
+            77
+          ],
+          "opaqueBounds": [
+            38,
+            51,
+            64,
+            100
+          ]
+        },
+        {
+          "index": 6,
+          "rect": [
+            576,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            39,
+            82
+          ],
+          "opaqueBounds": [
+            38,
+            52,
+            65,
+            100
+          ]
+        },
+        {
+          "index": 7,
+          "rect": [
+            672,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            47,
+            80
+          ],
+          "opaqueBounds": [
+            38,
+            45,
+            65,
+            100
+          ]
+        }
+      ],
+      "sockets": {
+        "0": {
+          "hand": [
+            40,
+            78
+          ]
+        },
+        "1": {
+          "hand": [
+            35,
+            77
+          ]
+        },
+        "2": {
+          "hand": [
+            36,
+            76
+          ]
+        },
+        "3": {
+          "hand": [
+            37,
+            75
+          ]
+        },
+        "4": {
+          "hand": [
+            41,
+            77
+          ]
+        },
+        "5": {
+          "hand": [
+            30,
+            77
+          ]
+        },
+        "6": {
+          "hand": [
+            39,
+            82
+          ]
+        },
+        "7": {
+          "hand": [
+            47,
+            80
+          ]
+        }
+      },
+      "sourceSha256": "06c61e2b9296c9d53e58459dcdb24ec00823e6d3842ef7a8872e58a8c8eab3d8",
+      "normalization": "Uniform row scale, nearest neighbor, feet baseline, alpha cleanup only; poses authored in source"
+    },
+    "pupilGirl": {
+      "image": "assets/npcs/pupilGirl-v1.png",
+      "frameWidth": 96,
+      "frameHeight": 112,
+      "columns": 8,
+      "pivot": [
+        48,
+        100
+      ],
+      "poses": {
+        "idle": [
+          0
+        ],
+        "walk": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "seated": [
+          5
+        ],
+        "writing": [
+          6
+        ],
+        "raised": [
+          7
+        ]
+      },
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            39,
+            82
+          ],
+          "opaqueBounds": [
+            38,
+            46,
+            61,
+            100
+          ]
+        },
+        {
+          "index": 1,
+          "rect": [
+            96,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            37,
+            79
+          ],
+          "opaqueBounds": [
+            35,
+            46,
+            65,
+            100
+          ]
+        },
+        {
+          "index": 2,
+          "rect": [
+            192,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            37,
+            78
+          ],
+          "opaqueBounds": [
+            34,
+            46,
+            60,
+            100
+          ]
+        },
+        {
+          "index": 3,
+          "rect": [
+            288,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            38,
+            78
+          ],
+          "opaqueBounds": [
+            34,
+            46,
+            65,
+            100
+          ]
+        },
+        {
+          "index": 4,
+          "rect": [
+            384,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            46,
+            78
+          ],
+          "opaqueBounds": [
+            42,
+            46,
+            68,
+            100
+          ]
+        },
+        {
+          "index": 5,
+          "rect": [
+            480,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            33,
+            82
+          ],
+          "opaqueBounds": [
+            39,
+            51,
+            67,
+            100
+          ]
+        },
+        {
+          "index": 6,
+          "rect": [
+            576,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            40,
+            82
+          ],
+          "opaqueBounds": [
+            39,
+            51,
+            67,
+            100
+          ]
+        },
+        {
+          "index": 7,
+          "rect": [
+            672,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            49,
+            83
+          ],
+          "opaqueBounds": [
+            40,
+            44,
+            68,
+            100
+          ]
+        }
+      ],
+      "sockets": {
+        "0": {
+          "hand": [
+            39,
+            82
+          ]
+        },
+        "1": {
+          "hand": [
+            37,
+            79
+          ]
+        },
+        "2": {
+          "hand": [
+            37,
+            78
+          ]
+        },
+        "3": {
+          "hand": [
+            38,
+            78
+          ]
+        },
+        "4": {
+          "hand": [
+            46,
+            78
+          ]
+        },
+        "5": {
+          "hand": [
+            33,
+            82
+          ]
+        },
+        "6": {
+          "hand": [
+            40,
+            82
+          ]
+        },
+        "7": {
+          "hand": [
+            49,
+            83
+          ]
+        }
+      },
+      "sourceSha256": "06c61e2b9296c9d53e58459dcdb24ec00823e6d3842ef7a8872e58a8c8eab3d8",
+      "normalization": "Uniform row scale, nearest neighbor, feet baseline, alpha cleanup only; poses authored in source"
+    },
+    "shopper": {
+      "image": "assets/npcs/shopper-v1.png",
+      "frameWidth": 96,
+      "frameHeight": 112,
+      "columns": 8,
+      "pivot": [
+        48,
+        100
+      ],
+      "poses": {
+        "idle": [
+          0
+        ],
+        "walk": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "reach": [
+          5
+        ],
+        "pickup": [
+          5,
+          6
+        ],
+        "carry": [
+          6
+        ],
+        "carryWalk": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            35,
+            71
+          ],
+          "opaqueBounds": [
+            33,
+            20,
+            65,
+            100
+          ]
+        },
+        {
+          "index": 1,
+          "rect": [
+            96,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            29,
+            68
+          ],
+          "opaqueBounds": [
+            26,
+            21,
+            72,
+            100
+          ]
+        },
+        {
+          "index": 2,
+          "rect": [
+            192,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            33,
+            68
+          ],
+          "opaqueBounds": [
+            29,
+            20,
+            66,
+            100
+          ]
+        },
+        {
+          "index": 3,
+          "rect": [
+            288,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            37,
+            70
+          ],
+          "opaqueBounds": [
+            27,
+            20,
+            70,
+            100
+          ]
+        },
+        {
+          "index": 4,
+          "rect": [
+            384,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            41,
+            71
+          ],
+          "opaqueBounds": [
+            32,
+            20,
+            70,
+            100
+          ]
+        },
+        {
+          "index": 5,
+          "rect": [
+            480,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            19,
+            72
+          ],
+          "opaqueBounds": [
+            13,
+            23,
+            69,
+            100
+          ]
+        },
+        {
+          "index": 6,
+          "rect": [
+            576,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            21,
+            69
+          ],
+          "opaqueBounds": [
+            17,
+            22,
+            67,
+            100
+          ]
+        },
+        {
+          "index": 7,
+          "rect": [
+            672,
+            0,
+            96,
+            112
+          ],
+          "pivot": [
+            48,
+            100
+          ],
+          "hand": [
+            41,
+            65
+          ],
+          "opaqueBounds": [
+            32,
+            20,
+            67,
+            100
+          ]
+        }
+      ],
+      "sockets": {
+        "0": {
+          "hand": [
+            35,
+            71
+          ]
+        },
+        "1": {
+          "hand": [
+            29,
+            68
+          ]
+        },
+        "2": {
+          "hand": [
+            33,
+            68
+          ]
+        },
+        "3": {
+          "hand": [
+            37,
+            70
+          ]
+        },
+        "4": {
+          "hand": [
+            41,
+            71
+          ]
+        },
+        "5": {
+          "hand": [
+            19,
+            72
+          ]
+        },
+        "6": {
+          "hand": [
+            21,
+            69
+          ]
+        },
+        "7": {
+          "hand": [
+            41,
+            65
+          ]
+        }
+      },
+      "sourceSha256": "06c61e2b9296c9d53e58459dcdb24ec00823e6d3842ef7a8872e58a8c8eab3d8",
+      "normalization": "Uniform row scale, nearest neighbor, feet baseline, alpha cleanup only; poses authored in source"
+    }
+  }
 }

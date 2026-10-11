@@ -1,0 +1,671 @@
+{
+  "milestone": "S02+S03 first vertical slice,189seconds; private draft, not full11-scene game",
+  "build_id": "slice-df8ec482082a4b396c4f",
+  "build_artifact": {
+    "path": "production/build-manifest.json",
+    "sha256": "cc6d69bdffd886c299d9ffaa4b4db3353f918aa2196c20431879ec8381887a26"
+  },
+  "gate_status": "BLOCKED",
+  "required_domains": [
+    "visual",
+    "characters",
+    "animation",
+    "environment_vfx",
+    "narrative",
+    "gameplay",
+    "ui",
+    "web",
+    "audio",
+    "performance",
+    "persistence",
+    "accessibility",
+    "privacy",
+    "integration"
+  ],
+  "reviewer": {
+    "kind": "delegated_agent",
+    "independent": true,
+    "context_id": "/root/critic_resume",
+    "inspected_build_id": "slice-df8ec482082a4b396c4f",
+    "production_edits": "None; reviewer wrote only critic-* reports/capture utilities and quality-gate.json"
+  },
+  "reviews": [
+    {
+      "domain": "visual",
+      "status": "PASS",
+      "inspected_build_id": "slice-df8ec482082a4b396c4f",
+      "observations": "Native world craft has coherent 3/4 furniture, day lighting and adult silhouettes. NPC faces/limbs remain visibly cruder than actors and rooms (P2). Proposed art still needs user creative approval.",
+      "evidence": [
+        "production/critic-final-captures/world-only-native320-sheet-1.png",
+        "production/critic-final-captures/world-only-native320-sheet-2.png",
+        "production/critic-final-captures/world-only-native320-sheet-3.png",
+        "production/art-style-bible.md"
+      ],
+      "tested_cases": [
+        "Both480x360 worlds and18 world-only320px images",
+        "Full52 authored poses"
+      ],
+      "untested_cases": [
+        "Actual CSS/mobile/PIP presentation"
+      ],
+      "owner": "visual-art-director",
+      "required_fix_or_next_check": "Improve anonymous NPC silhouette and shading; see CRIT-VISUAL-NPC-CRAFT.",
+      "verdict_justification": "Native world craft has coherent 3/4 furniture, day lighting and adult silhouettes. NPC faces/limbs remain visibly cruder than actors and rooms (P2). Proposed art still needs user creative approval.",
+      "residual_risk": "Native rendering PASS does not certify actual mobile layout or creative approval."
+    },
+    {
+      "domain": "characters",
+      "status": "PASS",
+      "inspected_build_id": "slice-df8ec482082a4b396c4f",
+      "observations": "Vova retains short dark hair, rectangular glasses and charcoal work clothes. Nastya retains long russet/dark-blond hair, rounded glasses and blouse/vest/trousers across new phone/chalk poses. No detached limb was found in reviewed authored stops.",
+      "evidence": [
+        "production/qa-captures/all-poses-vova-01.png",
+        "production/qa-captures/all-poses-vova-02.png",
+        "production/qa-captures/all-poses-nastya-01.png",
+        "production/qa-captures/all-poses-nastya-02.png",
+        "production/qa-captures/all-poses-nastya-03.png",
+        "production/critic-final-captures/phone-sit-take-all-stops-x3.png"
+      ],
+      "tested_cases": [
+        "All24 Vova+28 Nastya authored frames",
+        "New phone/rise at actual world position"
+      ],
+      "untested_cases": [
+        "Real mobile CSS scale and user likeness approval"
+      ],
+      "owner": "art-director",
+      "required_fix_or_next_check": "Keep identity/pivot when redrawing gait and chalk transition poses.",
+      "verdict_justification": "Vova retains short dark hair, rectangular glasses and charcoal work clothes. Nastya retains long russet/dark-blond hair, rounded glasses and blouse/vest/trousers across new phone/chalk poses. No detached limb was found in reviewed authored stops.",
+      "residual_risk": "Motion FAIL is recorded separately; source pose consistency is not animation acceptance."
+    },
+    {
+      "domain": "animation",
+      "status": "FAIL",
+      "inspected_build_id": "slice-df8ec482082a4b396c4f",
+      "observations": "Two P1 remain: Nastya near/far walking phases repeat the physical lead/support leg; chalk35 entry and46.5 return snap46.06/37.70 nativepx within1/60s. New phone action and stationary pen-up defects are verified fixed.",
+      "evidence": [
+        "production/critic-final-captures/walk-runtime-stops-x3.png",
+        "production/qa-captures/all-poses-nastya-01.png",
+        "production/qa-captures/all-poses-nastya-03.png",
+        "production/critic-final-captures/chalk-entry-stops-x3.png",
+        "production/critic-final-captures/chalk-return-stops-x3.png",
+        "production/critic-final-captures/chalk-penup-regression-stops-x3.png",
+        "production/critic-final-captures/phone-put-rise-all-stops-x3.png",
+        "production/critic-final-captures/evidence.json"
+      ],
+      "tested_cases": [
+        "All52 authored frames;23 contact triples",
+        "Exact27 phone boundaries±1/60",
+        "Worst-frame entry/exit and gait cycles"
+      ],
+      "untested_cases": [
+        "Live HTML motion, actual low-FPS/pause captures"
+      ],
+      "owner": "animation-director+art-director",
+      "required_fix_or_next_check": "Redraw genuine opposite support/passing phases and upright chalk raise/lower/pickup/release; do not stretch limbs or shorten bad frames.",
+      "verdict_justification": "Two P1 remain: Nastya near/far walking phases repeat the physical lead/support leg; chalk35 entry and46.5 return snap46.06/37.70 nativepx within1/60s. New phone action and stationary pen-up defects are verified fixed.",
+      "residual_risk": "P1 blocks milestone completion; ordinary gait already survived two unsuccessful art repair attempts."
+    },
+    {
+      "domain": "environment_vfx",
+      "status": "PASS",
+      "inspected_build_id": "slice-df8ec482082a4b396c4f",
+      "observations": "Fixed room topology and separated furniture layers remain coherent. Notebook and contacting arm are visible at71; shelf loaf remains visible after120 release; chair exists at fixed location throughout0–189. This slice has daylight/dust, no rain toggle.",
+      "evidence": [
+        "production/critic-final-captures/notebook-help-current-x3.png",
+        "production/qa-captures/contact-strip-02.png",
+        "production/qa-captures/contact-strip-03.png",
+        "production/critic-final-captures/phone-put-rise-all-stops-x3.png",
+        "production/critic-final-captures/evidence.json"
+      ],
+      "tested_cases": [
+        "Desk hand/notebook depth",
+        "Shelf release±1/60",
+        "Fixedchair at11,341 model samples plus natural stops"
+      ],
+      "untested_cases": [
+        "Full-game rain/weather reversibility outside S02/S03",
+        "Actual PIP overlays"
+      ],
+      "owner": "environment+engine",
+      "required_fix_or_next_check": "Preserve depth layers during pose repairs.",
+      "verdict_justification": "Fixed room topology and separated furniture layers remain coherent. Notebook and contacting arm are visible at71; shelf loaf remains visible after120 release; chair exists at fixed location throughout0–189. This slice has daylight/dust, no rain toggle.",
+      "residual_risk": "Broader weather and mobile overlays are not certified."
+    },
+    {
+      "domain": "narrative",
+      "status": "PASS",
+      "inspected_build_id": "slice-df8ec482082a4b396c4f",
+      "observations": "Actual slice keeps S02/S03/189s and exactly five original IDs, speakers and texts. Bread release precedes Vova phone; Nastya phone starts130.65 after all pupils leave; board result persists; no new romance choices or full-day ending is claimed. Chalk physical acting remains animation P1.",
+      "evidence": [
+        "src/story.json",
+        "dist/model.js",
+        "production/narrative-audit.md",
+        "production/qa-regression.json",
+        "production/critic-final-captures/evidence.json"
+      ],
+      "tested_cases": [
+        "Five messages and exact prefix",
+        "Lesson/break/phone causality",
+        "Scene entry/exit and no-input model sequence"
+      ],
+      "untested_cases": [
+        "Real UI reading and broader11-scene narrative"
+      ],
+      "owner": "narrative-verifier",
+      "required_fix_or_next_check": "Preserve canon when repairing chalk/gait.",
+      "verdict_justification": "Actual slice keeps S02/S03/189s and exactly five original IDs, speakers and texts. Bread release precedes Vova phone; Nastya phone starts130.65 after all pupils leave; board result persists; no new romance choices or full-day ending is claimed. Chalk physical acting remains animation P1.",
+      "residual_risk": "PASS applies to the supplied verified ledger and current two-scene slice, not reauthentication of Telegram or full game."
+    },
+    {
+      "domain": "gameplay",
+      "status": "PASS",
+      "inspected_build_id": "slice-df8ec482082a4b396c4f",
+      "observations": "Bounded actual model/API progression is consistent: auto progression, pause/resume, repeated continuous advance, speed, restart and restore preserve one loaf and message order. No permanent model softlock found. Real player input belongs to untested browser/UI checks.",
+      "evidence": [
+        "production/qa-regression.json",
+        "production/critic-final-captures/evidence.json",
+        "tests/acceptance-contract.json"
+      ],
+      "tested_cases": [
+        "Actual exported model at60Hz",
+        "Actual createGame clock/API with injected environment from root QA"
+      ],
+      "untested_cases": [
+        "Browser pointer/touch/keyboard and focus/PIP controls"
+      ],
+      "owner": "gameplay+engine",
+      "required_fix_or_next_check": "Exercise actual controls when supported browser capability is available.",
+      "verdict_justification": "Bounded actual model/API progression is consistent: auto progression, pause/resume, repeated continuous advance, speed, restart and restore preserve one loaf and message order. No permanent model softlock found. Real player input belongs to untested browser/UI checks.",
+      "residual_risk": "This PASS is for deterministic progression/API, not live playability."
+    },
+    {
+      "domain": "ui",
+      "status": "NOT_CHECKED",
+      "inspected_build_id": "slice-df8ec482082a4b396c4f",
+      "observations": "Static Russian UI, selectable text, one chat,55/45 desktop emphasis102–111 and portrait PIP are declared; actual layout/readability/control behavior was unavailable.",
+      "evidence": [
+        "production/ui-static-audit.json",
+        "dist/index.html",
+        "dist/ui.js",
+        "dist/style.css"
+      ],
+      "tested_cases": [
+        "Source IDs/assets and message textContent"
+      ],
+      "untested_cases": [
+        "Desktop and320/360/393/412 layouts;touch;menus;PIP overlap"
+      ],
+      "owner": "UI/UX",
+      "required_fix_or_next_check": "Run actual browser layouts and player controls.",
+      "verdict_justification": "Static Russian UI, selectable text, one chat,55/45 desktop emphasis102–111 and portrait PIP are declared; actual layout/readability/control behavior was unavailable.",
+      "residual_risk": "Source audit and world-only320 captures do not prove DOM layout."
+    },
+    {
+      "domain": "web",
+      "status": "NOT_CHECKED",
+      "inspected_build_id": "slice-df8ec482082a4b396c4f",
+      "observations": "Default loader20 local image paths and actual renderer/API code pass native tests. Real browser startup, DOM event dispatch, console, tab return and HTML sequencing were unavailable.",
+      "evidence": [
+        "production/qa-report.json",
+        "production/qa-regression.json",
+        "production/capability-ledger.md"
+      ],
+      "tested_cases": [
+        "Default production URL resolution with filesystem fetch/image substitutes",
+        "Native Canvas exports"
+      ],
+      "untested_cases": [
+        "Actual browser HTML/JS execution,pointer,touch,keyboard,visibility resume"
+      ],
+      "owner": "web-engineer",
+      "required_fix_or_next_check": "Managed browser test through required control-browser skill when available.",
+      "verdict_justification": "Default loader20 local image paths and actual renderer/API code pass native tests. Real browser startup, DOM event dispatch, console, tab return and HTML sequencing were unavailable.",
+      "residual_risk": "No server, browser installation or alternate browser-control fallback was used."
+    },
+    {
+      "domain": "audio",
+      "status": "NOT_CHECKED",
+      "inspected_build_id": "slice-df8ec482082a4b396c4f",
+      "observations": "Source declares local procedural fridge/rustle/bell/message/checkout cues and mute; no playback/listening or browser autoplay/mix evidence exists.",
+      "evidence": [
+        "dist/engine.js",
+        "dist/model.js",
+        "production/qa-report.json"
+      ],
+      "tested_cases": [
+        "Cue timestamps and source implementation"
+      ],
+      "untested_cases": [
+        "Audible cue timing,mix,mute/unlock,autoplay"
+      ],
+      "owner": "audio-director",
+      "required_fix_or_next_check": "Listen to actual browser sequence and verify pause/mute/replay.",
+      "verdict_justification": "Source declares local procedural fridge/rustle/bell/message/checkout cues and mute; no playback/listening or browser autoplay/mix evidence exists.",
+      "residual_risk": "Source cue list cannot establish audible sound quality."
+    },
+    {
+      "domain": "performance",
+      "status": "NOT_CHECKED",
+      "inspected_build_id": "slice-df8ec482082a4b396c4f",
+      "observations": "No measured mobile FPS, frame pacing, memory, loading or battery evidence. Native process/capture speed and file sizes are insufficient.",
+      "evidence": [
+        "production/qa-report.json",
+        "production/capability-ledger.md"
+      ],
+      "tested_cases": [
+        "Bounded clock logic inspected"
+      ],
+      "untested_cases": [
+        "Device/browser FPS,loading,memory,tab suspension"
+      ],
+      "owner": "test-engineer",
+      "required_fix_or_next_check": "Measure actual target devices/browser.",
+      "verdict_justification": "No measured mobile FPS, frame pacing, memory, loading or battery evidence. Native process/capture speed and file sizes are insufficient.",
+      "residual_risk": "No performance readiness claim."
+    },
+    {
+      "domain": "persistence",
+      "status": "NOT_CHECKED",
+      "inspected_build_id": "slice-df8ec482082a4b396c4f",
+      "observations": "Actual save-code/clock tests PASS with injected storage, including corruption/quota handling and atomic event commits at new phone boundaries. Actual browser localStorage/reload/permissions were unavailable.",
+      "evidence": [
+        "production/qa-regression.json",
+        "production/qa-regression-v3-boundary-diagnostic.json",
+        "dist/model.js",
+        "dist/engine.js"
+      ],
+      "tested_cases": [
+        "Root33/0 run;CLOCK-SAVE-01 uses130.65/178.66 and retains owner-change assertion",
+        "Source validation/quota checks"
+      ],
+      "untested_cases": [
+        "Actual browser page reload,localStorage and permissions"
+      ],
+      "owner": "web-engineer+test-engineer",
+      "required_fix_or_next_check": "Reproduce mid-contact save/reload in browser.",
+      "verdict_justification": "Actual save-code/clock tests PASS with injected storage, including corruption/quota handling and atomic event commits at new phone boundaries. Actual browser localStorage/reload/permissions were unavailable.",
+      "residual_risk": "Historical test FAIL at old130 fixture is preserved; final33/0 replaces it without weakening assertion."
+    },
+    {
+      "domain": "accessibility",
+      "status": "NOT_CHECKED",
+      "inspected_build_id": "slice-df8ec482082a4b396c4f",
+      "observations": "44px controls, focus-visible, Russian labels/live region,safe areas and reduced-motion are declared in source. Real keyboard/focus/screen-reader/contrast/mobile behavior was unavailable.",
+      "evidence": [
+        "production/ui-static-audit.json",
+        "dist/index.html",
+        "dist/ui.js",
+        "dist/style.css"
+      ],
+      "tested_cases": [
+        "Static labels,44px rules and reduced-motion declarations"
+      ],
+      "untested_cases": [
+        "Keyboard focus/menu traps,screen-reader behavior,contrast,real reduced-motion playback"
+      ],
+      "owner": "UI/accessibility",
+      "required_fix_or_next_check": "Execute actual accessible controls and layouts.",
+      "verdict_justification": "44px controls, focus-visible, Russian labels/live region,safe areas and reduced-motion are declared in source. Real keyboard/focus/screen-reader/contrast/mobile behavior was unavailable.",
+      "residual_risk": "Declarations are not verified accessibility."
+    },
+    {
+      "domain": "privacy",
+      "status": "PASS",
+      "inspected_build_id": "slice-df8ec482082a4b396c4f",
+      "observations": "Current private artifact contains generated/reference-derived art and five supplied messages; source scan found no photos, secrets, analytics/beacons or remote service calls beyond local manifest/image loading. Text is assigned through textContent. Public publication and personal-message consent are not certified.",
+      "evidence": [
+        "production/art-provenance.json",
+        "production/art-export-v3.json",
+        "production/decisions.md",
+        "production/project-state.json",
+        "dist/index.html",
+        "dist/ui.js",
+        "dist/engine.js",
+        "production/build-manifest.json"
+      ],
+      "tested_cases": [
+        "All86 frozen files hashed",
+        "Runtime source URL/exfiltration/secret scan",
+        "Private-scope artifact provenance"
+      ],
+      "untested_cases": [
+        "Public publication consent and external hosting behavior"
+      ],
+      "owner": "producer",
+      "required_fix_or_next_check": "Maintain private authorized scope; user separately decides public publication.",
+      "verdict_justification": "Current private artifact contains generated/reference-derived art and five supplied messages; source scan found no photos, secrets, analytics/beacons or remote service calls beyond local manifest/image loading. Text is assigned through textContent. Public publication and personal-message consent are not certified.",
+      "residual_risk": "PASS is current source/private artifact only; no public release authorization implied."
+    },
+    {
+      "domain": "integration",
+      "status": "FAIL",
+      "inspected_build_id": "slice-df8ec482082a4b396c4f",
+      "observations": "World ownership/chat/board/phone/chair agree in current native simulation, but visible gait and chalk entry/return fail physical continuity. DOM/PIP/audio integration remains untested.",
+      "evidence": [
+        "production/critic-final-captures/evidence.json",
+        "production/critic-final-captures/chalk-entry-stops-x3.png",
+        "production/critic-final-captures/chalk-return-stops-x3.png",
+        "production/critic-final-captures/walk-runtime-stops-x3.png",
+        "production/qa-report.json"
+      ],
+      "tested_cases": [
+        "Scene boundary102;bread/contact/chat/phone sequence",
+        "New pocket contacts and fixedchair",
+        "Actual source/render hash agreement"
+      ],
+      "untested_cases": [
+        "Real responsive views and audible/player interaction integration"
+      ],
+      "owner": "producer+independent-critic",
+      "required_fix_or_next_check": "Resolve two P1 and obtain real browser/UI/audio/device evidence before completion.",
+      "verdict_justification": "World ownership/chat/board/phone/chair agree in current native simulation, but visible gait and chalk entry/return fail physical continuity. DOM/PIP/audio integration remains untested.",
+      "residual_risk": "Native/API PASS does not override art FAIL or unknown essential lanes."
+    }
+  ],
+  "cross_domain_review": {
+    "status": "FAIL",
+    "inspected_build_id": "slice-df8ec482082a4b396c4f",
+    "evidence": [
+      "production/critic-final-captures/evidence.json",
+      "production/critic-final-captures/chalk-entry-stops-x3.png",
+      "production/critic-final-captures/chalk-return-stops-x3.png",
+      "production/critic-final-captures/walk-runtime-stops-x3.png",
+      "production/qa-report.json"
+    ],
+    "observations": "Two animationP1 plus untested actual browser/UI/accessibility/audio/performance/persistence prevent verified milestone handoff. Native story/ownership contracts are consistent."
+  },
+  "issues": [
+    {
+      "id": "CRIT-ASSET-LOADER",
+      "domain": "web",
+      "severity": "P0",
+      "original_severity": "P0",
+      "status": "VERIFIED_FIXED",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "Previously reported assets/assets URL failure. Current production defaultloader resolves20 real images.",
+      "evidence": [
+        "production/qa-regression.json"
+      ],
+      "expected": "All current required image URLs resolve.",
+      "fix": "Correct manifest-relative base path.",
+      "owner": "web-engineer",
+      "retest": "ASSET-02 real defaultloader; browser startup remains untested.",
+      "retest_build_id": "slice-df8ec482082a4b396c4f",
+      "retest_evidence": [
+        "production/qa-regression.json"
+      ],
+      "baseline_basis": "Prior delegated critic/producer report; original failing loader log was not retained. This closure is current-code native loader only."
+    },
+    {
+      "id": "CRIT-PUPIL-HAND",
+      "domain": "animation",
+      "severity": "P1",
+      "original_severity": "P1",
+      "status": "VERIFIED_FIXED",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "Raised hand/forearm visible and connected above pupil head at50.",
+      "evidence": [
+        "production/qa-captures/contact-strip-03.png",
+        "production/qa-regression.json"
+      ],
+      "expected": "Gesture visible after furniture layers.",
+      "fix": "Raise connected forearm/wrist above head.",
+      "owner": "engine+art",
+      "retest": "RENDER-02 plus49.983/50/50.016 natural renders.",
+      "retest_build_id": "slice-df8ec482082a4b396c4f",
+      "retest_evidence": [
+        "production/qa-captures/contact-strip-03.png",
+        "production/qa-regression.json"
+      ]
+    },
+    {
+      "id": "CRIT-SHELF-VISIBILITY",
+      "domain": "environment_vfx",
+      "severity": "P1",
+      "original_severity": "P1",
+      "status": "VERIFIED_FIXED",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "Tracked packed loaf stays visible after release120.",
+      "evidence": [
+        "production/qa-captures/contact-strip-02.png",
+        "production/critic-final-captures/raw/t-120_00000000.png"
+      ],
+      "expected": "Released loaf visible and single shelf owner.",
+      "fix": "Draw shelf loaf after shelf-front occlusion.",
+      "owner": "engine",
+      "retest": "119.983/120/120.016 and one-owner sweep.",
+      "retest_build_id": "slice-df8ec482082a4b396c4f",
+      "retest_evidence": [
+        "production/qa-captures/contact-strip-02.png",
+        "production/critic-final-captures/raw/t-120_00000000.png"
+      ]
+    },
+    {
+      "id": "CRIT-EQUALS",
+      "domain": "narrative",
+      "severity": "P1",
+      "original_severity": "P1",
+      "status": "VERIFIED_FIXED",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "Final7+5=12 shows two separate equals bars.",
+      "evidence": [
+        "production/critic-final-captures/board71-x5.png",
+        "production/qa-regression.json"
+      ],
+      "expected": "Literal correct arithmetic.",
+      "fix": "Separate equals strokes.",
+      "owner": "engine",
+      "retest": "RENDER-03 and natural completedboard71.",
+      "retest_build_id": "slice-df8ec482082a4b396c4f",
+      "retest_evidence": [
+        "production/critic-final-captures/board71-x5.png",
+        "production/qa-regression.json"
+      ]
+    },
+    {
+      "id": "CRIT-EVENT-COMMIT",
+      "domain": "persistence",
+      "severity": "P1",
+      "original_severity": "P1",
+      "status": "VERIFIED_FIXED",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "Every tested critical event commits before observable callback/restore. New ownership timestamps130.65/178.66 are exercised.",
+      "evidence": [
+        "production/qa-regression.json"
+      ],
+      "expected": "Reload never rewinds a visibly committed prop/message event.",
+      "fix": "Commit critical state before draw/callback/cue.",
+      "owner": "engine",
+      "retest": "CLOCK-SAVE-01 actual createGame with injected storage; realbrowser remains untested.",
+      "retest_build_id": "slice-df8ec482082a4b396c4f",
+      "retest_evidence": [
+        "production/qa-regression.json"
+      ]
+    },
+    {
+      "id": "CRIT-ANIM-NASTYA-PHONE",
+      "domain": "animation",
+      "severity": "P1",
+      "original_severity": "P1",
+      "status": "VERIFIED_FIXED",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "Authored stand/bend/sit/pockettake/hold/type/pocketput/rise sequence now visible; chair persists and phone hides only at pocket178.66.",
+      "evidence": [
+        "production/critic-final-captures/phone-sit-take-all-stops-x3.png",
+        "production/critic-final-captures/phone-type-stops-x3.png",
+        "production/critic-final-captures/phone-put-rise-all-stops-x3.png",
+        "production/critic-final-captures/evidence.json"
+      ],
+      "expected": "Physical take/return without chair vanish or instant sitting.",
+      "fix": "Integrate8 real phone poses and persistent worldchair.",
+      "owner": "art+engine",
+      "retest": "All27 exact phase boundaries±1/60;one-phone ownership130.65–178.66.",
+      "retest_build_id": "slice-df8ec482082a4b396c4f",
+      "retest_evidence": [
+        "production/critic-final-captures/phone-sit-take-all-stops-x3.png",
+        "production/critic-final-captures/phone-type-stops-x3.png",
+        "production/critic-final-captures/phone-put-rise-all-stops-x3.png",
+        "production/critic-final-captures/evidence.json"
+      ]
+    },
+    {
+      "id": "CRIT-ANIM-CHALK-PENUP",
+      "domain": "animation",
+      "severity": "P1",
+      "original_severity": "P1",
+      "status": "VERIFIED_FIXED",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "Stationary pen-up41.283/41.633 holds raised authored arm; interglyph steps use24–27 with baked chalk once.",
+      "evidence": [
+        "production/critic-final-captures/chalk-penup-regression-stops-x3.png",
+        "production/qa-captures/all-poses-nastya-03.png",
+        "production/qa-regression.json"
+      ],
+      "expected": "Pen-up does not fall to hip-levelgenericwalk.",
+      "fix": "Raised stationary pose and real chalk-step sprites.",
+      "owner": "art+engine",
+      "retest": "NAR-CHALK-PENUP/current natural stops; closure excludes entry/return and gait.",
+      "retest_build_id": "slice-df8ec482082a4b396c4f",
+      "retest_evidence": [
+        "production/critic-final-captures/chalk-penup-regression-stops-x3.png",
+        "production/qa-captures/all-poses-nastya-03.png",
+        "production/qa-regression.json"
+      ]
+    },
+    {
+      "id": "CRIT-NOTEBOOK-VISIBILITY",
+      "domain": "environment_vfx",
+      "severity": "P1",
+      "original_severity": "P1",
+      "status": "VERIFIED_FIXED",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "At71 notebook interior has106 exact visiblecolorpixels; two pages and connecting hand visible at71/74.",
+      "evidence": [
+        "production/critic-final-captures/notebook-help-current-x3.png",
+        "production/critic-final-captures/evidence.json",
+        "production/qa-captures/contact-strip-04.png"
+      ],
+      "expected": "Notebook and teacher contact visible over desk.",
+      "fix": "Place notebook/forearm above correct furniture face.",
+      "owner": "engine",
+      "retest": "Direct naturalframe71color count plus visual71/74; source pixels unedited.",
+      "retest_build_id": "slice-df8ec482082a4b396c4f",
+      "retest_evidence": [
+        "production/critic-final-captures/notebook-help-current-x3.png",
+        "production/critic-final-captures/evidence.json",
+        "production/qa-captures/contact-strip-04.png"
+      ]
+    },
+    {
+      "id": "CRIT-ANIM-NASTYA-GAIT",
+      "domain": "animation",
+      "severity": "P1",
+      "original_severity": "P1",
+      "status": "OPEN",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "Frames8/10 and9/11 repeat/ambiguously preserve same physical leading/support leg;24/26 and25/27 have same flaw. Current nativewalk10–18 shows repeated halfcycle.",
+      "evidence": [
+        "production/critic-final-captures/walk-runtime-stops-x3.png",
+        "production/qa-captures/all-poses-nastya-01.png",
+        "production/qa-captures/all-poses-nastya-03.png",
+        "production/art-export-v3.json"
+      ],
+      "expected": "A complete walk alternates physical support leg and passing phase.",
+      "fix": "Redraw genuine opposite contact/passing phases at unchanged head/body scale; verify continuous real path.",
+      "owner": "art-director+animation-director",
+      "retest": "All source frames and original-rate current walk; compare physical legs and floor support, not image hashes/framecount.",
+      "repair_attempts": 2,
+      "escalated": true,
+      "escalation": "Two unsuccessful imagegen repairs preserved; no severity downgrade or further generic loop."
+    },
+    {
+      "id": "CRIT-ANIM-CHALK-ENTRY-RETURN",
+      "domain": "animation",
+      "severity": "P1",
+      "original_severity": "P1",
+      "status": "OPEN",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "34.98333333 walk10 hand(199.40,161)→35 chalkHigh12(197,115):46.06px/1frame.46.48333333 chalkLow14(279,131)→46.5 idle0(293,166):37.70px/1frame, chalkvanishes.",
+      "evidence": [
+        "production/critic-final-captures/chalk-entry-stops-x3.png",
+        "production/critic-final-captures/chalk-return-stops-x3.png",
+        "production/qa-captures/raw/t-34_98333333.json",
+        "production/qa-captures/raw/t-35_00000000.json",
+        "production/qa-captures/raw/t-46_48333333.json",
+        "production/qa-captures/raw/t-46_50000000.json"
+      ],
+      "expected": "Visible authored arm raise/lower and actual chalk take/release contact.",
+      "fix": "Create upright intermediate raise/lower plus source/ledge contact and emptyhand release. Point/boardReach is alreadyhigh; deskLean does not solve it. Do not merely move snap earlier.",
+      "owner": "art-director+animation-director+engine",
+      "retest": "Full entry/return action at1x plus every transition±1/60; board contact, fixedfeet and exactlyonechalk.",
+      "baseline_evidence": [
+        "production/critic-current-captures/chalk-start.png"
+      ],
+      "confirmation": "Independent current-build raw evidence; pen-up repair does not close the full chalk action."
+    },
+    {
+      "id": "CRIT-VISUAL-NPC-CRAFT",
+      "domain": "visual",
+      "severity": "P2",
+      "original_severity": "P2",
+      "status": "OPEN",
+      "build_id": "slice-df8ec482082a4b396c4f",
+      "observed": "Anonymous pupils/customer retain square flat faces and rectilinear limbs that look rough next to shaded actors/furniture.",
+      "evidence": [
+        "production/critic-final-captures/notebook-help-current-x3.png",
+        "production/critic-final-captures/world-only-native320-sheet-1.png"
+      ],
+      "expected": "Anonymous NPCs fit established camera/palette/craft without personal likeness.",
+      "fix": "Redraw neutral pupil/customer silhouettes and small shade clusters; preserve anonymous identities and hand visibility.",
+      "owner": "visual-art-director",
+      "retest": "Native fullworld+320 worldonly and raisedhand/regression. This is polish; does not replace P1 repairs."
+    }
+  ],
+  "baseline_evidence": [
+    "production/critic-acceptance.md",
+    "production/critic-current-captures/evidence.json",
+    "production/critic-current-captures/sit130.png",
+    "production/critic-current-captures/return179.png",
+    "production/critic-current-captures/chalk-start.png",
+    "production/critic-current-captures/chalk-pen-up.png",
+    "production/critic-current-captures/desk-help71.png",
+    "production/critic-baseline-captures/offscreen-40.png"
+  ],
+  "integration_evidence": [
+    "production/critic-final-captures/evidence.json",
+    "production/critic-final-captures/sheet-provenance.json",
+    "production/qa-captures/index.json",
+    "production/qa-report.json",
+    "production/build-manifest.json"
+  ],
+  "regression_evidence": [
+    "production/qa-regression.json",
+    "production/critic-final-captures/evidence.json",
+    "production/critic-final-captures/chalk-penup-regression-stops-x3.png",
+    "production/qa-captures/contact-strip-03.png",
+    "production/critic-final-captures/notebook-help-current-x3.png"
+  ],
+  "review_coverage": {
+    "authored_frames_visually_inspected": 52,
+    "pose_sheets": 5,
+    "contact_neighborhoods_inspected": 23,
+    "contact_sheets": 6,
+    "exact_phone_phase_boundaries_probed": 27,
+    "independent_raw_frames": 125,
+    "native320_world_images_inspected": 18,
+    "model_samples": 11341,
+    "frozen_file_hashes_verified": 86,
+    "all360raw_individually_viewed": false,
+    "note": "Worst-case raw frames, all authored poses and all contact triples were visually inspected. All360 root raw files remain available; no exhaustive pixel-by-pixel viewing claim."
+  },
+  "technical_QA": {
+    "executed_by": "/root",
+    "independent": false,
+    "pass": 33,
+    "fail": 0,
+    "type": "Native/model/API; not browser"
+  },
+  "not_checked_reason": "Required managed control-browser skill unavailable. No browser installation/server/alternate browser-control fallback used.",
+  "createdAt": "2026-10-10T10:26:12.867119+00:00"
+}

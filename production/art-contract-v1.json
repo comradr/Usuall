@@ -1,0 +1,1155 @@
+{
+  "version": "art-contract-v1-native-measured",
+  "status": "prototype-exported; not user-approved or browser-motion-approved",
+  "logicalSize": [
+    480,
+    360
+  ],
+  "pixelSampling": "nearest-neighbor",
+  "backgrounds": {
+    "store": {
+      "image": "assets/store-bg-v1.png",
+      "width": 480,
+      "height": 360
+    },
+    "school": {
+      "image": "assets/school-bg-v1.png",
+      "width": 480,
+      "height": 360
+    }
+  },
+  "actors": {
+    "vova": {
+      "image": "assets/actors/vova-work-v1.png",
+      "frameWidth": 96,
+      "frameHeight": 112,
+      "columns": 8,
+      "rows": 1,
+      "pivot": [
+        48,
+        100
+      ],
+      "poses": {
+        "idle": [
+          0
+        ],
+        "walk": [
+          1,
+          2
+        ],
+        "reach": [
+          6
+        ],
+        "contact": [
+          6
+        ],
+        "carry": [
+          5
+        ],
+        "pack": [
+          6
+        ],
+        "put": [
+          6
+        ],
+        "phone": [
+          7
+        ],
+        "walkA": [
+          1
+        ],
+        "walkB": [
+          2
+        ],
+        "raisedReach": [
+          3
+        ],
+        "raisedContact": [
+          4
+        ]
+      },
+      "sockets": {
+        "0": {
+          "hand": [
+            39,
+            72
+          ],
+          "handOffset": [
+            -9,
+            -28
+          ]
+        },
+        "1": {
+          "hand": [
+            30,
+            65
+          ],
+          "handOffset": [
+            -18,
+            -35
+          ]
+        },
+        "2": {
+          "hand": [
+            35,
+            67
+          ],
+          "handOffset": [
+            -13,
+            -33
+          ]
+        },
+        "3": {
+          "hand": [
+            21,
+            25
+          ],
+          "handOffset": [
+            -27,
+            -75
+          ]
+        },
+        "4": {
+          "hand": [
+            23,
+            23
+          ],
+          "handOffset": [
+            -25,
+            -77
+          ]
+        },
+        "5": {
+          "hand": [
+            38,
+            56
+          ],
+          "handOffset": [
+            -10,
+            -44
+          ]
+        },
+        "6": {
+          "hand": [
+            28,
+            54
+          ],
+          "handOffset": [
+            -20,
+            -46
+          ]
+        },
+        "7": {
+          "hand": [
+            39,
+            50
+          ],
+          "handOffset": [
+            -9,
+            -50
+          ],
+          "bakedItem": "phone"
+        }
+      },
+      "frames": [
+        {
+          "index": 0,
+          "name": "idle",
+          "sourceCell": [
+            0,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            201,
+            500
+          ],
+          "sourceHand": [
+            149,
+            330
+          ],
+          "scale": 0.166667,
+          "bounds": [
+            36,
+            20,
+            63,
+            101
+          ],
+          "hand": [
+            39,
+            72
+          ],
+          "handOffset": [
+            -9,
+            -28
+          ]
+        },
+        {
+          "index": 1,
+          "name": "walkA",
+          "sourceCell": [
+            384,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            565,
+            499
+          ],
+          "sourceHand": [
+            460,
+            297
+          ],
+          "scale": 0.175055,
+          "bounds": [
+            27,
+            19,
+            68,
+            100
+          ],
+          "hand": [
+            30,
+            65
+          ],
+          "handOffset": [
+            -18,
+            -35
+          ]
+        },
+        {
+          "index": 2,
+          "name": "walkB",
+          "sourceCell": [
+            768,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            955,
+            499
+          ],
+          "sourceHand": [
+            878,
+            309
+          ],
+          "scale": 0.173913,
+          "bounds": [
+            27,
+            19,
+            68,
+            98
+          ],
+          "hand": [
+            35,
+            67
+          ],
+          "handOffset": [
+            -13,
+            -33
+          ]
+        },
+        {
+          "index": 3,
+          "name": "raisedReach",
+          "sourceCell": [
+            1152,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            1358,
+            500
+          ],
+          "sourceHand": [
+            1206,
+            77
+          ],
+          "scale": 0.176991,
+          "bounds": [
+            19,
+            20,
+            66,
+            101
+          ],
+          "hand": [
+            21,
+            25
+          ],
+          "handOffset": [
+            -27,
+            -75
+          ]
+        },
+        {
+          "index": 4,
+          "name": "raisedContact",
+          "sourceCell": [
+            0,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            236,
+            994
+          ],
+          "sourceHand": [
+            95,
+            555
+          ],
+          "scale": 0.175439,
+          "bounds": [
+            19,
+            19,
+            66,
+            100
+          ],
+          "hand": [
+            23,
+            23
+          ],
+          "handOffset": [
+            -25,
+            -77
+          ]
+        },
+        {
+          "index": 5,
+          "name": "carry",
+          "sourceCell": [
+            384,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            590,
+            994
+          ],
+          "sourceHand": [
+            532,
+            746
+          ],
+          "scale": 0.1766,
+          "bounds": [
+            32,
+            18,
+            65,
+            99
+          ],
+          "hand": [
+            38,
+            56
+          ],
+          "handOffset": [
+            -10,
+            -44
+          ]
+        },
+        {
+          "index": 6,
+          "name": "pack",
+          "sourceCell": [
+            768,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            980,
+            991
+          ],
+          "sourceHand": [
+            874,
+            744
+          ],
+          "scale": 0.184332,
+          "bounds": [
+            24,
+            17,
+            66,
+            100
+          ],
+          "hand": [
+            28,
+            54
+          ],
+          "handOffset": [
+            -20,
+            -46
+          ]
+        },
+        {
+          "index": 7,
+          "name": "phone",
+          "sourceCell": [
+            1152,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            1354,
+            992
+          ],
+          "sourceHand": [
+            1306,
+            710
+          ],
+          "scale": 0.177778,
+          "bounds": [
+            32,
+            18,
+            61,
+            100
+          ],
+          "hand": [
+            39,
+            50
+          ],
+          "handOffset": [
+            -9,
+            -50
+          ]
+        }
+      ],
+      "facing": "left or three-quarter left",
+      "status": "exported-alpha-clean; pose craft pending full runtime critic"
+    },
+    "nastya": {
+      "image": "assets/actors/nastya-work-v1.png",
+      "frameWidth": 96,
+      "frameHeight": 112,
+      "columns": 8,
+      "rows": 1,
+      "pivot": [
+        48,
+        100
+      ],
+      "poses": {
+        "idle": [
+          0
+        ],
+        "walk": [
+          1,
+          2
+        ],
+        "reach": [
+          3
+        ],
+        "chalk": [
+          3,
+          4
+        ],
+        "point": [
+          5
+        ],
+        "help": [
+          6
+        ],
+        "deskLean": [
+          6
+        ],
+        "phone": [
+          7
+        ],
+        "walkA": [
+          1
+        ],
+        "walkB": [
+          2
+        ],
+        "boardReach": [
+          3
+        ]
+      },
+      "sockets": {
+        "0": {
+          "hand": [
+            37,
+            69
+          ],
+          "handOffset": [
+            -11,
+            -31
+          ]
+        },
+        "1": {
+          "hand": [
+            30,
+            63
+          ],
+          "handOffset": [
+            -18,
+            -37
+          ]
+        },
+        "2": {
+          "hand": [
+            29,
+            65
+          ],
+          "handOffset": [
+            -19,
+            -35
+          ]
+        },
+        "3": {
+          "hand": [
+            21,
+            24
+          ],
+          "handOffset": [
+            -27,
+            -76
+          ],
+          "bakedItem": "chalk"
+        },
+        "4": {
+          "hand": [
+            19,
+            22
+          ],
+          "handOffset": [
+            -29,
+            -78
+          ],
+          "bakedItem": "chalk"
+        },
+        "5": {
+          "hand": [
+            16,
+            23
+          ],
+          "handOffset": [
+            -32,
+            -77
+          ]
+        },
+        "6": {
+          "hand": [
+            10,
+            56
+          ],
+          "handOffset": [
+            -38,
+            -44
+          ]
+        },
+        "7": {
+          "hand": [
+            46,
+            58
+          ],
+          "handOffset": [
+            -2,
+            -42
+          ]
+        }
+      },
+      "frames": [
+        {
+          "index": 0,
+          "name": "idle",
+          "sourceCell": [
+            0,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            188,
+            499
+          ],
+          "sourceHand": [
+            123,
+            308
+          ],
+          "scale": 0.164271,
+          "bounds": [
+            35,
+            20,
+            66,
+            100
+          ],
+          "hand": [
+            37,
+            69
+          ],
+          "handOffset": [
+            -11,
+            -31
+          ]
+        },
+        {
+          "index": 1,
+          "name": "walkA",
+          "sourceCell": [
+            384,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            556,
+            500
+          ],
+          "sourceHand": [
+            446,
+            275
+          ],
+          "scale": 0.163934,
+          "bounds": [
+            28,
+            20,
+            68,
+            99
+          ],
+          "hand": [
+            30,
+            63
+          ],
+          "handOffset": [
+            -18,
+            -37
+          ]
+        },
+        {
+          "index": 2,
+          "name": "walkB",
+          "sourceCell": [
+            768,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            946,
+            500
+          ],
+          "sourceHand": [
+            828,
+            288
+          ],
+          "scale": 0.164609,
+          "bounds": [
+            27,
+            20,
+            67,
+            100
+          ],
+          "hand": [
+            29,
+            65
+          ],
+          "handOffset": [
+            -19,
+            -35
+          ]
+        },
+        {
+          "index": 3,
+          "name": "boardReach",
+          "sourceCell": [
+            1152,
+            0,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            1356,
+            500
+          ],
+          "sourceHand": [
+            1194,
+            39
+          ],
+          "scale": 0.165631,
+          "bounds": [
+            18,
+            19,
+            64,
+            100
+          ],
+          "hand": [
+            21,
+            24
+          ],
+          "handOffset": [
+            -27,
+            -76
+          ]
+        },
+        {
+          "index": 4,
+          "name": "chalk",
+          "sourceCell": [
+            0,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            241,
+            1006
+          ],
+          "sourceHand": [
+            66,
+            535
+          ],
+          "scale": 0.16632,
+          "bounds": [
+            17,
+            19,
+            63,
+            100
+          ],
+          "hand": [
+            19,
+            22
+          ],
+          "handOffset": [
+            -29,
+            -78
+          ]
+        },
+        {
+          "index": 5,
+          "name": "point",
+          "sourceCell": [
+            384,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            626,
+            1008
+          ],
+          "sourceHand": [
+            435,
+            541
+          ],
+          "scale": 0.165631,
+          "bounds": [
+            15,
+            19,
+            72,
+            99
+          ],
+          "hand": [
+            16,
+            23
+          ],
+          "handOffset": [
+            -32,
+            -77
+          ]
+        },
+        {
+          "index": 6,
+          "name": "deskLean",
+          "sourceCell": [
+            768,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            999,
+            1006
+          ],
+          "sourceHand": [
+            777,
+            752
+          ],
+          "scale": 0.171674,
+          "bounds": [
+            8,
+            20,
+            63,
+            100
+          ],
+          "hand": [
+            10,
+            56
+          ],
+          "handOffset": [
+            -38,
+            -44
+          ]
+        },
+        {
+          "index": 7,
+          "name": "phone",
+          "sourceCell": [
+            1152,
+            512,
+            384,
+            512
+          ],
+          "sourceFeet": [
+            1295,
+            1005
+          ],
+          "sourceHand": [
+            1283,
+            752
+          ],
+          "scale": 0.164271,
+          "bounds": [
+            35,
+            28,
+            76,
+            100
+          ],
+          "hand": [
+            46,
+            58
+          ],
+          "handOffset": [
+            -2,
+            -42
+          ]
+        }
+      ],
+      "facing": "left or three-quarter left",
+      "status": "exported-alpha-clean; pose craft pending full runtime critic"
+    }
+  },
+  "props": {
+    "bread": {
+      "image": "assets/props/bread-v1.png",
+      "width": 22,
+      "height": 13,
+      "pivot": [
+        11,
+        6
+      ],
+      "status": "separated-native-export"
+    },
+    "bagEmpty": {
+      "image": "assets/props/bagEmpty-v1.png",
+      "width": 24,
+      "height": 24,
+      "pivot": [
+        12,
+        12
+      ],
+      "status": "separated-native-export"
+    },
+    "breadPacked": {
+      "image": "assets/props/breadPacked-v1.png",
+      "width": 24,
+      "height": 27,
+      "pivot": [
+        12,
+        13
+      ],
+      "status": "separated-native-export"
+    },
+    "trolley": {
+      "image": "assets/props/trolley-v1.png",
+      "width": 56,
+      "height": 47,
+      "pivot": [
+        28,
+        23
+      ],
+      "status": "separated-native-export"
+    },
+    "phone": {
+      "image": "assets/props/phone-v1.png",
+      "width": 8,
+      "height": 12,
+      "pivot": [
+        4,
+        6
+      ],
+      "status": "separated-native-export"
+    },
+    "notebook": {
+      "image": "assets/props/notebook-v1.png",
+      "width": 20,
+      "height": 13,
+      "pivot": [
+        10,
+        6
+      ],
+      "status": "separated-native-export"
+    },
+    "chalk": {
+      "image": "assets/props/chalk-v1.png",
+      "width": 4,
+      "height": 3,
+      "pivot": [
+        2,
+        1
+      ],
+      "status": "separated-native-export"
+    },
+    "chair": {
+      "image": "assets/props/chair-v1.png",
+      "width": 25,
+      "height": 35,
+      "pivot": [
+        12,
+        17
+      ],
+      "status": "separated-native-export"
+    }
+  },
+  "occluders": {
+    "store": [
+      {
+        "name": "packingBench",
+        "image": "assets/occlusion/store-packingBench-v1.png",
+        "bounds": [
+          193,
+          164,
+          292,
+          199
+        ],
+        "depth": 199,
+        "layer": "foreground furniture face; draw only for actor behind contact plane",
+        "source": "same native background rectangular occlusion export"
+      },
+      {
+        "name": "breadShelf",
+        "image": "assets/occlusion/store-breadShelf-v1.png",
+        "bounds": [
+          22,
+          185,
+          119,
+          254
+        ],
+        "depth": 254,
+        "layer": "foreground furniture face; draw only for actor behind contact plane",
+        "source": "same native background rectangular occlusion export"
+      },
+      {
+        "name": "cashCounter",
+        "image": "assets/occlusion/store-cashCounter-v1.png",
+        "bounds": [
+          315,
+          187,
+          480,
+          282
+        ],
+        "depth": 282,
+        "layer": "foreground furniture face; draw only for actor behind contact plane",
+        "source": "same native background rectangular occlusion export"
+      }
+    ],
+    "school": [
+      {
+        "name": "teacherDesk",
+        "image": "assets/occlusion/school-teacherDesk-v1.png",
+        "bounds": [
+          51,
+          176,
+          210,
+          231
+        ],
+        "depth": 231,
+        "layer": "foreground furniture face; draw only for actor behind contact plane",
+        "source": "same native background rectangular occlusion export"
+      },
+      {
+        "name": "studentUpperLeft",
+        "image": "assets/occlusion/school-studentUpperLeft-v1.png",
+        "bounds": [
+          13,
+          226,
+          144,
+          277
+        ],
+        "depth": 277,
+        "layer": "foreground furniture face; draw only for actor behind contact plane",
+        "source": "same native background rectangular occlusion export"
+      },
+      {
+        "name": "studentLowerLeft",
+        "image": "assets/occlusion/school-studentLowerLeft-v1.png",
+        "bounds": [
+          0,
+          280,
+          128,
+          346
+        ],
+        "depth": 346,
+        "layer": "foreground furniture face; draw only for actor behind contact plane",
+        "source": "same native background rectangular occlusion export"
+      },
+      {
+        "name": "studentUpperRight",
+        "image": "assets/occlusion/school-studentUpperRight-v1.png",
+        "bounds": [
+          361,
+          217,
+          480,
+          252
+        ],
+        "depth": 252,
+        "layer": "foreground furniture face; draw only for actor behind contact plane",
+        "source": "same native background rectangular occlusion export"
+      },
+      {
+        "name": "studentLowerRight",
+        "image": "assets/occlusion/school-studentLowerRight-v1.png",
+        "bounds": [
+          370,
+          271,
+          480,
+          338
+        ],
+        "depth": 338,
+        "layer": "foreground furniture face; draw only for actor behind contact plane",
+        "source": "same native background rectangular occlusion export"
+      }
+    ]
+  },
+  "anchors": {
+    "store": {
+      "initial": [
+        245,
+        275
+      ],
+      "work": [
+        242,
+        220
+      ],
+      "source": [
+        210,
+        157
+      ],
+      "pack": [
+        219,
+        158
+      ],
+      "trolley": [
+        178,
+        285
+      ],
+      "cartFeet": [
+        209,
+        304
+      ],
+      "shelfFeet": [
+        144,
+        264
+      ],
+      "shelf": [
+        104,
+        182
+      ]
+    },
+    "school": {
+      "initial": [
+        275,
+        225
+      ],
+      "boardFeet": [
+        338,
+        197
+      ],
+      "boardSurface": [
+        164,
+        60,
+        192,
+        77
+      ],
+      "equationBounds": [
+        194,
+        113,
+        88,
+        17
+      ],
+      "teacherDesk": [
+        51,
+        163,
+        159,
+        68
+      ],
+      "teacherNotebook": [
+        177,
+        172
+      ],
+      "studentNotebook": [
+        114,
+        225
+      ],
+      "studentHelpFeet": [
+        147,
+        288
+      ],
+      "breakFeet": [
+        235,
+        242
+      ]
+    }
+  },
+  "obstacles": {
+    "store": [
+      [
+        0,
+        52,
+        123,
+        205
+      ],
+      [
+        193,
+        165,
+        99,
+        34
+      ],
+      [
+        315,
+        158,
+        165,
+        124
+      ]
+    ],
+    "school": [
+      [
+        51,
+        176,
+        159,
+        55
+      ],
+      [
+        13,
+        226,
+        131,
+        51
+      ],
+      [
+        0,
+        280,
+        128,
+        66
+      ],
+      [
+        361,
+        217,
+        119,
+        35
+      ],
+      [
+        370,
+        271,
+        110,
+        67
+      ]
+    ]
+  },
+  "notes": [
+    "Backgrounds contain architecture and fixed furniture only, no main actors/UI/interactive bread/phone/notebooks.",
+    "Exact socket offsets below are measured from exported pixels; producers must solve feet=contact-handOffset rather than use arbitrary former coordinates.",
+    "Two raised Vova reach poses are retained for review only; bread manipulation uses forward-lean poses."
+  ]
+}

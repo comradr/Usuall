@@ -1,0 +1,29 @@
+{
+  "build_id": "slice-cc408edc66cc9eb44d25",
+  "reviewer": "/root/review_actual_02",
+  "independent": true,
+  "checker_path": "/workspace/scratch/c320be6a75fa/skill-02/Pixel_Game_Studio_COMPLETE_v2.0.0/skills/pixel-game-studio-orchestrator/scripts/check_quality_gate.py",
+  "checker_sha256": "2621eca303e18d2d0498f1c2f0f6a6dae0dd9b939f194d2f969c0eb293749e67",
+  "command": "python check_quality_gate.py production/quality-gate-interactive.json --evidence-root /workspace/sites/obychnyy-den --require-independent",
+  "gate_status": "BLOCKED",
+  "expected_checker_exit_code": 1,
+  "readiness_blockers": [
+    "animation: required domain FAIL (expected PASS)",
+    "ui: required domain NOT_CHECKED (expected PASS)",
+    "web: required domain NOT_CHECKED (expected PASS)",
+    "audio: required domain NOT_CHECKED (expected PASS)",
+    "performance: required domain NOT_CHECKED (expected PASS)",
+    "persistence: required domain NOT_CHECKED (expected PASS)",
+    "accessibility: required domain NOT_CHECKED (expected PASS)",
+    "integration: required domain FAIL (expected PASS)",
+    "cross-domain review not PASS",
+    "CRIT-ANIM-NASTYA-GAIT: unverified blocker P1",
+    "CRIT-ANIM-CHALK-ENTRY-RETURN: unverified blocker P1"
+  ],
+  "invalid_evidence_or_schema_errors": [],
+  "frozen_files_reverified": 91,
+  "independent_capture_hashes_reverified": 55,
+  "review_artifact_sha256": "c08692dfc4f11e720268577b5da76ee80cd6b1b5a6542d9c1eaad40d8ab391d3",
+  "createdAt": "2026-10-11T08:00:48.466213+00:00",
+  "note": "Original checker correctly blocks known animationP1 and missing actual-browser evidence. No missing file, stale artifact hash or independence metadata error. This is not STRUCTURAL GATE PASS."
+}

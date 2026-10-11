@@ -1,0 +1,8 @@
+{
+  "reviewed_build_id": "slice-df8ec482082a4b396c4f",
+  "reviewer": "/root",
+  "command": "check_quality_gate.py production/quality-gate.json --evidence-root /workspace/sites/obychnyy-den --require-independent",
+  "exit_code": 1,
+  "status": "BLOCKED",
+  "output": "BLOCKED: animation: required domain FAIL (expected PASS)\nBLOCKED: ui: required domain NOT_CHECKED (expected PASS)\nBLOCKED: web: required domain NOT_CHECKED (expected PASS)\nBLOCKED: audio: required domain NOT_CHECKED (expected PASS)\nBLOCKED: performance: required domain NOT_CHECKED (expected PASS)\nBLOCKED: persistence: required domain NOT_CHECKED (expected PASS)\nBLOCKED: accessibility: required domain NOT_CHECKED (expected PASS)\nBLOCKED: integration: required domain FAIL (expected PASS)\nBLOCKED: cross-domain review not PASS\nBLOCKED: CRIT-ANIM-NASTYA-GAIT: unverified blocker P1\nBLOCKED: CRIT-ANIM-CHALK-ENTRY-RETURN: unverified blocker P1"
+}

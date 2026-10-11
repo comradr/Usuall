@@ -1,0 +1,273 @@
+{
+  "title": "Independent deterministic regression · S02–S03",
+  "createdAt": "2026-10-09T21:58:39.171Z",
+  "command": "node tests/regression.mjs --model-only",
+  "workingDirectory": "/workspace/sites/obychnyy-den",
+  "nodeVersion": "v24.19.0",
+  "scope": [
+    "S02",
+    "S03"
+  ],
+  "environment": "Node, injected clock/storage, no browser",
+  "status": "PASS",
+  "sourceSha256": {
+    "dist/model.js": "873ae5c859746de095d1189474074d4f99f9b1ba81d0c187a342a01d44b76687",
+    "src/story.json": "73dadda3765c8db31216e1842df7a6a1e88f26dea498a2c8270a249c57a90753"
+  },
+  "tests": [
+    {
+      "id": "CANON-01",
+      "purpose": "The playable story contains exactly S02/S03, 15 continuous shots and 189 seconds",
+      "status": "PASS",
+      "milliseconds": 1.021,
+      "evidence": {
+        "sceneDurations": [
+          102,
+          87
+        ],
+        "shots": 15
+      }
+    },
+    {
+      "id": "CANON-02",
+      "purpose": "Five exact original messages retain IDs, speakers, text and order",
+      "status": "PASS",
+      "milliseconds": 0.214,
+      "evidence": {
+        "messageIds": [
+          "message4459710",
+          "message4459712",
+          "message4459713",
+          "message4459715",
+          "message4459716"
+        ]
+      }
+    },
+    {
+      "id": "API-01",
+      "purpose": "The real model is importable without browser globals",
+      "status": "PASS",
+      "milliseconds": 2.506,
+      "evidence": {
+        "exports": [
+          "BEATS",
+          "CHALK_STROKES",
+          "CUES",
+          "DEFAULT_GEOMETRY",
+          "HEIGHT",
+          "MESSAGES",
+          "MODEL_VERSION",
+          "SAVE_KEY",
+          "SAVE_VERSION",
+          "SCENES",
+          "SCHOOL_ACTIONS",
+          "STORE_ACTIONS",
+          "TOTAL_DURATION",
+          "WIDTH",
+          "beatAt",
+          "chalkAt",
+          "clearSave",
+          "loadSave",
+          "makeSave",
+          "nextBeatEnd",
+          "normalizedTime",
+          "sampleRoute",
+          "saveToStorage",
+          "sceneAt",
+          "stateAt",
+          "validateSave"
+        ]
+      }
+    },
+    {
+      "id": "WORLD-01",
+      "purpose": "Every 60 Hz sample conserves the one loaf through all ownership transfers",
+      "status": "PASS",
+      "milliseconds": 112.434,
+      "evidence": {
+        "framesChecked": 11341,
+        "breadId": "loaf-01",
+        "transitions": [
+          {
+            "time": 0,
+            "owner": "crate",
+            "packaged": false
+          },
+          {
+            "time": 25,
+            "owner": "hand",
+            "packaged": false
+          },
+          {
+            "time": 32,
+            "owner": "stage",
+            "packaged": true
+          },
+          {
+            "time": 82,
+            "owner": "hand",
+            "packaged": true
+          },
+          {
+            "time": 91,
+            "owner": "trolley",
+            "packaged": true
+          },
+          {
+            "time": 105,
+            "owner": "hand",
+            "packaged": true
+          },
+          {
+            "time": 120,
+            "owner": "shelf",
+            "packaged": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "WORLD-02",
+      "purpose": "Scene boundary preserves packed loaf, board and message state",
+      "status": "PASS",
+      "milliseconds": 0.156,
+      "evidence": {
+        "boundary": 102,
+        "breadOwner": "trolley",
+        "boardComplete": true
+      }
+    },
+    {
+      "id": "NAR-01",
+      "purpose": "No phone before break or while carrying bread; five messages follow physical phone actions",
+      "status": "PASS",
+      "milliseconds": 90.236,
+      "evidence": {
+        "framesChecked": 11341,
+        "emissions": [
+          {
+            "time": 136,
+            "id": "message4459710",
+            "senderPhone": "hand"
+          },
+          {
+            "time": 152,
+            "id": "message4459712",
+            "senderPhone": "hand"
+          },
+          {
+            "time": 159,
+            "id": "message4459713",
+            "senderPhone": "hand"
+          },
+          {
+            "time": 170,
+            "id": "message4459715",
+            "senderPhone": "hand"
+          },
+          {
+            "time": 176,
+            "id": "message4459716",
+            "senderPhone": "hand"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NAR-02",
+      "purpose": "Chalk contact precedes visible progress and completed arithmetic persists",
+      "status": "PASS",
+      "milliseconds": 64.846,
+      "evidence": {
+        "framesChecked": 11341,
+        "firstMark": 35.016666666666666,
+        "contactFrames": 689,
+        "arithmetic": "7 + 5 = 12"
+      }
+    },
+    {
+      "id": "SAVE-01",
+      "purpose": "Reload roundtrip preserves ownership, chalk and chat at eleven intermediate/end times",
+      "status": "PASS",
+      "milliseconds": 2.346,
+      "evidence": {
+        "roundtrips": 11,
+        "times": [
+          0,
+          25.2,
+          30,
+          45,
+          85,
+          97,
+          109,
+          123,
+          151,
+          171,
+          189
+        ],
+        "saveKey": "obychnyy-den.slice.v1",
+        "clearVerified": true
+      }
+    },
+    {
+      "id": "SAVE-02",
+      "purpose": "Malformed, stale, oversized and non-finite save data fail closed",
+      "status": "PASS",
+      "milliseconds": 0.397,
+      "evidence": {
+        "malformedInputs": 16,
+        "malformedRawStrings": 6
+      }
+    },
+    {
+      "id": "SAVE-03",
+      "purpose": "Blocked storage and quota errors do not throw or overwrite the last valid save",
+      "status": "PASS",
+      "milliseconds": 0.209,
+      "evidence": {
+        "injectedFailures": [
+          "QuotaExceededError",
+          "SecurityError",
+          "absent storage"
+        ],
+        "lastValidElapsed": 97
+      }
+    },
+    {
+      "id": "SAVE-04",
+      "purpose": "Unsupported preferences are sanitized into supported finite values",
+      "status": "PASS",
+      "milliseconds": 0.093,
+      "evidence": {
+        "normalizedPreferences": {
+          "speed": 1,
+          "muted": true,
+          "reducedMotion": false
+        },
+        "prototypePollution": false
+      }
+    },
+    {
+      "id": "WORLD-03",
+      "purpose": "Non-finite/out-of-range timeline input remains inside the supported fragment",
+      "status": "PASS",
+      "milliseconds": 0.533,
+      "evidence": {
+        "extremeInputs": 8,
+        "repeatedStates": 7
+      }
+    }
+  ],
+  "notChecked": [
+    "Real browser startup, HTML/CSS layout and mobile text readability",
+    "Touch/keyboard events, PIP/focus overlays and DOM controls",
+    "Actual browser audio output and autoplay policy",
+    "Browser FPS and real tab suspension",
+    "Complete game outside S02–S03",
+    "Artistic sign-off (separate independent critic)"
+  ],
+  "counts": {
+    "pass": 12,
+    "fail": 0
+  }
+}

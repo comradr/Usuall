@@ -1,0 +1,98 @@
+{
+  "version": "nastya-export-v3-mechanical-report",
+  "status": "mechanically exported; artistic approval explicitly pending",
+  "nativeAtlasSize": [
+    768,
+    448
+  ],
+  "frameCount": 28,
+  "pivot": [
+    48,
+    100
+  ],
+  "alphaValues": [
+    0,
+    255
+  ],
+  "socketIssues": [],
+  "preservation": {
+    "first16NastyaRGBAPixelsEqualV2": true,
+    "phone8RGBAPixelsEqualPhoneV1": true,
+    "ordinaryWalkIndices": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "ordinaryWalkRepaired": false,
+    "vovaBackgroundsPropsOccluders": "not edited by this script",
+    "standardBuildVerified": true,
+    "unchangedNonNastyaAndV2PNGCount": 45,
+    "unchangedNonNastyaAndV2PNGHashes": {
+      "dist/assets/store-bg-v1.png": "7919c9fbe1d8a8c71b9c3cf0901d13dd05b24ce7d4cb2d9e8befa16a1c7b4165",
+      "dist/assets/school-bg-v1.png": "6bd66ef10cbae6539afc5534636590a20d0f4b015212004be44a3cd620da6a36",
+      "dist/assets/occlusion/school-studentUpperLeft-v1.png": "16771f08ec1a4a97195cecc6e6a6b0e5d717620963244bfb1de4ae26ae24397e",
+      "dist/assets/occlusion/school-studentLowerRight-v1.png": "d5d0b569c2563befd899e831197af1a943b7c777a119cb41b7233172a199d665",
+      "dist/assets/occlusion/school-teacherDesk-v1.png": "14ab7cfc6235876bc93db932052ce04aa2b7c0350204f4185afdd14cfcc8ea08",
+      "dist/assets/occlusion/store-packingBench-v1.png": "6e2d2428cf058b33384b5061bf648f4c229c1c897620cd9dfee5b41756834ebd",
+      "dist/assets/occlusion/store-breadShelf-v1.png": "9190beb4cc4bbc8ead7db89ffb6e271a53c569d5124bb3f97a0ed3f33e0f60a6",
+      "dist/assets/occlusion/store-cashCounter-v1.png": "15280c53ffcb19e52cb7881a49f6a0a39d6c076759fa8236c768ac3c03697e0b",
+      "dist/assets/occlusion/school-studentLowerLeft-v1.png": "a63c358346e808a2c9f2a1877f8a050837fec609509cafd7dd4b2286c64df22b",
+      "dist/assets/occlusion/school-studentUpperRight-v1.png": "3e8767e9ccfa2c836e2308238f1f29f1677dbb177705c1b15ade4f18ff9b925d",
+      "dist/assets/props/trolley-v1.png": "3f13f544e4eb3e90e7e0ed3292be659438980fd8a56a3db81ca698e98d0b808d",
+      "dist/assets/props/chalk-v1.png": "ce15e37245bd6761c960f71c9a2abf86c4ef8c078f02642cd5ba57f4a1e23049",
+      "dist/assets/props/phone-v1.png": "a0c4b48c0d8eff676a6a2489a9e99c05c4a8907efdd1ea069feae3caed5450de",
+      "dist/assets/props/notebook-v1.png": "e3d8de26fad35ad20cfcc07a7fa4c8d031741df0ec3b48976c7da531e5208ffe",
+      "dist/assets/props/bagEmpty-v1.png": "be9dd1403d040b4044f5a9ddaeb33e31bbb1f9da62aba50ddeb4d72d9e00f08f",
+      "dist/assets/props/breadPacked-v1.png": "2b0589bd94b329d2fb501cac11d557c4df55465146f4794d7bbb27f22b977004",
+      "dist/assets/props/bread-v1.png": "cea1af724a102ba26dbcbf4442161a167f87108fe8b7d03e3151fb6829bfe34c",
+      "dist/assets/props/chair-v1.png": "35134caaebeaacc6e464b5a0a7b8262ea4d334e587811fa060c01b2fc75835e7",
+      "dist/assets/actors/vova__phone__f000.png": "0a9097472ff4c54d115bfad9cb97c0ae02e1efeac2f2213b8ed56c3932bae5c3",
+      "dist/assets/actors/vova__packA__f000.png": "9929d4a897985f60ce11d34291c41053b8b2b0ca638a293983465e6b1e86e493",
+      "dist/assets/actors/vova__walkA__f000.png": "ed108c479a6a8a70282a32e9f933ed6c5cd4a829df8de91a10a9b2dbf9d91405",
+      "dist/assets/actors/vova__carryWalk3__f000.png": "ee128096a5276e96202d4ce27962664e29fb538bedf6a380630aba52cdfb0826",
+      "dist/assets/actors/vova__carryB__f000.png": "896cd4020214df45ef6147105c8a42a21724ef82e7b65c877e418b2b71580af4",
+      "dist/assets/actors/vova__shelfLift__f000.png": "d5c01cd5ec401655be28a8ccf7cd2e8b2a27ad1a0a8c423a7ad0596e99f9c04f",
+      "dist/assets/actors/vova-work-v1.png": "0a85745416d70d96fafd9c8648b112b2d94581efc6834f8b011e9f5f0fef9a74",
+      "dist/assets/actors/vova-work-v2.png": "79a8f2a12aa63dfed1a217a0fb8339a9b81f3e26163f0381c2dfcc5909bee848",
+      "dist/assets/actors/vova__cartBendA__f000.png": "404acc37c42835f79c0f2f093ed40e9f1453efcb46d29c8e98e3159f696d4d32",
+      "dist/assets/actors/vova__pack__f000.png": "2924d33ea05f776d78d6dfcb39961c3abca4b42c7348c7580e643b9ef34f5435",
+      "dist/assets/actors/vova__idle__f000.png": "50a2a2789ef62fd5a1e660d2e44b4eb26d68c1608e5299dba40c65c5307af63b",
+      "dist/assets/actors/vova__walkContactNear__f000.png": "34ce1f80a56a2addd786fe7b87388d21245a52f54b372eb75711a6f8456189ab",
+      "dist/assets/actors/vova__cartLiftB__f000.png": "3972217dd00ccffa51dfc1532d42abcab477dca1412f70d61a69812d146241a3",
+      "dist/assets/actors/vova__cartContact__f000.png": "39ba7b9a63e45f37edb0c60f4bbd6423d80bfb4f4ff554653798327520b80bee",
+      "dist/assets/actors/vova__carryWalk0__f000.png": "0da6e090b5dbf02907882d80e70725b9d01f23343f3b2a960ceabe5f7f5b6231",
+      "dist/assets/actors/vova__liftA__f000.png": "fdd643c6eac958a89aac75fcf13973def0e1b37adb57d21bee057b181a2d5073",
+      "dist/assets/actors/vova__walkB__f000.png": "a8f79f8755ee12f9e58f2c48128e66cadd9a1a97b9aa7786feff2495d2215461",
+      "dist/assets/actors/vova__raisedContact__f000.png": "780a0d3aa873b0cb49744b34ba730a32d2647f365050495fd0e031174f16c07f",
+      "dist/assets/actors/vova__carryWalk1__f000.png": "f7b9a342d764cbb10c5978400d0b32b325a69476d3e179ffe8f7f77134b71cfa",
+      "dist/assets/actors/vova__walkPassingNear__f000.png": "a988d0a221515198a4a6816562612b5b6f67672dd6e87ff32bb98bd98a5a3c0a",
+      "dist/assets/actors/vova__carry__f000.png": "f63718a13cabcc211ea77bb58bf594466687577c525499efb3da644fb37e878d",
+      "dist/assets/actors/vova__cartLiftA__f000.png": "24f4aee494a6e01e7b031010ec5092f55a9726dda4fa50642c377430004dbc98",
+      "dist/assets/actors/vova__walkPassingFar__f000.png": "263875e2806933e4d0fe77e0a1bc86fbddd2be341206d72dc537e23f78caed46",
+      "dist/assets/actors/vova__raisedReach__f000.png": "0987ed383e65a7b772695945165990f559216ea868c21ce78d1b7f4ddba1d6d0",
+      "dist/assets/actors/vova__carryWalk2__f000.png": "6122a487df2919497a772f8dac6058fbd852858438c22a9e73faac742f282c42",
+      "dist/assets/actors/vova__walkContactFar__f000.png": "41aa4a0f3e15ea370569efe5a8b89d4a018b9416c9ef9ee9a50c158d219804a6",
+      "dist/assets/actors/nastya-work-v2.png": "688ec36a6888647121c0f44c4d9fd67788b2b102b3de66584a5800de3e6e91c1"
+    }
+  },
+  "limits": [
+    "Ordinary walking frames 8–11 and aliases remain unchanged; previous opposite-leg repair was not verified.",
+    "Chalk step frames 24–27 preserve raised arm continuity, with ambiguous opposite-leading leg.",
+    "Phone action chair hip contact and separate phone ownership require live-engine review."
+  ],
+  "hashes": {
+    "production/art-source/nastya-chalk-step-source-v1.png": "c93c15b81a0ea2d7a3a53e101c32a6a19c90a1d8478f99031ceeb710ec7d38a8",
+    "dist/assets/actors/nastya-work-v2.png": "688ec36a6888647121c0f44c4d9fd67788b2b102b3de66584a5800de3e6e91c1",
+    "dist/assets/actors/nastya-phone-action-v1.png": "27a4375957a367ef2b11e3940636276ed928ceb90aa1d295e1ad194381d81068",
+    "dist/assets/actors/nastya-chalk-step-action-v1.png": "8eeb24e5a554b66600566cf9bab0a9eb81cdb7c2ff8d5f920a7ca29e87272ba8",
+    "dist/assets/actors/nastya-work-v3.png": "e38f515c76fe7084ceeb5033248bbc02cc1c4ccfc1bb0a62e2c152391b017439",
+    "production/nastya-phone-action-v1.json": "b958b6b020c1124cf6f8afde84aabfbd10c897784d5704bc55d17faf866ccc26",
+    "production/nastya-chalk-step-action-v1.json": "c3ccb3fd9bc791b121432e40809adfc276abd803630c34a37953b26ed518d966",
+    "production/art-contract-v3.json": "c0d33b8b44d19f4f0c77ebf63d6c5b3013e702dd1755e5c1cf903a51a92023b7",
+    "dist/assets/manifest.json": "c0d33b8b44d19f4f0c77ebf63d6c5b3013e702dd1755e5c1cf903a51a92023b7",
+    "production/art-review/nastya-all28-native-x2-v3.png": "c8979ff0ae2167e75b6fc0cb2c602e725df28eb4b379da36256c70299083223d",
+    "production/art-review/nastya-appended12-native-x3-v3.png": "e0322fafc094941bce7e3b6bf3e1d35a93b218434c0bc5e3f630a8778116ad7e",
+    "production/art-review/nastya-chalk-step-sockets-native-x4-v1.png": "e230bd4f8c2ce3366db8cb7cef3b0f4df1b29791af4728a56b952243fe5ad168"
+  }
+}

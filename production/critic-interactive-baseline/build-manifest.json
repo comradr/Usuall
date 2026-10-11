@@ -1,0 +1,461 @@
+{
+  "format": "obychnyy-den-build-v1",
+  "files": [
+    {
+      "path": "dist/assets/actors/nastya-chalk-step-action-v1.png",
+      "bytes": 21175,
+      "sha256": "8eeb24e5a554b66600566cf9bab0a9eb81cdb7c2ff8d5f920a7ca29e87272ba8"
+    },
+    {
+      "path": "dist/assets/actors/nastya-phone-action-v1.png",
+      "bytes": 37769,
+      "sha256": "27a4375957a367ef2b11e3940636276ed928ceb90aa1d295e1ad194381d81068"
+    },
+    {
+      "path": "dist/assets/actors/nastya-work-v1.png",
+      "bytes": 44290,
+      "sha256": "495c85bfde0b14d90d3af3bd3ec7fe6fa925869361757ab128131d33505c2f7c"
+    },
+    {
+      "path": "dist/assets/actors/nastya-work-v2.png",
+      "bytes": 94086,
+      "sha256": "688ec36a6888647121c0f44c4d9fd67788b2b102b3de66584a5800de3e6e91c1"
+    },
+    {
+      "path": "dist/assets/actors/nastya-work-v3.png",
+      "bytes": 153871,
+      "sha256": "e38f515c76fe7084ceeb5033248bbc02cc1c4ccfc1bb0a62e2c152391b017439"
+    },
+    {
+      "path": "dist/assets/actors/nastya__boardReach__f000.png",
+      "bytes": 6130,
+      "sha256": "1fc2e4e37610f92e4be81e7d52b7ba01e43c88b2bd87631e750fb073550101cb"
+    },
+    {
+      "path": "dist/assets/actors/nastya__chalkHigh__f000.png",
+      "bytes": 6093,
+      "sha256": "184317fa878b5982a8ae094635780aa32130f655b0da8c2111de1dfc77cc4af1"
+    },
+    {
+      "path": "dist/assets/actors/nastya__chalkLow__f000.png",
+      "bytes": 6218,
+      "sha256": "a441a55fbb61d02fb540975825a917895633f25a8a25fc4257efb26080957b38"
+    },
+    {
+      "path": "dist/assets/actors/nastya__chalkLowest__f000.png",
+      "bytes": 6261,
+      "sha256": "ca52bf6308745a03e9b58252089ffdc256c8f522c64bcec4a8d002a3f7d933a6"
+    },
+    {
+      "path": "dist/assets/actors/nastya__chalkMiddle__f000.png",
+      "bytes": 6132,
+      "sha256": "6719bceb6692c2f2df984b7006008a8cd26e6f29b20309e9e4bb372b1344aea2"
+    },
+    {
+      "path": "dist/assets/actors/nastya__chalkStep0__f000.png",
+      "bytes": 5569,
+      "sha256": "a7c307ac18bbff2c415d845133c36fe53867edb319bea2b8de47ac63b240b771"
+    },
+    {
+      "path": "dist/assets/actors/nastya__chalkStep1__f000.png",
+      "bytes": 5358,
+      "sha256": "1db48219248845311a0987ce54a07a8b18fc1bda40f4036270a4ecc9f916c9ff"
+    },
+    {
+      "path": "dist/assets/actors/nastya__chalkStep2__f000.png",
+      "bytes": 5697,
+      "sha256": "ebaa05ded8c5c5e644bcf7fec58dd21e42e85c4780e1fed28bb47d24b6fdfdde"
+    },
+    {
+      "path": "dist/assets/actors/nastya__chalkStep3__f000.png",
+      "bytes": 5636,
+      "sha256": "602041ee5250f4a89afbebbac4cd0b9de4e17ae241f72a5cf29686c38a5ab356"
+    },
+    {
+      "path": "dist/assets/actors/nastya__chalk__f000.png",
+      "bytes": 6023,
+      "sha256": "e0725b8652c49358d1f018f9831a4a4a0c23f23569dad50a9d20ff23e094113e"
+    },
+    {
+      "path": "dist/assets/actors/nastya__deskLean__f000.png",
+      "bytes": 6291,
+      "sha256": "5eb57e344c07f5b9dd572b6b48b5d9fe59989e1601346ad7dc592471a367bbc5"
+    },
+    {
+      "path": "dist/assets/actors/nastya__halfRise__phone_v1_f000.png",
+      "bytes": 5158,
+      "sha256": "ce48e0ac6fbd24ac8f4723ef32cedad247a3cb48db9646226d3bec89dbcbbc12"
+    },
+    {
+      "path": "dist/assets/actors/nastya__idle__f000.png",
+      "bytes": 5408,
+      "sha256": "f3c57c5027819cacd1fcd30b141795b7261079c60f7e4f85d5391933af11acb5"
+    },
+    {
+      "path": "dist/assets/actors/nastya__phoneHold__phone_v1_f000.png",
+      "bytes": 4868,
+      "sha256": "61b75c32ba45b5727b7296ee30ef1d5014c6ea5432c0c8287e8ae78cf9425e6c"
+    },
+    {
+      "path": "dist/assets/actors/nastya__phoneLow__phone_v1_f000.png",
+      "bytes": 4933,
+      "sha256": "270159b229b8b27a05d3929405c159c27d9e5f531ee248e0bb92c06dd5e13a14"
+    },
+    {
+      "path": "dist/assets/actors/nastya__phoneType__phone_v1_f000.png",
+      "bytes": 4947,
+      "sha256": "e9b6c5ff34c29c32ac100aaf0fea33cfa554c04ec7655993ac661505f1c0f7b3"
+    },
+    {
+      "path": "dist/assets/actors/nastya__phone__f000.png",
+      "bytes": 5283,
+      "sha256": "41ccd929e62cfe0f46005bc281d6072ee3fad6387702a987282f745628e7d037"
+    },
+    {
+      "path": "dist/assets/actors/nastya__pocketContact__phone_v1_f000.png",
+      "bytes": 4914,
+      "sha256": "d288d3b944a9f113db4d5d40b89e47190f5ccffc7e7c3d076fbce7d79c679c94"
+    },
+    {
+      "path": "dist/assets/actors/nastya__pocketReturn__phone_v1_f000.png",
+      "bytes": 4893,
+      "sha256": "ec71a5a5a6fc489c2a02b4bb89e2a9da0da98dcb8794e87e4e15faba1c579a29"
+    },
+    {
+      "path": "dist/assets/actors/nastya__point__f000.png",
+      "bytes": 5984,
+      "sha256": "dc3883c76a628ddc7b0582e1edecac19f2db1167bc671fe0578c507b7812cea0"
+    },
+    {
+      "path": "dist/assets/actors/nastya__sitSettle__phone_v1_f000.png",
+      "bytes": 5097,
+      "sha256": "df8ddf0da4455068ec19ce84796aefc08199992f9d1ee3abdb0369b2521480c1"
+    },
+    {
+      "path": "dist/assets/actors/nastya__standNeutral__phone_v1_f000.png",
+      "bytes": 5339,
+      "sha256": "ce3cdd985bb7475cf8ddfa3c82dc3746605bc21d340b75ec56d45c86086b708a"
+    },
+    {
+      "path": "dist/assets/actors/nastya__walkA__f000.png",
+      "bytes": 5749,
+      "sha256": "7138c3ecb17cc019b0916be0e609e77b36bbad32b3a3746736460788722f820e"
+    },
+    {
+      "path": "dist/assets/actors/nastya__walkB__f000.png",
+      "bytes": 5987,
+      "sha256": "bee6d6fa5527336c788aa861521ea822f46f65c8bb56dbdfc43dbfab13b7e8d6"
+    },
+    {
+      "path": "dist/assets/actors/nastya__walkContactFar__f000.png",
+      "bytes": 7288,
+      "sha256": "5457d12ce5f80f84a4db3c136e804be053059a9227e70321cd7128e642c26f05"
+    },
+    {
+      "path": "dist/assets/actors/nastya__walkContactNear__f000.png",
+      "bytes": 7212,
+      "sha256": "d5fc7644c7f8dcb7d29637b23f37baac2e712cf7eb4c3a85302aadbac453ff97"
+    },
+    {
+      "path": "dist/assets/actors/nastya__walkPassingFar__f000.png",
+      "bytes": 6563,
+      "sha256": "fa89a81078a7670eeabbb83d13db8af80ba38cf7e353a60b8e270a0502a151b5"
+    },
+    {
+      "path": "dist/assets/actors/nastya__walkPassingNear__f000.png",
+      "bytes": 6495,
+      "sha256": "6bdc59c0fc7d9f0990018069e950f8b839a3e7a507ae2472509a2fe83eb19f2b"
+    },
+    {
+      "path": "dist/assets/actors/vova-work-v1.png",
+      "bytes": 41149,
+      "sha256": "0a85745416d70d96fafd9c8648b112b2d94581efc6834f8b011e9f5f0fef9a74"
+    },
+    {
+      "path": "dist/assets/actors/vova-work-v2.png",
+      "bytes": 123562,
+      "sha256": "79a8f2a12aa63dfed1a217a0fb8339a9b81f3e26163f0381c2dfcc5909bee848"
+    },
+    {
+      "path": "dist/assets/actors/vova__carryB__f000.png",
+      "bytes": 5220,
+      "sha256": "896cd4020214df45ef6147105c8a42a21724ef82e7b65c877e418b2b71580af4"
+    },
+    {
+      "path": "dist/assets/actors/vova__carryWalk0__f000.png",
+      "bytes": 5710,
+      "sha256": "0da6e090b5dbf02907882d80e70725b9d01f23343f3b2a960ceabe5f7f5b6231"
+    },
+    {
+      "path": "dist/assets/actors/vova__carryWalk1__f000.png",
+      "bytes": 5248,
+      "sha256": "f7b9a342d764cbb10c5978400d0b32b325a69476d3e179ffe8f7f77134b71cfa"
+    },
+    {
+      "path": "dist/assets/actors/vova__carryWalk2__f000.png",
+      "bytes": 5707,
+      "sha256": "6122a487df2919497a772f8dac6058fbd852858438c22a9e73faac742f282c42"
+    },
+    {
+      "path": "dist/assets/actors/vova__carryWalk3__f000.png",
+      "bytes": 5183,
+      "sha256": "ee128096a5276e96202d4ce27962664e29fb538bedf6a380630aba52cdfb0826"
+    },
+    {
+      "path": "dist/assets/actors/vova__carry__f000.png",
+      "bytes": 5136,
+      "sha256": "f63718a13cabcc211ea77bb58bf594466687577c525499efb3da644fb37e878d"
+    },
+    {
+      "path": "dist/assets/actors/vova__cartBendA__f000.png",
+      "bytes": 5340,
+      "sha256": "404acc37c42835f79c0f2f093ed40e9f1453efcb46d29c8e98e3159f696d4d32"
+    },
+    {
+      "path": "dist/assets/actors/vova__cartContact__f000.png",
+      "bytes": 5004,
+      "sha256": "39ba7b9a63e45f37edb0c60f4bbd6423d80bfb4f4ff554653798327520b80bee"
+    },
+    {
+      "path": "dist/assets/actors/vova__cartLiftA__f000.png",
+      "bytes": 5215,
+      "sha256": "24f4aee494a6e01e7b031010ec5092f55a9726dda4fa50642c377430004dbc98"
+    },
+    {
+      "path": "dist/assets/actors/vova__cartLiftB__f000.png",
+      "bytes": 5190,
+      "sha256": "3972217dd00ccffa51dfc1532d42abcab477dca1412f70d61a69812d146241a3"
+    },
+    {
+      "path": "dist/assets/actors/vova__idle__f000.png",
+      "bytes": 5022,
+      "sha256": "50a2a2789ef62fd5a1e660d2e44b4eb26d68c1608e5299dba40c65c5307af63b"
+    },
+    {
+      "path": "dist/assets/actors/vova__liftA__f000.png",
+      "bytes": 5242,
+      "sha256": "fdd643c6eac958a89aac75fcf13973def0e1b37adb57d21bee057b181a2d5073"
+    },
+    {
+      "path": "dist/assets/actors/vova__packA__f000.png",
+      "bytes": 5675,
+      "sha256": "9929d4a897985f60ce11d34291c41053b8b2b0ca638a293983465e6b1e86e493"
+    },
+    {
+      "path": "dist/assets/actors/vova__pack__f000.png",
+      "bytes": 5912,
+      "sha256": "2924d33ea05f776d78d6dfcb39961c3abca4b42c7348c7580e643b9ef34f5435"
+    },
+    {
+      "path": "dist/assets/actors/vova__phone__f000.png",
+      "bytes": 4820,
+      "sha256": "0a9097472ff4c54d115bfad9cb97c0ae02e1efeac2f2213b8ed56c3932bae5c3"
+    },
+    {
+      "path": "dist/assets/actors/vova__raisedContact__f000.png",
+      "bytes": 5859,
+      "sha256": "780a0d3aa873b0cb49744b34ba730a32d2647f365050495fd0e031174f16c07f"
+    },
+    {
+      "path": "dist/assets/actors/vova__raisedReach__f000.png",
+      "bytes": 5844,
+      "sha256": "0987ed383e65a7b772695945165990f559216ea868c21ce78d1b7f4ddba1d6d0"
+    },
+    {
+      "path": "dist/assets/actors/vova__shelfLift__f000.png",
+      "bytes": 5028,
+      "sha256": "d5c01cd5ec401655be28a8ccf7cd2e8b2a27ad1a0a8c423a7ad0596e99f9c04f"
+    },
+    {
+      "path": "dist/assets/actors/vova__walkA__f000.png",
+      "bytes": 5636,
+      "sha256": "ed108c479a6a8a70282a32e9f933ed6c5cd4a829df8de91a10a9b2dbf9d91405"
+    },
+    {
+      "path": "dist/assets/actors/vova__walkB__f000.png",
+      "bytes": 5178,
+      "sha256": "a8f79f8755ee12f9e58f2c48128e66cadd9a1a97b9aa7786feff2495d2215461"
+    },
+    {
+      "path": "dist/assets/actors/vova__walkContactFar__f000.png",
+      "bytes": 6023,
+      "sha256": "41aa4a0f3e15ea370569efe5a8b89d4a018b9416c9ef9ee9a50c158d219804a6"
+    },
+    {
+      "path": "dist/assets/actors/vova__walkContactNear__f000.png",
+      "bytes": 5948,
+      "sha256": "34ce1f80a56a2addd786fe7b87388d21245a52f54b372eb75711a6f8456189ab"
+    },
+    {
+      "path": "dist/assets/actors/vova__walkPassingFar__f000.png",
+      "bytes": 5609,
+      "sha256": "263875e2806933e4d0fe77e0a1bc86fbddd2be341206d72dc537e23f78caed46"
+    },
+    {
+      "path": "dist/assets/actors/vova__walkPassingNear__f000.png",
+      "bytes": 5408,
+      "sha256": "a988d0a221515198a4a6816562612b5b6f67672dd6e87ff32bb98bd98a5a3c0a"
+    },
+    {
+      "path": "dist/assets/fragment-poster.png",
+      "bytes": 596577,
+      "sha256": "e2c8438d855a72f495632e6a70ecbe35c078548a060e280ed86ceddef7567665"
+    },
+    {
+      "path": "dist/assets/fragment-preview.gif",
+      "bytes": 2327133,
+      "sha256": "c62cb34de8bfa5794304929bf4ba39c786d7d66ed81df7421092cafe854f9c7d"
+    },
+    {
+      "path": "dist/assets/game-icon.svg",
+      "bytes": 352,
+      "sha256": "cf6384279d555f0efe694f18941c9a35b1c1b82f584b3baa8fb7c433ea1709c0"
+    },
+    {
+      "path": "dist/assets/manifest.json",
+      "bytes": 71868,
+      "sha256": "6b141ba815dce3d82218eb55b96056d38ed442966233e2c3b6eb7b63526bcbf1"
+    },
+    {
+      "path": "dist/assets/npcs/pupilBoy-v1.png",
+      "bytes": 24646,
+      "sha256": "18c32ab7e84b0a725ba11dce2311e991070d5840cce61ebc9d9665ef60b6e1ba"
+    },
+    {
+      "path": "dist/assets/npcs/pupilGirl-v1.png",
+      "bytes": 25719,
+      "sha256": "d027125f903546f05d70cf9229abef0f7514d79c391b4d79c48614f582c9ca01"
+    },
+    {
+      "path": "dist/assets/npcs/shopper-v1.png",
+      "bytes": 47661,
+      "sha256": "13611fbb7f7ab5211c72ad9d4b31d630e62d6ee7e481f8a2e547d70d45fbd9e8"
+    },
+    {
+      "path": "dist/assets/occlusion/school-studentLowerLeft-v1.png",
+      "bytes": 17299,
+      "sha256": "a63c358346e808a2c9f2a1877f8a050837fec609509cafd7dd4b2286c64df22b"
+    },
+    {
+      "path": "dist/assets/occlusion/school-studentLowerRight-v1.png",
+      "bytes": 14984,
+      "sha256": "d5d0b569c2563befd899e831197af1a943b7c777a119cb41b7233172a199d665"
+    },
+    {
+      "path": "dist/assets/occlusion/school-studentUpperLeft-v1.png",
+      "bytes": 14409,
+      "sha256": "16771f08ec1a4a97195cecc6e6a6b0e5d717620963244bfb1de4ae26ae24397e"
+    },
+    {
+      "path": "dist/assets/occlusion/school-studentUpperRight-v1.png",
+      "bytes": 9139,
+      "sha256": "3e8767e9ccfa2c836e2308238f1f29f1677dbb177705c1b15ade4f18ff9b925d"
+    },
+    {
+      "path": "dist/assets/occlusion/school-teacherDesk-v1.png",
+      "bytes": 15060,
+      "sha256": "14ab7cfc6235876bc93db932052ce04aa2b7c0350204f4185afdd14cfcc8ea08"
+    },
+    {
+      "path": "dist/assets/occlusion/store-breadShelf-v1.png",
+      "bytes": 16181,
+      "sha256": "9190beb4cc4bbc8ead7db89ffb6e271a53c569d5124bb3f97a0ed3f33e0f60a6"
+    },
+    {
+      "path": "dist/assets/occlusion/store-cashCounter-v1.png",
+      "bytes": 35727,
+      "sha256": "15280c53ffcb19e52cb7881a49f6a0a39d6c076759fa8236c768ac3c03697e0b"
+    },
+    {
+      "path": "dist/assets/occlusion/store-packingBench-v1.png",
+      "bytes": 7973,
+      "sha256": "6e2d2428cf058b33384b5061bf648f4c229c1c897620cd9dfee5b41756834ebd"
+    },
+    {
+      "path": "dist/assets/props/bagEmpty-v1.png",
+      "bytes": 1609,
+      "sha256": "be9dd1403d040b4044f5a9ddaeb33e31bbb1f9da62aba50ddeb4d72d9e00f08f"
+    },
+    {
+      "path": "dist/assets/props/bread-v1.png",
+      "bytes": 806,
+      "sha256": "cea1af724a102ba26dbcbf4442161a167f87108fe8b7d03e3151fb6829bfe34c"
+    },
+    {
+      "path": "dist/assets/props/breadPacked-v1.png",
+      "bytes": 1722,
+      "sha256": "2b0589bd94b329d2fb501cac11d557c4df55465146f4794d7bbb27f22b977004"
+    },
+    {
+      "path": "dist/assets/props/chair-v1.png",
+      "bytes": 1538,
+      "sha256": "35134caaebeaacc6e464b5a0a7b8262ea4d334e587811fa060c01b2fc75835e7"
+    },
+    {
+      "path": "dist/assets/props/chalk-v1.png",
+      "bytes": 102,
+      "sha256": "ce15e37245bd6761c960f71c9a2abf86c4ef8c078f02642cd5ba57f4a1e23049"
+    },
+    {
+      "path": "dist/assets/props/notebook-v1.png",
+      "bytes": 665,
+      "sha256": "e3d8de26fad35ad20cfcc07a7fa4c8d031741df0ec3b48976c7da531e5208ffe"
+    },
+    {
+      "path": "dist/assets/props/phone-v1.png",
+      "bytes": 318,
+      "sha256": "a0c4b48c0d8eff676a6a2489a9e99c05c4a8907efdd1ea069feae3caed5450de"
+    },
+    {
+      "path": "dist/assets/props/trolley-v1.png",
+      "bytes": 4904,
+      "sha256": "3f13f544e4eb3e90e7e0ed3292be659438980fd8a56a3db81ca698e98d0b808d"
+    },
+    {
+      "path": "dist/assets/school-bg-v1.png",
+      "bytes": 224718,
+      "sha256": "6bd66ef10cbae6539afc5534636590a20d0f4b015212004be44a3cd620da6a36"
+    },
+    {
+      "path": "dist/assets/store-bg-v1.png",
+      "bytes": 289287,
+      "sha256": "7919c9fbe1d8a8c71b9c3cf0901d13dd05b24ce7d4cb2d9e8befa16a1c7b4165"
+    },
+    {
+      "path": "dist/engine.js",
+      "bytes": 29382,
+      "sha256": "c58d2102a73aaff4bf202a4446ca9dd76b1ba47a51a54dcd55c0d38e7d426943"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 4605,
+      "sha256": "12d6da7eb39b3c20bd6c844eecd10eded4317a07a66500d6fc986ce1d7a00f3c"
+    },
+    {
+      "path": "dist/manifest.webmanifest",
+      "bytes": 302,
+      "sha256": "dfeb532f689b1f5e2158fa57e1bcbb703552b7a18f448365a744489b86caf571"
+    },
+    {
+      "path": "dist/model.js",
+      "bytes": 25326,
+      "sha256": "cdbb5ca8fd71e0d483a490ec3670c535c3215a42623729e0b4221e1897000e20"
+    },
+    {
+      "path": "dist/style.css",
+      "bytes": 6324,
+      "sha256": "4155142282d8a1433ba4c123d88a5f17dec6a90eabecd604ebe4c52a80b0fc22"
+    },
+    {
+      "path": "dist/ui.js",
+      "bytes": 6597,
+      "sha256": "56219ccc66f1eca83959e3be11b47f76840242aa09be28b2a199d39b02fd0ca0"
+    },
+    {
+      "path": "src/story.json",
+      "bytes": 6668,
+      "sha256": "73dadda3765c8db31216e1842df7a6a1e88f26dea498a2c8270a249c57a90753"
+    }
+  ],
+  "build_id": "slice-b333ad6c866f5091fc4d"
+}

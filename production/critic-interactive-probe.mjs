@@ -1,0 +1,24 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createCanvas,loadNativeFiles,sha256} from '../tests/native-harness.mjs';
+import {buildGeometry,renderFrame,createGame} from '../dist/engine.js';
+import {stateAt,TOTAL_DURATION,INTERACTIONS,MESSAGES,SAVE_KEY} from '../dist/model.js';
+const manifestBytes=fs.readFileSync('production/build-manifest.json'),build=JSON.parse(manifestBytes);
+for(const f of build.files)assert.equal(sha256(fs.readFileSync(f.path)),f.sha256,f.path);
+const native=await loadNativeFiles(),geometry=buildGeometry(native.manifest),assets={manifest:native.manifest,images:native.imagesByFile};
+const out='production/critic-interactive-captures';fs.mkdirSync(out,{recursive:true});
+const store=createCanvas(480,360),school=createCanvas(480,360),both=createCanvas(960,360),ctx=both.getContext('2d');
+const frames=[];
+function capture(state,label){for(const [side,c]of [['store',store],['school',school]])renderFrame(c.getContext('2d'),state,side,assets,{ambientTime:state.elapsed});ctx.drawImage(store,0,0);ctx.drawImage(school,480,0);const file=out+'/'+label+'.png',bytes=both.toBuffer('image/png');fs.writeFileSync(file,bytes);frames.push({label,time:state.elapsed,file,sha256:sha256(bytes),storePose:state.store.actor.pose,storeFrame:state.store.actor.frame,customer:state.store.customer,purchase:state.store.purchase});}
+for(const t of [20,25,30,34,42,49,55.99,56,61.99,62,62.983333333,63,64.99,65,66,68,69.49,69.5,70.483333333,70.5,70.65,70.67,70.82,70.84,70.983333333,71,71.016666667,71.2,71.4,72,74,78.99,79,35-1/60,35,46.5-1/60,46.5,50,71.7,136,145,146,147])capture(stateAt(t,{geometry}),'time-'+t.toFixed(5).replace('.','_'));
+const contactJumps=[];
+for(const t of [63,65,70.5,70.5+1/6,70.5+2/6,71]){const before=stateAt(t-1e-6,{geometry}),after=stateAt(t+1e-6,{geometry});contactJumps.push({time:t,before:before.store.purchase,after:after.store.purchase,distance:Math.hypot(after.store.purchase.x-before.store.purchase.x,after.store.purchase.y-before.store.purchase.y)});}
+for(let i=0;i<=TOTAL_DURATION*60;i++){const t=i/60,s=stateAt(t,{geometry});assert.equal(s.store.totalBread,6);assert.equal(s.store.sourceCount+Number(s.store.bread.owner!=='crate'),6);assert.equal(s.dialogue.length,MESSAGES.filter(m=>m.at<=t).length);assert.ok(!s.school.phone.visible||s.school.pupils.every(p=>!p.visible));if(s.store.purchase?.owner==='vova')assert.deepEqual([s.store.purchase.x,s.store.purchase.y],[s.store.actor.hand.x,s.store.actor.hand.y]);if(s.store.purchase?.owner==='customer')assert.deepEqual([s.store.purchase.x,s.store.purchase.y],[s.store.customer.hand.x,s.store.customer.hand.y]);}
+let now=0;const memory=new Map(),events=[],storage={getItem:k=>memory.get(k)||null,setItem:(k,v)=>memory.set(k,v),removeItem:k=>memory.delete(k)};
+const game=await createGame({assets,storeCanvas:createCanvas(480,360),schoolCanvas:createCanvas(480,360),clock:{now:()=>now,requestFrame:()=>1,cancelFrame(){}},storage,listenVisibility:false,onEvent:e=>events.push(e)});
+game.start();let clicks=0;
+while(game.getSnapshot().phase!=='complete'&&now<220000){let s=game.getSnapshot();if(s.awaitingAction){const a=s.awaitingAction;capture(s,'gate-'+a.id+'-before');const heldTime=s.elapsed;for(let i=0;i<20;i++){now+=100;game.tick(now);}assert.equal(game.getSnapshot().elapsed,heldTime);assert.equal(game.performAction(a.id,a.side==='store'?'school':'store').accepted,false);assert.equal(game.performAction(a.id,a.side).accepted,true);assert.equal(JSON.parse(memory.get(SAVE_KEY)).acceptedActions.includes(a.id),true);assert.equal(game.performAction(a.id,a.side).accepted,false);capture(game.getSnapshot(),'gate-'+a.id+'-accepted');clicks++;}now+=100;s=game.tick(now);assert.equal(s.store.phone.visible,s.elapsed>=147&&s.elapsed<164,'Physical phone timeline');}
+assert.equal(game.getSnapshot().elapsed,189);assert.equal(clicks,6);assert.equal(events.filter(e=>e.type==='complete').length,1);game.destroy();
+for(const f of build.files)assert.equal(sha256(fs.readFileSync(f.path)),f.sha256,f.path);
+const evidence={reviewer:'/root/review_actual_02',independent:true,build_id:build.build_id,build_artifact:{path:'production/build-manifest.json',sha256:sha256(manifestBytes)},evidence_type:'Actual production exports with native Canvas; not a browser screenshot',frames,contactJumps,checks:[{id:'CRIT-MODEL-SWEEP',status:'PASS',samples:11341},{id:'CRIT-SIX-GATE-ACTUAL-API',status:'PASS',waitTicksPerGate:20,wrongSideRejected:true,duplicateRejected:true,actionPersisted:true,completedAt:189}],limits:['Browser/fullscreen/orientation/audio/touch/layout/FPS/storage permissions not exercised.','Independent mechanical check does not certify creative approval.']};
+fs.writeFileSync('production/critic-interactive-evidence.json',JSON.stringify(evidence,null,2)+'\n');console.log(JSON.stringify({build:build.build_id,frames:frames.length,contactJumps}));

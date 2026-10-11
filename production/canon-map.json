@@ -1,0 +1,1691 @@
+{
+  "title": "Обычный день",
+  "canonVersion": "3.0",
+  "scope": [
+    "S02",
+    "S03"
+  ],
+  "status": "canon_mapping_only_not_runtime_signoff",
+  "sceneCount": 11,
+  "shotCount": 83,
+  "mainDialogueCount": 72,
+  "ledgerDialogueCount": 90,
+  "sources": {
+    "01_Сценарий/ПОЛНЫЙ_СЦЕНАРИЙ_ПОКАДРОВО.md": {
+      "sha256": "82f1ba95d4cbe10dd146de6919417c7f53318da95677acb3703e3d5943a35200"
+    },
+    "04_Диалоги_и_источники/DIALOGUE_LEDGER_VERIFIED_90.json": {
+      "sha256": "02e773e49e3ca3e11d14d14d0f2cdda7451203ac108b203b875208b2b00271be"
+    },
+    "06_Передача_разработчику/shot_registry.json": {
+      "sha256": "d527f339616aed0e6c422a951aa2a8112a2e0b7125acf7fdf499d1d16d1310b1"
+    },
+    "06_Передача_разработчику/state_contracts.json": {
+      "sha256": "17e3164b0878c90405d93e7ab60d7553ed8ec50cf599b4123c990fdd68d3d8b1"
+    }
+  },
+  "note": "Реестр производственного канона. Наличие записи не означает реализацию сцены. Только S02 и S03 входят в первый исполняемый этап; остальные сцены предназначены для следующих этапов. Настоящие сообщения смонтированы из разных дат; действия и время игрового дня являются постановкой.",
+  "scenes": [
+    {
+      "id": "S01",
+      "title": "Утро у каждого своё",
+      "period": "Раннее утро",
+      "description": "Мягко показать разный ритм пробуждения и нормальную задержку ответов. Установить, что не всякий экран требует диалога.",
+      "milestoneStatus": "future_not_implemented",
+      "durationSeconds": 80,
+      "stateContract": {
+        "vova": "asleep → awake → commute",
+        "nastya": "asleep → awake → commute_school",
+        "world": "alarm off, one outgoing message thread"
+      },
+      "dialogue": [
+        {
+          "id": "message4455554",
+          "speaker": "Настя",
+          "text": "доброе утро",
+          "sourceId": "message4455554"
+        },
+        {
+          "id": "message4455555",
+          "speaker": "Настя",
+          "text": "я сегодня встала даже из-за будильника",
+          "sourceId": "message4455555"
+        }
+      ],
+      "shots": [
+        {
+          "id": "01.01",
+          "secondsStart": 0,
+          "secondsEnd": 8,
+          "action": "Вова под одеялом; Настя срабатывает будильник — Утренний свет идёт из окна Насти; на стороне Вовы почти темно. Звонок будильника не дублировать в левой части.",
+          "shotType": "ОПШ",
+          "layout": "split 40/60",
+          "interaction": "Нет",
+          "locations": "Комната Вовы | Комната Насти",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "01.02",
+          "secondsStart": 8,
+          "secondsEnd": 17,
+          "action": "Настя тянется к будильнику — Точка касания физически возле телефона; дисплей тускнеет, звук прекращается.",
+          "shotType": "СР",
+          "layout": "Настя 75/25",
+          "interaction": "Касание будильника или автособытие через 3 сек",
+          "locations": "Комната Вовы | Комната Насти",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "01.03",
+          "secondsStart": 17,
+          "secondsEnd": 27,
+          "action": "Стол: очки, сумка, школьная одежда — Настя надевает очки, поправляет волосы, застёгивает сумку. Вещи остаются в новом положении.",
+          "shotType": "ДЕТ",
+          "layout": "Настя крупнее",
+          "interaction": "Нет",
+          "locations": "Комната Вовы | Комната Насти",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "01.04",
+          "secondsStart": 27,
+          "secondsEnd": 42,
+          "action": "Настя пишет, Вова всё ещё спит — Сначала два оригинальных сообщения; никаких тёмных подсказок о молчании. Телефон Вовы коротко загорается, но остаётся лежать.",
+          "shotType": "СР",
+          "layout": "50/50",
+          "interaction": "Просмотреть чат (необязательно)",
+          "locations": "Комната Вовы | Комната Насти",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "01.05",
+          "secondsStart": 42,
+          "secondsEnd": 53,
+          "action": "Выход Насти из квартиры → короткая перебивка дороги — Показываем только одну дверь/коридор, без огромного открытого мира.",
+          "shotType": "ОПШ",
+          "layout": "Настя справа",
+          "interaction": "Нет",
+          "locations": "Комната Вовы | Комната Насти",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "01.06",
+          "secondsStart": 53,
+          "secondsEnd": 68,
+          "action": "Вова просыпается позже — Протянул руку к телефону, сел, поправил очки, встал. Не печатает автоматически.",
+          "shotType": "СР",
+          "layout": "Левая сторона крупнее",
+          "interaction": "Коснуться телефона или автособытие",
+          "locations": "Комната Вовы | Комната Насти",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "01.07",
+          "secondsStart": 68,
+          "secondsEnd": 80,
+          "action": "Настя у школы, Вова выходит из дома — Обе стороны готовы перейти в рабочий день, но события не обязаны происходить в одну секунду; нужен мягкий монтажный разрыв.",
+          "shotType": "ОПШ",
+          "layout": "50/50",
+          "interaction": "Продолжить",
+          "locations": "Комната Вовы | Комната Насти",
+          "referenceStatus": "staging / not documentary"
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "title": "Хлеб и доска",
+      "period": "Утро: рабочий ритм",
+      "description": "Доказать визуально, что перед нами две автономные жизни и настоящие действия, а не фоновые портреты.",
+      "milestoneStatus": "in_first_milestone_scope_unverified",
+      "durationSeconds": 102,
+      "stateContract": {
+        "vova": "in_store → bread_packed",
+        "nastya": "in_school teaching",
+        "world": "bread input −1, packed bread +1, chalk marks persist"
+      },
+      "dialogue": [],
+      "shots": [
+        {
+          "id": "02.01",
+          "secondsStart": 0,
+          "secondsEnd": 10,
+          "action": "В магазине слышен холодильник; класс наполняется детьми — Простые фоновые циклы, никто не говорит по телефону.",
+          "shotType": "ОПШ",
+          "layout": "50/50",
+          "interaction": "Нет",
+          "locations": "Магазин, хлебная зона | Школьный класс",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "02.02",
+          "secondsStart": 10,
+          "secondsEnd": 23,
+          "action": "Вова подходит к ящику с хлебом — До ящика идёт 3–5 шагов; переставляет руки к нижней полке.",
+          "shotType": "СР",
+          "layout": "левый акцент",
+          "interaction": "Клик по хлебному ящику (или автозапуск)",
+          "locations": "Магазин, хлебная зона | Школьный класс",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "02.03",
+          "secondsStart": 23,
+          "secondsEnd": 35,
+          "action": "Взять один хлеб, раскрыть пакет, уложить — Предмет отсутствует в исходном ящике после захвата, появляется только в руках и в подготовленной кучке.",
+          "shotType": "ДЕТ",
+          "layout": "левый",
+          "interaction": "Нет",
+          "locations": "Магазин, хлебная зона | Школьный класс",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "02.04",
+          "secondsStart": 35,
+          "secondsEnd": 48,
+          "action": "Настя пишет простой пример для второго класса — На доске «7 + 5 = 12», мел по контакту, не теорема Пифагора!",
+          "shotType": "СР",
+          "layout": "правый акцент",
+          "interaction": "Нажать на доску (необязательно)",
+          "locations": "Магазин, хлебная зона | Школьный класс",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "02.05",
+          "secondsStart": 48,
+          "secondsEnd": 61,
+          "action": "Ребёнок поднимает руку, Настя поворачивается — Классная сцена живая: один пишет, другой смотрит, третий меняет позу.",
+          "shotType": "СР",
+          "layout": "правый",
+          "interaction": "Нет",
+          "locations": "Магазин, хлебная зона | Школьный класс",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "02.06",
+          "secondsStart": 61,
+          "secondsEnd": 79,
+          "action": "Настя обходит парту и указывает на тетрадь — Путь вокруг мебели; рука не пересекает парту. Дети без реальных имён и без пародии на учеников.",
+          "shotType": "СР",
+          "layout": "правый",
+          "interaction": "Нет",
+          "locations": "Магазин, хлебная зона | Школьный класс",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "02.07",
+          "secondsStart": 79,
+          "secondsEnd": 94,
+          "action": "Пакет хлеба помещён в тележку — Шуршание пакета ↔ шорох страницы; в ящике на один хлеб меньше.",
+          "shotType": "ДЕТ",
+          "layout": "левый",
+          "interaction": "Нет",
+          "locations": "Магазин, хлебная зона | Школьный класс",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "02.08",
+          "secondsStart": 94,
+          "secondsEnd": 102,
+          "action": "Вова продолжает хлеб; Настя продолжает занятие — Сплит сохраняется, камеры не дёргаются, кадр живёт 4–7 сек без UI.",
+          "shotType": "ОПШ",
+          "layout": "50/50",
+          "interaction": "Продолжить",
+          "locations": "Магазин, хлебная зона | Школьный класс",
+          "referenceStatus": "staging / not documentary"
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "title": "«Хлеб выставляю»",
+      "period": "Позднее утро / перемена",
+      "description": "Первое очевидное пересечение через короткую, совершенно обыденную переписку.",
+      "milestoneStatus": "in_first_milestone_scope_unverified",
+      "durationSeconds": 87,
+      "stateContract": {
+        "vova": "bread_packed → bread_shelved",
+        "nastya": "class_break → class_ready",
+        "world": "shelf +1, trolley −1, chat 5 true lines"
+      },
+      "dialogue": [
+        {
+          "id": "message4459710",
+          "speaker": "Настя",
+          "text": "вова такой занятой",
+          "sourceId": "message4459710"
+        },
+        {
+          "id": "message4459712",
+          "speaker": "Вова",
+          "text": "Привет",
+          "sourceId": "message4459712"
+        },
+        {
+          "id": "message4459713",
+          "speaker": "Вова",
+          "text": "Хлеб выставляю",
+          "sourceId": "message4459713"
+        },
+        {
+          "id": "message4459715",
+          "speaker": "Настя",
+          "text": "оо хлеб это хорошо",
+          "sourceId": "message4459715"
+        },
+        {
+          "id": "message4459716",
+          "speaker": "Настя",
+          "text": "как раз у меня закончился",
+          "sourceId": "message4459716"
+        }
+      ],
+      "shots": [
+        {
+          "id": "03.01",
+          "secondsStart": 0,
+          "secondsEnd": 13,
+          "action": "Вова переносит подготовленный хлеб к стеллажу — Одна упаковка перемещается из тележки в руки, затем на полку.",
+          "shotType": "СР",
+          "layout": "левый",
+          "interaction": "Клик на стеллаж",
+          "locations": "Магазин: стеллаж | Класс: перемена",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "03.02",
+          "secondsStart": 13,
+          "secondsEnd": 22,
+          "action": "Хлеб встаёт в ряд, руки отпускают — Шелест упаковки, стеллаж показывает новую единицу, тележка уменьшилась.",
+          "shotType": "ДЕТ",
+          "layout": "левый",
+          "interaction": "Нет",
+          "locations": "Магазин: стеллаж | Класс: перемена",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "03.03",
+          "secondsStart": 22,
+          "secondsEnd": 34,
+          "action": "Прозвенела перемена; Настя свободна — Дети ушли; Настя присаживается и берёт телефон.",
+          "shotType": "СР",
+          "layout": "правый",
+          "interaction": "Нет",
+          "locations": "Магазин: стеллаж | Класс: перемена",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "03.04",
+          "secondsStart": 34,
+          "secondsEnd": 45,
+          "action": "Приходит «вова такой занятой» — Реплика появляется только после отправки Настей; в магазине Вова ещё заканчивает выкладку.",
+          "shotType": "ДЕТ",
+          "layout": "центр UI",
+          "interaction": "Открыть сообщение",
+          "locations": "Магазин: стеллаж | Класс: перемена",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "03.05",
+          "secondsStart": 45,
+          "secondsEnd": 62,
+          "action": "Вова убрал хлеб и ответил «Привет / Хлеб выставляю» — Сначала свободные руки → телефон → печать коротко → убрать.",
+          "shotType": "СР",
+          "layout": "левый",
+          "interaction": "Нет",
+          "locations": "Магазин: стеллаж | Класс: перемена",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "03.06",
+          "secondsStart": 62,
+          "secondsEnd": 79,
+          "action": "Настя отвечает про хлеб дома — Два коротких сообщения, после них прекращает переписку, возвращается к своим делам.",
+          "shotType": "СР",
+          "layout": "правый",
+          "interaction": "Нет",
+          "locations": "Магазин: стеллаж | Класс: перемена",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "03.07",
+          "secondsStart": 79,
+          "secondsEnd": 87,
+          "action": "Оба работают дальше — Пауза без текста 4 сек; касса на стороне Вовы подаёт сигнал.",
+          "shotType": "ОПШ",
+          "layout": "50/50",
+          "interaction": "Продолжить",
+          "locations": "Магазин: стеллаж | Класс: перемена",
+          "referenceStatus": "staging / not documentary"
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "title": "Касса / ещё один урок",
+      "period": "Около полудня",
+      "description": "Уравнять статус профессий без переписки и дать ритмическую рифму сканер ↔ школьный звонок.",
+      "milestoneStatus": "future_not_implemented",
+      "durationSeconds": 82,
+      "stateContract": {
+        "vova": "checkout_pending → completed",
+        "nastya": "lesson_active → ended",
+        "world": "scanned item moves, customer leaves, students leave"
+      },
+      "dialogue": [],
+      "shots": [
+        {
+          "id": "04.01",
+          "secondsStart": 0,
+          "secondsEnd": 9,
+          "action": "Приближение к кассе; класс продолжается — Фоновая очередь 1–2 безымянных покупателя, несколько учеников сидят за партами.",
+          "shotType": "ОПШ",
+          "layout": "50/50",
+          "interaction": "Нет",
+          "locations": "Касса в магазине | Школьный класс",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "04.02",
+          "secondsStart": 9,
+          "secondsEnd": 22,
+          "action": "Вова берёт товар покупателя и сканирует — Кассовый бип только в момент считывания; цифры в интерфейсе кассы не псевдо-RPG валюты.",
+          "shotType": "СР",
+          "layout": "левый",
+          "interaction": "Нажать на товар",
+          "locations": "Касса в магазине | Школьный класс",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "04.03",
+          "secondsStart": 22,
+          "secondsEnd": 30,
+          "action": "Товар переносится в зону готовых покупок — Одна единица у кассы переставлена; карта терминала физически перед покупателем.",
+          "shotType": "ДЕТ",
+          "layout": "левый",
+          "interaction": "Нет",
+          "locations": "Касса в магазине | Школьный класс",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "04.04",
+          "secondsStart": 30,
+          "secondsEnd": 45,
+          "action": "Настя проверяет у парты ответ — Наклонилась, показала строчку, ребёнок исправляет свой пример.",
+          "shotType": "СР",
+          "layout": "правый",
+          "interaction": "Нажать на тетрадь (необязательно)",
+          "locations": "Касса в магазине | Школьный класс",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "04.05",
+          "secondsStart": 45,
+          "secondsEnd": 56,
+          "action": "Покупатель оплатил и ушёл — Чек выдаётся после оплаты, корзина пустеет, следующий ждёт в стороне.",
+          "shotType": "СР",
+          "layout": "левый",
+          "interaction": "Нет",
+          "locations": "Касса в магазине | Школьный класс",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "04.06",
+          "secondsStart": 56,
+          "secondsEnd": 75,
+          "action": "Завершение урока/звонок — Дети собирают тетради и выходят, Настя убирает мел.",
+          "shotType": "СР",
+          "layout": "правый",
+          "interaction": "Нет",
+          "locations": "Касса в магазине | Школьный класс",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "04.07",
+          "secondsStart": 75,
+          "secondsEnd": 82,
+          "action": "Тишина между обязанностями — Звук сканера сходится со звонком в мостике; сцена переходит к классной уборке.",
+          "shotType": "ОПШ",
+          "layout": "50/50",
+          "interaction": "Продолжить",
+          "locations": "Касса в магазине | Школьный класс",
+          "referenceStatus": "staging / not documentary"
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "title": "«Не по плану»",
+      "period": "После уроков",
+      "description": "Дать Насте собственный рабочий опыт, где не всё идеально, и настоящую реакцию Вовы.",
+      "milestoneStatus": "future_not_implemented",
+      "durationSeconds": 82,
+      "stateContract": {
+        "vova": "still_in_store",
+        "nastya": "after_school with notebooks",
+        "world": "notebook pile organized, chat 5 true lines"
+      },
+      "dialogue": [
+        {
+          "id": "message4466430",
+          "speaker": "Настя",
+          "text": "да полчаса назад закончилось все",
+          "sourceId": "message4466430"
+        },
+        {
+          "id": "message4466433",
+          "speaker": "Настя",
+          "text": "все ваше не по плану было",
+          "sourceId": "message4466433"
+        },
+        {
+          "id": "message4466434",
+          "speaker": "Настя",
+          "text": "кроме математики",
+          "sourceId": "message4466434"
+        },
+        {
+          "id": "message4466435",
+          "speaker": "Вова",
+          "text": "Рассказывай обязательно котенок",
+          "sourceId": "message4466435"
+        },
+        {
+          "id": "message4466436",
+          "speaker": "Вова",
+          "text": "Хуетень бывает!",
+          "sourceId": "message4466436"
+        }
+      ],
+      "shots": [
+        {
+          "id": "05.01",
+          "secondsStart": 0,
+          "secondsEnd": 10,
+          "action": "В школе становится тихо — Шум детей затухает естественно; парты с открытыми тетрадями.",
+          "shotType": "ОПШ",
+          "layout": "40/60",
+          "interaction": "Нет",
+          "locations": "Магазин: касса/полки | Школа: пустеющий класс",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "05.02",
+          "secondsStart": 10,
+          "secondsEnd": 25,
+          "action": "Настя собирает стопку работ — Три тетради переложены со столов; закрывает журнал/папку.",
+          "shotType": "СР",
+          "layout": "правый",
+          "interaction": "Клик на тетради (необязательно)",
+          "locations": "Магазин: касса/полки | Школа: пустеющий класс",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "05.03",
+          "secondsStart": 25,
+          "secondsEnd": 43,
+          "action": "Сообщения «полчаса назад», «не по плану» — Настя печатает после уроков, несколько реплик появляются с небольшими паузами.",
+          "shotType": "ДЕТ",
+          "layout": "правый UI",
+          "interaction": "Читать",
+          "locations": "Магазин: касса/полки | Школа: пустеющий класс",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "05.04",
+          "secondsStart": 43,
+          "secondsEnd": 57,
+          "action": "Вова заканчивает работу с покупателем и смотрит телефон — Не резко бросает кассу. Поддержка звучит просто и неформально.",
+          "shotType": "СР",
+          "layout": "левый",
+          "interaction": "Нет",
+          "locations": "Магазин: касса/полки | Школа: пустеющий класс",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "05.05",
+          "secondsStart": 57,
+          "secondsEnd": 72,
+          "action": "Настя улыбается краем рта и продолжает дела — Не обязанно радоваться; без искусственного «спасибо, любимый» поверх реальной переписки.",
+          "shotType": "СР",
+          "layout": "правый",
+          "interaction": "Нет",
+          "locations": "Магазин: касса/полки | Школа: пустеющий класс",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "05.06",
+          "secondsStart": 72,
+          "secondsEnd": 82,
+          "action": "Параллельные короткие движения рук — В магазине вещи возвращены на полку, в школе подготовлена рабочая стопка.",
+          "shotType": "ОПШ",
+          "layout": "50/50",
+          "interaction": "Продолжить",
+          "locations": "Магазин: касса/полки | Школа: пустеющий класс",
+          "referenceStatus": "staging / not documentary"
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "title": "Две стопки",
+      "period": "День",
+      "description": "Механическая рифма двух профессий — у одного монеты, у другой тетради.",
+      "milestoneStatus": "future_not_implemented",
+      "durationSeconds": 85,
+      "stateContract": {
+        "vova": "coins_unsorted → sorted",
+        "nastya": "notebooks_checking → school_exit",
+        "world": "money counted, graded pile moved into bag, no more school scenes"
+      },
+      "dialogue": [
+        {
+          "id": "message4463030",
+          "speaker": "Настя",
+          "text": "проверяю тетради",
+          "sourceId": "message4463030"
+        },
+        {
+          "id": "message4473763",
+          "speaker": "Вова",
+          "text": "На 1400 рублей",
+          "sourceId": "message4473763"
+        },
+        {
+          "id": "message4473764",
+          "speaker": "Вова",
+          "text": "По рублю считал",
+          "sourceId": "message4473764"
+        },
+        {
+          "id": "message4473769",
+          "speaker": "Настя",
+          "text": "ЭТО КАПЕЦ",
+          "sourceId": "message4473769"
+        },
+        {
+          "id": "message4473771",
+          "speaker": "Настя",
+          "text": "КАССИРОМ БЫТЬ ЕЩЁ СТРАШНЕЕ",
+          "sourceId": "message4473771"
+        },
+        {
+          "id": "message4473774",
+          "speaker": "Настя",
+          "text": "ЭТО ЖЕ ЗАКОЛЕБАТЬСЯ МОЖНО",
+          "sourceId": "message4473774"
+        }
+      ],
+      "shots": [
+        {
+          "id": "06.01",
+          "secondsStart": 0,
+          "secondsEnd": 11,
+          "action": "Настя берёт первую непроверенную тетрадь — Открывает, читает, отмечает карандашом.",
+          "shotType": "ДЕТ",
+          "layout": "правый",
+          "interaction": "Нет",
+          "locations": "Магазин: касса и мелочь | Школа: тетради",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "06.02",
+          "secondsStart": 11,
+          "secondsEnd": 22,
+          "action": "Вова высыпает подготовленную мелочь — Часть монет из лотка действительно переходит на стол, не на место покупательских продуктов.",
+          "shotType": "ДЕТ",
+          "layout": "левый",
+          "interaction": "Нажать на монеты",
+          "locations": "Магазин: касса и мелочь | Школа: тетради",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "06.03",
+          "secondsStart": 22,
+          "secondsEnd": 31,
+          "action": "Настя пишет коротко «проверяю тетради» — Текст из другого реального дня добавлен как монтаж, не надо утверждать что это ответ про монеты.",
+          "shotType": "СР",
+          "layout": "50/50",
+          "interaction": "Открыть чат",
+          "locations": "Магазин: касса и мелочь | Школа: тетради",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "06.04",
+          "secondsStart": 31,
+          "secondsEnd": 46,
+          "action": "Попеременное выравнивание стопок — Рифма: стопка монет ↔ стопка тетрадей; краткие звуки металла и бумаги.",
+          "shotType": "ДЕТ",
+          "layout": "50/50",
+          "interaction": "Нет",
+          "locations": "Магазин: касса и мелочь | Школа: тетради",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "06.05",
+          "secondsStart": 46,
+          "secondsEnd": 56,
+          "action": "Вова рассказывает «На 1400 рублей / По рублю считал» — Одна шутка об объёме мелочи, никаких 1400 интерактивных кликов.",
+          "shotType": "СР",
+          "layout": "левый",
+          "interaction": "Нет",
+          "locations": "Магазин: касса и мелочь | Школа: тетради",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "06.06",
+          "secondsStart": 56,
+          "secondsEnd": 72,
+          "action": "Настя реагирует капсом — Реакция с юмором; на секунду перестаёт проверять, но не теряет бумаги.",
+          "shotType": "СР",
+          "layout": "правый",
+          "interaction": "Нет",
+          "locations": "Магазин: касса и мелочь | Школа: тетради",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "06.07",
+          "secondsStart": 72,
+          "secondsEnd": 85,
+          "action": "Настя складывает тетради, берёт сумку и уходит — Ни одного человека в классе; школьная локация закрывается до следующего прохождения.",
+          "shotType": "ОПШ",
+          "layout": "правый акцент",
+          "interaction": "Продолжить",
+          "locations": "Магазин: касса и мелочь | Школа: тетради",
+          "referenceStatus": "staging / not documentary"
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "title": "«Хочу с тобой посидеть»",
+      "period": "После школы, ближе к вечеру",
+      "description": "Тихий эмоциональный узел: Настя сама предлагает провести вечер и честно хочет поспать, чтобы не уснуть раньше.",
+      "milestoneStatus": "future_not_implemented",
+      "durationSeconds": 122,
+      "stateContract": {
+        "vova": "store_continuing",
+        "nastya": "home_entry → nap → awake",
+        "world": "bag placed, school clothes changed, two-hour ellipsis, evening planned"
+      },
+      "dialogue": [
+        {
+          "id": "message4456902",
+          "speaker": "Настя",
+          "text": "думаю посплю",
+          "sourceId": "message4456902"
+        },
+        {
+          "id": "message4456903",
+          "speaker": "Настя",
+          "text": "а то устала и клонит",
+          "sourceId": "message4456903"
+        },
+        {
+          "id": "message4456906",
+          "speaker": "Вова",
+          "text": "Хорошего тебе сна!!!!",
+          "sourceId": "message4456906"
+        },
+        {
+          "id": "message4456907",
+          "speaker": "Настя",
+          "text": "хочу с тобой посидеть сегодня",
+          "sourceId": "message4456907"
+        },
+        {
+          "id": "message4456908",
+          "speaker": "Настя",
+          "text": "я люблю тебя",
+          "sourceId": "message4456908"
+        },
+        {
+          "id": "message4456909",
+          "speaker": "Настя",
+          "text": "чтоб меня раньше не заклонило",
+          "sourceId": "message4456909"
+        },
+        {
+          "id": "message4456911",
+          "speaker": "Настя",
+          "text": "люблю тебя очень",
+          "sourceId": "message4456911"
+        },
+        {
+          "id": "message4456914",
+          "speaker": "Вова",
+          "text": "Посидим",
+          "sourceId": "message4456914"
+        },
+        {
+          "id": "message4456915",
+          "speaker": "Вова",
+          "text": "До двух спокойно",
+          "sourceId": "message4456915"
+        },
+        {
+          "id": "message4456916",
+          "speaker": "Вова",
+          "text": "Поиграем во что нибудь, посмотрим",
+          "sourceId": "message4456916"
+        },
+        {
+          "id": "message4457048",
+          "speaker": "Настя",
+          "text": "ой",
+          "sourceId": "message4457048"
+        },
+        {
+          "id": "message4457049",
+          "speaker": "Настя",
+          "text": "2 часа уже",
+          "sourceId": "message4457049"
+        },
+        {
+          "id": "message4457050",
+          "speaker": "Настя",
+          "text": "проспала",
+          "sourceId": "message4457050"
+        }
+      ],
+      "shots": [
+        {
+          "id": "07.01",
+          "secondsStart": 0,
+          "secondsEnd": 13,
+          "action": "Настя вошла, поставила сумку и сняла верхнюю одежду — Куртка/сумка остаются у двери. В шкафу нет второго идентичного костюма.",
+          "shotType": "ОПШ",
+          "layout": "правый 70%",
+          "interaction": "Нет",
+          "locations": "Магазин: продолжающаяся смена | Настина квартира/комната",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "07.02",
+          "secondsStart": 13,
+          "secondsEnd": 24,
+          "action": "Настя садится на кровать, устало выдыхает — Телефон в руке, она сама начинает разговор.",
+          "shotType": "СР",
+          "layout": "правый",
+          "interaction": "Нет",
+          "locations": "Магазин: продолжающаяся смена | Настина квартира/комната",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "07.03",
+          "secondsStart": 24,
+          "secondsEnd": 35,
+          "action": "«думаю посплю» / «а то устала и клонит» — Переписка не превращается в сцену тревоги; Вова отвечает из паузы.",
+          "shotType": "ДЕТ",
+          "layout": "правый UI",
+          "interaction": "Читать",
+          "locations": "Магазин: продолжающаяся смена | Настина квартира/комната",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "07.04",
+          "secondsStart": 35,
+          "secondsEnd": 65,
+          "action": "Реальный разговор про желание посидеть вместе — Настя сама пишет «хочу с тобой посидеть сегодня»; короткие приятные ответы Вовы; не все реплики необходимо читать одновременно.",
+          "shotType": "СР",
+          "layout": "50/50",
+          "interaction": "Нет",
+          "locations": "Магазин: продолжающаяся смена | Настина квартира/комната",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "07.05",
+          "secondsStart": 65,
+          "secondsEnd": 80,
+          "action": "Настя кладёт телефон на стол, снимает очки и ложится — Подушку поправляет рукой, экран телефона гаснет, состояние «спит».",
+          "shotType": "СР",
+          "layout": "правый",
+          "interaction": "Нажать «Отдохнуть» (или автодействие)",
+          "locations": "Магазин: продолжающаяся смена | Настина квартира/комната",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "07.06",
+          "secondsStart": 80,
+          "secondsEnd": 93,
+          "action": "Проход времени ~2 часа — Тени в комнате Насти смещаются; Вова 2–3 коротких самостоятельных рабочих движения. Нет второго сообщения во сне.",
+          "shotType": "МОНТАЖ",
+          "layout": "две стороны",
+          "interaction": "Нет",
+          "locations": "Магазин: продолжающаяся смена | Настина квартира/комната",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "07.07",
+          "secondsStart": 93,
+          "secondsEnd": 110,
+          "action": "Настя просыпается, видит время — Надела очки, взяла телефон; «ой / 2 часа уже / проспала» появляются после пробуждения.",
+          "shotType": "СР",
+          "layout": "правый",
+          "interaction": "Нет",
+          "locations": "Магазин: продолжающаяся смена | Настина квартира/комната",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "07.08",
+          "secondsStart": 110,
+          "secondsEnd": 122,
+          "action": "Настя возвращается к бытовым делам — Вова продолжает смену, два параллельных рабочих ритма снова соединяются.",
+          "shotType": "ОПШ",
+          "layout": "50/50",
+          "interaction": "Продолжить",
+          "locations": "Магазин: продолжающаяся смена | Настина квартира/комната",
+          "referenceStatus": "staging / not documentary"
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "title": "«Ты че.»",
+      "period": "Ранний вечер",
+      "description": "Короткая реальная шероховатость: неожиданная колкость, опечатки и возвращение к обычным делам без оценки виновных.",
+      "milestoneStatus": "future_not_implemented",
+      "durationSeconds": 88,
+      "stateContract": {
+        "vova": "store_work_paused → resumed",
+        "nastya": "list_ready → groceries_picked_up → home_return",
+        "world": "one multiline list, short awkward exchange; shopping is staged"
+      },
+      "dialogue": [
+        {
+          "id": "message4460100",
+          "speaker": "Настя",
+          "text": "так",
+          "sourceId": "message4460100"
+        },
+        {
+          "id": "message4460101",
+          "speaker": "Настя",
+          "text": "хлеб\nлавровый лист\nперец\nпельмени\nсметана",
+          "sourceId": "message4460101"
+        },
+        {
+          "id": "message4460103",
+          "speaker": "Настя",
+          "text": "все да",
+          "sourceId": "message4460103"
+        },
+        {
+          "id": "message4460104",
+          "speaker": "Вова",
+          "text": "Перец именно горошком",
+          "sourceId": "message4460104"
+        },
+        {
+          "id": "message4460105",
+          "speaker": "Вова",
+          "text": "я как понимаю",
+          "sourceId": "message4460105"
+        },
+        {
+          "id": "message4460106",
+          "speaker": "Настя",
+          "text": "я знаю",
+          "sourceId": "message4460106"
+        },
+        {
+          "id": "message4460107",
+          "speaker": "Настя",
+          "text": "ты че.",
+          "sourceId": "message4460107"
+        },
+        {
+          "id": "message4460108",
+          "speaker": "Вова",
+          "text": "Не ввжеа",
+          "sourceId": "message4460108"
+        },
+        {
+          "id": "message4460109",
+          "speaker": "Вова",
+          "text": "Важна",
+          "sourceId": "message4460109"
+        },
+        {
+          "id": "message4460110",
+          "speaker": "Вова",
+          "text": "НЕ ВАЖНО",
+          "sourceId": "message4460110"
+        },
+        {
+          "id": "message4460111",
+          "speaker": "Настя",
+          "text": "........",
+          "sourceId": "message4460111"
+        },
+        {
+          "id": "message4460112",
+          "speaker": "Вова",
+          "text": "ВСЕ",
+          "sourceId": "message4460112"
+        },
+        {
+          "id": "message4460113",
+          "speaker": "Настя",
+          "text": ".........",
+          "sourceId": "message4460113"
+        },
+        {
+          "id": "message4460114",
+          "speaker": "Настя",
+          "text": "................",
+          "sourceId": "message4460114"
+        },
+        {
+          "id": "message4460115",
+          "speaker": "Вова",
+          "text": "Я ОБИДЕЛСЯ",
+          "sourceId": "message4460115"
+        },
+        {
+          "id": "message4460116",
+          "speaker": "Настя",
+          "text": "нет куплю вот такой",
+          "sourceId": "message4460116"
+        },
+        {
+          "id": "message4460117",
+          "speaker": "Настя",
+          "text": "обычный",
+          "sourceId": "message4460117"
+        },
+        {
+          "id": "message4460119",
+          "speaker": "Настя",
+          "text": "кину",
+          "sourceId": "message4460119"
+        }
+      ],
+      "shots": [
+        {
+          "id": "08.01",
+          "secondsStart": 0,
+          "secondsEnd": 10,
+          "action": "Настя сидит у стола с телефоном — Видны только нужные для списка продукты/пакет; никаких придуманных имен.",
+          "shotType": "СР",
+          "layout": "правый",
+          "interaction": "Нет",
+          "locations": "Магазин: короткая рабочая пауза | Настина кухня/стол",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "08.02",
+          "secondsStart": 10,
+          "secondsEnd": 23,
+          "action": "Настя набирает единый список — «хлеб\nлавровый лист\nперец\nпельмени\nсметана» — 1 сообщение с переводами строки.",
+          "shotType": "ДЕТ",
+          "layout": "правый UI",
+          "interaction": "Просмотреть список",
+          "locations": "Магазин: короткая рабочая пауза | Настина кухня/стол",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "08.03",
+          "secondsStart": 23,
+          "secondsEnd": 33,
+          "action": "Вова пишет про перец в рабочей паузе — Не рядом с ожидающим покупателем.",
+          "shotType": "СР",
+          "layout": "левый",
+          "interaction": "Нет",
+          "locations": "Магазин: короткая рабочая пауза | Настина кухня/стол",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "08.04",
+          "secondsStart": 33,
+          "secondsEnd": 44,
+          "action": "«я знаю» / «ты че.» — Чуть неловкая остановка на 1–2 сек. Никакой мрачной музыки.",
+          "shotType": "ДЕТ",
+          "layout": "центр UI",
+          "interaction": "Нет",
+          "locations": "Магазин: короткая рабочая пауза | Настина кухня/стол",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "08.05",
+          "secondsStart": 44,
+          "secondsEnd": 65,
+          "action": "Развернуть подлинный комичный хвост с опечатками — Только необязательная кнопка «Ещё сообщения», все 18 из реестра показываются без изменения смысла.",
+          "shotType": "ДЕТ",
+          "layout": "опц. окно чата",
+          "interaction": "По желанию",
+          "locations": "Магазин: короткая рабочая пауза | Настина кухня/стол",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "08.06",
+          "secondsStart": 65,
+          "secondsEnd": 73,
+          "action": "Настя берёт сумку, выходит за покупками — Короткий уличный cutaway — без модели второго супермаркета.",
+          "shotType": "ОПШ",
+          "layout": "правый",
+          "interaction": "Нет",
+          "locations": "Магазин: короткая рабочая пауза | Настина кухня/стол",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "08.07",
+          "secondsStart": 73,
+          "secondsEnd": 88,
+          "action": "Возвращается с пакетом, кладёт продукты на стол — Пакет появляется через монтаж перехода, не телепортацией. Вова продолжает смену.",
+          "shotType": "МОНТАЖ",
+          "layout": "правый",
+          "interaction": "Продолжить",
+          "locations": "Магазин: короткая рабочая пауза | Настина кухня/стол",
+          "referenceStatus": "staging / not documentary"
+        }
+      ]
+    },
+    {
+      "id": "S09",
+      "title": "«Рагушин, это срочно»",
+      "period": "Вечер",
+      "description": "Возврат лёгкого юмора после бытовой сцены. Инициатор — Настя, предмет выбора — чехол для Вовы.",
+      "milestoneStatus": "future_not_implemented",
+      "durationSeconds": 97,
+      "stateContract": {
+        "vova": "store_pause → case_browsed → work_resumed",
+        "nastya": "home_case_browsing",
+        "world": "case preview shared, no payment, no relationship metric"
+      },
+      "dialogue": [
+        {
+          "id": "message4463910",
+          "speaker": "Настя",
+          "text": "рагушин это срочно",
+          "sourceId": "message4463910"
+        },
+        {
+          "id": "message4463911",
+          "speaker": "Настя",
+          "text": "набираешь в озоне case place Смешарики poco x7 pro",
+          "sourceId": "message4463911"
+        },
+        {
+          "id": "message4463912",
+          "speaker": "Настя",
+          "text": "и выбираешь себе чехол",
+          "sourceId": "message4463912"
+        },
+        {
+          "id": "message4463913",
+          "speaker": "Настя",
+          "text": "какой хочешь",
+          "sourceId": "message4463913"
+        },
+        {
+          "id": "message4463914",
+          "speaker": "Настя",
+          "text": "и кидаешь мне ссылку",
+          "sourceId": "message4463914"
+        },
+        {
+          "id": "message4463915",
+          "speaker": "Вова",
+          "text": "Щааа",
+          "sourceId": "message4463915"
+        },
+        {
+          "id": "message4463925",
+          "speaker": "Вова",
+          "text": "Левый или правый",
+          "sourceId": "message4463925"
+        },
+        {
+          "id": "message4463928",
+          "speaker": "Настя",
+          "text": "мне правый нравится оч",
+          "sourceId": "message4463928"
+        },
+        {
+          "id": "message4463937",
+          "speaker": "Настя",
+          "text": "я не люблю глянцевые",
+          "sourceId": "message4463937"
+        },
+        {
+          "id": "message4463938",
+          "speaker": "Настя",
+          "text": "а тут матовый",
+          "sourceId": "message4463938"
+        },
+        {
+          "id": "message4463939",
+          "speaker": "Настя",
+          "text": "матовый люблю",
+          "sourceId": "message4463939"
+        }
+      ],
+      "shots": [
+        {
+          "id": "09.01",
+          "secondsStart": 0,
+          "secondsEnd": 9,
+          "action": "Настя с телефоном рассматривает каталог — Краем кадра видно несколько вариантов, оформление не выдаётся за реальный Ozon.",
+          "shotType": "СР",
+          "layout": "правый",
+          "interaction": "Нет",
+          "locations": "Магазин: перерыв/полки | Настина квартира",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "09.02",
+          "secondsStart": 9,
+          "secondsEnd": 22,
+          "action": "Уведомление «рагушин это срочно» — Маленькая задержка перед раскрытием; без тревожного звука.",
+          "shotType": "ДЕТ",
+          "layout": "центр UI",
+          "interaction": "Открыть",
+          "locations": "Магазин: перерыв/полки | Настина квартира",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "09.03",
+          "secondsStart": 22,
+          "secondsEnd": 31,
+          "action": "Вова реагирует удивлением, пишет «Щааа» — У него свободные руки, нет ожидающего покупателя.",
+          "shotType": "СР",
+          "layout": "левый",
+          "interaction": "Нет",
+          "locations": "Магазин: перерыв/полки | Настина квартира",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "09.04",
+          "secondsStart": 31,
+          "secondsEnd": 48,
+          "action": "Просмотр двух вариантов чехла — Один из вариантов матовый, другой глянцевый, не утверждать что реальные фото идентичны.",
+          "shotType": "ДЕТ",
+          "layout": "телефон",
+          "interaction": "Листать/приблизить",
+          "locations": "Магазин: перерыв/полки | Настина квартира",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "09.05",
+          "secondsStart": 48,
+          "secondsEnd": 63,
+          "action": "«Левый или правый» / «мне правый нравится оч» — Только подлинные реплики, синхронные с ручным просмотром, без испытания на «правильность».",
+          "shotType": "СР",
+          "layout": "центр",
+          "interaction": "Рассмотреть",
+          "locations": "Магазин: перерыв/полки | Настина квартира",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "09.06",
+          "secondsStart": 63,
+          "secondsEnd": 78,
+          "action": "Настя пишет про матовый — Настин юмор без выдуманного капса.",
+          "shotType": "СР",
+          "layout": "правый",
+          "interaction": "Нет",
+          "locations": "Магазин: перерыв/полки | Настина квартира",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "09.07",
+          "secondsStart": 78,
+          "secondsEnd": 88,
+          "action": "Смена требует внимания, Вова убирает телефон — Появился покупатель — сначала обслуживание, потом можно вернуться.",
+          "shotType": "СР",
+          "layout": "левый",
+          "interaction": "Нет",
+          "locations": "Магазин: перерыв/полки | Настина квартира",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "09.08",
+          "secondsStart": 88,
+          "secondsEnd": 97,
+          "action": "Отправить карточку чехла / ссылку — Без платежей, без исхода «ошибка выбора».",
+          "shotType": "ДЕТ",
+          "layout": "левый UI",
+          "interaction": "Необязательная кнопка «Поделиться»",
+          "locations": "Магазин: перерыв/полки | Настина квартира",
+          "referenceStatus": "staging / not documentary"
+        }
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "«Энергетик»",
+      "period": "Поздний вечер",
+      "description": "Дать последнюю смешную бытовую историю и осмысленно вывести Вову из магазина.",
+      "milestoneStatus": "future_not_implemented",
+      "durationSeconds": 112,
+      "stateContract": {
+        "vova": "store_shelf → spill → mop → shift_end → commute_home",
+        "nastya": "home",
+        "world": "one can removed, one puddle added then removed, mop returned; store ends"
+      },
+      "dialogue": [
+        {
+          "id": "message4502185",
+          "speaker": "Вова",
+          "text": "Пока тебе отвечал и витрины поправлял",
+          "sourceId": "message4502185"
+        },
+        {
+          "id": "message4502186",
+          "speaker": "Вова",
+          "text": "Энергетик упал",
+          "sourceId": "message4502186"
+        },
+        {
+          "id": "message4502187",
+          "speaker": "Вова",
+          "text": "И разбился",
+          "sourceId": "message4502187"
+        },
+        {
+          "id": "message4502189",
+          "speaker": "Настя",
+          "text": "НЕЕЕТ",
+          "sourceId": "message4502189"
+        },
+        {
+          "id": "message4502193",
+          "speaker": "Настя",
+          "text": "ТЫ УЖЕ СКОРО ДОМОЙ УРА",
+          "sourceId": "message4502193"
+        },
+        {
+          "id": "message4502197",
+          "speaker": "Настя",
+          "text": "с пола слизал?",
+          "sourceId": "message4502197"
+        },
+        {
+          "id": "message4502199",
+          "speaker": "Вова",
+          "text": "Не, вытер шваброй",
+          "sourceId": "message4502199"
+        }
+      ],
+      "shots": [
+        {
+          "id": "10.01",
+          "secondsStart": 0,
+          "secondsEnd": 9,
+          "action": "Вова поправляет витрины; Настя дома — Спокойная работа, без зловещего предвестия.",
+          "shotType": "ОПШ",
+          "layout": "50/50",
+          "interaction": "Нет",
+          "locations": "Магазин: витрина и хозяйственная зона | Настина квартира",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "10.02",
+          "secondsStart": 9,
+          "secondsEnd": 17,
+          "action": "Вова задевает одну банку — Банка из исходного места переходит в движение, ещё не разлилась.",
+          "shotType": "СР",
+          "layout": "левый",
+          "interaction": "Нажать «Поправить витрину» (или автособытие)",
+          "locations": "Магазин: витрина и хозяйственная зона | Настина квартира",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "10.03",
+          "secondsStart": 17,
+          "secondsEnd": 24,
+          "action": "Банка падает и разбивается — Одна точка столкновения, лужа появляется ПОСЛЕ падения, не две банки и не две лужи.",
+          "shotType": "ДЕТ",
+          "layout": "левый",
+          "interaction": "Нет",
+          "locations": "Магазин: витрина и хозяйственная зона | Настина квартира",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "10.04",
+          "secondsStart": 24,
+          "secondsEnd": 39,
+          "action": "Вова пишет три сообщения о случившемся — Телефон достаётся после свободных рук; в кадре нет сообщения до происшествия.",
+          "shotType": "ДЕТ",
+          "layout": "центр UI",
+          "interaction": "Читать",
+          "locations": "Магазин: витрина и хозяйственная зона | Настина квартира",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "10.05",
+          "secondsStart": 39,
+          "secondsEnd": 53,
+          "action": "Настя реагирует «НЕЕЕТ» / «УРА» — Её реакция не перехватывает сцену, после чего спрашивает «с пола слизал?».",
+          "shotType": "СР",
+          "layout": "правый",
+          "interaction": "Нет",
+          "locations": "Магазин: витрина и хозяйственная зона | Настина квартира",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "10.06",
+          "secondsStart": 53,
+          "secondsEnd": 78,
+          "action": "Вова берёт швабру и убирает разлив — Два последовательных контакта с лужей уменьшают пятно; мокрый след исчезает позже.",
+          "shotType": "СР",
+          "layout": "левый",
+          "interaction": "Нажать швабру",
+          "locations": "Магазин: витрина и хозяйственная зона | Настина квартира",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "10.07",
+          "secondsStart": 78,
+          "secondsEnd": 86,
+          "action": "«Не, вытер шваброй» — Реплика только после уборки, если визуализируем её завершение.",
+          "shotType": "ДЕТ",
+          "layout": "центр UI",
+          "interaction": "Нет",
+          "locations": "Магазин: витрина и хозяйственная зона | Настина квартира",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "10.08",
+          "secondsStart": 86,
+          "secondsEnd": 100,
+          "action": "Вова возвращает швабру, заканчивает рабочее место — Снимает рабочую одежду / забирает вещи; магазин не закрывает целиком.",
+          "shotType": "СР",
+          "layout": "левый",
+          "interaction": "Нет",
+          "locations": "Магазин: витрина и хозяйственная зона | Настина квартира",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "10.09",
+          "secondsStart": 100,
+          "secondsEnd": 112,
+          "action": "Выход из магазина и путь домой — Один-два средних кадра на улице, шум вывески за спиной, затем дверь дома.",
+          "shotType": "МОНТАЖ",
+          "layout": "левый",
+          "interaction": "Продолжить",
+          "locations": "Магазин: витрина и хозяйственная зона | Настина квартира",
+          "referenceStatus": "staging / not documentary"
+        }
+      ]
+    },
+    {
+      "id": "S11",
+      "title": "На связи",
+      "period": "Поздний вечер → ночь",
+      "description": "Завершить отдельные дни одним привычным звонком, не выдумывая слова внутри недоступных телефонных разговоров.",
+      "milestoneStatus": "future_not_implemented",
+      "durationSeconds": 157,
+      "stateContract": {
+        "vova": "home_entry → home_clothes → audio_call → sleep",
+        "nastya": "home_night → audio_call → sleep",
+        "world": "same rooms and phone UI, connected call in darkness"
+      },
+      "dialogue": [
+        {
+          "id": "message4464800",
+          "speaker": "Вова",
+          "text": "Но заснем вместе",
+          "sourceId": "message4464800"
+        },
+        {
+          "id": "message4464806",
+          "speaker": "Настя",
+          "text": "окииииии",
+          "sourceId": "message4464806"
+        },
+        {
+          "id": "message4464813",
+          "speaker": "Настя",
+          "text": "ты спать хочеш?",
+          "sourceId": "message4464813"
+        },
+        {
+          "id": "message4464819",
+          "speaker": "Настя",
+          "text": "как сегодня ваще",
+          "sourceId": "message4464819"
+        },
+        {
+          "id": "message4464820",
+          "speaker": "Настя",
+          "text": "выспался нет",
+          "sourceId": "message4464820"
+        }
+      ],
+      "shots": [
+        {
+          "id": "11.01",
+          "secondsStart": 0,
+          "secondsEnd": 14,
+          "action": "Вова зашёл, поставил вещи и снял рабочий слой — Появляется домашний костюм только после реального переодевания; рабочая одежда на вешалке.",
+          "shotType": "СР",
+          "layout": "левая 60%",
+          "interaction": "Нет",
+          "locations": "Комната Вовы | Комната Насти",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "11.02",
+          "secondsStart": 14,
+          "secondsEnd": 27,
+          "action": "Настя закончила с бумагами и готовится ко сну — Телефон рядом; очки могут быть ещё на ней. Комната не преобразилась в открытку.",
+          "shotType": "СР",
+          "layout": "правая 60%",
+          "interaction": "Нет",
+          "locations": "Комната Вовы | Комната Насти",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "11.03",
+          "secondsStart": 27,
+          "secondsEnd": 42,
+          "action": "«Но заснем вместе» / «окииииии» — Подлинные сообщения в правильном порядке; дополнительные вопросы показываются как необязательный отрывок.",
+          "shotType": "ДЕТ",
+          "layout": "центр чат",
+          "interaction": "Прочитать чат",
+          "locations": "Комната Вовы | Комната Насти",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "11.04",
+          "secondsStart": 42,
+          "secondsEnd": 57,
+          "action": "Начинается аудиозвонок — Визуальная связь только в split-режиме игрока; телефоны не включают видеокамеру без подтверждения.",
+          "shotType": "СР",
+          "layout": "50/50",
+          "interaction": "Кнопка звонка / автосвязь",
+          "locations": "Комната Вовы | Комната Насти",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "11.05",
+          "secondsStart": 57,
+          "secondsEnd": 85,
+          "action": "Оба параллельно занимаются своим — Вова садится к ПК; Настя перелистывает страницу/устраивается удобнее. Звонок подключён.",
+          "shotType": "СР",
+          "layout": "50/50",
+          "interaction": "Выбор фонового занятия",
+          "locations": "Комната Вовы | Комната Насти",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "11.06",
+          "secondsStart": 85,
+          "secondsEnd": 105,
+          "action": "Настя откладывает телефон рядом, ложится — Звонок продолжается. Настя не сидит с телефоном прижатым к уху всю ночь.",
+          "shotType": "СР",
+          "layout": "правая 55%",
+          "interaction": "Нет",
+          "locations": "Комната Вовы | Комната Насти",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "11.07",
+          "secondsStart": 105,
+          "secondsEnd": 125,
+          "action": "Вова приглушает монитор, встаёт, идёт к кровати — Переход от desk_pose к walk_pose к bed_pose; ничего не перекрывает ноги.",
+          "shotType": "СР",
+          "layout": "левая 55%",
+          "interaction": "Коснуться лампы (необязательно)",
+          "locations": "Комната Вовы | Комната Насти",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "11.08",
+          "secondsStart": 125,
+          "secondsEnd": 145,
+          "action": "Обе комнаты постепенно темнеют — Цвет меняется без смены планировки, маленький индикатор продолжающегося соединения остаётся.",
+          "shotType": "ОПШ",
+          "layout": "50/50",
+          "interaction": "Нет",
+          "locations": "Комната Вовы | Комната Насти",
+          "referenceStatus": "staging / not documentary"
+        },
+        {
+          "id": "11.09",
+          "secondsStart": 145,
+          "secondsEnd": 157,
+          "action": "8–10 секунд тихого присутствия → конец — Никаких надписей «вернись», титра про расставание, вопроса с решением.",
+          "shotType": "ОПШ",
+          "layout": "50/50",
+          "interaction": "Кнопки «С начала», «Сцены»",
+          "locations": "Комната Вовы | Комната Насти",
+          "referenceStatus": "staging / not documentary"
+        }
+      ]
+    }
+  ],
+  "optionalDialogue": [
+    {
+      "id": "S04_OPTIONAL",
+      "status": "future_optional_not_implemented",
+      "replayScope": "not_required_for_S04",
+      "dialogue": [
+        {
+          "id": "message4194745",
+          "speaker": "Вова",
+          "text": "Итак бешусь что тебе отвечаю с задержкой хыхыыхыззы",
+          "sourceId": "message4194745"
+        },
+        {
+          "id": "message4194746",
+          "speaker": "Настя",
+          "text": "а чего",
+          "sourceId": "message4194746"
+        },
+        {
+          "id": "message4194747",
+          "speaker": "Настя",
+          "text": "всяко успеешь",
+          "sourceId": "message4194747"
+        },
+        {
+          "id": "message4194748",
+          "speaker": "Настя",
+          "text": "никуда не денусь",
+          "sourceId": "message4194748"
+        }
+      ]
+    },
+    {
+      "id": "O1",
+      "status": "future_optional_not_implemented",
+      "replayScope": "archive_only_outside_same_day",
+      "dialogue": [
+        {
+          "id": "message4413207",
+          "speaker": "Настя",
+          "text": "судакамо",
+          "sourceId": "message4413207"
+        },
+        {
+          "id": "message4413208",
+          "speaker": "Вова",
+          "text": "Ково",
+          "sourceId": "message4413208"
+        },
+        {
+          "id": "message4413209",
+          "speaker": "Вова",
+          "text": "Чево",
+          "sourceId": "message4413209"
+        },
+        {
+          "id": "message4413214",
+          "speaker": "Настя",
+          "text": "крекс пекс",
+          "sourceId": "message4413214"
+        },
+        {
+          "id": "message4413216",
+          "speaker": "Настя",
+          "text": "домино",
+          "sourceId": "message4413216"
+        },
+        {
+          "id": "message4413217",
+          "speaker": "Вова",
+          "text": "Ширли мырли?",
+          "sourceId": "message4413217"
+        }
+      ]
+    },
+    {
+      "id": "O2",
+      "status": "future_optional_not_implemented",
+      "replayScope": "archive_only_outside_same_day",
+      "dialogue": [
+        {
+          "id": "message4485807",
+          "speaker": "Вова",
+          "text": "Чтобы на кассе не работать 😭",
+          "sourceId": "message4485807"
+        },
+        {
+          "id": "message4485808",
+          "speaker": "Настя",
+          "text": "а чо",
+          "sourceId": "message4485808"
+        },
+        {
+          "id": "message4485809",
+          "speaker": "Настя",
+          "text": "как без тебя магазин",
+          "sourceId": "message4485809"
+        },
+        {
+          "id": "message4485810",
+          "speaker": "Настя",
+          "text": "рухнут твои барские пруды",
+          "sourceId": "message4485810"
+        },
+        {
+          "id": "message4485813",
+          "speaker": "Вова",
+          "text": "Устроюсь на дистанционку",
+          "sourceId": "message4485813"
+        },
+        {
+          "id": "message4485814",
+          "speaker": "Вова",
+          "text": "Перееду к тебе жить",
+          "sourceId": "message4485814"
+        },
+        {
+          "id": "message4485815",
+          "speaker": "Вова",
+          "text": "Буду дома работать",
+          "sourceId": "message4485815"
+        },
+        {
+          "id": "message4485816",
+          "speaker": "Настя",
+          "text": "а ну тогда ладно",
+          "sourceId": "message4485816"
+        }
+      ]
+    }
+  ]
+}

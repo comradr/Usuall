@@ -1,0 +1,1164 @@
+{
+  "title": "Independent deterministic regression · S02–S03",
+  "createdAt": "2026-10-09T22:07:02.046Z",
+  "command": "node tests/regression.mjs --preliminary",
+  "workingDirectory": "/workspace/sites/obychnyy-den",
+  "nodeVersion": "v24.19.0",
+  "scope": [
+    "S02",
+    "S03"
+  ],
+  "environment": "Node, injected clock/storage, no browser",
+  "status": "FAIL",
+  "sourceSha256": {
+    "dist/model.js": "881b7a830f8771f9fb9649eb951a50b02b8d73d62bb13adb466d02aac3bc56e3",
+    "src/story.json": "73dadda3765c8db31216e1842df7a6a1e88f26dea498a2c8270a249c57a90753",
+    "dist/engine.js": "70f4ccdfc6327b93986ec0a9afec2beb07e12ac2bfa58593434b54c841d4490d",
+    "dist/assets/manifest.json": "bd68b5e376e4283b68da834179779920a83fd907842787b8f9b03c2bc1624449"
+  },
+  "tests": [
+    {
+      "id": "CANON-01",
+      "purpose": "The playable story contains exactly S02/S03, 15 continuous shots and 189 seconds",
+      "status": "PASS",
+      "milliseconds": 0.92,
+      "evidence": {
+        "sceneDurations": [
+          102,
+          87
+        ],
+        "shots": 15
+      }
+    },
+    {
+      "id": "CANON-02",
+      "purpose": "Five exact original messages retain IDs, speakers, text and order",
+      "status": "PASS",
+      "milliseconds": 0.267,
+      "evidence": {
+        "messageIds": [
+          "message4459710",
+          "message4459712",
+          "message4459713",
+          "message4459715",
+          "message4459716"
+        ]
+      }
+    },
+    {
+      "id": "API-01",
+      "purpose": "The real model is importable without browser globals",
+      "status": "PASS",
+      "milliseconds": 2.354,
+      "evidence": {
+        "exports": [
+          "BEATS",
+          "CHALK_STROKES",
+          "CUES",
+          "DEFAULT_GEOMETRY",
+          "HEIGHT",
+          "MESSAGES",
+          "MODEL_VERSION",
+          "SAVE_KEY",
+          "SAVE_VERSION",
+          "SCENES",
+          "SCHOOL_ACTIONS",
+          "STORE_ACTIONS",
+          "TOTAL_DURATION",
+          "WIDTH",
+          "beatAt",
+          "chalkAt",
+          "clearSave",
+          "loadSave",
+          "makeSave",
+          "nextBeatEnd",
+          "normalizedTime",
+          "sampleRoute",
+          "saveToStorage",
+          "sceneAt",
+          "stateAt",
+          "validateSave"
+        ]
+      }
+    },
+    {
+      "id": "API-02",
+      "purpose": "The real renderer/clock are importable without browser globals",
+      "status": "PASS",
+      "milliseconds": 1.432,
+      "evidence": {
+        "exports": [
+          "buildGeometry",
+          "createGame",
+          "loadAssets",
+          "pixelLine",
+          "renderFrame"
+        ]
+      }
+    },
+    {
+      "id": "ASSET-01",
+      "purpose": "Actual PNGs have native dimensions, alpha, distinct frames and measured opaque hand sockets",
+      "status": "PASS",
+      "milliseconds": 76.007,
+      "evidence": {
+        "manifestSha256": "bd68b5e376e4283b68da834179779920a83fd907842787b8f9b03c2bc1624449",
+        "imageFiles": {
+          "assets/store-bg-v1.png": {
+            "sha256": "7919c9fbe1d8a8c71b9c3cf0901d13dd05b24ce7d4cb2d9e8befa16a1c7b4165",
+            "bytes": 289287
+          },
+          "assets/school-bg-v1.png": {
+            "sha256": "6bd66ef10cbae6539afc5534636590a20d0f4b015212004be44a3cd620da6a36",
+            "bytes": 224718
+          },
+          "assets/actors/vova-work-v1.png": {
+            "sha256": "0a85745416d70d96fafd9c8648b112b2d94581efc6834f8b011e9f5f0fef9a74",
+            "bytes": 41149
+          },
+          "assets/actors/nastya-work-v1.png": {
+            "sha256": "495c85bfde0b14d90d3af3bd3ec7fe6fa925869361757ab128131d33505c2f7c",
+            "bytes": 44290
+          },
+          "assets/props/bread-v1.png": {
+            "sha256": "cea1af724a102ba26dbcbf4442161a167f87108fe8b7d03e3151fb6829bfe34c",
+            "bytes": 806
+          },
+          "assets/props/bagEmpty-v1.png": {
+            "sha256": "be9dd1403d040b4044f5a9ddaeb33e31bbb1f9da62aba50ddeb4d72d9e00f08f",
+            "bytes": 1609
+          },
+          "assets/props/breadPacked-v1.png": {
+            "sha256": "2b0589bd94b329d2fb501cac11d557c4df55465146f4794d7bbb27f22b977004",
+            "bytes": 1722
+          },
+          "assets/props/trolley-v1.png": {
+            "sha256": "3f13f544e4eb3e90e7e0ed3292be659438980fd8a56a3db81ca698e98d0b808d",
+            "bytes": 4904
+          },
+          "assets/props/phone-v1.png": {
+            "sha256": "a0c4b48c0d8eff676a6a2489a9e99c05c4a8907efdd1ea069feae3caed5450de",
+            "bytes": 318
+          },
+          "assets/props/notebook-v1.png": {
+            "sha256": "e3d8de26fad35ad20cfcc07a7fa4c8d031741df0ec3b48976c7da531e5208ffe",
+            "bytes": 665
+          },
+          "assets/props/chalk-v1.png": {
+            "sha256": "ce15e37245bd6761c960f71c9a2abf86c4ef8c078f02642cd5ba57f4a1e23049",
+            "bytes": 102
+          },
+          "assets/props/chair-v1.png": {
+            "sha256": "35134caaebeaacc6e464b5a0a7b8262ea4d334e587811fa060c01b2fc75835e7",
+            "bytes": 1538
+          },
+          "assets/occlusion/store-packingBench-v1.png": {
+            "sha256": "6e2d2428cf058b33384b5061bf648f4c229c1c897620cd9dfee5b41756834ebd",
+            "bytes": 7973
+          },
+          "assets/occlusion/store-breadShelf-v1.png": {
+            "sha256": "9190beb4cc4bbc8ead7db89ffb6e271a53c569d5124bb3f97a0ed3f33e0f60a6",
+            "bytes": 16181
+          },
+          "assets/occlusion/store-cashCounter-v1.png": {
+            "sha256": "15280c53ffcb19e52cb7881a49f6a0a39d6c076759fa8236c768ac3c03697e0b",
+            "bytes": 35727
+          },
+          "assets/occlusion/school-teacherDesk-v1.png": {
+            "sha256": "14ab7cfc6235876bc93db932052ce04aa2b7c0350204f4185afdd14cfcc8ea08",
+            "bytes": 15060
+          },
+          "assets/occlusion/school-studentUpperLeft-v1.png": {
+            "sha256": "16771f08ec1a4a97195cecc6e6a6b0e5d717620963244bfb1de4ae26ae24397e",
+            "bytes": 14409
+          },
+          "assets/occlusion/school-studentLowerLeft-v1.png": {
+            "sha256": "a63c358346e808a2c9f2a1877f8a050837fec609509cafd7dd4b2286c64df22b",
+            "bytes": 17299
+          },
+          "assets/occlusion/school-studentUpperRight-v1.png": {
+            "sha256": "3e8767e9ccfa2c836e2308238f1f29f1677dbb177705c1b15ade4f18ff9b925d",
+            "bytes": 9139
+          },
+          "assets/occlusion/school-studentLowerRight-v1.png": {
+            "sha256": "d5d0b569c2563befd899e831197af1a943b7c777a119cb41b7233172a199d665",
+            "bytes": 14984
+          }
+        },
+        "authoredFrameCount": 16,
+        "actorFrames": [
+          {
+            "actor": "vova",
+            "frame": 0,
+            "name": "idle",
+            "width": 96,
+            "height": 112,
+            "opaque": 1513,
+            "transparent": 9239,
+            "partial": 0,
+            "bounds": [
+              36,
+              20,
+              63,
+              101
+            ],
+            "rgbaSha256": "566541dc5222c6091dc8ba7aa6eaffba5b919756362b85070e632290a95a83a0",
+            "nearestHandPixel": 0
+          },
+          {
+            "actor": "vova",
+            "frame": 1,
+            "name": "walkA",
+            "width": 96,
+            "height": 112,
+            "opaque": 1658,
+            "transparent": 9094,
+            "partial": 0,
+            "bounds": [
+              27,
+              19,
+              68,
+              100
+            ],
+            "rgbaSha256": "449ee119e93e12220c3a0fb04944bff7fe1a7f17d08794382aba9d5264fc312a",
+            "nearestHandPixel": 0
+          },
+          {
+            "actor": "vova",
+            "frame": 2,
+            "name": "walkB",
+            "width": 96,
+            "height": 112,
+            "opaque": 1495,
+            "transparent": 9257,
+            "partial": 0,
+            "bounds": [
+              27,
+              19,
+              68,
+              98
+            ],
+            "rgbaSha256": "9bedca901400fd5284ad668f675b3139ce344597bcee43e0c88c1d1d28500219",
+            "nearestHandPixel": 0
+          },
+          {
+            "actor": "vova",
+            "frame": 3,
+            "name": "raisedReach",
+            "width": 96,
+            "height": 112,
+            "opaque": 1726,
+            "transparent": 9026,
+            "partial": 0,
+            "bounds": [
+              19,
+              20,
+              66,
+              101
+            ],
+            "rgbaSha256": "9710d143650eb0e6030de1dfe52c7eae786442ddf110002b7a0c974b42d49dc8",
+            "nearestHandPixel": 0
+          },
+          {
+            "actor": "vova",
+            "frame": 4,
+            "name": "raisedContact",
+            "width": 96,
+            "height": 112,
+            "opaque": 1753,
+            "transparent": 8999,
+            "partial": 0,
+            "bounds": [
+              19,
+              19,
+              66,
+              100
+            ],
+            "rgbaSha256": "53b0cee5d93ae0e3fd4ba4acb224fc2eb99cbfc32e28fa700d94977d442d1715",
+            "nearestHandPixel": 0
+          },
+          {
+            "actor": "vova",
+            "frame": 5,
+            "name": "carry",
+            "width": 96,
+            "height": 112,
+            "opaque": 1529,
+            "transparent": 9223,
+            "partial": 0,
+            "bounds": [
+              32,
+              18,
+              65,
+              99
+            ],
+            "rgbaSha256": "72564acf02e321b3aaa59b417d0f6bb75c519ac9d08ffacc71dd04fb9f518df0",
+            "nearestHandPixel": 0
+          },
+          {
+            "actor": "vova",
+            "frame": 6,
+            "name": "pack",
+            "width": 96,
+            "height": 112,
+            "opaque": 1837,
+            "transparent": 8915,
+            "partial": 0,
+            "bounds": [
+              24,
+              17,
+              66,
+              100
+            ],
+            "rgbaSha256": "325300d7accbbcf66644c4dbab5decc09a8396dc185f7bf5e2af80362984da68",
+            "nearestHandPixel": 0
+          },
+          {
+            "actor": "vova",
+            "frame": 7,
+            "name": "phone",
+            "width": 96,
+            "height": 112,
+            "opaque": 1472,
+            "transparent": 9280,
+            "partial": 0,
+            "bounds": [
+              32,
+              18,
+              61,
+              100
+            ],
+            "rgbaSha256": "3406ea64a8fdac219fbca132a0ae76d5920a6ae4f35bd4e430733601c8b7eeb3",
+            "nearestHandPixel": 0
+          },
+          {
+            "actor": "nastya",
+            "frame": 0,
+            "name": "idle",
+            "width": 96,
+            "height": 112,
+            "opaque": 1720,
+            "transparent": 9032,
+            "partial": 0,
+            "bounds": [
+              35,
+              20,
+              66,
+              100
+            ],
+            "rgbaSha256": "17e31c5548d269484f86fa1425dc89882ab3ac61caa6a28fea915086af870373",
+            "nearestHandPixel": 0
+          },
+          {
+            "actor": "nastya",
+            "frame": 1,
+            "name": "walkA",
+            "width": 96,
+            "height": 112,
+            "opaque": 1712,
+            "transparent": 9040,
+            "partial": 0,
+            "bounds": [
+              28,
+              20,
+              68,
+              99
+            ],
+            "rgbaSha256": "c81ffd3fd7e894c4f95c27b08906d244c5a19f5ef2439ba12ede509ef8206912",
+            "nearestHandPixel": 0
+          },
+          {
+            "actor": "nastya",
+            "frame": 2,
+            "name": "walkB",
+            "width": 96,
+            "height": 112,
+            "opaque": 1748,
+            "transparent": 9004,
+            "partial": 0,
+            "bounds": [
+              27,
+              20,
+              67,
+              100
+            ],
+            "rgbaSha256": "cf50a4049f6a0e19e2ba495290d16ed3a88fb63b43b9061353e236c6d34e9bf2",
+            "nearestHandPixel": 0
+          },
+          {
+            "actor": "nastya",
+            "frame": 3,
+            "name": "boardReach",
+            "width": 96,
+            "height": 112,
+            "opaque": 1893,
+            "transparent": 8859,
+            "partial": 0,
+            "bounds": [
+              18,
+              19,
+              64,
+              100
+            ],
+            "rgbaSha256": "77c96fe99d8d5f85537694e9d434894e4349b044806ae81a744b4004613c09af",
+            "nearestHandPixel": 0
+          },
+          {
+            "actor": "nastya",
+            "frame": 4,
+            "name": "chalk",
+            "width": 96,
+            "height": 112,
+            "opaque": 1863,
+            "transparent": 8889,
+            "partial": 0,
+            "bounds": [
+              17,
+              19,
+              63,
+              100
+            ],
+            "rgbaSha256": "774882790fed3ad73f94d0e3eeb40f7555568f99160d4773fc607641e6770354",
+            "nearestHandPixel": 0
+          },
+          {
+            "actor": "nastya",
+            "frame": 5,
+            "name": "point",
+            "width": 96,
+            "height": 112,
+            "opaque": 1863,
+            "transparent": 8889,
+            "partial": 0,
+            "bounds": [
+              15,
+              19,
+              72,
+              99
+            ],
+            "rgbaSha256": "4ca68cc13bb414e84d1ad3a2fd65398a19b07968fec272fa019109454b9c1a3c",
+            "nearestHandPixel": 0
+          },
+          {
+            "actor": "nastya",
+            "frame": 6,
+            "name": "deskLean",
+            "width": 96,
+            "height": 112,
+            "opaque": 1949,
+            "transparent": 8803,
+            "partial": 0,
+            "bounds": [
+              8,
+              20,
+              63,
+              100
+            ],
+            "rgbaSha256": "68768797a7285b5a0ad0495f2c6fb7461554be70a3222dc5561dbc41a3fe4285",
+            "nearestHandPixel": 0
+          },
+          {
+            "actor": "nastya",
+            "frame": 7,
+            "name": "phone",
+            "width": 96,
+            "height": 112,
+            "opaque": 1657,
+            "transparent": 9095,
+            "partial": 0,
+            "bounds": [
+              35,
+              28,
+              76,
+              100
+            ],
+            "rgbaSha256": "71f503a4cf2d06c9306d1bc4809f3fc86961cdfd269a545accb27ed10d9192c0",
+            "nearestHandPixel": 0
+          }
+        ],
+        "props": [
+          {
+            "id": "bread",
+            "width": 22,
+            "height": 13,
+            "opaque": 194,
+            "transparent": 92,
+            "partial": 0,
+            "bounds": [
+              0,
+              0,
+              22,
+              13
+            ],
+            "rgbaSha256": "895d274b33ee8fc2750ae914e9606cee3ab5d542906bf07a541acc6bdd6c2bb7"
+          },
+          {
+            "id": "bagEmpty",
+            "width": 24,
+            "height": 24,
+            "opaque": 428,
+            "transparent": 148,
+            "partial": 0,
+            "bounds": [
+              0,
+              0,
+              24,
+              24
+            ],
+            "rgbaSha256": "a17601afe325bf52c86e7390ddced64263eb3f9293505668d1005e95904e0c13"
+          },
+          {
+            "id": "breadPacked",
+            "width": 24,
+            "height": 27,
+            "opaque": 436,
+            "transparent": 212,
+            "partial": 0,
+            "bounds": [
+              0,
+              0,
+              24,
+              27
+            ],
+            "rgbaSha256": "a67e0502a721eec066e96c146965c0002c26e4faf5852b74037cf6df3bfeede4"
+          },
+          {
+            "id": "trolley",
+            "width": 56,
+            "height": 47,
+            "opaque": 1536,
+            "transparent": 1096,
+            "partial": 0,
+            "bounds": [
+              0,
+              0,
+              56,
+              47
+            ],
+            "rgbaSha256": "9243c63dc3225f89a30cecc5d83c1d95d81a2d0001614df222ad378588fde67c"
+          },
+          {
+            "id": "phone",
+            "width": 8,
+            "height": 12,
+            "opaque": 75,
+            "transparent": 21,
+            "partial": 0,
+            "bounds": [
+              0,
+              0,
+              8,
+              12
+            ],
+            "rgbaSha256": "19d7cab070242685a8df958b57d5c5b9238aa306ad93226060bdba4cf80027c7"
+          },
+          {
+            "id": "notebook",
+            "width": 20,
+            "height": 13,
+            "opaque": 157,
+            "transparent": 103,
+            "partial": 0,
+            "bounds": [
+              0,
+              0,
+              20,
+              13
+            ],
+            "rgbaSha256": "61fe92f80ac92f5f079ce7c270f2cb157e3bad088447059fab7a21237f6566f1"
+          },
+          {
+            "id": "chalk",
+            "width": 4,
+            "height": 3,
+            "opaque": 5,
+            "transparent": 7,
+            "partial": 0,
+            "bounds": [
+              0,
+              0,
+              4,
+              3
+            ],
+            "rgbaSha256": "7a6c08ce103a0730fad5fea558a1a62c8d3940d6bc3cf175ef934c23b92bb56d"
+          },
+          {
+            "id": "chair",
+            "width": 25,
+            "height": 35,
+            "opaque": 364,
+            "transparent": 511,
+            "partial": 0,
+            "bounds": [
+              0,
+              0,
+              25,
+              35
+            ],
+            "rgbaSha256": "e687148143d1e7153786da683176f2fce57b7028b0450ccd39b69c9e6c8b3e89"
+          }
+        ],
+        "limitations": [
+          "Metadata/alpha checks do not certify anatomy, foot contact, attractive artwork or runtime layout."
+        ]
+      }
+    },
+    {
+      "id": "ASSET-02",
+      "purpose": "Default createGame loader resolves every manifest image to an existing dist file",
+      "status": "PASS",
+      "milliseconds": 11.434,
+      "evidence": {
+        "defaultManifestUsed": true,
+        "requestedFiles": [
+          "assets/store-bg-v1.png",
+          "assets/school-bg-v1.png",
+          "assets/actors/vova-work-v1.png",
+          "assets/actors/nastya-work-v1.png",
+          "assets/props/bread-v1.png",
+          "assets/props/bagEmpty-v1.png",
+          "assets/props/breadPacked-v1.png",
+          "assets/props/trolley-v1.png",
+          "assets/props/phone-v1.png",
+          "assets/props/notebook-v1.png",
+          "assets/props/chalk-v1.png",
+          "assets/props/chair-v1.png",
+          "assets/occlusion/store-packingBench-v1.png",
+          "assets/occlusion/store-breadShelf-v1.png",
+          "assets/occlusion/store-cashCounter-v1.png",
+          "assets/occlusion/school-teacherDesk-v1.png",
+          "assets/occlusion/school-studentUpperLeft-v1.png",
+          "assets/occlusion/school-studentLowerLeft-v1.png",
+          "assets/occlusion/school-studentUpperRight-v1.png",
+          "assets/occlusion/school-studentLowerRight-v1.png"
+        ],
+        "realFileReads": 20,
+        "note": "Filesystem-backed fetch/image-loader substitutes; actual production URL resolution and createGame path are tested. No browser."
+      }
+    },
+    {
+      "id": "WORLD-01",
+      "purpose": "Every 60 Hz sample conserves the one loaf through all ownership transfers",
+      "status": "PASS",
+      "milliseconds": 155.231,
+      "evidence": {
+        "framesChecked": 11341,
+        "breadId": "loaf-01",
+        "transitions": [
+          {
+            "time": 0,
+            "owner": "crate",
+            "packaged": false
+          },
+          {
+            "time": 25,
+            "owner": "hand",
+            "packaged": false
+          },
+          {
+            "time": 32,
+            "owner": "stage",
+            "packaged": true
+          },
+          {
+            "time": 82,
+            "owner": "hand",
+            "packaged": true
+          },
+          {
+            "time": 91,
+            "owner": "trolley",
+            "packaged": true
+          },
+          {
+            "time": 105,
+            "owner": "hand",
+            "packaged": true
+          },
+          {
+            "time": 120,
+            "owner": "shelf",
+            "packaged": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "WORLD-02",
+      "purpose": "Scene boundary preserves packed loaf, board and message state",
+      "status": "PASS",
+      "milliseconds": 0.156,
+      "evidence": {
+        "boundary": 102,
+        "breadOwner": "trolley",
+        "boardComplete": true
+      }
+    },
+    {
+      "id": "NAR-01",
+      "purpose": "No phone before break or while carrying bread; five messages follow physical phone actions",
+      "status": "PASS",
+      "milliseconds": 130.002,
+      "evidence": {
+        "framesChecked": 11341,
+        "emissions": [
+          {
+            "time": 136,
+            "id": "message4459710",
+            "senderPhone": "hand"
+          },
+          {
+            "time": 152,
+            "id": "message4459712",
+            "senderPhone": "hand"
+          },
+          {
+            "time": 159,
+            "id": "message4459713",
+            "senderPhone": "hand"
+          },
+          {
+            "time": 170,
+            "id": "message4459715",
+            "senderPhone": "hand"
+          },
+          {
+            "time": 176,
+            "id": "message4459716",
+            "senderPhone": "hand"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NAR-02",
+      "purpose": "Chalk contact precedes visible progress and completed arithmetic persists",
+      "status": "PASS",
+      "milliseconds": 80.663,
+      "evidence": {
+        "framesChecked": 11341,
+        "firstMark": 35.016666666666666,
+        "contactFrames": 689,
+        "arithmetic": "7 + 5 = 12"
+      }
+    },
+    {
+      "id": "SAVE-01",
+      "purpose": "Reload roundtrip preserves ownership, chalk and chat at eleven intermediate/end times",
+      "status": "PASS",
+      "milliseconds": 2.781,
+      "evidence": {
+        "roundtrips": 11,
+        "times": [
+          0,
+          25.2,
+          30,
+          45,
+          85,
+          97,
+          109,
+          123,
+          151,
+          171,
+          189
+        ],
+        "saveKey": "obychnyy-den.slice.v1",
+        "clearVerified": true
+      }
+    },
+    {
+      "id": "SAVE-02",
+      "purpose": "Malformed, stale, oversized and non-finite save data fail closed",
+      "status": "PASS",
+      "milliseconds": 0.258,
+      "evidence": {
+        "malformedInputs": 16,
+        "malformedRawStrings": 6
+      }
+    },
+    {
+      "id": "SAVE-03",
+      "purpose": "Blocked storage and quota errors do not throw or overwrite the last valid save",
+      "status": "PASS",
+      "milliseconds": 0.182,
+      "evidence": {
+        "injectedFailures": [
+          "QuotaExceededError",
+          "SecurityError",
+          "absent storage"
+        ],
+        "lastValidElapsed": 97
+      }
+    },
+    {
+      "id": "SAVE-04",
+      "purpose": "Unsupported preferences are sanitized into supported finite values",
+      "status": "PASS",
+      "milliseconds": 0.115,
+      "evidence": {
+        "normalizedPreferences": {
+          "speed": 1,
+          "muted": true,
+          "reducedMotion": false
+        },
+        "prototypePollution": false
+      }
+    },
+    {
+      "id": "WORLD-03",
+      "purpose": "Non-finite/out-of-range timeline input remains inside the supported fragment",
+      "status": "PASS",
+      "milliseconds": 0.629,
+      "evidence": {
+        "extremeInputs": 8,
+        "repeatedStates": 7
+      }
+    },
+    {
+      "id": "GEO-01",
+      "purpose": "Held loaf and phone attach to the actual bitmap frame hand, not a synthetic target",
+      "status": "PASS",
+      "milliseconds": 89.598,
+      "evidence": {
+        "propFramesChecked": 5790,
+        "maximumDistanceNativePixels": 0.7071067811865476,
+        "toleranceNativePixels": 3
+      }
+    },
+    {
+      "id": "GEO-02",
+      "purpose": "All six ownership boundaries touch the prior/new object anchor within three native pixels",
+      "status": "FAIL",
+      "milliseconds": 0.874,
+      "error": "No new contact at 32: 11.18 px",
+      "stack": "AssertionError [ERR_ASSERTION]: No new contact at 32: 11.18 px\n    at file:///workspace/sites/obychnyy-den/tests/regression.mjs:347:14\n    at test (file:///workspace/sites/obychnyy-den/tests/regression.mjs:41:28)\n    at file:///workspace/sites/obychnyy-den/tests/regression.mjs:338:9"
+    },
+    {
+      "id": "GEO-03",
+      "purpose": "Drawing chalk remains at the actual hand while both feet remain on the board floor plane",
+      "status": "FAIL",
+      "milliseconds": 0.167,
+      "error": "Chalk tip is 8.01 px away from actual bitmap hand at 35.016666666666666",
+      "stack": "AssertionError [ERR_ASSERTION]: Chalk tip is 8.01 px away from actual bitmap hand at 35.016666666666666\n    at file:///workspace/sites/obychnyy-den/tests/regression.mjs:363:14\n    at test (file:///workspace/sites/obychnyy-den/tests/regression.mjs:41:28)\n    at file:///workspace/sites/obychnyy-den/tests/regression.mjs:354:9"
+    },
+    {
+      "id": "GEO-04",
+      "purpose": "Main actor feet route around the real background furniture at every 60 Hz sample",
+      "status": "PASS",
+      "milliseconds": 75.738,
+      "evidence": {
+        "positionsChecked": 22682,
+        "geometrySource": "actual manifest obstacles",
+        "footprint": "floor pivot point; visual limb/body occlusion reviewed separately"
+      }
+    },
+    {
+      "id": "RENDER-01",
+      "purpose": "Every rendered store frame draws exactly six loaf images with one moving owner",
+      "status": "PASS",
+      "milliseconds": 2.174,
+      "evidence": {
+        "traces": [
+          {
+            "time": 0,
+            "rawCalls": 6,
+            "packedCalls": 0,
+            "owner": "crate"
+          },
+          {
+            "time": 24.99,
+            "rawCalls": 6,
+            "packedCalls": 0,
+            "owner": "crate"
+          },
+          {
+            "time": 25,
+            "rawCalls": 6,
+            "packedCalls": 0,
+            "owner": "hand"
+          },
+          {
+            "time": 27.9,
+            "rawCalls": 6,
+            "packedCalls": 0,
+            "owner": "hand"
+          },
+          {
+            "time": 28,
+            "rawCalls": 5,
+            "packedCalls": 1,
+            "owner": "hand"
+          },
+          {
+            "time": 31.99,
+            "rawCalls": 5,
+            "packedCalls": 1,
+            "owner": "hand"
+          },
+          {
+            "time": 32,
+            "rawCalls": 5,
+            "packedCalls": 1,
+            "owner": "stage"
+          },
+          {
+            "time": 81.99,
+            "rawCalls": 5,
+            "packedCalls": 1,
+            "owner": "stage"
+          },
+          {
+            "time": 82,
+            "rawCalls": 5,
+            "packedCalls": 1,
+            "owner": "hand"
+          },
+          {
+            "time": 90.99,
+            "rawCalls": 5,
+            "packedCalls": 1,
+            "owner": "hand"
+          },
+          {
+            "time": 91,
+            "rawCalls": 5,
+            "packedCalls": 1,
+            "owner": "trolley"
+          },
+          {
+            "time": 104.99,
+            "rawCalls": 5,
+            "packedCalls": 1,
+            "owner": "trolley"
+          },
+          {
+            "time": 105,
+            "rawCalls": 5,
+            "packedCalls": 1,
+            "owner": "hand"
+          },
+          {
+            "time": 119.99,
+            "rawCalls": 5,
+            "packedCalls": 1,
+            "owner": "hand"
+          },
+          {
+            "time": 120,
+            "rawCalls": 5,
+            "packedCalls": 1,
+            "owner": "shelf"
+          },
+          {
+            "time": 189,
+            "rawCalls": 5,
+            "packedCalls": 1,
+            "owner": "shelf"
+          }
+        ],
+        "note": "Actual PNG draw calls, not inventory metadata alone. Background is the separately authored static layer."
+      }
+    },
+    {
+      "id": "CLOCK-01",
+      "purpose": "Pause freezes story time and resume cannot consume the paused wall-clock gap",
+      "status": "PASS",
+      "milliseconds": 14.509,
+      "evidence": {
+        "beforePause": 0.9999999999999982,
+        "pausedWallClockSeconds": 60,
+        "afterResume": 1.0166666666666624
+      }
+    },
+    {
+      "id": "CLOCK-02",
+      "purpose": "Supported playback speeds change wall-clock rate while stalls remain bounded",
+      "status": "PASS",
+      "milliseconds": 34.03,
+      "evidence": {
+        "samples": [
+          {
+            "speed": 1,
+            "elapsedAfterOneWallClockSecond": 0.9999999999999982,
+            "elapsedAfterFiveMinuteGap": 1.0999999999999983
+          },
+          {
+            "speed": 1.5,
+            "elapsedAfterOneWallClockSecond": 1.4999999999999976,
+            "elapsedAfterFiveMinuteGap": 1.5999999999999976
+          },
+          {
+            "speed": 2,
+            "elapsedAfterOneWallClockSecond": 1.9999999999999964,
+            "elapsedAfterFiveMinuteGap": 2.0999999999999965
+          }
+        ],
+        "realBrowserTab": "NOT_CHECKED; injected tick gap only"
+      }
+    },
+    {
+      "id": "CLOCK-03",
+      "purpose": "Repeated player advance is continuous, visits every owner, and emits cues once",
+      "status": "PASS",
+      "milliseconds": 495.113,
+      "evidence": {
+        "renderedTicks": 1903,
+        "maximumStoryStep": 0.10000000000000142,
+        "owners": [
+          "crate",
+          "hand",
+          "stage",
+          "hand",
+          "trolley",
+          "hand",
+          "shelf"
+        ],
+        "cueIds": [
+          "bag",
+          "page",
+          "cart",
+          "shelf",
+          "break",
+          "chat-nastya",
+          "chat-vova",
+          "chat-reply",
+          "checkout"
+        ],
+        "completeEvents": 1
+      }
+    },
+    {
+      "id": "CLOCK-04",
+      "purpose": "Resume restores a mid-action save and reduced motion preserves physical and message state",
+      "status": "PASS",
+      "milliseconds": 2.222,
+      "evidence": {
+        "resumedAt": 109.2,
+        "resumedOwner": "hand",
+        "reducedMotionWorldStateUnchanged": true,
+        "restartedAt": 0
+      }
+    },
+    {
+      "id": "CLOCK-05",
+      "purpose": "Quota failures produce one notice and gameplay keeps running",
+      "status": "PASS",
+      "milliseconds": 37.549,
+      "evidence": {
+        "renderedTicks": 240,
+        "storyElapsed": 4,
+        "notices": 1
+      }
+    },
+    {
+      "id": "SOURCE-01",
+      "purpose": "Regression evidence still matches every model/renderer/manifest file loaded by this run",
+      "status": "PASS",
+      "milliseconds": 0.458,
+      "evidence": {
+        "checkedSourceFiles": [
+          "dist/model.js",
+          "src/story.json",
+          "dist/engine.js",
+          "dist/assets/manifest.json"
+        ],
+        "stale": false
+      }
+    }
+  ],
+  "notChecked": [
+    "Real browser startup, HTML/CSS layout and mobile text readability",
+    "Touch/keyboard events, PIP/focus overlays and DOM controls",
+    "Actual browser audio output and autoplay policy",
+    "Browser FPS and real tab suspension",
+    "Complete game outside S02–S03",
+    "Artistic sign-off (separate independent critic)"
+  ],
+  "assetSha256": {
+    "assets/store-bg-v1.png": {
+      "sha256": "7919c9fbe1d8a8c71b9c3cf0901d13dd05b24ce7d4cb2d9e8befa16a1c7b4165",
+      "bytes": 289287
+    },
+    "assets/school-bg-v1.png": {
+      "sha256": "6bd66ef10cbae6539afc5534636590a20d0f4b015212004be44a3cd620da6a36",
+      "bytes": 224718
+    },
+    "assets/actors/vova-work-v1.png": {
+      "sha256": "0a85745416d70d96fafd9c8648b112b2d94581efc6834f8b011e9f5f0fef9a74",
+      "bytes": 41149
+    },
+    "assets/actors/nastya-work-v1.png": {
+      "sha256": "495c85bfde0b14d90d3af3bd3ec7fe6fa925869361757ab128131d33505c2f7c",
+      "bytes": 44290
+    },
+    "assets/props/bread-v1.png": {
+      "sha256": "cea1af724a102ba26dbcbf4442161a167f87108fe8b7d03e3151fb6829bfe34c",
+      "bytes": 806
+    },
+    "assets/props/bagEmpty-v1.png": {
+      "sha256": "be9dd1403d040b4044f5a9ddaeb33e31bbb1f9da62aba50ddeb4d72d9e00f08f",
+      "bytes": 1609
+    },
+    "assets/props/breadPacked-v1.png": {
+      "sha256": "2b0589bd94b329d2fb501cac11d557c4df55465146f4794d7bbb27f22b977004",
+      "bytes": 1722
+    },
+    "assets/props/trolley-v1.png": {
+      "sha256": "3f13f544e4eb3e90e7e0ed3292be659438980fd8a56a3db81ca698e98d0b808d",
+      "bytes": 4904
+    },
+    "assets/props/phone-v1.png": {
+      "sha256": "a0c4b48c0d8eff676a6a2489a9e99c05c4a8907efdd1ea069feae3caed5450de",
+      "bytes": 318
+    },
+    "assets/props/notebook-v1.png": {
+      "sha256": "e3d8de26fad35ad20cfcc07a7fa4c8d031741df0ec3b48976c7da531e5208ffe",
+      "bytes": 665
+    },
+    "assets/props/chalk-v1.png": {
+      "sha256": "ce15e37245bd6761c960f71c9a2abf86c4ef8c078f02642cd5ba57f4a1e23049",
+      "bytes": 102
+    },
+    "assets/props/chair-v1.png": {
+      "sha256": "35134caaebeaacc6e464b5a0a7b8262ea4d334e587811fa060c01b2fc75835e7",
+      "bytes": 1538
+    },
+    "assets/occlusion/store-packingBench-v1.png": {
+      "sha256": "6e2d2428cf058b33384b5061bf648f4c229c1c897620cd9dfee5b41756834ebd",
+      "bytes": 7973
+    },
+    "assets/occlusion/store-breadShelf-v1.png": {
+      "sha256": "9190beb4cc4bbc8ead7db89ffb6e271a53c569d5124bb3f97a0ed3f33e0f60a6",
+      "bytes": 16181
+    },
+    "assets/occlusion/store-cashCounter-v1.png": {
+      "sha256": "15280c53ffcb19e52cb7881a49f6a0a39d6c076759fa8236c768ac3c03697e0b",
+      "bytes": 35727
+    },
+    "assets/occlusion/school-teacherDesk-v1.png": {
+      "sha256": "14ab7cfc6235876bc93db932052ce04aa2b7c0350204f4185afdd14cfcc8ea08",
+      "bytes": 15060
+    },
+    "assets/occlusion/school-studentUpperLeft-v1.png": {
+      "sha256": "16771f08ec1a4a97195cecc6e6a6b0e5d717620963244bfb1de4ae26ae24397e",
+      "bytes": 14409
+    },
+    "assets/occlusion/school-studentLowerLeft-v1.png": {
+      "sha256": "a63c358346e808a2c9f2a1877f8a050837fec609509cafd7dd4b2286c64df22b",
+      "bytes": 17299
+    },
+    "assets/occlusion/school-studentUpperRight-v1.png": {
+      "sha256": "3e8767e9ccfa2c836e2308238f1f29f1677dbb177705c1b15ade4f18ff9b925d",
+      "bytes": 9139
+    },
+    "assets/occlusion/school-studentLowerRight-v1.png": {
+      "sha256": "d5d0b569c2563befd899e831197af1a943b7c777a119cb41b7233172a199d665",
+      "bytes": 14984
+    }
+  },
+  "geometry": "Actual measured manifest via production buildGeometry adapter",
+  "counts": {
+    "pass": 24,
+    "fail": 2
+  }
+}

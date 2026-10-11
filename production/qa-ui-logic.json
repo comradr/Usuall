@@ -1,0 +1,33 @@
+{
+  "environment": "Node VM DOM/event substitutes; NOT a browser, no layout or touch proof",
+  "independent": false,
+  "tests": [
+    {
+      "id": "UI-START-FULLSCREEN-REJECTION",
+      "status": "PASS"
+    },
+    {
+      "id": "UI-MANUAL-MENU-ROTATION-PAUSE",
+      "status": "PASS"
+    },
+    {
+      "id": "UI-VISIBILITY-COMPOSED-WITH-MENU",
+      "status": "PASS"
+    },
+    {
+      "id": "UI-PHONE-OWNERSHIP-SAFE-MESSAGES",
+      "status": "PASS"
+    },
+    {
+      "id": "UI-ACTION-READY-RUNNING",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "counts": {
+    "pass": 5,
+    "fail": 0
+  },
+  "pauseCount": 3,
+  "resumeCount": 3
+}

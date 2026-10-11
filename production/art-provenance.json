@@ -1,0 +1,148 @@
+[
+  {
+    "name": "store",
+    "originalGeneratorFile": "exec-d8fe492e-a3d5-4897-8fe3-b2c11ab9f39d.png",
+    "source": "production/art-source/store-source-v1.png",
+    "sha256": "ce6090a86e7d965e5a0e6bc6f120c6b3203a608a35e129c601518af2431ee8e6",
+    "dimensions": [
+      1448,
+      1086
+    ],
+    "mode": "RGB",
+    "alphaExtrema": null,
+    "method": "built-in image_gen",
+    "reference": "user supplied reference12 (actors),14 (rooms),13 (props), original new artwork",
+    "sourceStatus": "generative source, not an accepted atlas",
+    "export": "binary alpha threshold160; native nearest sampling; body-scale normalization; manual source hand/foot landmarks; separated crop; no invented arm animation"
+  },
+  {
+    "name": "school",
+    "originalGeneratorFile": "exec-db0eb170-d56f-44d3-af4a-8e6b0c5acfe1.png",
+    "source": "production/art-source/school-source-v1.png",
+    "sha256": "657f7cb3ea066626f5ec78e10570b168a127656b6a4c6b2f6d2ce67f8da12aff",
+    "dimensions": [
+      1448,
+      1086
+    ],
+    "mode": "RGB",
+    "alphaExtrema": null,
+    "method": "built-in image_gen",
+    "reference": "user supplied reference12 (actors),14 (rooms),13 (props), original new artwork",
+    "sourceStatus": "generative source, not an accepted atlas",
+    "export": "binary alpha threshold160; native nearest sampling; body-scale normalization; manual source hand/foot landmarks; separated crop; no invented arm animation"
+  },
+  {
+    "name": "vova",
+    "originalGeneratorFile": "exec-1a1055e8-ca74-42cd-896e-8712fcc415ff.png",
+    "source": "production/art-source/vova-source-v1.png",
+    "sha256": "4ba0fae1ac0de592833c2ea2b4b4948f4a467bb2f5e29afa0fa9587cfd9ffb3e",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "method": "built-in image_gen",
+    "reference": "user supplied reference12 (actors),14 (rooms),13 (props), original new artwork",
+    "sourceStatus": "generative source, not an accepted atlas",
+    "export": "binary alpha threshold160; native nearest sampling; body-scale normalization; manual source hand/foot landmarks; separated crop; no invented arm animation"
+  },
+  {
+    "name": "nastya",
+    "originalGeneratorFile": "exec-e4361e09-5668-45f4-b059-760a5cdbced4.png",
+    "source": "production/art-source/nastya-source-v1.png",
+    "sha256": "2133230cad8c736d360bc4eac1db64adf33545890a9fb90f8bde37f3f58b6c0f",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "method": "built-in image_gen",
+    "reference": "user supplied reference12 (actors),14 (rooms),13 (props), original new artwork",
+    "sourceStatus": "generative source, not an accepted atlas",
+    "export": "binary alpha threshold160; native nearest sampling; body-scale normalization; manual source hand/foot landmarks; separated crop; no invented arm animation"
+  },
+  {
+    "name": "props",
+    "originalGeneratorFile": "exec-30569fdf-5f34-48c1-9799-d884657fdb97.png",
+    "source": "production/art-source/props-source-v1.png",
+    "sha256": "73a20c79f828069d18e49dc55b47564539cf2a117a1f1f2b0fbb03111d504528",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "method": "built-in image_gen",
+    "reference": "user supplied reference12 (actors),14 (rooms),13 (props), original new artwork",
+    "sourceStatus": "generative source, not an accepted atlas",
+    "export": "binary alpha threshold160; native nearest sampling; body-scale normalization; manual source hand/foot landmarks; separated crop; no invented arm animation"
+  },
+  {
+    "name": "vovaActing",
+    "originalGeneratorFile": "exec-969beca2-d8c4-470c-805a-2bc9fd524d70.png",
+    "source": "production/art-source/vovaActing-source-v1.png",
+    "sha256": "bfb5f616c40adcb223f01bf6cb467a2bbbced224e356e4abcca3881bafa781cb",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "method": "built-in image_gen",
+    "reference": "user supplied reference12 (actors),14 (rooms),13 (props), original new artwork",
+    "sourceStatus": "generative source, not an accepted atlas",
+    "export": "binary alpha threshold160; native nearest sampling; body-scale normalization; manual source hand/foot landmarks; separated crop; no invented arm animation"
+  },
+  {
+    "name": "walkCorrected",
+    "originalGeneratorFile": "exec-d3597dd2-d302-43e4-8fd1-301a2fea1175.png",
+    "source": "production/art-source/walkCorrected-source-v1.png",
+    "sha256": "46b48468f06ab8d01dc6d8df365b26c8766bbc32657920ffc095f3cc053ce611",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "method": "built-in image_gen",
+    "reference": "user supplied reference12 (actors),14 (rooms),13 (props), original new artwork",
+    "sourceStatus": "generative source, not an accepted atlas",
+    "export": "binary alpha threshold160; native nearest sampling; body-scale normalization; manual source hand/foot landmarks; separated crop; no invented arm animation"
+  },
+  {
+    "name": "chalkCarry",
+    "originalGeneratorFile": "exec-3998a90f-2610-40b3-99cc-0c9f62cb8cc8.png",
+    "source": "production/art-source/chalkCarry-source-v1.png",
+    "sha256": "57d52c7ec8dd00a65c311dd204605cbd0cc6c7d20f09d715e6669c35f7522e81",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "method": "built-in image_gen",
+    "reference": "user supplied reference12 (actors),14 (rooms),13 (props), original new artwork",
+    "sourceStatus": "generative source, not an accepted atlas",
+    "export": "binary alpha threshold160; native nearest sampling; body-scale normalization; manual source hand/foot landmarks; separated crop; no invented arm animation"
+  }
+]

@@ -1,0 +1,87 @@
+{
+  "project": "Обычный день",
+  "version": "0.2.0-interactive-slice",
+  "scope": [
+    "S02",
+    "S03"
+  ],
+  "milestone": "Fullscreen landscape split, six physical player actions, customer event and NPC sprites",
+  "implementation_status": "playable_revision_with_open_art_quality_blockers",
+  "build_id": "slice-cc408edc66cc9eb44d25",
+  "independent_review": {
+    "status": "BLOCKED",
+    "reviewer": "/root/review_actual_02",
+    "independent": true,
+    "evidence": "production/critic-interactive-evidence.json",
+    "gate": "production/quality-gate-interactive.json",
+    "gate_validation": "production/quality-gate-interactive-validation.json",
+    "open_p1": [
+      "Nastya opposite support leg and chalk entry/return"
+    ]
+  },
+  "source": "/workspace/scratch/c320be6a75fa/concept/Obychnyy_den_CONCEPT_COMPLETE_v3",
+  "source_sha256": "ee3afd72cb8586a05c37ebc4dbdedb14ca754839e45cfe89676ddc4a27c36e86",
+  "logical_resolution": [
+    480,
+    360
+  ],
+  "sprite_frame": [
+    96,
+    112
+  ],
+  "sprite_feet_pivot": [
+    48,
+    100
+  ],
+  "canonical_duration_seconds": 189,
+  "owners": {
+    "Producer, UI, Engine, Art export and technical QA": "/root",
+    "Independent Critic": "/root/review_actual_02"
+  },
+  "creative_approval": "proposed_sprite_art_not_yet_approved",
+  "browser_qa": "NOT_CHECKED",
+  "browser_qa_reason": "Managed preview requires unavailable control-browser skill; browser installation and alternate controls prohibited by Sites instructions",
+  "future_scenes": [
+    "S01",
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "S11"
+  ],
+  "public_deployment": "site_audience_unchanged_private",
+  "private_site_id": "appgprj_6ac96180a080819193b082c26699d249",
+  "native_qa": {
+    "status": "PASS",
+    "checks_passed": 46,
+    "checks_failed": 0,
+    "evidence": [
+      "production/qa-regression.json",
+      "production/qa-interactive.json",
+      "production/qa-ui-logic.json"
+    ],
+    "reviewer": "/root",
+    "independent": false,
+    "limits": "33 Node/native Canvas,8 interactive/storage,5 UI events in Node VM; no real browser"
+  },
+  "art_contract": "production/art-contract-v3.json",
+  "known_quality_blockers": [
+    "Nastya opposite-step gait and chalk entry/return need new authored poses",
+    "NPC walking support leg remains subject to independent animation review",
+    "Actual mobile DOM/touch/fullscreen, audible audio and device FPS not checked"
+  ],
+  "quality_escalation": {
+    "status": "DRAFT_ONLY_NO_SUCCESS_HANDOFF",
+    "reason": "Orchestrator requires evidence-based escalation after two unsuccessful repair cycles and forbids successful handoff with open P1 issues",
+    "evidence": [
+      "production/engine-handoff.md",
+      "production/art-handoff-v3.md",
+      "production/qa-report.json"
+    ]
+  },
+  "next_milestone": "Complete missing authored animation poses and real device verification before scaling remaining nine story scenes.",
+  "public_source_repository": "https://github.com/comradr/Usuall"
+}

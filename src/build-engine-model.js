@@ -1,10 +1,19 @@
 /** Ordinary Day — S02/S03. Pure canonical timeline; no DOM, assets or side effects. */
-export const MODEL_VERSION = 's02-s03-1';
-export const SAVE_VERSION = 1;
+export const MODEL_VERSION = 's02-s03-interactive-2';
+export const SAVE_VERSION = 2;
 export const SAVE_KEY = 'obychnyy-den.slice.v1';
 export const WIDTH = 480;
 export const HEIGHT = 360;
 export const TOTAL_DURATION = 189;
+/** Commands start a physical segment; waiting never consumes story time. */
+export const INTERACTIONS = Object.freeze([
+  {id:'packBread',label:'Фасовать хлеб',side:'store',at:10,end:35},
+  {id:'writeBoard',label:'Написать пример',side:'school',at:35,end:48},
+  {id:'serveCustomer',label:'Обслужить покупателя',side:'store',at:56,end:79},
+  {id:'moveBreadToCart',label:'Перенести хлеб в тележку',side:'store',at:79,end:94},
+  {id:'stockShelf',label:'Выставить хлеб',side:'store',at:102,end:124},
+  {id:'replyToNastya',label:'Ответить Насте',side:'store',at:145,end:164},
+].map(action=>Object.freeze(action)));
 export const SCENES = Object.freeze([
   {id: 'S02', title: 'Хлеб и доска', period: 'Утро · рабочий ритм', start: 0, duration: 102},
   {id: 'S03', title: 'Хлеб выставляю', period: 'Позднее утро · перемена', start: 102, duration: 87},
@@ -38,8 +47,8 @@ export const CUES = Object.freeze([
   {id:'cart',at:91,kind:'rustle'}, {id:'shelf',at:120,kind:'rustle'},
   {id:'break',at:124,kind:'bell'}, {id:'chat-nastya',at:136,kind:'message'},
   {id:'chat-vova',at:152,kind:'message'}, {id:'chat-reply',at:170,kind:'message'},
-  {id:'checkout',at:185,kind:'checkout'},
-]);
+  {id:'checkout',at:64,kind:'checkout'},
+].sort((a,b)=>a.at-b.at));
 /** Authored v3 frames. Sitting and pocket contact are separate actions. */
 export const NASTYA_PHONE_ACTIONS = Object.freeze({
   sitDown:{frames:[23,22,16],durationsMs:[180,250,220]},
@@ -186,7 +195,27 @@ function storeAt(t,geometry) {
     else if(u<79) {pos=move(u,65,79,[a.shelfFeet,[141,304],[251,308]]);pose='walk';}
     else {pos=[251,308];pose='busy';}
   }
+  let customer=customerAt(t,geometry),purchase=null;
+  if(t>=56&&t<76) {
+    const busy=[a.workFeet[0]+23,a.workFeet[1]],scanFeet=[305,227];
+    const receiver=npcHand('shopper','reach',0,[350,333],'left',geometry);
+    const carryOffset=socketFor('vova','carry',geometry,geometry?.actors?.vova?.poses?.carry?.[0]??5);
+    const giveFeet=[receiver.x+carryOffset[0],receiver.y-carryOffset[1]];
+    facing='right';
+    if(t<62){pos=move(t,56,62,[busy,[304,212],scanFeet]);pose='walk';}
+    else if(t<65){pos=scanFeet;pose='pack';p=1;}
+    else if(t<66){pos=scanFeet;pose='liftStage';p=t-65;}
+    else if(t<69.5){pos=move(t,66,69.5,[scanFeet,[304,292],giveFeet],false);pose='carryWalk';}
+    else if(t<71){pos=giveFeet;pose='carry';}
+    else {pos=move(t,71,76,[giveFeet,[304,292],[304,212],busy]);pose='walk';}
+  }
   const person=actor('vova',pos,pose,t,p,geometry,facing,travelled);
+  if(t>=20&&t<79) {
+    let point=[325,181],purchaseOwner='counter';
+    if(t>=63&&t<70.5){purchaseOwner='vova';point=[person.hand.x,person.hand.y];}
+    else if(t>=70.5){purchaseOwner='customer';point=[customer.hand.x,customer.hand.y];}
+    purchase={id:'purchase-01',kind:'neutral-packet',owner:purchaseOwner,x:point[0],y:point[1],scanning:t>=63&&t<65,collected:t>=70.5};
+  }
   let owner='crate',packaged=false,point=a.source;
   if(t>=25&&t<32) {owner='hand';point=[person.hand.x,person.hand.y];packaged=t>=28;}
   else if(t>=32&&t<82) {owner='stage';point=a.stage;packaged=true;}
@@ -201,7 +230,7 @@ function storeAt(t,geometry) {
     phone:{owner:phoneActive?'hand':'pocket',visible:phoneActive,x:person.hand.x,y:person.hand.y,unread:t>=136&&t<147},
     bag:{visible:bagVisible,owner:t<26.5?'stage':'hand',openness:clamp((t-26)/.6),
       x:t<26.5?a.stage[0]:person.hand.x,y:t<26.5?a.stage[1]:person.hand.y},
-    emptyBagVisible:t>=35&&t<79,queue:storeQueueAt(t),customer:customerAt(t)};
+    emptyBagVisible:t>=35&&t<79,queue:storeQueueAt(t),customer,purchase};
 }
 export const STORE_ACTIONS=Object.freeze([
   {id:'arrived',start:0,end:10},{id:'approach-crate',start:10,end:23},
@@ -220,10 +249,24 @@ export const SCHOOL_ACTIONS=Object.freeze([
 ]);
 function queueAt(list,t) {const found=list.findIndex(a=>t<a.end),index=found<0?list.length-1:found;return {action:list[index],index,upcoming:list.slice(index+1).map(a=>a.id)};}
 function storeQueueAt(t) {return queueAt(STORE_ACTIONS,t);}
-function customerAt(t) {
-  if(t<42||t>=80)return {visible:false};
-  const p=t<56?sampleRoute(t,42,56,[[503,333],[350,333]]):t<65?[350,333]:sampleRoute(t,65,80,[[350,333],[503,333]]);
-  return {visible:true,x:p[0],y:p[1],frame:Math.floor(t*5)%4,facing:t<56?'left':'right'};
+function npcHand(id,pose,animationFrame,position,facing,geometry) {
+  const spec=geometry?.npcs?.[id],frames=spec?.poses?.[pose]||spec?.poses?.idle||[0];
+  const frame=frames[animationFrame%frames.length],pivot=spec?.pivot||[48,100];
+  const hand=spec?.frames?.[frame]?.hand||spec?.sockets?.[String(frame)]?.hand;
+  const offset=hand?[hand[0]-pivot[0],hand[1]-pivot[1]]:[-14,-39];
+  return {x:position[0]+offset[0]*(facing==='right'?-1:1),y:position[1]+offset[1]};
+}
+function customerAt(t,geometry) {
+  if(t<20||t>=79)return {visible:false};
+  const walking=t<34||t>=71;
+  // The customer enters during packing and leaves towards the foreground.
+  // Keeping the held side avoids a mirrored hand teleport at the exit turn.
+  const p=t<34?sampleRoute(t,20,34,[[503,333],[350,333]]):t<71?[350,333]:sampleRoute(t,71,79,[[350,333],[344,356],[332,450]]);
+  const facing='left';
+  const frame=walking?Math.floor((t<34?t-20:t-71)*5)%4:t>=70.5&&t<71?Math.min(1,Math.floor((t-70.5)*6)):0;
+  const pose=t>=71?'carryWalk':t>=70.5?'pickup':t>=69.5?'reach':walking?'walk':'idle';
+  return {id:'shopper',visible:true,x:p[0],y:p[1],frame,pose,walking,facing,
+    waiting:t>=34&&t<62,served:t>=70.5,hand:npcHand('shopper',pose,frame,p,facing,geometry)};
 }
 function schoolAt(t,geometry) {
   const a=anchors(geometry);let pos=a.teacherInitial,pose='idle',p=0,travelled=0,facing='left';
@@ -291,15 +334,28 @@ export function stateAt(seconds,options={}) {
     store:storeAt(t,geometry),school:schoolAt(t,geometry),
     focus:t>=102&&t<111?'store':'split',geometry:anchors(geometry)};
 }
-export function makeSave(elapsed,prefs={}) {
+export function makeSave(elapsed,prefs={},progress=null) {
+  const t=normalizedTime(elapsed),interactive=progress?.interactive===true;
+  const accepted=progress?.acceptedActions||INTERACTIONS.filter(action=>action.at<=t).map(action=>action.id);
   return {version:SAVE_VERSION,model:MODEL_VERSION,elapsed:normalizedTime(elapsed),
+    interactive,acceptedActions:INTERACTIONS.filter(action=>accepted.includes(action.id)&&action.at<=t).map(action=>action.id),
     prefs:{speed:[1,1.5,2].includes(prefs.speed)?prefs.speed:1,muted:prefs.muted!==false,reducedMotion:prefs.reducedMotion===true}};
 }
 export function validateSave(input) {
-  if(!input||typeof input!=='object'||input.version!==SAVE_VERSION||input.model!==MODEL_VERSION||
+  const legacy=input?.version===1&&input?.model==='s02-s03-1';
+  if(!input||typeof input!=='object'||(!legacy&&(input.version!==SAVE_VERSION||input.model!==MODEL_VERSION))||
     typeof input.elapsed!=='number'||!Number.isFinite(input.elapsed)||input.elapsed<0||input.elapsed>TOTAL_DURATION)return null;
   if(input.prefs!==undefined&&(typeof input.prefs!=='object'||input.prefs===null||Array.isArray(input.prefs)))return null;
-  return makeSave(input.elapsed,input.prefs||{});
+  if(legacy)return makeSave(input.elapsed,input.prefs||{});
+  if(typeof input.interactive!=='boolean'||!Array.isArray(input.acceptedActions)||new Set(input.acceptedActions).size!==input.acceptedActions.length)return null;
+  if(input.acceptedActions.some(id=>!INTERACTIONS.some(action=>action.id===id&&action.at<=input.elapsed)))return null;
+  if(input.interactive) {
+    const pending=INTERACTIONS.find(action=>!input.acceptedActions.includes(action.id));
+    if(pending&&input.elapsed>pending.at)return null;
+    const lastAccepted=INTERACTIONS.filter(action=>input.acceptedActions.includes(action.id)).at(-1);
+    if(lastAccepted&&INTERACTIONS.some(action=>action.at<lastAccepted.at&&!input.acceptedActions.includes(action.id)))return null;
+  }
+  return makeSave(input.elapsed,input.prefs||{},{interactive:input.interactive,acceptedActions:input.acceptedActions});
 }
 export function loadSave(storage) {
   try {const raw=storage?.getItem(SAVE_KEY);if(typeof raw!=='string'||raw.length>16384)return null;return validateSave(JSON.parse(raw));}catch {return null;}

@@ -1,0 +1,497 @@
+{
+  "milestone": "0.2 interactive full-viewport landscape S02/S03 two-scene prototype; not full11-scene game",
+  "build_id": "slice-cc408edc66cc9eb44d25",
+  "build_artifact": {
+    "path": "production/build-manifest.json",
+    "sha256": "34df5ff10485a9f4e3cdeadc7c259ed1c4697ffff07b610951c5fe3aabd13c15"
+  },
+  "gate_status": "BLOCKED",
+  "required_domains": [
+    "visual",
+    "characters",
+    "animation",
+    "environment_vfx",
+    "narrative",
+    "gameplay",
+    "ui",
+    "web",
+    "audio",
+    "performance",
+    "persistence",
+    "accessibility",
+    "privacy",
+    "integration"
+  ],
+  "reviewer": {
+    "kind": "delegated_agent",
+    "independent": true,
+    "context_id": "/root/review_actual_02",
+    "inspected_build_id": "slice-cc408edc66cc9eb44d25",
+    "production_edits": "None. Reviewer wrote only critic-interactive-* evidence/reports and quality-gate-interactive.json."
+  },
+  "reviews": [
+    {
+      "domain": "visual",
+      "status": "PASS",
+      "inspected_build_id": "slice-cc408edc66cc9eb44d25",
+      "observations": "Native rooms and new full-body NPCs have coherent pixel shading and adult/child scale. Retested seated faces after the12px offset with pupil-2 exception; no feet on desk in final63 image.",
+      "evidence": [
+        "production/critic-interactive-captures/time-63_00000.png",
+        "production/npc-review-sheet.png"
+      ],
+      "tested_cases": [
+        "All24 NPC poses, actual full-world frames; before/after seating at63"
+      ],
+      "untested_cases": [
+        "Actual mobile CSS display and user creative approval"
+      ],
+      "required_fix_or_next_check": "Preserve seat-specific depth during future animation repair.",
+      "owner": "visual-art-director",
+      "verdict_justification": "Native rooms and new full-body NPCs have coherent pixel shading and adult/child scale. Retested seated faces after the12px offset with pupil-2 exception; no feet on desk in final63 image.",
+      "residual_risk": "Native art PASS does not certify live mobile presentation."
+    },
+    {
+      "domain": "characters",
+      "status": "PASS",
+      "inspected_build_id": "slice-cc408edc66cc9eb44d25",
+      "observations": "Vova and Nastya retain hair, glasses and clothes across52 authored poses. Anonymous NPC sprites improve faces, full-body proportions and connected raised arm.",
+      "evidence": [
+        "production/qa-captures/all-poses-vova-01.png",
+        "production/qa-captures/all-poses-vova-02.png",
+        "production/qa-captures/all-poses-nastya-01.png",
+        "production/qa-captures/all-poses-nastya-02.png",
+        "production/qa-captures/all-poses-nastya-03.png",
+        "production/npc-review-sheet.png"
+      ],
+      "tested_cases": [
+        "All52 actor poses and24 NPC poses visually inspected"
+      ],
+      "untested_cases": [
+        "Likeness approval and real phone scale"
+      ],
+      "required_fix_or_next_check": "Keep consistent identities and measured pivots.",
+      "owner": "character-art-director",
+      "verdict_justification": "Vova and Nastya retain hair, glasses and clothes across52 authored poses. Anonymous NPC sprites improve faces, full-body proportions and connected raised arm.",
+      "residual_risk": "Pose identity PASS is separate from motion acceptance."
+    },
+    {
+      "domain": "animation",
+      "status": "FAIL",
+      "inspected_build_id": "slice-cc408edc66cc9eb44d25",
+      "observations": "Nastya chalk35/46.5 hand jumps remain46.0624/37.6962nativepx; near/far gait repeats leading/support leg. Shopper20.4px pickup jump removed; exit15.23 reduced8.06px, residual stiffness and NPC opposite support remain unverified.",
+      "evidence": [
+        "production/critic-interactive-evidence.json",
+        "production/critic-interactive-captures/time-35_00000.png",
+        "production/critic-interactive-captures/time-46_50000.png",
+        "production/qa-captures/all-poses-nastya-01.png",
+        "production/critic-interactive-captures/service-contact-sheet.png"
+      ],
+      "tested_cases": [
+        "55 actual new native captures; ownership contacts63/70.5 zero; full authored pose sheets"
+      ],
+      "untested_cases": [
+        "Live browser motion, low device FPS, definitive NPC support-cycle acceptance"
+      ],
+      "required_fix_or_next_check": "Draw true opposite-support and chalk raise/lower poses; retain single-owner packet and review source pickup/turn poses.",
+      "owner": "animation+art",
+      "verdict_justification": "Nastya chalk35/46.5 hand jumps remain46.0624/37.6962nativepx; near/far gait repeats leading/support leg. Shopper20.4px pickup jump removed; exit15.23 reduced8.06px, residual stiffness and NPC opposite support remain unverified.",
+      "residual_risk": "Existing P1 blocks completion; numerical anchors do not establish natural motion."
+    },
+    {
+      "domain": "environment_vfx",
+      "status": "PASS",
+      "inspected_build_id": "slice-cc408edc66cc9eb44d25",
+      "observations": "Final seated NPC mask alignment, notebook contact, room layers and fixed furniture are coherent. Daylight setting remains unchanged.",
+      "evidence": [
+        "production/critic-interactive-captures/time-63_00000.png",
+        "production/critic-interactive-captures/time-71_20000.png",
+        "production/critic-interactive-captures/time-50_00000.png"
+      ],
+      "tested_cases": [
+        "Desk masks after seat repair; natural notebook scene and raised arm"
+      ],
+      "untested_cases": [
+        "Full-game rain/weather outside current daylight slice"
+      ],
+      "required_fix_or_next_check": "Preserve fixed furniture and depth ordering.",
+      "owner": "environment+engine",
+      "verdict_justification": "Final seated NPC mask alignment, notebook contact, room layers and fixed furniture are coherent. Daylight setting remains unchanged.",
+      "residual_risk": "No rain implementation or broader environment completion claimed."
+    },
+    {
+      "domain": "narrative",
+      "status": "PASS",
+      "inspected_build_id": "slice-cc408edc66cc9eb44d25",
+      "observations": "Five exact original messages and189s S02/S03 remain. Buyer now arrives20–34 during accepted bread action10–35. Reply command145 starts pickup before phone147; message152/159 timing unchanged.",
+      "evidence": [
+        "production/critic-interactive-evidence.json",
+        "dist/model.js",
+        "tests/acceptance-contract.json",
+        "production/qa-interactive.json"
+      ],
+      "tested_cases": [
+        "11,341 canonical samples; six-input full traversal; root exact dialogue regression"
+      ],
+      "untested_cases": [
+        "Remaining nine story scenes; actual phone UI reading"
+      ],
+      "required_fix_or_next_check": "Preserve message text/IDs and physical phone causality.",
+      "owner": "narrative-verifier",
+      "verdict_justification": "Five exact original messages and189s S02/S03 remain. Buyer now arrives20–34 during accepted bread action10–35. Reply command145 starts pickup before phone147; message152/159 timing unchanged.",
+      "residual_risk": "PASS only for two-scene fragment, not full11-scene story."
+    },
+    {
+      "domain": "gameplay",
+      "status": "PASS",
+      "inspected_build_id": "slice-cc408edc66cc9eb44d25",
+      "observations": "Actual createGame requires each of six commands, waits without story progression, rejects wrong-side/stale duplicates, commits accepted action before event, and reaches189. Buyer service is a separate neutral packet; tracked loaf remains one owner.",
+      "evidence": [
+        "production/critic-interactive-evidence.json",
+        "production/qa-interactive.json"
+      ],
+      "tested_cases": [
+        "Independent six-gate API traversal,20wait ticks per gate, wrong-side/duplicate rejection; model single-loaf sweep"
+      ],
+      "untested_cases": [
+        "Real pointer/touch dispatch and mobile button usability"
+      ],
+      "required_fix_or_next_check": "Exercise live touch/keyboard once required browser capability exists.",
+      "owner": "gameplay+engine",
+      "verdict_justification": "Actual createGame requires each of six commands, waits without story progression, rejects wrong-side/stale duplicates, commits accepted action before event, and reaches189. Buyer service is a separate neutral packet; tracked loaf remains one owner.",
+      "residual_risk": "PASS is API/game-state only. Both worlds share one story clock; ambient animation continues at waits."
+    },
+    {
+      "domain": "ui",
+      "status": "NOT_CHECKED",
+      "inspected_build_id": "slice-cc408edc66cc9eb44d25",
+      "observations": "Source removes old article/chat/PIP layout and uses full viewport50/50split, lower-right physical-phone overlay, portrait rotation prompt and composed pause reasons.",
+      "evidence": [
+        "dist/index.html",
+        "dist/style.css",
+        "dist/ui.js",
+        "production/qa-ui-logic.json"
+      ],
+      "tested_cases": [
+        "Source audit; five root NodeVM event tests"
+      ],
+      "untested_cases": [
+        "Actual landscape viewport320–430high, desktop, safe areas, overlap and readable message size"
+      ],
+      "required_fix_or_next_check": "Run actual browser/mobile layouts and fullscreen/orientation fallback.",
+      "owner": "UI/UX",
+      "verdict_justification": "Source removes old article/chat/PIP layout and uses full viewport50/50split, lower-right physical-phone overlay, portrait rotation prompt and composed pause reasons.",
+      "residual_risk": "NodeVM and native worlds cannot certify DOM layout."
+    },
+    {
+      "domain": "web",
+      "status": "NOT_CHECKED",
+      "inspected_build_id": "slice-cc408edc66cc9eb44d25",
+      "observations": "Current asset loading and runtime exports execute in native tests. Browser startup/fullscreen/orientation and real event dispatch were unavailable.",
+      "evidence": [
+        "production/qa-regression.json",
+        "dist/engine.js",
+        "dist/ui.js"
+      ],
+      "tested_cases": [
+        "Source URL resolver; native createGame and renderFrame"
+      ],
+      "untested_cases": [
+        "Actual HTML/module startup, console, pointer/touch, fullscreen, orientation lock"
+      ],
+      "required_fix_or_next_check": "Use supported control-browser when available; no workaround.",
+      "owner": "web-engineer",
+      "verdict_justification": "Current asset loading and runtime exports execute in native tests. Browser startup/fullscreen/orientation and real event dispatch were unavailable.",
+      "residual_risk": "No browser/server installation was performed."
+    },
+    {
+      "domain": "audio",
+      "status": "NOT_CHECKED",
+      "inspected_build_id": "slice-cc408edc66cc9eb44d25",
+      "observations": "Source has procedural hum/rustle/message/bell and checkout64 during scan63–65; no listening or real autoplay/mix evidence.",
+      "evidence": [
+        "dist/engine.js",
+        "dist/model.js"
+      ],
+      "tested_cases": [
+        "Cue timing/source audit"
+      ],
+      "untested_cases": [
+        "Audible mix, cue quality, mute/unlock and device autoplay"
+      ],
+      "required_fix_or_next_check": "Listen to actual sequence on target browser.",
+      "owner": "audio-director",
+      "verdict_justification": "Source has procedural hum/rustle/message/bell and checkout64 during scan63–65; no listening or real autoplay/mix evidence.",
+      "residual_risk": "Source sound definitions cannot establish sound quality."
+    },
+    {
+      "domain": "performance",
+      "status": "NOT_CHECKED",
+      "inspected_build_id": "slice-cc408edc66cc9eb44d25",
+      "observations": "Bounded100ms clock is verified by API; native capture speed does not measure mobile performance.",
+      "evidence": [
+        "production/critic-interactive-evidence.json",
+        "dist/engine.js"
+      ],
+      "tested_cases": [
+        "Clock bound; asset inventory inspected"
+      ],
+      "untested_cases": [
+        "Device FPS/frame pacing, loading, memory and battery"
+      ],
+      "required_fix_or_next_check": "Measure target phones and desktop browser.",
+      "owner": "test-engineer",
+      "verdict_justification": "Bounded100ms clock is verified by API; native capture speed does not measure mobile performance.",
+      "residual_risk": "No performance readiness claim."
+    },
+    {
+      "domain": "persistence",
+      "status": "NOT_CHECKED",
+      "inspected_build_id": "slice-cc408edc66cc9eb44d25",
+      "observations": "Accepted-action ledger, waiting/mid-action reload, corrupt/legacy saves and blocked storage pass injected-storage tests; real browser persistence unavailable.",
+      "evidence": [
+        "production/critic-interactive-evidence.json",
+        "production/qa-interactive.json",
+        "production/qa-regression.json"
+      ],
+      "tested_cases": [
+        "Independent accepted-action write-before-event; root waiting/mid-action migration and quota regressions"
+      ],
+      "untested_cases": [
+        "Actual browser reload/localStorage permissions"
+      ],
+      "required_fix_or_next_check": "Exercise real reload and blocked-storage behavior.",
+      "owner": "web+QA",
+      "verdict_justification": "Accepted-action ledger, waiting/mid-action reload, corrupt/legacy saves and blocked storage pass injected-storage tests; real browser persistence unavailable.",
+      "residual_risk": "Injected Map/storage evidence is bounded code proof only."
+    },
+    {
+      "domain": "accessibility",
+      "status": "NOT_CHECKED",
+      "inspected_build_id": "slice-cc408edc66cc9eb44d25",
+      "observations": "Russian labels,44pxcontrols, native dialog, focus outlines, role-log safe text and reduced-motion exist in source; composed pause logic is tested in NodeVM.",
+      "evidence": [
+        "dist/index.html",
+        "dist/style.css",
+        "dist/ui.js",
+        "production/qa-ui-logic.json"
+      ],
+      "tested_cases": [
+        "Static labels, control minima, reduced-motion and pause source"
+      ],
+      "untested_cases": [
+        "Real focus order/trap, screen reader, live announcement behavior, zoom and contrast on device"
+      ],
+      "required_fix_or_next_check": "Run keyboard/screen-reader/mobile verification; inspect focus when action buttons change.",
+      "owner": "UI/accessibility",
+      "verdict_justification": "Russian labels,44pxcontrols, native dialog, focus outlines, role-log safe text and reduced-motion exist in source; composed pause logic is tested in NodeVM.",
+      "residual_risk": "Accessible source attributes do not prove actual accessibility."
+    },
+    {
+      "domain": "privacy",
+      "status": "PASS",
+      "inspected_build_id": "slice-cc408edc66cc9eb44d25",
+      "observations": "Reviewed runtime only fetches local generated assets and stores progress/preferences locally. Messages use textContent; no outbound analytics, secret or personal reference photos found in shipped dist.",
+      "evidence": [
+        "dist/ui.js",
+        "dist/engine.js",
+        "dist/assets/manifest.json"
+      ],
+      "tested_cases": [
+        "Runtime network/text/storage source audit and shipped asset inventory"
+      ],
+      "untested_cases": [
+        "External repository audience settings not independently queried by critic"
+      ],
+      "required_fix_or_next_check": "Producer must preserve authorized private Site audience and public-source scope.",
+      "owner": "producer+privacy",
+      "verdict_justification": "Reviewed runtime only fetches local generated assets and stores progress/preferences locally. Messages use textContent; no outbound analytics, secret or personal reference photos found in shipped dist.",
+      "residual_risk": "PASS is shipped-source privacy, not a certification of external access settings."
+    },
+    {
+      "domain": "integration",
+      "status": "FAIL",
+      "inspected_build_id": "slice-cc408edc66cc9eb44d25",
+      "observations": "API story, loaf, buyer packet and phone145→147 agree. Final seating regression is repaired; animation P1 and missing actual UI/audio/device/browser persistence evidence still prevent verified handoff.",
+      "evidence": [
+        "production/critic-interactive-evidence.json",
+        "production/critic-interactive-review.md",
+        "production/critic-interactive-captures/time-63_00000.png",
+        "production/critic-interactive-captures/service-contact-sheet.png"
+      ],
+      "tested_cases": [
+        "Scene and owner transitions; all six actions; final seat and phone retest"
+      ],
+      "untested_cases": [
+        "Live responsive views/audio/input integration"
+      ],
+      "required_fix_or_next_check": "Resolve known animationP1 and gather actual browser/device evidence before completion.",
+      "owner": "producer+independent-critic",
+      "verdict_justification": "API story, loaf, buyer packet and phone145→147 agree. Final seating regression is repaired; animation P1 and missing actual UI/audio/device/browser persistence evidence still prevent verified handoff.",
+      "residual_risk": "New code improvements do not turn the prototype into verified finished game."
+    }
+  ],
+  "cross_domain_review": {
+    "status": "FAIL",
+    "inspected_build_id": "slice-cc408edc66cc9eb44d25",
+    "evidence": [
+      "production/critic-interactive-evidence.json",
+      "production/critic-interactive-review.md"
+    ],
+    "observations": "Known animationP1 plus actual-browser essential NOT_CHECKED lanes block completion."
+  },
+  "issues": [
+    {
+      "id": "CRIT-ANIM-NASTYA-GAIT",
+      "domain": "animation",
+      "severity": "P1",
+      "status": "OPEN",
+      "build_id": "slice-cc408edc66cc9eb44d25",
+      "observed": "Actual authored8/10 and9/11 phases repeat leading/support leg.",
+      "expected": "True opposite support/passing phases.",
+      "fix": "Redraw genuine opposing poses without limb stretching.",
+      "owner": "art+animation",
+      "evidence": [
+        "production/qa-captures/all-poses-nastya-01.png"
+      ],
+      "retest": "Inspect actual latest raw native frames and full source pose cycle; then live browser.",
+      "repair_attempts": 2,
+      "escalated": true,
+      "escalation": "Existing unresolved art blocker; do not start another unbounded repair loop."
+    },
+    {
+      "id": "CRIT-ANIM-CHALK-ENTRY-RETURN",
+      "domain": "animation",
+      "severity": "P1",
+      "status": "OPEN",
+      "build_id": "slice-cc408edc66cc9eb44d25",
+      "observed": "35 entry46.0624px and46.5 return37.6962px hand jump across1/60s.",
+      "expected": "Visible physical raise/lower and pickup/release.",
+      "fix": "Author upright intermediate chalk poses, retain board-contact anchors.",
+      "owner": "art+animation",
+      "evidence": [
+        "production/critic-interactive-captures/time-35_00000.png",
+        "production/critic-interactive-captures/time-46_50000.png"
+      ],
+      "retest": "Inspect actual latest raw native frames and full source pose cycle; then live browser."
+    },
+    {
+      "id": "CRIT-NPC-SEAT-DEPTH",
+      "domain": "visual",
+      "severity": "P1",
+      "status": "VERIFIED_FIXED",
+      "build_id": "slice-cc408edc66cc9eb44d25",
+      "observed": "Initial seats hid faces; generic−12 repair exposed pupil-2 feet atop desk. Final pupil-2 exception restores intended depth while three faces improve.",
+      "expected": "Faces readable above desks and feet behind furniture.",
+      "fix": "Seat−12 except pupil-2 at0; walking baseline unchanged.",
+      "owner": "engine+art",
+      "evidence": [
+        "production/critic-interactive-baseline/time-63_00000.png",
+        "production/critic-interactive-captures/time-63_00000.png"
+      ],
+      "retest": "Inspect actual latest raw native frames and full source pose cycle; then live browser.",
+      "retest_build_id": "slice-cc408edc66cc9eb44d25",
+      "retest_evidence": [
+        "production/critic-interactive-captures/time-63_00000.png",
+        "production/critic-interactive-captures/time-50_00000.png"
+      ]
+    },
+    {
+      "id": "CRIT-ANIM-SHOPPER-PICKUP-JUMP",
+      "domain": "animation",
+      "severity": "P1",
+      "status": "VERIFIED_FIXED",
+      "build_id": "slice-cc408edc66cc9eb44d25",
+      "observed": "Initial20.40px at70.8333 now0. Mirror15.23px at71 removed; residual8.06px source-pose step remains separately P2.",
+      "expected": "No large discontinuous pickup/mirror jump.",
+      "fix": "Retain authored reach/pickup5/6 and foreground exit without facing flip.",
+      "owner": "engine+art",
+      "evidence": [
+        "production/critic-interactive-baseline/service-contact-sheet.png",
+        "production/critic-interactive-evidence.json"
+      ],
+      "retest": "Inspect actual latest raw native frames and full source pose cycle; then live browser.",
+      "retest_build_id": "slice-cc408edc66cc9eb44d25",
+      "retest_evidence": [
+        "production/critic-interactive-evidence.json",
+        "production/critic-interactive-captures/service-contact-sheet.png"
+      ]
+    },
+    {
+      "id": "CRIT-ANIM-SHOPPER-EXIT-POLISH",
+      "domain": "animation",
+      "severity": "P2",
+      "status": "OPEN",
+      "build_id": "slice-cc408edc66cc9eb44d25",
+      "observed": "Residual8.0623nativepx pickup→walk change at71. Four authored walk poses remove idle alternation but true opposite support remains visually ambiguous, not independently certified.",
+      "expected": "Natural load-bearing pickup/turn/walk sequence.",
+      "fix": "Review/redraw whole-body carrier poses in a future bounded art pass; preserve exact contact.",
+      "owner": "art+animation",
+      "evidence": [
+        "production/critic-interactive-evidence.json",
+        "production/npc-review-sheet.png",
+        "production/critic-interactive-captures/service-contact-sheet.png"
+      ],
+      "retest": "Inspect actual latest raw native frames and full source pose cycle; then live browser."
+    },
+    {
+      "id": "CRIT-PHONE-COMMAND-TIMING",
+      "domain": "gameplay",
+      "severity": "P2",
+      "status": "VERIFIED_FIXED",
+      "build_id": "slice-cc408edc66cc9eb44d25",
+      "observed": "Original command147 followed pickup145–147 and flipped waiting idle directly tophone. Final command145 precedes existing pickup; phone visible147.",
+      "expected": "Command starts physical phone take.",
+      "fix": "Gate145 with unchanged phone147/messages152/159.",
+      "owner": "engine",
+      "evidence": [
+        "production/critic-interactive-evidence.json",
+        "dist/model.js"
+      ],
+      "retest": "Inspect actual latest raw native frames and full source pose cycle; then live browser.",
+      "retest_build_id": "slice-cc408edc66cc9eb44d25",
+      "retest_evidence": [
+        "production/critic-interactive-evidence.json",
+        "production/critic-interactive-captures/gate-replyToNastya-before.png",
+        "production/critic-interactive-captures/gate-replyToNastya-accepted.png",
+        "production/critic-interactive-captures/time-146_00000.png",
+        "production/critic-interactive-captures/time-147_00000.png"
+      ]
+    }
+  ],
+  "baseline_evidence": [
+    "production/critic-interactive-baseline/evidence.json",
+    "production/critic-interactive-baseline/time-63_00000.png",
+    "production/quality-gate.json"
+  ],
+  "integration_evidence": [
+    "production/critic-interactive-evidence.json",
+    "production/critic-interactive-review.md",
+    "production/build-manifest.json"
+  ],
+  "regression_evidence": [
+    "production/critic-interactive-evidence.json",
+    "production/qa-interactive.json",
+    "production/qa-regression.json",
+    "production/qa-ui-logic.json"
+  ],
+  "review_coverage": {
+    "authored_actor_frames_visually_inspected": 52,
+    "authored_npc_frames_visually_inspected": 24,
+    "independent_native_frames": 55,
+    "model_samples": 11341,
+    "frozen_file_hashes_verified": 91,
+    "actual_browser_frames": 0,
+    "all_raw_frames_individually_viewed": false,
+    "note": "Worst-case selected raw frames, all authored pose sheets, contact boundaries and full API traversal; no fabricated browser coverage."
+  },
+  "technical_QA": {
+    "executed_by": "/root",
+    "independent": false,
+    "legacy": 33,
+    "interactive": 8,
+    "ui_logic": 5,
+    "type": "Native/model/API + NodeVM; not browser"
+  },
+  "not_checked_reason": "Required managed control-browser skill unavailable; no server/browser install/CUA workaround.",
+  "createdAt": "2026-10-11T07:59:18.138339+00:00"
+}

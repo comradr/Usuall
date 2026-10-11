@@ -1,8 +1,9 @@
 {
   "name": "obychnyy-den",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
-  "description": "Обычный день — S02–S03 playable art prototype",
-  "scripts": {"check": "node --check dist/model.js && node --check dist/engine.js && node --check dist/ui.js", "test": "node tests/regression.mjs"}
+  "description": "Обычный день — интерактивный горизонтальный сплит",
+  "scripts": {"check": "node --check dist/model.js && node --check dist/engine.js && node --check dist/ui.js", "test": "node tests/regression.mjs && node tests/interactive-regression.mjs && node tests/ui-logic.mjs", "capture": "node tests/capture-offscreen.mjs", "qa:report": "node tests/qa-report.mjs"},
+  "devDependencies": {"@napi-rs/canvas": "0.1.100"}
 }

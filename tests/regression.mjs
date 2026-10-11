@@ -569,7 +569,7 @@ if (!modelOnly && engine && runtimeAssets && geometry) {
     storage ??= { getItem: k => memory.get(k) ?? null, setItem: (k, v) => memory.set(k, v), removeItem: k => memory.delete(k) };
     const clock = { now: () => now, requestFrame: cb => { const id = nextId++; callbacks.set(id, cb); return id; }, cancelFrame: id => callbacks.delete(id) };
     const game = await engine.createGame({ storeCanvas: createCanvas(480, 360), schoolCanvas: createCanvas(480, 360),
-      assets: runtimeAssets, clock, storage, listenVisibility: false,
+      assets: runtimeAssets, clock, storage, listenVisibility: false, interactive: false,
       onEvent: event => { events.push(event); eventCheck(event); }, onUpdate: update => updates.push(update) });
     return { game, events, updates, memory, callbacks, step(ms = 1000 / 60) { now += ms; return game.tick(now); } };
   }

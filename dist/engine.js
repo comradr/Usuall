@@ -1,4 +1,4 @@
-import {WIDTH,HEIGHT,TOTAL_DURATION,SAVE_KEY,SCENES,CUES,MESSAGES,NASTYA_PHONE_ACTIONS,stateAt,nextBeatEnd,makeSave,loadSave,saveToStorage,clearSave} from './model.js';
+import {WIDTH,HEIGHT,TOTAL_DURATION,SAVE_KEY,SCENES,CUES,MESSAGES,INTERACTIONS,NASTYA_PHONE_ACTIONS,stateAt,nextBeatEnd,makeSave,loadSave,saveToStorage,clearSave} from './model.js';
 
 /** Images are original scene layers and alpha atlases, never a screenshot of a finished scene. */
 export async function loadAssets(manifestURL = new URL('./assets/manifest.json', import.meta.url), imageLoader) {
@@ -138,6 +138,15 @@ function genericPerson(ctx,pupil,kind='pupil') {
   }
   else {const armY=y-height+22+(pupil.writing?pupil.frame%2:0);ctx.fillRect(x+9,armY,7,3);}
 }
+function drawNpc(ctx,person,assets,customer=false){
+  const key=customer?'shopper':Number(person.id.split('-')[1])%2?'pupilGirl':'pupilBoy';
+  const spec=assets.manifest.npcs?.[key];if(!spec){genericPerson(ctx,person,customer?'customer':'pupil');return;}
+  const pose=customer?person.pose:person.walking?'walk':person.raised?'raised':person.writing?'writing':'seated';
+  const sequence=spec.poses[pose]||spec.poses.idle,index=sequence[(person.frame||0)%sequence.length],record=spec.frames[index];
+  const seatOffset=!customer&&!person.walking&&person.id!=='pupil-2'?-12:0;
+  ctx.save();ctx.translate(Math.round(person.x),Math.round(person.y)+seatOffset);if(person.facing==='right')ctx.scale(-1,1);
+  imageRect(ctx,imageOf(assets,spec),record.rect,-spec.pivot[0],-spec.pivot[1],spec.frameWidth,spec.frameHeight);ctx.restore();
+}
 function drawNotebook(ctx,school) {
   const {x,y,progress}=school.notebook;
   ctx.fillStyle='#cbbd8a';ctx.fillRect(x-12,y-5,24,10);ctx.fillStyle='#eee2b8';ctx.fillRect(x-11,y-4,10,8);ctx.fillRect(x+1,y-4,10,8);
@@ -205,7 +214,8 @@ export function renderFrame(ctx,state,side,assets,options={}) {
     // Five remaining loaves do not move. The sixth has exactly one owner and draw call.
     for(const [x,y]of [[230,157],[249,157],[269,157],[218,147],[240,147]])drawLoaf(ctx,{x,y,packaged:false},assets);
     if(world.emptyBagVisible)drawSmallProp(ctx,assets,'bagEmpty',242,157);
-    if(world.customer.visible)layers.push({depth:world.customer.y,draw:()=>genericPerson(ctx,world.customer,'customer')});
+    if(world.customer.visible)layers.push({depth:world.customer.y,draw:()=>drawNpc(ctx,world.customer,assets,true)});
+    if(world.purchase){const p=world.purchase;layers.push({depth:p.owner==='counter'||(p.x>=315&&p.y<210)?282.1:p.owner==='vova'?world.actor.y+.1:world.customer.y+.1,draw:()=>drawSmallProp(ctx,assets,'bagEmpty',p.x,p.y)});}
     if(world.bag.visible&&world.bag.owner==='stage')drawBag(ctx,world.bag,assets);
     layers.push({depth:world.actor.y,draw:()=>{drawActor(ctx,world.actor,assets);if(world.bag.visible&&world.bag.owner==='hand')drawBag(ctx,world.bag,assets);if(world.bread.owner==='hand')drawLoaf(ctx,world.bread,assets);drawPhone(ctx,world.phone,assets,world.actor);}});
     if(world.bread.owner!=='hand')layers.push({depth:world.bread.owner==='shelf'?254.5:world.bread.owner==='trolley'?world.bread.y+.5:world.bread.y,draw:()=>drawLoaf(ctx,world.bread,assets)});
@@ -217,7 +227,7 @@ export function renderFrame(ctx,state,side,assets,options={}) {
     layers.push({depth:deskDepth+.1,draw:()=>drawNotebook(ctx,world)});
     if(world.actor.pose==='help')layers.push({depth:deskDepth+.2,draw:()=>drawDeskContact(ctx,world,assets)});
     layers.push({depth:world.chair.y-.1,draw:()=>drawChair(ctx,world.chair,assets)});
-    for(const p of world.pupils)if(p.visible)layers.push({depth:p.y,draw:()=>genericPerson(ctx,p)});
+    for(const p of world.pupils)if(p.visible)layers.push({depth:p.y,draw:()=>drawNpc(ctx,p,assets)});
     layers.push({depth:world.actor.y,draw:()=>{drawActor(ctx,world.actor,assets);drawPhone(ctx,world.phone,assets,world.actor);}});
   }
   for(const occ of assets.manifest.occluders?.[side]||[])layers.push({depth:occ.depth,draw:()=>drawOccluder(ctx,{...occ,side},assets)});
@@ -268,18 +278,35 @@ export async function createGame(options) {
   let storage=options.storage;
   if(storage===undefined) {try {storage=globalThis.localStorage;}catch {storage=null;}}
   const stored=loadSave(storage);
+  const interactive=options.interactive!==false;
+  let acceptedActions=new Set();
   let elapsed=0,phase='ready',speed=stored?.prefs.speed||1,muted=stored?.prefs.muted??true,reducedMotion=stored?.prefs.reducedMotion||false;
   let destroyed=false,raf=null,lastTime=null,ambientTime=0,lastUpdate=-Infinity,lastSave=-Infinity,boostTarget=null,autoPaused=false;
   let savedRecord=stored,storageNoticeShown=false,audioNoticeShown=false,lastScene='S02';
   const audio=quietAudio(()=>{if(!audioNoticeShown){audioNoticeShown=true;onEvent({type:'notice',text:'Звук сейчас недоступен.'});}});
-  function currentState() {return stateAt(elapsed,{geometry});}
-  function snapshot() {const state=currentState();return {...state,phase,canAdvance:phase==='playing'&&elapsed<TOTAL_DURATION,hasSave:!!savedRecord&&savedRecord.elapsed>0&&savedRecord.elapsed<TOTAL_DURATION,speed,muted,reducedMotion,advancing:boostTarget!==null};}
-  function draw(t=elapsed) {const state=stateAt(t,{geometry});renderFrame(contexts.store,state,'store',assets,{ambientTime,reducedMotion});renderFrame(contexts.school,state,'school',assets,{ambientTime,reducedMotion});return state;}
+  function nextAction(){return interactive?INTERACTIONS.find(a=>!acceptedActions.has(a.id)):null;}
+  function awaitingAction(){const a=nextAction();return a&&elapsed>=a.at?a:null;}
+  function currentState() {
+    const state=stateAt(elapsed,{geometry}),pending=awaitingAction();
+    if(pending){
+      const person=state[pending.side].actor,spec=geometry.actors[person.id],frame=spec.poses.idle[0];
+      const hand=spec.frames[frame]?.hand||spec.sockets[String(frame)]?.hand,pivot=spec.pivot;
+      person.pose='idle';person.frame=frame;person.animationFrame=0;person.progress=0;
+      person.socket=[(hand[0]-pivot[0])*(person.facing==='right'?-1:1),hand[1]-pivot[1]];
+      person.hand={x:person.x+person.socket[0],y:person.y+person.socket[1]};
+      if(pending.id==='writeBoard')state.school.board=stateAt(pending.at-1e-6,{geometry}).school.board;
+      if(pending.id==='replyToNastya')state.store.phone={...state.store.phone,owner:'pocket',visible:false,unread:true};
+    }
+    return state;
+  }
+  function actionStates(){return interactive?INTERACTIONS.filter(a=>acceptedActions.has(a.id)||elapsed>=a.at).map(a=>({...a,status:acceptedActions.has(a.id)?(elapsed<a.end?'running':'complete'):'available'})):[];}
+  function snapshot() {const state=currentState();return {...state,phase,interactive,actions:actionStates(),awaitingAction:awaitingAction(),canAdvance:!interactive&&phase==='playing'&&elapsed<TOTAL_DURATION,hasSave:!!savedRecord&&savedRecord.elapsed>0&&savedRecord.elapsed<TOTAL_DURATION,speed,muted,reducedMotion,advancing:boostTarget!==null};}
+  function draw(t=elapsed,canonical=false) {const state=canonical?stateAt(t,{geometry}):currentState();renderFrame(contexts.store,state,'store',assets,{ambientTime,reducedMotion});renderFrame(contexts.school,state,'school',assets,{ambientTime,reducedMotion});return state;}
   function update(force=false) {if(force||elapsed-lastUpdate>=.10||phase!=='playing') {lastUpdate=elapsed;onUpdate(snapshot());}}
   function persist(force=false) {
     if(elapsed===0||elapsed>=TOTAL_DURATION) {if(elapsed>=TOTAL_DURATION){clearSave(storage);savedRecord=null;}return;}
     if(!force&&elapsed-lastSave<1)return;
-    lastSave=elapsed;const record=makeSave(elapsed,{speed,muted,reducedMotion});
+    lastSave=elapsed;const record=makeSave(elapsed,{speed,muted,reducedMotion},{interactive,acceptedActions:[...acceptedActions]});
     if(saveToStorage(storage,record))savedRecord=record;
     else if(!storageNoticeShown){storageNoticeShown=true;onEvent({type:'notice',text:'Прогресс сохранится только до закрытия страницы.'});}
   }
@@ -292,6 +319,7 @@ export async function createGame(options) {
       const before=elapsed,beforeState=currentState(),factor=boostTarget===null?speed:6;
       // A foreground stall never skips an interaction. Normal and boosted frames advance at most 100 ms.
       let after=Math.min(TOTAL_DURATION,elapsed+Math.min(.1,dt*factor));
+      const pending=nextAction();if(pending)after=Math.min(after,pending.at);
       if(boostTarget!==null&&after>=boostTarget){after=boostTarget;boostTarget=null;}
       elapsed=after;ambientTime+=dt;
       const afterState=currentState();
@@ -304,7 +332,7 @@ export async function createGame(options) {
       for(const cue of CUES)if(cue.at>before&&cue.at<=after){audio.cue(cue.kind);onEvent({type:'cue',...cue});}
       const scene=currentState().sceneId;if(scene!==lastScene){lastScene=scene;onEvent({type:'scene',sceneId:scene});}
       if(elapsed>=TOTAL_DURATION)finish();
-      draw();persist();update();
+      draw();persist();update(!!awaitingAction());
     }
     return snapshot();
   }
@@ -316,6 +344,7 @@ export async function createGame(options) {
   const pointers=[];
   function pointer(side,canvas,event) {
     if(phase!=='playing')return;
+    if(interactive){const pending=awaitingAction();if(pending?.side===side)game.performAction(pending.id,side);return;}
     const rect=canvas.getBoundingClientRect(),screenX=(event.clientX-rect.left)*WIDTH/rect.width,screenY=(event.clientY-rect.top)*HEIGHT/rect.height;
     const camera=cameraAt(elapsed,side,reducedMotion),x=camera.x+(screenX-camera.x)/camera.zoom,y=camera.y+(screenY-camera.y)/camera.zoom;
     const t=elapsed;
@@ -328,16 +357,29 @@ export async function createGame(options) {
   }
   if(options.listenVisibility!==false)globalThis.document?.addEventListener('visibilitychange',visibility);
   const game={
-    start({resume:requested=false}={}) {if(!requested){clearSave(storage);savedRecord=null;}return begin(requested&&savedRecord?savedRecord.elapsed:0);},
+    start({resume:requested=false}={}) {
+      if(!requested){clearSave(storage);savedRecord=null;acceptedActions=new Set();return begin(0);}
+      if(!savedRecord){acceptedActions=new Set();return begin(0);}
+      let at=savedRecord.elapsed;
+      if(interactive&&!savedRecord.interactive){const incomplete=INTERACTIONS.find(a=>at>=a.at&&at<a.end);if(incomplete)at=incomplete.at;acceptedActions=new Set(INTERACTIONS.filter(a=>a.at<at).map(a=>a.id));}
+      else acceptedActions=new Set(savedRecord.acceptedActions||[]);
+      return begin(at);
+    },
     pause(){autoPaused=false;return pause(false);},resume,
-    restart(){clearSave(storage);savedRecord=null;return begin(0);},
+    restart(){clearSave(storage);savedRecord=null;acceptedActions=new Set();return begin(0);},
     setSpeed(value){speed=[1,1.5,2].includes(Number(value))?Number(value):1;persist(true);update(true);return snapshot();},
     setMuted(value){muted=!!value;audio.setMuted(muted);persist(true);update(true);return snapshot();},
     setReducedMotion(value){reducedMotion=!!value;draw();persist(true);update(true);return snapshot();},
-    fastForward(){if(phase==='playing'&&boostTarget===null){boostTarget=nextBeatEnd(elapsed);update(true);}return snapshot();},
-    serialize(){return makeSave(elapsed,{speed,muted,reducedMotion});},getSnapshot:snapshot,
+    fastForward(){if(!interactive&&phase==='playing'&&boostTarget===null){boostTarget=nextBeatEnd(elapsed);update(true);}return snapshot();},
+    performAction(id,side){
+      const pending=awaitingAction();
+      if(phase!=='playing'||!pending||pending.id!==id||(side!==undefined&&side!==pending.side))return {accepted:false,reason:'unavailable',snapshot:snapshot()};
+      acceptedActions.add(id);persist(true);draw();update(true);onEvent({type:'action',id,side:pending.side,at:elapsed});
+      return {accepted:true,snapshot:snapshot()};
+    },
+    serialize(){return makeSave(elapsed,{speed,muted,reducedMotion},{interactive,acceptedActions:[...acceptedActions]});},getSnapshot:snapshot,
     stateAt:seconds=>stateAt(seconds,{geometry}),
-    renderAt(seconds){return draw(seconds);},
+    renderAt(seconds){return draw(seconds,true);},
     seek(seconds){const state=stateAt(seconds,{geometry});elapsed=state.elapsed;lastTime=clock.now();lastScene=state.sceneId;boostTarget=null;phase=elapsed>=TOTAL_DURATION?'complete':'paused';audio.setPaused(true);draw();update(true);return snapshot();},
     tick,
     destroy(){destroyed=true;clock.cancelFrame(raf);audio.destroy();for(const [canvas,handler]of pointers)canvas.removeEventListener?.('pointerdown',handler);globalThis.document?.removeEventListener('visibilitychange',visibility);},

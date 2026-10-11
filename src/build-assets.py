@@ -225,5 +225,6 @@ for name,filename in FILES.items():
 # retained production/art-source PNGs and do not require a surviving scratch run.
 subprocess.run([sys.executable, str(ROOT/'src/build-assets-nastya-phone.py')], check=True)
 subprocess.run([sys.executable, str(ROOT/'src/build-assets-nastya-v3.py')], check=True)
+subprocess.run([sys.executable, str(ROOT/'src/build-assets-npcs.py')], check=True)
 active = json.loads((ASSETS/'manifest.json').read_text())
 print(json.dumps({'manifest':str(ASSETS/'manifest.json'),'version':active['version'],'actors':{k:{'image':v['image'],'frameCount':v['frameCount']} for k,v in active['actors'].items()},'nativeBackgrounds':[str(ASSETS/f'{k}-bg-v1.png') for k in ['store','school']]},ensure_ascii=False))
